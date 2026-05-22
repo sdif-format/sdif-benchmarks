@@ -1,6 +1,6 @@
 # SDIF Benchmarks
 
-Evidence-first benchmarks measuring SDIF against JSON, YAML, XML, CSV Bundle, SDIF AI, and TOON from the perspective of AI and LLM developers. Every compared representation is derived from the same canonical JSON source under `examples/golden/`. Each run writes evidence to `tmp/<track>/` while running and promotes it to `results/<track>/` on success.
+Evidence-first benchmarks measuring SDIF against JSON, YAML, XML, CSV Bundle, SDIF AI, and TOON from the perspective of AI and LLM developers. Every compared representation is derived from the same canonical JSON source under the core repo's `examples/golden/` directory, or `SDIF_BENCHMARK_GOLDEN_DIR` when overridden. Each run writes evidence to `tmp/<track>/` while running and promotes it to `results/<track>/` on success.
 
 ## Quick Start
 
@@ -71,12 +71,12 @@ Guards that SDIF preserves semantic structure beyond token efficiency: relations
 
 ## Corpus Model
 
-SDIF keeps the canonical semantic corpus in `examples/golden/` instead of duplicating it under `benchmarks/data/`. This avoids drift between parser/conformance fixtures and benchmark fixtures.
+SDIF core keeps the canonical semantic corpus in `examples/golden/` instead of duplicating it under benchmark-local data directories. This avoids drift between parser/conformance fixtures and benchmark fixtures.
 
 Each fixture should contain:
 
 ```text
-examples/golden/<fixture>/
+../sdif/examples/golden/<fixture>/
 ├── equivalent.json     # canonical semantic source
 ├── source.sdif         # hand-authored or generated SDIF source
 ├── canonical.sdif      # canonical SDIF form
@@ -130,6 +130,7 @@ Common environment switches (all tracks):
 
 ```bash
 SDIF_BENCHMARK_OUTPUT_DIR=/tmp/sdif-benchmarks  # redirect all benchmark output
+SDIF_CORE_REPO=../sdif                              # core repo with examples/golden
 SDIF_BENCHMARK_GOLDEN_DIR=/tmp/golden-fixtures   # use a custom corpus
 SDIF_BENCHMARK_TOON=0                           # disable TOON comparison
 SDIF_BENCHMARK_VERBOSE=1                        # print optional-tool diagnostics
@@ -170,7 +171,7 @@ benchmarks/
 - Executable benchmark runners belong in `scripts/`.
 - Reusable helpers belong in `src/` — code shared by two or more tracks.
 - Each track writes scratch output to `tmp/<track>/`; completed evidence goes to `results/<track>/`.
-- Canonical semantic sources belong in `examples/golden/`, unless `SDIF_BENCHMARK_GOLDEN_DIR` overrides.
+- Canonical semantic sources belong in the core repo's `examples/golden/`, unless `SDIF_BENCHMARK_GOLDEN_DIR` overrides.
 - Optional external tools (TOON, tiktoken) must degrade gracefully.
 - Claims must name the tokenizer and model coverage that produced them.
 - Retrieval accuracy must use deterministic validators, not subjective LLM judging.

@@ -3,7 +3,7 @@
 
 The fixture shapes are intentionally SDIF-representable: large repeated records
 are normalized into top-level scalar tables instead of arbitrary nested arrays in
-row cells. ``equivalent.json`` remains the semantic source; run
+row cells. ``equivalent.json`` remains the semantic source; run the core
 ``scripts/generate_golden_fixtures.py`` afterwards to derive SDIF artifacts.
 """
 
@@ -11,13 +11,15 @@ from __future__ import annotations
 
 import argparse
 import json
+import os
 from pathlib import Path
 from typing import Any
 
 JsonObject = dict[str, Any]
 
-ROOT = Path(__file__).resolve().parents[1]
-DEFAULT_GOLDEN_DIR = ROOT / "examples" / "golden"
+BENCHMARK_ROOT = Path(__file__).resolve().parents[1]
+SDIF_CORE_REPO = Path(os.environ.get("SDIF_CORE_REPO", BENCHMARK_ROOT.parent)).expanduser().resolve()
+DEFAULT_GOLDEN_DIR = SDIF_CORE_REPO / "examples" / "golden"
 DEFAULT_GITHUB_OPENAPI = DEFAULT_GOLDEN_DIR / "github.openapi" / "github.openapi.json"
 
 

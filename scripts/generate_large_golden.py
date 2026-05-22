@@ -14,11 +14,15 @@ from __future__ import annotations
 
 import argparse
 import json
+import os
 from pathlib import Path
 from typing import Any
 
 
 JsonObject = dict[str, Any]
+BENCHMARK_ROOT = Path(__file__).resolve().parents[1]
+SDIF_CORE_REPO = Path(os.environ.get("SDIF_CORE_REPO", BENCHMARK_ROOT.parent)).expanduser().resolve()
+DEFAULT_GOLDEN_DIR = SDIF_CORE_REPO / "examples" / "golden"
 
 
 def write_fixture(output_dir: Path, name: str, data: JsonObject) -> None:
@@ -468,7 +472,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument(
         "--output-dir",
         type=Path,
-        default=Path("examples/golden"),
+        default=DEFAULT_GOLDEN_DIR,
         help="Directory where generated golden fixtures will be written.",
     )
     parser.add_argument(
