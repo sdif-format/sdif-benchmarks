@@ -1,6 +1,6 @@
 # SDIF Benchmarks
 
-Evidence-first benchmarks measuring SDIF against JSON, YAML, XML, CSV Bundle, SDIF AI, and TOON from the perspective of AI and LLM developers. Every compared representation is derived from the same canonical JSON source under `examples/golden/`. Each run writes evidence to `benchmarks/tmp/<track>/` while running and promotes it to `benchmarks/results/<track>/` on success.
+Evidence-first benchmarks measuring SDIF against JSON, YAML, XML, CSV Bundle, SDIF AI, and TOON from the perspective of AI and LLM developers. Every compared representation is derived from the same canonical JSON source under `examples/golden/`. Each run writes evidence to `tmp/<track>/` while running and promotes it to `results/<track>/` on success.
 
 ## Quick Start
 
@@ -36,7 +36,7 @@ Measures byte and token reduction across shared semantic fixtures:
 4. Rank formats against JSON Compact as the stable baseline.
 5. Write Markdown, JSON, SDIF, SDIF AI, and HTML reports.
 
-Results: `benchmarks/results/token_efficiency/` — run with `make benchmark-token`.
+Results: `results/token_efficiency/` — run with `make benchmark-token`.
 
 ### Context Packing
 
@@ -45,19 +45,19 @@ Measures how many document copies of each format fit inside fixed token budgets 
 - **Fit rate**: % of corpus documents where at least one copy fits.
 - **Avg docs** / **Median docs**: mean and median copies per budget.
 
-Results: `benchmarks/results/context_packing/` — run with `make benchmark-packing`.
+Results: `results/context_packing/` — run with `make benchmark-packing`.
 
 ### Round-trip Fidelity
 
 Measures JSON→format→JSON preservation. Scores value fidelity, type fidelity, and structure fidelity (harmonic mean = overall fidelity). N/A for SDIF AI and TOON, which are projections, not full encodings.
 
-Results: `benchmarks/results/roundtrip_fidelity/` — run with `make benchmark-roundtrip`.
+Results: `results/roundtrip_fidelity/` — run with `make benchmark-roundtrip`.
 
 ### Delta Compactness (Mutation Sensitivity)
 
 Measures the token overhead of re-sending a mutated document vs the original. Applies a deterministic mutation to the first 10% of leaf values. Reports token delta, % overhead, and unified-diff line counts. This is a full-resend measurement — not a true SDIF delta protocol.
 
-Results: `benchmarks/results/delta_compactness/` — run with `make benchmark-delta`.
+Results: `results/delta_compactness/` — run with `make benchmark-delta`.
 
 ### Retrieval Accuracy
 
@@ -93,7 +93,7 @@ scripts/generate_large_golden.py
 Executable benchmark runners live in:
 
 ```text
-benchmarks/scripts/
+scripts/
 ```
 
 ## Result Model
@@ -101,8 +101,8 @@ benchmarks/scripts/
 Each benchmark run writes:
 
 ```text
-benchmarks/tmp/<track>/           # while running
-└── moved on success to benchmarks/results/<track>/
+tmp/<track>/           # while running
+└── moved on success to results/<track>/
     ├── comparison.log            # console output
     ├── comparison.md             # per-document detail
     ├── summary.md                # key findings
@@ -122,7 +122,7 @@ benchmarks/tmp/<track>/           # while running
             └── toon.toon         # when TOON is enabled
 ```
 
-`benchmarks/results/<track>/` is replaced only after a successful run. Failed runs leave `benchmarks/tmp/<track>/` for diagnosis without touching the last clean result.
+`results/<track>/` is replaced only after a successful run. Failed runs leave `tmp/<track>/` for diagnosis without touching the last clean result.
 
 ## Environment
 
@@ -167,9 +167,9 @@ benchmarks/
 
 ## Organization Contract
 
-- Executable benchmark runners belong in `benchmarks/scripts/`.
-- Reusable helpers belong in `benchmarks/src/` — code shared by two or more tracks.
-- Each track writes scratch output to `benchmarks/tmp/<track>/`; completed evidence goes to `benchmarks/results/<track>/`.
+- Executable benchmark runners belong in `scripts/`.
+- Reusable helpers belong in `src/` — code shared by two or more tracks.
+- Each track writes scratch output to `tmp/<track>/`; completed evidence goes to `results/<track>/`.
 - Canonical semantic sources belong in `examples/golden/`, unless `SDIF_BENCHMARK_GOLDEN_DIR` overrides.
 - Optional external tools (TOON, tiktoken) must degrade gracefully.
 - Claims must name the tokenizer and model coverage that produced them.

@@ -13,4 +13,4 @@ Reusable helpers shared across all benchmark tracks.
 
 `infra.py` adds `REPO_ROOT/src` to `sys.path` at import time so all scripts can `import sdif` without extra setup. Scripts that import `formats.py` get this automatically.
 
-Keep executable entrypoints in `benchmarks/scripts/`. Add shared code here only when two or more tracks need it.
+Keep executable entrypoints in `scripts/`. Add shared code here only when two or more tracks need it.

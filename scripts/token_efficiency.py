@@ -105,9 +105,11 @@ from xml.sax.saxutils import escape as xml_escape
 
 import yaml  # type: ignore[import-untyped]
 
-REPO_ROOT = Path(__file__).resolve().parents[2]
-sys.path.insert(0, str(REPO_ROOT / "src"))
 BENCHMARK_DIR = Path(__file__).resolve().parents[1]
+BENCHMARK_REPO_ROOT = BENCHMARK_DIR
+SDIF_CORE_REPO = Path(os.environ.get("SDIF_CORE_REPO", BENCHMARK_REPO_ROOT.parent)).expanduser().resolve()
+REPO_ROOT = SDIF_CORE_REPO
+sys.path.insert(0, str(SDIF_CORE_REPO / "src"))
 sys.path.insert(0, str(BENCHMARK_DIR / "src"))
 DASHBOARD_TEMPLATE_PATH = BENCHMARK_DIR / "src" / "dashboard_template.html"
 
@@ -261,7 +263,7 @@ def benchmark_output_dir() -> Path:
     if configured:
         return Path(configured).expanduser().resolve()
 
-    return REPO_ROOT / "benchmarks"
+    return BENCHMARK_REPO_ROOT
 
 
 def benchmark_golden_dir() -> Path:
@@ -274,10 +276,12 @@ def benchmark_golden_dir() -> Path:
 
 
 def display_path(path: Path) -> str:
-    try:
-        return str(path.relative_to(REPO_ROOT))
-    except ValueError:
-        return str(path.absolute())
+    for root in (BENCHMARK_REPO_ROOT, SDIF_CORE_REPO):
+        try:
+            return str(path.relative_to(root))
+        except ValueError:
+            pass
+    return str(path.absolute())
 
 
 def benchmark_result_dir(base_dir: Path | None = None) -> Path:
@@ -704,7 +708,7 @@ def npm_global_root() -> str | None:
 def tokenx_resolve_dirs() -> list[str]:
     dirs: list[str] = []
 
-    local_node_modules = REPO_ROOT / "node_modules"
+    local_node_modules = BENCHMARK_REPO_ROOT / "node_modules"
     if local_node_modules.exists():
         dirs.append(str(local_node_modules))
 
@@ -775,7 +779,7 @@ def get_tokenx_command() -> tuple[list[str], dict[str, str]] | None:
                 stdout=subprocess.PIPE,
                 stderr=subprocess.PIPE,
                 check=False,
-                cwd=REPO_ROOT,
+                cwd=BENCHMARK_REPO_ROOT,
                 env=env,
                 timeout=30,
             )
@@ -811,7 +815,7 @@ def count_tokenx(text: str) -> int | None:
             stdout=subprocess.PIPE,
             stderr=subprocess.PIPE,
             check=False,
-            cwd=REPO_ROOT,
+            cwd=BENCHMARK_REPO_ROOT,
             env=env,
             timeout=30,
         )
@@ -2307,7 +2311,7 @@ def run_benchmark(
 
 
 def main() -> None:
-    env_file_loaded = load_env_file(REPO_ROOT / ".env")
+    env_file_loaded = load_env_file(BENCHMARK_REPO_ROOT / ".env")
 
     run_dir = create_benchmark_run_dir()
     final_dir = benchmark_result_dir()

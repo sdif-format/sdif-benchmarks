@@ -1,0 +1,29 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout benchmarks
+        uses: actions/checkout@v4
+        with:
+          path: sdif-benchmarks
+      - name: Checkout SDIF core
+        uses: actions/checkout@v4
+        with:
+          repository: alessbarb/sdif
+          path: sdif
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install core and benchmark dependencies
+        run: |
+          python -m pip install -e sdif
+          python -m pip install -e 'sdif-benchmarks[dev]'
+      - name: Test
+        working-directory: sdif-benchmarks
+        run: make test SDIF_CORE_REPO=../sdif

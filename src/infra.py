@@ -10,11 +10,13 @@ from pathlib import Path
 from typing import TextIO
 
 BENCHMARK_DIR = Path(__file__).resolve().parents[1]
-REPO_ROOT = BENCHMARK_DIR.parent
+BENCHMARK_REPO_ROOT = BENCHMARK_DIR
+SDIF_CORE_REPO = Path(os.environ.get("SDIF_CORE_REPO", BENCHMARK_REPO_ROOT.parent)).expanduser().resolve()
+REPO_ROOT = SDIF_CORE_REPO
 
 # Make the SDIF library importable for all benchmark scripts that import this module.
-if str(REPO_ROOT / "src") not in sys.path:
-    sys.path.insert(0, str(REPO_ROOT / "src"))
+if str(SDIF_CORE_REPO / "src") not in sys.path:
+    sys.path.insert(0, str(SDIF_CORE_REPO / "src"))
 
 CORPUS_DIR_NAME = "corpus"
 DASHBOARD_FILE_NAME = "dashboard.html"
@@ -51,7 +53,7 @@ def benchmark_output_dir() -> Path:
     configured = os.environ.get("SDIF_BENCHMARK_OUTPUT_DIR")
     if configured:
         return Path(configured).expanduser().resolve()
-    return REPO_ROOT / "benchmarks"
+    return BENCHMARK_REPO_ROOT
 
 
 def benchmark_golden_dir() -> Path:
@@ -62,10 +64,12 @@ def benchmark_golden_dir() -> Path:
 
 
 def display_path(path: Path) -> str:
-    try:
-        return str(path.relative_to(REPO_ROOT))
-    except ValueError:
-        return str(path.absolute())
+    for root in (BENCHMARK_REPO_ROOT, SDIF_CORE_REPO):
+        try:
+            return str(path.relative_to(root))
+        except ValueError:
+            pass
+    return str(path.absolute())
 
 
 def benchmark_result_dir(track_name: str, base_dir: Path | None = None) -> Path:

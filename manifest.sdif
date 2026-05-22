@@ -5,10 +5,10 @@ version 1.0.0
 summary "Benchmark registry for token efficiency, semantic quality, and future retrieval accuracy evidence."
 
 tracks[id,status,command,output,description]:
-  token-efficiency	active	"make benchmark-token"	benchmarks/results/token_efficiency/summary.md	"Measures bytes and tokens across canonical JSON-derived representations."
+  token-efficiency	active	"make benchmark-token"	results/token_efficiency/summary.md	"Measures bytes and tokens across canonical JSON-derived representations."
   semantic-quality	active	"make benchmark-quality"	docs/semantic-quality.md	"Documents and checks semantic axes beyond token count."
   ai-speed-profile	active	docs/ai-speed-profile.md	docs/ai-speed-profile.md	"Documents LLM latency rules for SDIF AI locality, summary-first prompts, caching, deltas, and output contracts."
-  retrieval-accuracy	planned	"make benchmark-accuracy"	benchmarks/results/retrieval_accuracy/summary.md	"Future model comprehension benchmark with deterministic answer validation."
+  retrieval-accuracy	planned	"make benchmark-accuracy"	results/retrieval_accuracy/summary.md	"Future model comprehension benchmark with deterministic answer validation."
 
 formats[id,status,role,notes]:
   json-compact	active	baseline	"Stable baseline for primary ratios."
@@ -26,10 +26,10 @@ corpus_profiles[id,status,source,description]:
   generated-large	active	scripts/generate_large_golden.py	"Deterministic large fixture generator for scale and repetition analysis."
 
 outputs[id,status,path,description]:
-  token-efficiency-summary	active	benchmarks/results/token_efficiency/summary.md	"Human-readable token-efficiency result summary."
-  token-efficiency-json	active	benchmarks/results/token_efficiency/comparison.json	"Machine-readable token-efficiency comparison evidence."
-  token-efficiency-sdif	active	benchmarks/results/token_efficiency/comparison.sdif	"SDIF-encoded benchmark evidence."
-  token-efficiency-ai	active	benchmarks/results/token_efficiency/comparison.sdif.ai	"Compact AI-facing benchmark evidence."
+  token-efficiency-summary	active	results/token_efficiency/summary.md	"Human-readable token-efficiency result summary."
+  token-efficiency-json	active	results/token_efficiency/comparison.json	"Machine-readable token-efficiency comparison evidence."
+  token-efficiency-sdif	active	results/token_efficiency/comparison.sdif	"SDIF-encoded benchmark evidence."
+  token-efficiency-ai	active	results/token_efficiency/comparison.sdif.ai	"Compact AI-facing benchmark evidence."
 
 rel:
   token-efficiency derives_from canonical-golden
