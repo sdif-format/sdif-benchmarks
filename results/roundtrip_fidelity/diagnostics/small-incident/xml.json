@@ -1,0 +1,133 @@
+{
+  "missing_paths": [],
+  "extra_paths": [],
+  "value_mismatches": [
+    {
+      "path": "generated",
+      "expected": true,
+      "actual": "true"
+    }
+  ],
+  "type_mismatches": [
+    {
+      "path": "events[0].minute",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "events[10].minute",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "events[11].minute",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "events[12].minute",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "events[13].minute",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "events[14].minute",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "events[15].minute",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "events[16].minute",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "events[17].minute",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "events[18].minute",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "events[19].minute",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "events[1].minute",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "events[20].minute",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "events[21].minute",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "events[22].minute",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "events[2].minute",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "events[3].minute",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "events[4].minute",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "events[5].minute",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "events[6].minute",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "events[7].minute",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "events[8].minute",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "events[9].minute",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "generated",
+      "expected_type": "bool",
+      "actual_type": "str"
+    }
+  ]
+}

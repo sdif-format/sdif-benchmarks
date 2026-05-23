@@ -1,0 +1,4493 @@
+{
+  "missing_paths": [],
+  "extra_paths": [],
+  "value_mismatches": [
+    {
+      "path": "generated",
+      "expected": true,
+      "actual": "true"
+    }
+  ],
+  "type_mismatches": [
+    {
+      "path": "generated",
+      "expected_type": "bool",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[0].available",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[0].reserved",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[100].available",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[100].reserved",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[101].available",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[101].reserved",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[102].available",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[102].reserved",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[103].available",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[103].reserved",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[104].available",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[104].reserved",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[105].available",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[105].reserved",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[106].available",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[106].reserved",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[107].available",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[107].reserved",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[108].available",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[108].reserved",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[109].available",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[109].reserved",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[10].available",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[10].reserved",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[110].available",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[110].reserved",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[111].available",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[111].reserved",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[112].available",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[112].reserved",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[113].available",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[113].reserved",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[114].available",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[114].reserved",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[115].available",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[115].reserved",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[116].available",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[116].reserved",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[117].available",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[117].reserved",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[118].available",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[118].reserved",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[119].available",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[119].reserved",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[11].available",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[11].reserved",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[120].available",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[120].reserved",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[121].available",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[121].reserved",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[122].available",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[122].reserved",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[123].available",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[123].reserved",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[124].available",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[124].reserved",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[125].available",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[125].reserved",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[126].available",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[126].reserved",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[127].available",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[127].reserved",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[128].available",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[128].reserved",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[129].available",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[129].reserved",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[12].available",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[12].reserved",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[130].available",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[130].reserved",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[131].available",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[131].reserved",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[132].available",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[132].reserved",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[133].available",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[133].reserved",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[134].available",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[134].reserved",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[135].available",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[135].reserved",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[136].available",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[136].reserved",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[137].available",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[137].reserved",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[138].available",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[138].reserved",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[139].available",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[139].reserved",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[13].available",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[13].reserved",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[140].available",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[140].reserved",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[141].available",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[141].reserved",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[142].available",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[142].reserved",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[143].available",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[143].reserved",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[144].available",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[144].reserved",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[145].available",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[145].reserved",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[146].available",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[146].reserved",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[147].available",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[147].reserved",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[148].available",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[148].reserved",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[149].available",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[149].reserved",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[14].available",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[14].reserved",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[150].available",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[150].reserved",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[151].available",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[151].reserved",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[152].available",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[152].reserved",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[153].available",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[153].reserved",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[154].available",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[154].reserved",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[155].available",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[155].reserved",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[156].available",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[156].reserved",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[157].available",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[157].reserved",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[158].available",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[158].reserved",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[159].available",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[159].reserved",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[15].available",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[15].reserved",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[160].available",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[160].reserved",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[161].available",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[161].reserved",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[162].available",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[162].reserved",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[163].available",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[163].reserved",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[164].available",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[164].reserved",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[165].available",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[165].reserved",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[166].available",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[166].reserved",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[167].available",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[167].reserved",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[168].available",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[168].reserved",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[169].available",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[169].reserved",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[16].available",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[16].reserved",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[170].available",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[170].reserved",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[171].available",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[171].reserved",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[172].available",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[172].reserved",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[173].available",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[173].reserved",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[174].available",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[174].reserved",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[175].available",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[175].reserved",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[176].available",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[176].reserved",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[177].available",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[177].reserved",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[178].available",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[178].reserved",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[17].available",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[17].reserved",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[18].available",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[18].reserved",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[19].available",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[19].reserved",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[1].available",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[1].reserved",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[20].available",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[20].reserved",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[21].available",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[21].reserved",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[22].available",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[22].reserved",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[23].available",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[23].reserved",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[24].available",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[24].reserved",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[25].available",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[25].reserved",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[26].available",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[26].reserved",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[27].available",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[27].reserved",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[28].available",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[28].reserved",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[29].available",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[29].reserved",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[2].available",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[2].reserved",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[30].available",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[30].reserved",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[31].available",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[31].reserved",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[32].available",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[32].reserved",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[33].available",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[33].reserved",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[34].available",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[34].reserved",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[35].available",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[35].reserved",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[36].available",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[36].reserved",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[37].available",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[37].reserved",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[38].available",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[38].reserved",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[39].available",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[39].reserved",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[3].available",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[3].reserved",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[40].available",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[40].reserved",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[41].available",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[41].reserved",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[42].available",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[42].reserved",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[43].available",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[43].reserved",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[44].available",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[44].reserved",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[45].available",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[45].reserved",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[46].available",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[46].reserved",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[47].available",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[47].reserved",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[48].available",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[48].reserved",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[49].available",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[49].reserved",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[4].available",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[4].reserved",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[50].available",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[50].reserved",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[51].available",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[51].reserved",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[52].available",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[52].reserved",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[53].available",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[53].reserved",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[54].available",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[54].reserved",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[55].available",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[55].reserved",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[56].available",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[56].reserved",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[57].available",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[57].reserved",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[58].available",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[58].reserved",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[59].available",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[59].reserved",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[5].available",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[5].reserved",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[60].available",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[60].reserved",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[61].available",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[61].reserved",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[62].available",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[62].reserved",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[63].available",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[63].reserved",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[64].available",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[64].reserved",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[65].available",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[65].reserved",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[66].available",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[66].reserved",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[67].available",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[67].reserved",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[68].available",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[68].reserved",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[69].available",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[69].reserved",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[6].available",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[6].reserved",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[70].available",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[70].reserved",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[71].available",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[71].reserved",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[72].available",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[72].reserved",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[73].available",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[73].reserved",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[74].available",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[74].reserved",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[75].available",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[75].reserved",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[76].available",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[76].reserved",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[77].available",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[77].reserved",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[78].available",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[78].reserved",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[79].available",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[79].reserved",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[7].available",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[7].reserved",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[80].available",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[80].reserved",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[81].available",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[81].reserved",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[82].available",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[82].reserved",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[83].available",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[83].reserved",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[84].available",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[84].reserved",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[85].available",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[85].reserved",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[86].available",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[86].reserved",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[87].available",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[87].reserved",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[88].available",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[88].reserved",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[89].available",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[89].reserved",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[8].available",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[8].reserved",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[90].available",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[90].reserved",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[91].available",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[91].reserved",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[92].available",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[92].reserved",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[93].available",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[93].reserved",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[94].available",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[94].reserved",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[95].available",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[95].reserved",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[96].available",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[96].reserved",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[97].available",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[97].reserved",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[98].available",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[98].reserved",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[99].available",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[99].reserved",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[9].available",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "inventory[9].reserved",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[0].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[100].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[101].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[102].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[103].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[104].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[105].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[106].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[107].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[108].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[109].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[10].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[110].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[111].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[112].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[113].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[114].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[115].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[116].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[117].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[118].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[119].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[11].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[120].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[121].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[122].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[123].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[124].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[125].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[126].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[127].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[128].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[129].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[12].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[130].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[131].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[132].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[133].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[134].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[135].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[136].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[137].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[138].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[139].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[13].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[140].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[141].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[142].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[143].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[144].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[145].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[146].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[147].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[148].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[149].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[14].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[150].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[151].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[152].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[153].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[154].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[155].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[156].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[157].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[158].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[159].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[15].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[160].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[161].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[162].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[163].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[164].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[165].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[166].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[167].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[168].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[169].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[16].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[170].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[171].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[172].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[173].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[174].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[175].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[176].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[177].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[178].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[179].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[17].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[180].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[181].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[182].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[183].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[184].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[185].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[186].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[187].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[188].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[189].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[18].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[190].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[191].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[192].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[193].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[194].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[195].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[196].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[197].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[198].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[199].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[19].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[1].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[200].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[201].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[202].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[203].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[204].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[205].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[206].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[207].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[208].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[209].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[20].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[210].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[211].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[212].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[213].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[214].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[215].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[216].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[217].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[218].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[219].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[21].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[220].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[221].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[222].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[223].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[224].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[225].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[226].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[227].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[228].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[229].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[22].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[230].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[231].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[232].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[233].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[234].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[235].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[236].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[237].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[238].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[239].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[23].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[240].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[241].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[242].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[243].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[244].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[245].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[246].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[247].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[248].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[249].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[24].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[250].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[251].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[252].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[253].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[254].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[255].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[256].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[257].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[258].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[259].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[25].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[260].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[261].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[262].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[263].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[264].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[265].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[266].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[267].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[268].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[269].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[26].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[270].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[271].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[272].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[273].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[274].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[275].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[276].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[277].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[278].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[279].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[27].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[280].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[281].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[282].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[283].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[284].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[285].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[286].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[287].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[288].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[289].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[28].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[290].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[291].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[292].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[293].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[294].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[295].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[296].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[297].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[298].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[299].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[29].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[2].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[300].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[301].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[302].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[303].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[304].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[305].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[306].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[307].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[308].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[309].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[30].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[310].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[311].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[312].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[313].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[314].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[315].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[316].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[317].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[318].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[319].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[31].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[320].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[321].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[322].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[323].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[324].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[325].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[326].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[327].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[328].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[329].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[32].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[330].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[331].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[332].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[333].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[334].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[335].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[336].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[337].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[338].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[339].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[33].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[340].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[341].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[342].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[343].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[344].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[345].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[346].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[347].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[348].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[349].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[34].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[350].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[351].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[352].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[353].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[354].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[355].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[356].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[357].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[358].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[359].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[35].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[360].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[361].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[362].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[363].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[364].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[365].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[366].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[367].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[368].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[369].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[36].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[370].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[371].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[372].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[373].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[374].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[375].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[376].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[377].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[378].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[379].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[37].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[380].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[381].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[382].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[383].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[384].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[385].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[386].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[387].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[388].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[389].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[38].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[390].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[391].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[392].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[393].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[394].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[395].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[396].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[397].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[398].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[399].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[39].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[3].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[400].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[401].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[402].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[403].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[404].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[405].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[406].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[407].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[408].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[409].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[40].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[410].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[411].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[412].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[413].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[414].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[415].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[416].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[417].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[418].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[419].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[41].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[420].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[421].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[422].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[423].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[424].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[425].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[426].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[427].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[428].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[429].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[42].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[430].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[431].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[432].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[433].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[434].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[435].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[436].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[437].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[438].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[439].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[43].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[440].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[441].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[442].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[443].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[444].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[445].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[446].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[447].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[448].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[449].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[44].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[450].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[451].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[452].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[453].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[454].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[455].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[456].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[457].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[458].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[459].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[45].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[460].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[461].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[462].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[463].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[464].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[465].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[466].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[467].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[468].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[469].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[46].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[470].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[471].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[472].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[473].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[474].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[475].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[476].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[477].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[478].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[479].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[47].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[480].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[481].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[482].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[483].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[484].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[485].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[486].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[487].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[488].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[489].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[48].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[490].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[491].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[492].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[493].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[494].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[495].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[496].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[497].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[498].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[499].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[49].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[4].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[500].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[501].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[502].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[503].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[504].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[505].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[506].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[507].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[508].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[509].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[50].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[510].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[511].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[512].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[513].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[514].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[515].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[516].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[517].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[518].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[519].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[51].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[520].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[521].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[522].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[523].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[524].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[525].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[526].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[527].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[528].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[529].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[52].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[530].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[531].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[532].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[533].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[534].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[535].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[536].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[53].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[54].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[55].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[56].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[57].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[58].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[59].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[5].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[60].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[61].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[62].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[63].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[64].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[65].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[66].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[67].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[68].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[69].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[6].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[70].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[71].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[72].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[73].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[74].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[75].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[76].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[77].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[78].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[79].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[7].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[80].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[81].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[82].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[83].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[84].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[85].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[86].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[87].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[88].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[89].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[8].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[90].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[91].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[92].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[93].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[94].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[95].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[96].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[97].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[98].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[99].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "prices[9].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    }
+  ]
+}

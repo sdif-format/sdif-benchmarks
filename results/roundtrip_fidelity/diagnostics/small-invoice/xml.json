@@ -1,0 +1,198 @@
+{
+  "missing_paths": [],
+  "extra_paths": [],
+  "value_mismatches": [
+    {
+      "path": "generated",
+      "expected": true,
+      "actual": "true"
+    }
+  ],
+  "type_mismatches": [
+    {
+      "path": "generated",
+      "expected_type": "bool",
+      "actual_type": "str"
+    },
+    {
+      "path": "lines[0].quantity",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "lines[0].unit_price",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "lines[10].quantity",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "lines[10].unit_price",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "lines[11].quantity",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "lines[11].unit_price",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "lines[12].quantity",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "lines[12].unit_price",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "lines[13].quantity",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "lines[13].unit_price",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "lines[14].quantity",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "lines[14].unit_price",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "lines[15].quantity",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "lines[15].unit_price",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "lines[16].quantity",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "lines[16].unit_price",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "lines[1].quantity",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "lines[1].unit_price",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "lines[2].quantity",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "lines[2].unit_price",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "lines[3].quantity",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "lines[3].unit_price",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "lines[4].quantity",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "lines[4].unit_price",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "lines[5].quantity",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "lines[5].unit_price",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "lines[6].quantity",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "lines[6].unit_price",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "lines[7].quantity",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "lines[7].unit_price",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "lines[8].quantity",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "lines[8].unit_price",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "lines[9].quantity",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "lines[9].unit_price",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "payments[0].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "payments[1].amount",
+      "expected_type": "int",
+      "actual_type": "str"
+    }
+  ]
+}

@@ -1,0 +1,728 @@
+{
+  "missing_paths": [],
+  "extra_paths": [],
+  "value_mismatches": [],
+  "type_mismatches": [
+    {
+      "path": "nodes[1009].weight",
+      "expected_type": "float",
+      "actual_type": "int"
+    },
+    {
+      "path": "nodes[1019].weight",
+      "expected_type": "float",
+      "actual_type": "int"
+    },
+    {
+      "path": "nodes[1029].weight",
+      "expected_type": "float",
+      "actual_type": "int"
+    },
+    {
+      "path": "nodes[1039].weight",
+      "expected_type": "float",
+      "actual_type": "int"
+    },
+    {
+      "path": "nodes[1049].weight",
+      "expected_type": "float",
+      "actual_type": "int"
+    },
+    {
+      "path": "nodes[1059].weight",
+      "expected_type": "float",
+      "actual_type": "int"
+    },
+    {
+      "path": "nodes[1069].weight",
+      "expected_type": "float",
+      "actual_type": "int"
+    },
+    {
+      "path": "nodes[1079].weight",
+      "expected_type": "float",
+      "actual_type": "int"
+    },
+    {
+      "path": "nodes[1089].weight",
+      "expected_type": "float",
+      "actual_type": "int"
+    },
+    {
+      "path": "nodes[1099].weight",
+      "expected_type": "float",
+      "actual_type": "int"
+    },
+    {
+      "path": "nodes[109].weight",
+      "expected_type": "float",
+      "actual_type": "int"
+    },
+    {
+      "path": "nodes[1109].weight",
+      "expected_type": "float",
+      "actual_type": "int"
+    },
+    {
+      "path": "nodes[1119].weight",
+      "expected_type": "float",
+      "actual_type": "int"
+    },
+    {
+      "path": "nodes[1129].weight",
+      "expected_type": "float",
+      "actual_type": "int"
+    },
+    {
+      "path": "nodes[1139].weight",
+      "expected_type": "float",
+      "actual_type": "int"
+    },
+    {
+      "path": "nodes[1149].weight",
+      "expected_type": "float",
+      "actual_type": "int"
+    },
+    {
+      "path": "nodes[1159].weight",
+      "expected_type": "float",
+      "actual_type": "int"
+    },
+    {
+      "path": "nodes[1169].weight",
+      "expected_type": "float",
+      "actual_type": "int"
+    },
+    {
+      "path": "nodes[1179].weight",
+      "expected_type": "float",
+      "actual_type": "int"
+    },
+    {
+      "path": "nodes[1189].weight",
+      "expected_type": "float",
+      "actual_type": "int"
+    },
+    {
+      "path": "nodes[1199].weight",
+      "expected_type": "float",
+      "actual_type": "int"
+    },
+    {
+      "path": "nodes[119].weight",
+      "expected_type": "float",
+      "actual_type": "int"
+    },
+    {
+      "path": "nodes[1209].weight",
+      "expected_type": "float",
+      "actual_type": "int"
+    },
+    {
+      "path": "nodes[1219].weight",
+      "expected_type": "float",
+      "actual_type": "int"
+    },
+    {
+      "path": "nodes[1229].weight",
+      "expected_type": "float",
+      "actual_type": "int"
+    },
+    {
+      "path": "nodes[1239].weight",
+      "expected_type": "float",
+      "actual_type": "int"
+    },
+    {
+      "path": "nodes[1249].weight",
+      "expected_type": "float",
+      "actual_type": "int"
+    },
+    {
+      "path": "nodes[1259].weight",
+      "expected_type": "float",
+      "actual_type": "int"
+    },
+    {
+      "path": "nodes[1269].weight",
+      "expected_type": "float",
+      "actual_type": "int"
+    },
+    {
+      "path": "nodes[1279].weight",
+      "expected_type": "float",
+      "actual_type": "int"
+    },
+    {
+      "path": "nodes[1289].weight",
+      "expected_type": "float",
+      "actual_type": "int"
+    },
+    {
+      "path": "nodes[1299].weight",
+      "expected_type": "float",
+      "actual_type": "int"
+    },
+    {
+      "path": "nodes[129].weight",
+      "expected_type": "float",
+      "actual_type": "int"
+    },
+    {
+      "path": "nodes[1309].weight",
+      "expected_type": "float",
+      "actual_type": "int"
+    },
+    {
+      "path": "nodes[1319].weight",
+      "expected_type": "float",
+      "actual_type": "int"
+    },
+    {
+      "path": "nodes[1329].weight",
+      "expected_type": "float",
+      "actual_type": "int"
+    },
+    {
+      "path": "nodes[1339].weight",
+      "expected_type": "float",
+      "actual_type": "int"
+    },
+    {
+      "path": "nodes[1349].weight",
+      "expected_type": "float",
+      "actual_type": "int"
+    },
+    {
+      "path": "nodes[1359].weight",
+      "expected_type": "float",
+      "actual_type": "int"
+    },
+    {
+      "path": "nodes[1369].weight",
+      "expected_type": "float",
+      "actual_type": "int"
+    },
+    {
+      "path": "nodes[1379].weight",
+      "expected_type": "float",
+      "actual_type": "int"
+    },
+    {
+      "path": "nodes[1389].weight",
+      "expected_type": "float",
+      "actual_type": "int"
+    },
+    {
+      "path": "nodes[1399].weight",
+      "expected_type": "float",
+      "actual_type": "int"
+    },
+    {
+      "path": "nodes[139].weight",
+      "expected_type": "float",
+      "actual_type": "int"
+    },
+    {
+      "path": "nodes[1409].weight",
+      "expected_type": "float",
+      "actual_type": "int"
+    },
+    {
+      "path": "nodes[1419].weight",
+      "expected_type": "float",
+      "actual_type": "int"
+    },
+    {
+      "path": "nodes[1429].weight",
+      "expected_type": "float",
+      "actual_type": "int"
+    },
+    {
+      "path": "nodes[1439].weight",
+      "expected_type": "float",
+      "actual_type": "int"
+    },
+    {
+      "path": "nodes[149].weight",
+      "expected_type": "float",
+      "actual_type": "int"
+    },
+    {
+      "path": "nodes[159].weight",
+      "expected_type": "float",
+      "actual_type": "int"
+    },
+    {
+      "path": "nodes[169].weight",
+      "expected_type": "float",
+      "actual_type": "int"
+    },
+    {
+      "path": "nodes[179].weight",
+      "expected_type": "float",
+      "actual_type": "int"
+    },
+    {
+      "path": "nodes[189].weight",
+      "expected_type": "float",
+      "actual_type": "int"
+    },
+    {
+      "path": "nodes[199].weight",
+      "expected_type": "float",
+      "actual_type": "int"
+    },
+    {
+      "path": "nodes[19].weight",
+      "expected_type": "float",
+      "actual_type": "int"
+    },
+    {
+      "path": "nodes[209].weight",
+      "expected_type": "float",
+      "actual_type": "int"
+    },
+    {
+      "path": "nodes[219].weight",
+      "expected_type": "float",
+      "actual_type": "int"
+    },
+    {
+      "path": "nodes[229].weight",
+      "expected_type": "float",
+      "actual_type": "int"
+    },
+    {
+      "path": "nodes[239].weight",
+      "expected_type": "float",
+      "actual_type": "int"
+    },
+    {
+      "path": "nodes[249].weight",
+      "expected_type": "float",
+      "actual_type": "int"
+    },
+    {
+      "path": "nodes[259].weight",
+      "expected_type": "float",
+      "actual_type": "int"
+    },
+    {
+      "path": "nodes[269].weight",
+      "expected_type": "float",
+      "actual_type": "int"
+    },
+    {
+      "path": "nodes[279].weight",
+      "expected_type": "float",
+      "actual_type": "int"
+    },
+    {
+      "path": "nodes[289].weight",
+      "expected_type": "float",
+      "actual_type": "int"
+    },
+    {
+      "path": "nodes[299].weight",
+      "expected_type": "float",
+      "actual_type": "int"
+    },
+    {
+      "path": "nodes[29].weight",
+      "expected_type": "float",
+      "actual_type": "int"
+    },
+    {
+      "path": "nodes[309].weight",
+      "expected_type": "float",
+      "actual_type": "int"
+    },
+    {
+      "path": "nodes[319].weight",
+      "expected_type": "float",
+      "actual_type": "int"
+    },
+    {
+      "path": "nodes[329].weight",
+      "expected_type": "float",
+      "actual_type": "int"
+    },
+    {
+      "path": "nodes[339].weight",
+      "expected_type": "float",
+      "actual_type": "int"
+    },
+    {
+      "path": "nodes[349].weight",
+      "expected_type": "float",
+      "actual_type": "int"
+    },
+    {
+      "path": "nodes[359].weight",
+      "expected_type": "float",
+      "actual_type": "int"
+    },
+    {
+      "path": "nodes[369].weight",
+      "expected_type": "float",
+      "actual_type": "int"
+    },
+    {
+      "path": "nodes[379].weight",
+      "expected_type": "float",
+      "actual_type": "int"
+    },
+    {
+      "path": "nodes[389].weight",
+      "expected_type": "float",
+      "actual_type": "int"
+    },
+    {
+      "path": "nodes[399].weight",
+      "expected_type": "float",
+      "actual_type": "int"
+    },
+    {
+      "path": "nodes[39].weight",
+      "expected_type": "float",
+      "actual_type": "int"
+    },
+    {
+      "path": "nodes[409].weight",
+      "expected_type": "float",
+      "actual_type": "int"
+    },
+    {
+      "path": "nodes[419].weight",
+      "expected_type": "float",
+      "actual_type": "int"
+    },
+    {
+      "path": "nodes[429].weight",
+      "expected_type": "float",
+      "actual_type": "int"
+    },
+    {
+      "path": "nodes[439].weight",
+      "expected_type": "float",
+      "actual_type": "int"
+    },
+    {
+      "path": "nodes[449].weight",
+      "expected_type": "float",
+      "actual_type": "int"
+    },
+    {
+      "path": "nodes[459].weight",
+      "expected_type": "float",
+      "actual_type": "int"
+    },
+    {
+      "path": "nodes[469].weight",
+      "expected_type": "float",
+      "actual_type": "int"
+    },
+    {
+      "path": "nodes[479].weight",
+      "expected_type": "float",
+      "actual_type": "int"
+    },
+    {
+      "path": "nodes[489].weight",
+      "expected_type": "float",
+      "actual_type": "int"
+    },
+    {
+      "path": "nodes[499].weight",
+      "expected_type": "float",
+      "actual_type": "int"
+    },
+    {
+      "path": "nodes[49].weight",
+      "expected_type": "float",
+      "actual_type": "int"
+    },
+    {
+      "path": "nodes[509].weight",
+      "expected_type": "float",
+      "actual_type": "int"
+    },
+    {
+      "path": "nodes[519].weight",
+      "expected_type": "float",
+      "actual_type": "int"
+    },
+    {
+      "path": "nodes[529].weight",
+      "expected_type": "float",
+      "actual_type": "int"
+    },
+    {
+      "path": "nodes[539].weight",
+      "expected_type": "float",
+      "actual_type": "int"
+    },
+    {
+      "path": "nodes[549].weight",
+      "expected_type": "float",
+      "actual_type": "int"
+    },
+    {
+      "path": "nodes[559].weight",
+      "expected_type": "float",
+      "actual_type": "int"
+    },
+    {
+      "path": "nodes[569].weight",
+      "expected_type": "float",
+      "actual_type": "int"
+    },
+    {
+      "path": "nodes[579].weight",
+      "expected_type": "float",
+      "actual_type": "int"
+    },
+    {
+      "path": "nodes[589].weight",
+      "expected_type": "float",
+      "actual_type": "int"
+    },
+    {
+      "path": "nodes[599].weight",
+      "expected_type": "float",
+      "actual_type": "int"
+    },
+    {
+      "path": "nodes[59].weight",
+      "expected_type": "float",
+      "actual_type": "int"
+    },
+    {
+      "path": "nodes[609].weight",
+      "expected_type": "float",
+      "actual_type": "int"
+    },
+    {
+      "path": "nodes[619].weight",
+      "expected_type": "float",
+      "actual_type": "int"
+    },
+    {
+      "path": "nodes[629].weight",
+      "expected_type": "float",
+      "actual_type": "int"
+    },
+    {
+      "path": "nodes[639].weight",
+      "expected_type": "float",
+      "actual_type": "int"
+    },
+    {
+      "path": "nodes[649].weight",
+      "expected_type": "float",
+      "actual_type": "int"
+    },
+    {
+      "path": "nodes[659].weight",
+      "expected_type": "float",
+      "actual_type": "int"
+    },
+    {
+      "path": "nodes[669].weight",
+      "expected_type": "float",
+      "actual_type": "int"
+    },
+    {
+      "path": "nodes[679].weight",
+      "expected_type": "float",
+      "actual_type": "int"
+    },
+    {
+      "path": "nodes[689].weight",
+      "expected_type": "float",
+      "actual_type": "int"
+    },
+    {
+      "path": "nodes[699].weight",
+      "expected_type": "float",
+      "actual_type": "int"
+    },
+    {
+      "path": "nodes[69].weight",
+      "expected_type": "float",
+      "actual_type": "int"
+    },
+    {
+      "path": "nodes[709].weight",
+      "expected_type": "float",
+      "actual_type": "int"
+    },
+    {
+      "path": "nodes[719].weight",
+      "expected_type": "float",
+      "actual_type": "int"
+    },
+    {
+      "path": "nodes[729].weight",
+      "expected_type": "float",
+      "actual_type": "int"
+    },
+    {
+      "path": "nodes[739].weight",
+      "expected_type": "float",
+      "actual_type": "int"
+    },
+    {
+      "path": "nodes[749].weight",
+      "expected_type": "float",
+      "actual_type": "int"
+    },
+    {
+      "path": "nodes[759].weight",
+      "expected_type": "float",
+      "actual_type": "int"
+    },
+    {
+      "path": "nodes[769].weight",
+      "expected_type": "float",
+      "actual_type": "int"
+    },
+    {
+      "path": "nodes[779].weight",
+      "expected_type": "float",
+      "actual_type": "int"
+    },
+    {
+      "path": "nodes[789].weight",
+      "expected_type": "float",
+      "actual_type": "int"
+    },
+    {
+      "path": "nodes[799].weight",
+      "expected_type": "float",
+      "actual_type": "int"
+    },
+    {
+      "path": "nodes[79].weight",
+      "expected_type": "float",
+      "actual_type": "int"
+    },
+    {
+      "path": "nodes[809].weight",
+      "expected_type": "float",
+      "actual_type": "int"
+    },
+    {
+      "path": "nodes[819].weight",
+      "expected_type": "float",
+      "actual_type": "int"
+    },
+    {
+      "path": "nodes[829].weight",
+      "expected_type": "float",
+      "actual_type": "int"
+    },
+    {
+      "path": "nodes[839].weight",
+      "expected_type": "float",
+      "actual_type": "int"
+    },
+    {
+      "path": "nodes[849].weight",
+      "expected_type": "float",
+      "actual_type": "int"
+    },
+    {
+      "path": "nodes[859].weight",
+      "expected_type": "float",
+      "actual_type": "int"
+    },
+    {
+      "path": "nodes[869].weight",
+      "expected_type": "float",
+      "actual_type": "int"
+    },
+    {
+      "path": "nodes[879].weight",
+      "expected_type": "float",
+      "actual_type": "int"
+    },
+    {
+      "path": "nodes[889].weight",
+      "expected_type": "float",
+      "actual_type": "int"
+    },
+    {
+      "path": "nodes[899].weight",
+      "expected_type": "float",
+      "actual_type": "int"
+    },
+    {
+      "path": "nodes[89].weight",
+      "expected_type": "float",
+      "actual_type": "int"
+    },
+    {
+      "path": "nodes[909].weight",
+      "expected_type": "float",
+      "actual_type": "int"
+    },
+    {
+      "path": "nodes[919].weight",
+      "expected_type": "float",
+      "actual_type": "int"
+    },
+    {
+      "path": "nodes[929].weight",
+      "expected_type": "float",
+      "actual_type": "int"
+    },
+    {
+      "path": "nodes[939].weight",
+      "expected_type": "float",
+      "actual_type": "int"
+    },
+    {
+      "path": "nodes[949].weight",
+      "expected_type": "float",
+      "actual_type": "int"
+    },
+    {
+      "path": "nodes[959].weight",
+      "expected_type": "float",
+      "actual_type": "int"
+    },
+    {
+      "path": "nodes[969].weight",
+      "expected_type": "float",
+      "actual_type": "int"
+    },
+    {
+      "path": "nodes[979].weight",
+      "expected_type": "float",
+      "actual_type": "int"
+    },
+    {
+      "path": "nodes[989].weight",
+      "expected_type": "float",
+      "actual_type": "int"
+    },
+    {
+      "path": "nodes[999].weight",
+      "expected_type": "float",
+      "actual_type": "int"
+    },
+    {
+      "path": "nodes[99].weight",
+      "expected_type": "float",
+      "actual_type": "int"
+    },
+    {
+      "path": "nodes[9].weight",
+      "expected_type": "float",
+      "actual_type": "int"
+    }
+  ],
+  "cause": "external_decoder_int_float_coercion"
+}

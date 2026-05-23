@@ -1,0 +1,18 @@
+{
+  "missing_paths": [],
+  "extra_paths": [],
+  "value_mismatches": [
+    {
+      "path": "generated",
+      "expected": true,
+      "actual": "true"
+    }
+  ],
+  "type_mismatches": [
+    {
+      "path": "generated",
+      "expected_type": "bool",
+      "actual_type": "str"
+    }
+  ]
+}

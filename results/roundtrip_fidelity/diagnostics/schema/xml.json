@@ -1,0 +1,328 @@
+{
+  "missing_paths": [],
+  "extra_paths": [],
+  "value_mismatches": [
+    {
+      "path": "columns[0].required",
+      "expected": true,
+      "actual": "true"
+    },
+    {
+      "path": "columns[1].required",
+      "expected": true,
+      "actual": "true"
+    },
+    {
+      "path": "columns[2].required",
+      "expected": false,
+      "actual": "false"
+    },
+    {
+      "path": "columns[3].required",
+      "expected": false,
+      "actual": "false"
+    },
+    {
+      "path": "columns[4].required",
+      "expected": true,
+      "actual": "true"
+    },
+    {
+      "path": "columns[5].required",
+      "expected": true,
+      "actual": "true"
+    },
+    {
+      "path": "fields[0].default",
+      "expected": null,
+      "actual": "null"
+    },
+    {
+      "path": "fields[0].required",
+      "expected": true,
+      "actual": "true"
+    },
+    {
+      "path": "fields[1].default",
+      "expected": null,
+      "actual": "null"
+    },
+    {
+      "path": "fields[1].required",
+      "expected": true,
+      "actual": "true"
+    },
+    {
+      "path": "fields[2].default",
+      "expected": null,
+      "actual": "null"
+    },
+    {
+      "path": "fields[2].required",
+      "expected": true,
+      "actual": "true"
+    },
+    {
+      "path": "fields[3].required",
+      "expected": false,
+      "actual": "false"
+    },
+    {
+      "path": "fields[4].required",
+      "expected": false,
+      "actual": "false"
+    },
+    {
+      "path": "fields[5].default",
+      "expected": null,
+      "actual": "null"
+    },
+    {
+      "path": "fields[5].required",
+      "expected": true,
+      "actual": "true"
+    },
+    {
+      "path": "fields[6].required",
+      "expected": true,
+      "actual": "true"
+    },
+    {
+      "path": "fields[7].required",
+      "expected": false,
+      "actual": "false"
+    },
+    {
+      "path": "relations[0].required",
+      "expected": false,
+      "actual": "false"
+    },
+    {
+      "path": "relations[1].required",
+      "expected": false,
+      "actual": "false"
+    },
+    {
+      "path": "relations[2].required",
+      "expected": false,
+      "actual": "false"
+    },
+    {
+      "path": "relations[3].required",
+      "expected": false,
+      "actual": "false"
+    },
+    {
+      "path": "tables[0].ordered",
+      "expected": false,
+      "actual": "false"
+    },
+    {
+      "path": "tables[1].ordered",
+      "expected": true,
+      "actual": "true"
+    },
+    {
+      "path": "tables[1].primary_key",
+      "expected": null,
+      "actual": "null"
+    }
+  ],
+  "type_mismatches": [
+    {
+      "path": "columns[0].required",
+      "expected_type": "bool",
+      "actual_type": "str"
+    },
+    {
+      "path": "columns[1].required",
+      "expected_type": "bool",
+      "actual_type": "str"
+    },
+    {
+      "path": "columns[2].required",
+      "expected_type": "bool",
+      "actual_type": "str"
+    },
+    {
+      "path": "columns[3].required",
+      "expected_type": "bool",
+      "actual_type": "str"
+    },
+    {
+      "path": "columns[4].required",
+      "expected_type": "bool",
+      "actual_type": "str"
+    },
+    {
+      "path": "columns[5].required",
+      "expected_type": "bool",
+      "actual_type": "str"
+    },
+    {
+      "path": "fields[0].default",
+      "expected_type": "NoneType",
+      "actual_type": "str"
+    },
+    {
+      "path": "fields[0].required",
+      "expected_type": "bool",
+      "actual_type": "str"
+    },
+    {
+      "path": "fields[1].default",
+      "expected_type": "NoneType",
+      "actual_type": "str"
+    },
+    {
+      "path": "fields[1].required",
+      "expected_type": "bool",
+      "actual_type": "str"
+    },
+    {
+      "path": "fields[2].default",
+      "expected_type": "NoneType",
+      "actual_type": "str"
+    },
+    {
+      "path": "fields[2].required",
+      "expected_type": "bool",
+      "actual_type": "str"
+    },
+    {
+      "path": "fields[3].required",
+      "expected_type": "bool",
+      "actual_type": "str"
+    },
+    {
+      "path": "fields[4].required",
+      "expected_type": "bool",
+      "actual_type": "str"
+    },
+    {
+      "path": "fields[5].default",
+      "expected_type": "NoneType",
+      "actual_type": "str"
+    },
+    {
+      "path": "fields[5].required",
+      "expected_type": "bool",
+      "actual_type": "str"
+    },
+    {
+      "path": "fields[6].required",
+      "expected_type": "bool",
+      "actual_type": "str"
+    },
+    {
+      "path": "fields[7].required",
+      "expected_type": "bool",
+      "actual_type": "str"
+    },
+    {
+      "path": "relations[0].required",
+      "expected_type": "bool",
+      "actual_type": "str"
+    },
+    {
+      "path": "relations[1].required",
+      "expected_type": "bool",
+      "actual_type": "str"
+    },
+    {
+      "path": "relations[2].required",
+      "expected_type": "bool",
+      "actual_type": "str"
+    },
+    {
+      "path": "relations[3].required",
+      "expected_type": "bool",
+      "actual_type": "str"
+    },
+    {
+      "path": "rule_functions[0].max_args",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "rule_functions[0].min_args",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "rule_functions[1].max_args",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "rule_functions[1].min_args",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "rule_functions[2].max_args",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "rule_functions[2].min_args",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "rule_functions[3].max_args",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "rule_functions[3].min_args",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "rule_functions[4].max_args",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "rule_functions[4].min_args",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "rule_functions[5].max_args",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "rule_functions[5].min_args",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "rule_functions[6].max_args",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "rule_functions[6].min_args",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "tables[0].ordered",
+      "expected_type": "bool",
+      "actual_type": "str"
+    },
+    {
+      "path": "tables[1].ordered",
+      "expected_type": "bool",
+      "actual_type": "str"
+    },
+    {
+      "path": "tables[1].primary_key",
+      "expected_type": "NoneType",
+      "actual_type": "str"
+    }
+  ]
+}

@@ -1,7 +1,7 @@
 @sdif 1.0
 kind RoundTripFidelityReport
 version "1.0"
-generatedAt 2026-05-23T20:18:32Z
+generatedAt 2026-05-23T20:48:25Z
 runDirectory results/roundtrip_fidelity
 semanticSource examples/golden/<document>/equivalent.json
 envFileLoaded false
@@ -18,7 +18,7 @@ documents:
       SDIF	302202	true	100.0	100.0	100.0	100.0	""
       SDIF AI	292716	true	100.0	100.0	100.0	100.0	""
       TOON	302214	true	100.0	100.0	100.0	100.0	""
-      XML	768236	true	100.0	90.0	100.0	96.4	""
+      XML	768236	true	100.0	90.0	100.0	96.4	see diagnostics
   __item:
     name github.openapi
     formats[format,bytes,parseSuccess,valueFidelity,typeFidelity,structureFidelity,overallFidelity,note]:
@@ -26,10 +26,10 @@ documents:
       JSON Pretty	386842	true	100.0	100.0	100.0	100.0	""
       YAML	283256	true	100.0	100.0	100.0	100.0	""
       SDIF	173649	true	100.0	100.0	100.0	100.0	""
-      SDIF AI	167369	true	100.0	100.0	100.0	100.0	""
       TOON	174452	true	100.0	100.0	100.0	100.0	""
-      CSV Bundle	167539	true	100.0	89.3	100.0	96.2	""
-      XML	472655	true	87.4	87.4	100.0	91.3	""
+      CSV Bundle	167539	true	100.0	89.3	100.0	96.2	see diagnostics
+      SDIF AI	167369	true	100.0	89.3	100.0	96.2	see diagnostics
+      XML	472655	true	87.4	87.4	100.0	91.3	see diagnostics
   __item:
     name large-knowledge-graph
     formats[format,bytes,parseSuccess,valueFidelity,typeFidelity,structureFidelity,overallFidelity,note]:
@@ -39,8 +39,8 @@ documents:
       CSV Bundle	279620	true	100.0	100.0	100.0	100.0	""
       SDIF	289242	true	100.0	100.0	100.0	100.0	""
       SDIF AI	279580	true	100.0	100.0	100.0	100.0	""
-      TOON	288966	true	100.0	99.3	100.0	99.8	""
-      XML	884387	true	100.0	83.7	100.0	93.9	""
+      TOON	288966	true	100.0	99.3	100.0	99.8	see diagnostics
+      XML	884387	true	100.0	83.7	100.0	93.9	see diagnostics
   __item:
     name large-plan
     formats[format,bytes,parseSuccess,valueFidelity,typeFidelity,structureFidelity,overallFidelity,note]:
@@ -51,7 +51,7 @@ documents:
       SDIF	504796	true	100.0	100.0	100.0	100.0	""
       SDIF AI	492354	true	100.0	100.0	100.0	100.0	""
       TOON	504817	true	100.0	100.0	100.0	100.0	""
-      XML	1273626	true	100.0	83.1	100.0	93.6	""
+      XML	1273626	true	100.0	83.1	100.0	93.6	see diagnostics
   __item:
     name large-registry
     formats[format,bytes,parseSuccess,valueFidelity,typeFidelity,structureFidelity,overallFidelity,note]:
@@ -62,7 +62,7 @@ documents:
       SDIF	426166	true	100.0	100.0	100.0	100.0	""
       SDIF AI	402720	true	100.0	100.0	100.0	100.0	""
       TOON	426185	true	100.0	100.0	100.0	100.0	""
-      XML	1652261	true	79.7	79.7	100.0	85.5	""
+      XML	1652261	true	79.7	79.7	100.0	85.5	see diagnostics
   __item:
     name large-schema-catalog
     formats[format,bytes,parseSuccess,valueFidelity,typeFidelity,structureFidelity,overallFidelity,note]:
@@ -72,8 +72,8 @@ documents:
       SDIF	228953	true	100.0	100.0	100.0	100.0	""
       SDIF AI	221599	true	100.0	100.0	100.0	100.0	""
       TOON	229126	true	100.0	100.0	100.0	100.0	""
-      CSV Bundle	215257	true	84.8	84.8	100.0	89.3	""
-      XML	790035	true	80.4	77.6	100.0	84.9	""
+      CSV Bundle	215257	true	84.8	84.8	100.0	89.3	see diagnostics
+      XML	790035	true	80.4	77.6	100.0	84.9	see diagnostics
   __item:
     name large-support-export
     formats[format,bytes,parseSuccess,valueFidelity,typeFidelity,structureFidelity,overallFidelity,note]:
@@ -84,7 +84,7 @@ documents:
       SDIF	352437	true	100.0	100.0	100.0	100.0	""
       SDIF AI	342047	true	100.0	100.0	100.0	100.0	""
       TOON	352453	true	100.0	100.0	100.0	100.0	""
-      XML	986732	true	85.0	70.0	100.0	83.2	""
+      XML	986732	true	85.0	70.0	100.0	83.2	see diagnostics
   __item:
     name large-validation-report
     formats[format,bytes,parseSuccess,valueFidelity,typeFidelity,structureFidelity,overallFidelity,note]:
@@ -94,8 +94,8 @@ documents:
       SDIF	390534	true	100.0	100.0	100.0	100.0	""
       SDIF AI	383776	true	100.0	100.0	100.0	100.0	""
       TOON	391666	true	100.0	100.0	100.0	100.0	""
-      CSV Bundle	383821	true	100.0	96.2	100.0	98.7	""
-      XML	818657	true	100.0	92.0	100.0	97.2	""
+      CSV Bundle	383821	true	100.0	96.2	100.0	98.7	see diagnostics
+      XML	818657	true	100.0	92.0	100.0	97.2	see diagnostics
   __item:
     name medium-invoice-batch
     formats[format,bytes,parseSuccess,valueFidelity,typeFidelity,structureFidelity,overallFidelity,note]:
@@ -106,7 +106,7 @@ documents:
       SDIF	75859	true	100.0	100.0	100.0	100.0	""
       SDIF AI	73903	true	100.0	100.0	100.0	100.0	""
       TOON	75867	true	100.0	100.0	100.0	100.0	""
-      XML	238165	true	100.0	57.9	100.0	80.5	""
+      XML	238165	true	100.0	57.9	100.0	80.5	see diagnostics
   __item:
     name medium-observability-run
     formats[format,bytes,parseSuccess,valueFidelity,typeFidelity,structureFidelity,overallFidelity,note]:
@@ -117,7 +117,7 @@ documents:
       SDIF	58377	true	100.0	100.0	100.0	100.0	""
       SDIF AI	55931	true	100.0	100.0	100.0	100.0	""
       TOON	58391	true	100.0	100.0	100.0	100.0	""
-      XML	205986	true	100.0	81.2	100.0	92.8	""
+      XML	205986	true	100.0	81.2	100.0	92.8	see diagnostics
   __item:
     name medium-policy-catalog
     formats[format,bytes,parseSuccess,valueFidelity,typeFidelity,structureFidelity,overallFidelity,note]:
@@ -139,7 +139,7 @@ documents:
       SDIF	50784	true	100.0	100.0	100.0	100.0	""
       SDIF AI	47552	true	100.0	100.0	100.0	100.0	""
       TOON	50798	true	100.0	100.0	100.0	100.0	""
-      XML	214848	true	100.0	82.8	100.0	93.5	""
+      XML	214848	true	100.0	82.8	100.0	93.5	see diagnostics
   __item:
     name plan
     formats[format,bytes,parseSuccess,valueFidelity,typeFidelity,structureFidelity,overallFidelity,note]:
@@ -148,9 +148,9 @@ documents:
       YAML	1197	true	100.0	100.0	100.0	100.0	""
       XML	2080	true	100.0	100.0	100.0	100.0	""
       SDIF	984	true	100.0	100.0	100.0	100.0	""
+      SDIF AI	1000	true	100.0	100.0	100.0	100.0	""
       TOON	1002	true	100.0	100.0	100.0	100.0	""
-      SDIF AI	1000	true	92.5	100.0	88.9	93.6	""
-      CSV Bundle	1039	true	97.2	100.0	80.0	91.5	""
+      CSV Bundle	1039	true	97.2	100.0	80.0	91.5	see diagnostics
   __item:
     name registry
     formats[format,bytes,parseSuccess,valueFidelity,typeFidelity,structureFidelity,overallFidelity,note]:
@@ -159,9 +159,9 @@ documents:
       YAML	896	true	100.0	100.0	100.0	100.0	""
       XML	1601	true	100.0	100.0	100.0	100.0	""
       SDIF	674	true	100.0	100.0	100.0	100.0	""
+      SDIF AI	662	true	100.0	100.0	100.0	100.0	""
       TOON	697	true	100.0	100.0	100.0	100.0	""
-      CSV Bundle	720	true	100.0	100.0	91.4	97.0	""
-      SDIF AI	662	true	91.4	100.0	100.0	97.0	""
+      CSV Bundle	720	true	100.0	100.0	91.4	97.0	see diagnostics
   __item:
     name schema
     formats[format,bytes,parseSuccess,valueFidelity,typeFidelity,structureFidelity,overallFidelity,note]:
@@ -172,7 +172,7 @@ documents:
       SDIF	1161	true	100.0	100.0	100.0	100.0	""
       SDIF AI	1097	true	100.0	100.0	100.0	100.0	""
       TOON	1181	true	100.0	100.0	100.0	100.0	""
-      XML	4189	true	76.2	62.9	100.0	76.9	""
+      XML	4189	true	76.2	62.9	100.0	76.9	see diagnostics
   __item:
     name small-api-catalog
     formats[format,bytes,parseSuccess,valueFidelity,typeFidelity,structureFidelity,overallFidelity,note]:
@@ -183,7 +183,7 @@ documents:
       SDIF	1716	true	100.0	100.0	100.0	100.0	""
       SDIF AI	1640	true	100.0	100.0	100.0	100.0	""
       TOON	1718	true	100.0	100.0	100.0	100.0	""
-      XML	5647	true	99.4	99.4	100.0	99.6	""
+      XML	5647	true	99.4	99.4	100.0	99.6	see diagnostics
   __item:
     name small-incident
     formats[format,bytes,parseSuccess,valueFidelity,typeFidelity,structureFidelity,overallFidelity,note]:
@@ -194,7 +194,7 @@ documents:
       SDIF	2637	true	100.0	100.0	100.0	100.0	""
       SDIF AI	2563	true	100.0	100.0	100.0	100.0	""
       TOON	2640	true	100.0	100.0	100.0	100.0	""
-      XML	6808	true	99.4	85.0	100.0	94.3	""
+      XML	6808	true	99.4	85.0	100.0	94.3	see diagnostics
   __item:
     name small-invoice
     formats[format,bytes,parseSuccess,valueFidelity,typeFidelity,structureFidelity,overallFidelity,note]:
@@ -205,7 +205,7 @@ documents:
       SDIF	1454	true	100.0	100.0	100.0	100.0	""
       SDIF AI	1406	true	100.0	100.0	100.0	100.0	""
       TOON	1459	true	100.0	100.0	100.0	100.0	""
-      XML	4738	true	99.2	68.9	100.0	86.7	""
+      XML	4738	true	99.2	68.9	100.0	86.7	see diagnostics
   __item:
     name validation-report
     formats[format,bytes,parseSuccess,valueFidelity,typeFidelity,structureFidelity,overallFidelity,note]:
@@ -215,8 +215,8 @@ documents:
       XML	1685	true	100.0	100.0	100.0	100.0	""
       CSV Bundle	773	true	100.0	100.0	100.0	100.0	""
       SDIF	735	true	100.0	100.0	100.0	100.0	""
+      SDIF AI	691	true	100.0	100.0	100.0	100.0	""
       TOON	770	true	100.0	100.0	100.0	100.0	""
-      SDIF AI	691	true	88.9	100.0	100.0	96.0	""
   __item:
     name wide-table-survey
     formats[format,bytes,parseSuccess,valueFidelity,typeFidelity,structureFidelity,overallFidelity,note]:
@@ -227,4 +227,4 @@ documents:
       SDIF	19054	true	100.0	100.0	100.0	100.0	""
       SDIF AI	18606	true	100.0	100.0	100.0	100.0	""
       TOON	19053	true	100.0	100.0	100.0	100.0	""
-      XML	149167	true	100.0	9.1	100.0	23.2	""
+      XML	149167	true	100.0	9.1	100.0	23.2	see diagnostics

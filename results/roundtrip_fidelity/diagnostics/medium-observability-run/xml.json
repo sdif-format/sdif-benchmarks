@@ -1,0 +1,4848 @@
+{
+  "missing_paths": [],
+  "extra_paths": [],
+  "value_mismatches": [
+    {
+      "path": "generated",
+      "expected": true,
+      "actual": "true"
+    }
+  ],
+  "type_mismatches": [
+    {
+      "path": "generated",
+      "expected_type": "bool",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[0].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[100].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[101].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[102].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[103].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[104].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[105].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[106].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[107].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[108].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[109].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[10].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[110].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[111].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[112].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[113].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[114].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[115].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[116].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[117].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[118].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[119].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[11].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[120].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[121].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[122].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[123].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[124].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[125].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[126].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[127].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[128].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[129].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[12].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[130].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[131].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[132].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[133].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[134].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[135].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[136].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[137].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[138].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[139].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[13].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[140].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[141].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[142].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[143].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[144].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[145].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[146].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[147].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[148].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[149].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[14].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[150].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[151].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[152].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[153].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[154].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[155].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[156].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[157].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[158].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[159].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[15].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[160].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[161].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[162].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[163].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[164].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[165].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[166].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[167].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[168].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[169].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[16].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[170].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[171].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[172].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[173].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[174].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[175].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[176].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[177].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[178].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[179].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[17].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[180].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[181].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[182].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[183].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[184].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[185].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[186].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[187].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[188].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[189].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[18].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[190].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[191].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[192].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[193].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[194].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[195].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[196].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[197].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[198].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[199].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[19].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[1].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[200].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[201].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[202].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[203].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[204].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[205].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[206].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[207].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[208].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[209].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[20].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[210].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[211].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[212].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[213].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[214].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[215].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[216].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[217].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[218].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[219].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[21].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[220].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[221].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[222].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[223].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[224].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[225].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[226].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[227].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[228].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[229].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[22].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[230].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[231].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[232].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[233].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[234].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[235].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[236].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[237].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[238].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[239].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[23].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[240].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[241].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[242].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[243].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[244].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[245].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[246].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[247].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[248].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[249].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[24].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[250].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[251].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[252].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[253].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[254].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[255].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[256].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[257].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[258].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[259].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[25].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[260].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[261].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[262].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[263].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[264].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[265].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[266].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[267].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[268].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[269].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[26].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[270].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[271].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[272].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[273].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[274].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[275].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[276].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[277].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[278].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[279].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[27].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[280].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[281].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[282].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[283].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[284].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[285].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[286].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[287].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[288].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[289].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[28].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[290].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[291].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[292].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[293].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[294].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[295].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[296].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[297].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[298].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[299].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[29].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[2].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[300].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[301].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[302].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[303].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[304].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[305].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[306].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[307].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[308].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[309].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[30].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[310].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[311].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[312].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[313].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[314].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[315].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[316].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[317].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[318].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[319].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[31].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[320].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[321].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[322].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[323].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[324].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[325].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[326].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[327].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[328].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[329].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[32].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[330].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[331].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[332].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[333].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[334].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[335].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[336].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[337].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[338].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[339].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[33].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[340].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[341].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[342].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[343].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[344].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[345].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[346].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[347].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[348].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[349].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[34].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[350].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[351].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[352].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[353].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[354].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[355].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[356].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[357].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[358].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[359].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[35].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[360].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[361].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[362].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[363].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[364].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[365].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[366].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[367].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[368].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[369].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[36].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[370].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[371].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[372].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[373].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[374].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[375].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[376].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[377].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[378].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[379].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[37].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[380].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[381].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[382].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[383].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[384].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[385].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[386].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[387].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[388].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[389].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[38].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[390].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[391].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[392].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[393].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[394].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[395].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[396].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[397].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[398].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[399].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[39].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[3].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[400].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[401].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[402].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[403].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[404].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[405].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[406].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[407].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[408].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[409].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[40].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[410].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[411].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[412].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[413].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[414].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[415].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[416].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[417].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[418].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[419].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[41].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[420].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[421].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[422].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[423].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[424].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[425].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[426].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[427].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[428].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[429].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[42].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[430].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[431].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[432].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[433].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[434].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[435].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[436].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[437].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[438].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[439].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[43].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[440].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[441].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[442].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[443].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[444].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[445].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[446].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[447].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[448].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[449].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[44].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[450].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[451].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[452].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[453].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[454].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[455].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[456].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[457].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[458].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[459].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[45].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[460].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[461].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[462].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[463].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[464].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[465].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[466].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[467].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[468].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[469].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[46].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[470].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[471].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[472].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[473].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[474].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[475].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[476].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[477].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[478].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[479].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[47].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[480].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[481].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[482].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[48].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[49].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[4].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[50].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[51].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[52].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[53].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[54].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[55].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[56].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[57].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[58].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[59].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[5].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[60].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[61].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[62].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[63].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[64].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[65].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[66].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[67].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[68].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[69].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[6].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[70].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[71].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[72].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[73].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[74].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[75].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[76].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[77].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[78].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[79].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[7].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[80].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[81].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[82].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[83].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[84].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[85].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[86].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[87].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[88].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[89].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[8].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[90].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[91].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[92].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[93].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[94].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[95].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[96].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[97].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[98].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[99].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "metrics[9].value",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[0].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[100].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[101].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[102].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[103].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[104].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[105].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[106].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[107].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[108].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[109].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[10].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[110].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[111].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[112].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[113].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[114].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[115].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[116].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[117].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[118].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[119].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[11].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[120].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[121].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[122].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[123].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[124].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[125].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[126].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[127].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[128].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[129].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[12].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[130].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[131].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[132].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[133].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[134].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[135].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[136].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[137].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[138].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[139].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[13].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[140].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[141].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[142].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[143].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[144].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[145].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[146].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[147].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[148].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[149].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[14].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[150].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[151].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[152].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[153].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[154].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[155].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[156].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[157].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[158].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[159].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[15].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[160].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[161].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[162].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[163].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[164].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[165].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[166].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[167].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[168].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[169].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[16].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[170].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[171].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[172].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[173].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[174].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[175].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[176].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[177].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[178].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[179].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[17].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[180].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[181].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[182].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[183].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[184].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[185].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[186].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[187].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[188].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[189].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[18].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[190].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[191].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[192].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[193].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[194].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[195].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[196].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[197].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[198].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[199].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[19].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[1].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[200].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[201].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[202].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[203].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[204].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[205].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[206].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[207].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[208].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[209].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[20].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[210].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[211].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[212].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[213].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[214].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[215].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[216].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[217].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[218].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[219].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[21].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[220].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[221].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[222].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[223].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[224].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[225].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[226].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[227].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[228].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[229].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[22].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[230].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[231].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[232].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[233].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[234].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[235].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[236].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[237].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[238].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[239].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[23].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[240].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[241].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[242].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[243].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[244].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[245].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[246].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[247].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[248].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[249].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[24].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[250].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[251].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[252].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[253].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[254].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[255].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[256].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[257].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[258].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[259].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[25].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[260].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[261].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[262].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[263].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[264].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[265].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[266].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[267].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[268].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[269].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[26].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[270].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[271].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[272].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[273].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[274].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[275].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[276].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[277].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[278].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[279].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[27].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[280].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[281].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[282].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[283].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[284].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[285].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[286].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[287].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[288].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[289].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[28].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[290].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[291].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[292].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[293].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[294].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[295].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[296].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[297].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[298].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[299].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[29].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[2].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[300].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[301].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[302].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[303].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[304].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[305].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[306].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[307].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[308].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[309].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[30].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[310].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[311].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[312].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[313].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[314].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[315].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[316].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[317].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[318].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[319].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[31].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[320].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[321].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[322].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[323].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[324].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[325].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[326].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[327].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[328].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[329].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[32].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[330].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[331].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[332].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[333].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[334].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[335].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[336].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[337].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[338].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[339].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[33].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[340].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[341].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[342].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[343].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[344].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[345].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[346].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[347].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[348].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[349].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[34].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[350].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[351].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[352].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[353].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[354].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[355].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[356].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[357].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[358].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[359].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[35].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[360].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[361].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[362].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[363].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[364].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[365].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[366].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[367].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[368].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[369].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[36].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[370].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[371].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[372].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[373].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[374].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[375].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[376].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[377].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[378].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[379].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[37].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[380].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[381].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[382].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[383].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[384].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[385].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[386].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[387].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[388].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[389].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[38].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[390].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[391].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[392].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[393].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[394].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[395].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[396].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[397].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[398].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[399].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[39].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[3].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[400].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[401].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[402].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[403].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[404].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[405].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[406].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[407].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[408].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[409].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[40].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[410].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[411].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[412].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[413].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[414].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[415].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[416].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[417].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[418].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[419].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[41].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[420].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[421].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[422].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[423].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[424].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[425].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[426].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[427].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[428].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[429].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[42].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[430].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[431].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[432].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[433].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[434].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[435].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[436].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[437].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[438].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[439].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[43].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[440].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[441].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[442].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[443].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[444].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[445].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[446].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[447].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[448].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[449].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[44].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[450].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[451].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[452].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[453].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[454].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[455].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[456].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[457].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[458].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[459].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[45].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[460].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[461].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[462].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[463].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[464].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[465].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[466].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[467].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[468].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[469].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[46].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[470].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[471].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[472].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[473].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[474].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[475].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[476].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[477].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[478].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[479].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[47].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[480].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[481].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[482].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[48].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[49].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[4].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[50].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[51].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[52].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[53].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[54].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[55].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[56].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[57].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[58].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[59].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[5].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[60].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[61].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[62].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[63].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[64].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[65].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[66].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[67].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[68].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[69].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[6].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[70].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[71].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[72].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[73].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[74].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[75].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[76].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[77].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[78].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[79].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[7].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[80].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[81].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[82].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[83].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[84].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[85].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[86].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[87].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[88].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[89].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[8].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[90].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[91].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[92].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[93].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[94].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[95].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[96].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[97].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[98].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[99].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "spans[9].duration_ms",
+      "expected_type": "int",
+      "actual_type": "str"
+    }
+  ]
+}

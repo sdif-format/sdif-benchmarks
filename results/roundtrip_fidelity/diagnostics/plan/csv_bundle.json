@@ -1,0 +1,25 @@
+{
+  "missing_paths": [
+    "rules[0]",
+    "rules[1]",
+    "rules[2]",
+    "rules[3]",
+    "scope.in[0]",
+    "scope.in[1]",
+    "scope.out[0]",
+    "scope.out[1]",
+    "scope.out[2]"
+  ],
+  "extra_paths": [
+    "rules",
+    "scope"
+  ],
+  "value_mismatches": [
+    {
+      "path": "intent",
+      "expected": "Define the minimum validation requirements for release v2.\nThe plan must remain auditable, reproducible, and easy to review.",
+      "actual": "Define the minimum validation requirements for release v2.The plan must remain auditable, reproducible, and easy to review."
+    }
+  ],
+  "type_mismatches": []
+}

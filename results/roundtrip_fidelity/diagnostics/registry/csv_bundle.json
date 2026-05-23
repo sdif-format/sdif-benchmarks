@@ -1,0 +1,12 @@
+{
+  "missing_paths": [
+    "rules[0]",
+    "rules[1]",
+    "rules[2]"
+  ],
+  "extra_paths": [
+    "rules"
+  ],
+  "value_mismatches": [],
+  "type_mismatches": []
+}

@@ -1,0 +1,7918 @@
+{
+  "missing_paths": [],
+  "extra_paths": [],
+  "value_mismatches": [
+    {
+      "path": "generated",
+      "expected": true,
+      "actual": "true"
+    }
+  ],
+  "type_mismatches": [
+    {
+      "path": "generated",
+      "expected_type": "bool",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[0].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1000].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1001].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1002].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1003].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1004].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1005].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1006].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1007].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1008].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1009].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[100].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1010].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1011].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1012].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1013].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1014].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1015].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1016].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1017].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1018].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1019].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[101].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1020].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1021].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1022].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1023].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1024].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1025].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1026].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1027].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1028].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1029].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[102].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1030].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1031].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1032].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1033].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1034].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1035].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1036].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1037].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1038].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1039].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[103].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1040].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1041].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1042].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1043].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1044].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1045].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1046].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1047].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1048].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1049].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[104].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1050].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1051].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1052].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1053].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1054].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1055].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1056].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1057].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1058].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1059].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[105].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1060].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1061].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1062].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1063].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1064].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1065].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1066].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1067].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1068].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1069].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[106].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1070].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1071].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1072].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1073].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1074].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1075].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1076].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1077].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1078].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1079].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[107].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1080].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1081].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1082].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1083].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1084].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1085].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1086].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1087].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1088].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1089].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[108].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1090].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1091].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1092].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1093].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1094].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1095].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1096].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1097].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1098].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1099].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[109].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[10].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1100].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1101].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1102].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1103].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1104].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1105].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1106].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1107].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1108].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1109].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[110].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1110].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1111].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1112].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1113].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1114].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1115].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1116].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1117].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1118].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1119].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[111].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1120].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1121].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1122].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1123].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1124].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1125].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1126].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1127].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1128].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1129].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[112].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1130].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1131].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1132].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1133].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1134].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1135].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1136].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1137].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1138].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1139].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[113].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1140].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1141].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1142].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1143].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1144].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1145].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1146].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1147].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1148].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1149].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[114].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1150].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1151].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1152].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1153].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1154].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1155].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1156].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1157].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1158].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1159].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[115].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1160].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1161].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1162].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1163].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1164].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1165].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1166].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1167].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1168].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1169].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[116].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1170].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1171].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1172].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1173].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1174].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1175].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1176].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1177].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1178].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1179].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[117].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1180].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1181].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1182].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1183].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1184].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1185].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1186].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1187].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1188].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1189].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[118].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1190].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1191].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1192].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1193].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1194].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1195].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1196].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1197].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1198].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1199].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[119].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[11].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1200].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1201].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1202].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1203].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1204].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1205].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1206].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1207].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1208].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1209].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[120].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1210].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1211].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1212].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1213].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1214].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1215].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1216].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1217].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1218].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1219].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[121].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1220].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1221].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1222].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1223].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1224].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1225].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1226].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1227].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1228].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1229].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[122].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1230].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1231].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1232].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1233].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1234].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1235].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1236].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1237].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1238].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1239].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[123].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1240].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1241].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1242].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1243].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1244].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1245].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1246].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1247].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1248].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1249].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[124].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1250].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1251].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1252].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1253].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1254].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1255].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1256].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1257].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1258].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1259].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[125].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1260].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1261].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1262].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1263].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1264].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1265].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1266].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1267].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1268].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1269].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[126].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1270].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1271].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1272].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1273].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1274].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1275].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1276].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1277].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1278].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1279].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[127].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1280].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1281].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1282].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1283].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1284].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1285].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1286].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1287].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1288].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1289].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[128].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1290].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1291].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1292].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1293].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1294].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1295].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1296].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1297].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1298].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1299].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[129].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[12].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1300].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1301].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1302].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1303].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1304].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1305].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1306].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1307].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1308].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1309].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[130].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1310].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1311].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1312].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1313].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1314].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1315].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1316].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1317].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1318].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1319].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[131].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1320].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1321].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1322].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1323].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1324].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1325].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1326].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1327].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1328].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1329].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[132].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1330].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1331].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1332].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1333].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1334].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1335].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1336].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1337].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1338].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1339].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[133].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1340].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1341].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1342].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1343].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1344].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1345].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1346].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1347].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1348].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1349].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[134].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1350].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1351].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1352].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1353].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1354].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1355].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1356].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1357].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1358].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1359].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[135].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1360].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1361].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1362].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1363].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1364].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1365].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1366].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1367].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1368].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1369].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[136].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1370].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1371].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1372].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1373].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1374].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1375].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1376].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1377].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1378].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1379].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[137].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1380].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1381].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1382].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1383].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1384].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1385].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1386].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1387].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1388].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1389].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[138].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1390].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1391].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1392].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1393].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1394].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1395].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1396].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1397].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1398].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1399].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[139].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[13].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1400].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1401].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1402].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1403].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1404].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1405].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1406].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1407].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1408].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1409].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[140].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1410].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1411].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1412].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1413].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1414].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1415].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1416].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1417].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1418].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1419].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[141].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1420].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1421].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1422].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1423].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1424].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1425].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1426].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1427].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1428].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1429].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[142].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1430].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1431].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1432].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1433].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1434].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1435].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1436].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1437].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1438].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1439].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[143].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1440].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1441].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1442].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1443].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1444].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1445].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1446].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1447].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1448].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1449].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[144].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1450].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1451].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1452].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1453].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1454].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1455].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1456].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1457].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1458].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1459].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[145].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1460].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1461].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1462].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1463].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1464].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1465].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1466].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1467].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1468].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1469].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[146].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1470].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1471].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1472].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1473].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1474].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1475].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1476].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1477].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1478].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1479].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[147].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1480].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1481].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1482].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1483].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1484].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1485].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1486].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1487].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1488].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1489].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[148].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1490].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1491].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1492].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1493].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1494].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1495].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1496].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1497].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1498].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1499].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[149].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[14].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1500].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1501].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1502].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1503].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1504].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1505].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1506].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1507].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1508].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1509].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[150].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1510].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1511].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1512].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1513].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1514].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1515].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1516].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1517].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1518].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1519].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[151].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1520].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1521].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1522].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1523].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1524].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1525].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1526].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1527].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1528].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1529].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[152].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1530].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1531].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1532].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1533].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1534].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1535].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1536].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1537].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1538].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1539].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[153].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1540].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1541].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1542].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1543].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1544].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1545].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1546].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1547].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1548].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1549].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[154].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1550].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1551].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1552].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1553].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1554].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1555].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1556].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1557].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1558].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1559].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[155].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1560].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1561].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1562].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1563].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1564].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1565].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1566].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1567].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1568].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1569].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[156].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1570].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1571].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1572].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1573].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1574].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1575].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1576].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1577].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1578].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1579].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[157].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[158].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[159].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[15].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[160].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[161].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[162].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[163].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[164].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[165].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[166].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[167].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[168].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[169].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[16].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[170].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[171].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[172].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[173].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[174].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[175].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[176].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[177].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[178].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[179].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[17].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[180].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[181].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[182].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[183].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[184].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[185].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[186].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[187].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[188].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[189].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[18].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[190].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[191].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[192].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[193].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[194].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[195].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[196].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[197].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[198].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[199].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[19].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[1].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[200].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[201].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[202].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[203].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[204].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[205].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[206].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[207].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[208].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[209].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[20].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[210].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[211].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[212].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[213].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[214].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[215].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[216].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[217].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[218].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[219].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[21].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[220].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[221].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[222].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[223].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[224].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[225].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[226].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[227].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[228].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[229].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[22].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[230].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[231].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[232].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[233].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[234].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[235].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[236].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[237].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[238].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[239].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[23].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[240].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[241].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[242].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[243].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[244].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[245].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[246].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[247].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[248].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[249].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[24].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[250].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[251].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[252].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[253].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[254].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[255].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[256].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[257].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[258].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[259].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[25].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[260].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[261].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[262].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[263].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[264].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[265].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[266].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[267].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[268].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[269].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[26].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[270].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[271].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[272].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[273].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[274].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[275].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[276].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[277].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[278].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[279].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[27].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[280].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[281].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[282].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[283].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[284].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[285].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[286].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[287].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[288].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[289].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[28].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[290].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[291].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[292].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[293].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[294].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[295].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[296].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[297].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[298].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[299].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[29].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[2].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[300].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[301].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[302].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[303].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[304].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[305].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[306].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[307].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[308].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[309].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[30].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[310].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[311].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[312].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[313].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[314].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[315].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[316].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[317].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[318].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[319].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[31].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[320].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[321].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[322].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[323].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[324].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[325].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[326].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[327].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[328].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[329].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[32].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[330].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[331].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[332].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[333].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[334].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[335].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[336].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[337].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[338].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[339].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[33].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[340].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[341].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[342].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[343].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[344].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[345].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[346].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[347].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[348].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[349].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[34].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[350].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[351].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[352].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[353].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[354].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[355].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[356].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[357].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[358].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[359].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[35].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[360].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[361].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[362].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[363].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[364].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[365].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[366].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[367].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[368].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[369].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[36].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[370].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[371].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[372].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[373].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[374].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[375].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[376].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[377].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[378].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[379].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[37].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[380].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[381].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[382].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[383].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[384].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[385].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[386].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[387].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[388].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[389].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[38].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[390].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[391].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[392].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[393].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[394].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[395].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[396].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[397].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[398].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[399].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[39].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[3].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[400].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[401].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[402].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[403].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[404].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[405].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[406].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[407].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[408].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[409].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[40].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[410].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[411].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[412].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[413].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[414].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[415].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[416].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[417].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[418].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[419].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[41].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[420].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[421].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[422].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[423].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[424].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[425].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[426].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[427].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[428].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[429].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[42].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[430].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[431].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[432].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[433].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[434].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[435].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[436].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[437].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[438].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[439].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[43].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[440].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[441].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[442].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[443].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[444].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[445].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[446].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[447].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[448].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[449].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[44].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[450].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[451].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[452].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[453].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[454].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[455].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[456].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[457].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[458].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[459].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[45].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[460].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[461].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[462].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[463].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[464].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[465].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[466].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[467].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[468].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[469].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[46].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[470].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[471].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[472].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[473].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[474].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[475].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[476].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[477].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[478].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[479].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[47].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[480].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[481].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[482].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[483].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[484].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[485].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[486].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[487].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[488].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[489].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[48].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[490].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[491].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[492].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[493].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[494].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[495].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[496].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[497].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[498].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[499].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[49].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[4].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[500].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[501].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[502].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[503].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[504].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[505].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[506].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[507].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[508].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[509].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[50].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[510].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[511].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[512].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[513].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[514].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[515].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[516].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[517].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[518].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[519].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[51].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[520].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[521].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[522].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[523].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[524].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[525].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[526].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[527].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[528].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[529].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[52].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[530].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[531].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[532].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[533].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[534].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[535].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[536].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[537].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[538].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[539].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[53].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[540].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[541].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[542].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[543].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[544].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[545].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[546].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[547].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[548].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[549].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[54].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[550].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[551].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[552].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[553].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[554].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[555].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[556].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[557].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[558].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[559].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[55].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[560].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[561].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[562].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[563].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[564].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[565].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[566].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[567].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[568].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[569].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[56].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[570].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[571].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[572].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[573].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[574].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[575].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[576].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[577].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[578].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[579].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[57].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[580].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[581].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[582].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[583].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[584].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[585].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[586].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[587].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[588].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[589].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[58].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[590].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[591].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[592].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[593].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[594].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[595].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[596].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[597].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[598].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[599].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[59].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[5].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[600].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[601].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[602].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[603].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[604].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[605].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[606].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[607].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[608].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[609].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[60].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[610].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[611].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[612].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[613].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[614].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[615].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[616].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[617].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[618].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[619].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[61].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[620].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[621].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[622].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[623].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[624].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[625].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[626].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[627].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[628].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[629].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[62].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[630].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[631].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[632].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[633].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[634].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[635].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[636].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[637].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[638].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[639].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[63].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[640].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[641].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[642].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[643].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[644].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[645].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[646].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[647].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[648].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[649].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[64].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[650].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[651].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[652].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[653].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[654].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[655].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[656].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[657].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[658].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[659].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[65].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[660].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[661].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[662].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[663].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[664].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[665].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[666].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[667].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[668].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[669].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[66].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[670].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[671].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[672].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[673].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[674].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[675].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[676].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[677].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[678].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[679].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[67].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[680].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[681].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[682].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[683].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[684].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[685].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[686].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[687].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[688].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[689].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[68].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[690].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[691].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[692].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[693].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[694].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[695].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[696].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[697].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[698].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[699].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[69].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[6].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[700].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[701].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[702].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[703].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[704].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[705].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[706].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[707].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[708].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[709].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[70].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[710].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[711].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[712].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[713].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[714].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[715].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[716].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[717].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[718].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[719].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[71].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[720].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[721].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[722].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[723].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[724].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[725].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[726].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[727].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[728].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[729].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[72].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[730].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[731].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[732].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[733].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[734].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[735].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[736].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[737].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[738].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[739].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[73].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[740].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[741].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[742].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[743].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[744].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[745].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[746].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[747].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[748].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[749].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[74].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[750].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[751].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[752].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[753].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[754].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[755].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[756].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[757].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[758].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[759].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[75].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[760].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[761].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[762].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[763].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[764].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[765].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[766].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[767].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[768].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[769].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[76].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[770].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[771].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[772].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[773].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[774].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[775].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[776].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[777].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[778].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[779].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[77].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[780].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[781].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[782].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[783].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[784].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[785].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[786].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[787].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[788].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[789].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[78].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[790].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[791].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[792].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[793].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[794].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[795].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[796].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[797].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[798].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[799].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[79].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[7].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[800].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[801].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[802].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[803].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[804].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[805].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[806].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[807].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[808].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[809].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[80].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[810].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[811].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[812].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[813].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[814].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[815].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[816].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[817].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[818].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[819].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[81].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[820].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[821].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[822].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[823].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[824].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[825].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[826].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[827].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[828].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[829].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[82].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[830].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[831].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[832].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[833].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[834].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[835].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[836].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[837].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[838].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[839].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[83].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[840].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[841].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[842].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[843].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[844].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[845].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[846].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[847].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[848].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[849].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[84].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[850].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[851].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[852].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[853].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[854].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[855].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[856].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[857].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[858].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[859].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[85].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[860].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[861].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[862].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[863].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[864].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[865].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[866].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[867].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[868].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[869].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[86].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[870].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[871].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[872].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[873].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[874].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[875].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[876].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[877].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[878].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[879].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[87].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[880].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[881].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[882].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[883].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[884].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[885].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[886].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[887].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[888].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[889].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[88].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[890].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[891].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[892].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[893].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[894].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[895].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[896].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[897].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[898].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[899].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[89].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[8].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[900].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[901].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[902].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[903].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[904].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[905].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[906].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[907].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[908].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[909].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[90].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[910].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[911].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[912].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[913].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[914].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[915].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[916].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[917].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[918].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[919].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[91].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[920].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[921].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[922].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[923].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[924].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[925].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[926].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[927].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[928].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[929].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[92].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[930].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[931].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[932].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[933].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[934].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[935].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[936].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[937].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[938].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[939].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[93].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[940].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[941].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[942].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[943].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[944].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[945].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[946].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[947].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[948].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[949].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[94].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[950].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[951].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[952].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[953].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[954].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[955].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[956].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[957].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[958].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[959].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[95].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[960].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[961].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[962].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[963].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[964].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[965].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[966].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[967].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[968].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[969].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[96].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[970].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[971].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[972].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[973].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[974].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[975].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[976].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[977].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[978].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[979].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[97].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[980].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[981].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[982].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[983].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[984].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[985].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[986].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[987].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[988].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[989].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[98].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[990].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[991].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[992].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[993].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[994].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[995].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[996].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[997].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[998].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[999].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[99].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    },
+    {
+      "path": "levels[9].depth",
+      "expected_type": "int",
+      "actual_type": "str"
+    }
+  ]
+}

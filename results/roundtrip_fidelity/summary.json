@@ -1,7 +1,7 @@
 {
   "kind": "RoundTripFidelityReport",
   "version": "1.0",
-  "generatedAt": "2026-05-23T20:18:32Z",
+  "generatedAt": "2026-05-23T20:48:25Z",
   "runDirectory": "results/roundtrip_fidelity",
   "semanticSource": "examples/golden/<document>/equivalent.json",
   "envFileLoaded": false,
@@ -90,7 +90,7 @@
           "typeFidelity": 90.0,
           "structureFidelity": 100.0,
           "overallFidelity": 96.4,
-          "note": ""
+          "note": "see diagnostics"
         }
       ]
     },
@@ -138,16 +138,6 @@
           "note": ""
         },
         {
-          "format": "SDIF AI",
-          "bytes": 167369,
-          "parseSuccess": true,
-          "valueFidelity": 100.0,
-          "typeFidelity": 100.0,
-          "structureFidelity": 100.0,
-          "overallFidelity": 100.0,
-          "note": ""
-        },
-        {
           "format": "TOON",
           "bytes": 174452,
           "parseSuccess": true,
@@ -165,7 +155,17 @@
           "typeFidelity": 89.3,
           "structureFidelity": 100.0,
           "overallFidelity": 96.2,
-          "note": ""
+          "note": "see diagnostics"
+        },
+        {
+          "format": "SDIF AI",
+          "bytes": 167369,
+          "parseSuccess": true,
+          "valueFidelity": 100.0,
+          "typeFidelity": 89.3,
+          "structureFidelity": 100.0,
+          "overallFidelity": 96.2,
+          "note": "see diagnostics"
         },
         {
           "format": "XML",
@@ -175,7 +175,7 @@
           "typeFidelity": 87.4,
           "structureFidelity": 100.0,
           "overallFidelity": 91.3,
-          "note": ""
+          "note": "see diagnostics"
         }
       ]
     },
@@ -250,7 +250,7 @@
           "typeFidelity": 99.3,
           "structureFidelity": 100.0,
           "overallFidelity": 99.8,
-          "note": ""
+          "note": "see diagnostics"
         },
         {
           "format": "XML",
@@ -260,7 +260,7 @@
           "typeFidelity": 83.7,
           "structureFidelity": 100.0,
           "overallFidelity": 93.9,
-          "note": ""
+          "note": "see diagnostics"
         }
       ]
     },
@@ -345,7 +345,7 @@
           "typeFidelity": 83.1,
           "structureFidelity": 100.0,
           "overallFidelity": 93.6,
-          "note": ""
+          "note": "see diagnostics"
         }
       ]
     },
@@ -430,7 +430,7 @@
           "typeFidelity": 79.7,
           "structureFidelity": 100.0,
           "overallFidelity": 85.5,
-          "note": ""
+          "note": "see diagnostics"
         }
       ]
     },
@@ -505,7 +505,7 @@
           "typeFidelity": 84.8,
           "structureFidelity": 100.0,
           "overallFidelity": 89.3,
-          "note": ""
+          "note": "see diagnostics"
         },
         {
           "format": "XML",
@@ -515,7 +515,7 @@
           "typeFidelity": 77.6,
           "structureFidelity": 100.0,
           "overallFidelity": 84.9,
-          "note": ""
+          "note": "see diagnostics"
         }
       ]
     },
@@ -600,7 +600,7 @@
           "typeFidelity": 70.0,
           "structureFidelity": 100.0,
           "overallFidelity": 83.2,
-          "note": ""
+          "note": "see diagnostics"
         }
       ]
     },
@@ -675,7 +675,7 @@
           "typeFidelity": 96.2,
           "structureFidelity": 100.0,
           "overallFidelity": 98.7,
-          "note": ""
+          "note": "see diagnostics"
         },
         {
           "format": "XML",
@@ -685,7 +685,7 @@
           "typeFidelity": 92.0,
           "structureFidelity": 100.0,
           "overallFidelity": 97.2,
-          "note": ""
+          "note": "see diagnostics"
         }
       ]
     },
@@ -770,7 +770,7 @@
           "typeFidelity": 57.9,
           "structureFidelity": 100.0,
           "overallFidelity": 80.5,
-          "note": ""
+          "note": "see diagnostics"
         }
       ]
     },
@@ -855,7 +855,7 @@
           "typeFidelity": 81.2,
           "structureFidelity": 100.0,
           "overallFidelity": 92.8,
-          "note": ""
+          "note": "see diagnostics"
         }
       ]
     },
@@ -1025,7 +1025,7 @@
           "typeFidelity": 82.8,
           "structureFidelity": 100.0,
           "overallFidelity": 93.5,
-          "note": ""
+          "note": "see diagnostics"
         }
       ]
     },
@@ -1083,6 +1083,16 @@
           "note": ""
         },
         {
+          "format": "SDIF AI",
+          "bytes": 1000,
+          "parseSuccess": true,
+          "valueFidelity": 100.0,
+          "typeFidelity": 100.0,
+          "structureFidelity": 100.0,
+          "overallFidelity": 100.0,
+          "note": ""
+        },
+        {
           "format": "TOON",
           "bytes": 1002,
           "parseSuccess": true,
@@ -1093,16 +1103,6 @@
           "note": ""
         },
         {
-          "format": "SDIF AI",
-          "bytes": 1000,
-          "parseSuccess": true,
-          "valueFidelity": 92.5,
-          "typeFidelity": 100.0,
-          "structureFidelity": 88.9,
-          "overallFidelity": 93.6,
-          "note": ""
-        },
-        {
           "format": "CSV Bundle",
           "bytes": 1039,
           "parseSuccess": true,
@@ -1110,7 +1110,7 @@
           "typeFidelity": 100.0,
           "structureFidelity": 80.0,
           "overallFidelity": 91.5,
-          "note": ""
+          "note": "see diagnostics"
         }
       ]
     },
@@ -1168,6 +1168,16 @@
           "note": ""
         },
         {
+          "format": "SDIF AI",
+          "bytes": 662,
+          "parseSuccess": true,
+          "valueFidelity": 100.0,
+          "typeFidelity": 100.0,
+          "structureFidelity": 100.0,
+          "overallFidelity": 100.0,
+          "note": ""
+        },
+        {
           "format": "TOON",
           "bytes": 697,
           "parseSuccess": true,
@@ -1185,17 +1195,7 @@
           "typeFidelity": 100.0,
           "structureFidelity": 91.4,
           "overallFidelity": 97.0,
-          "note": ""
-        },
-        {
-          "format": "SDIF AI",
-          "bytes": 662,
-          "parseSuccess": true,
-          "valueFidelity": 91.4,
-          "typeFidelity": 100.0,
-          "structureFidelity": 100.0,
-          "overallFidelity": 97.0,
-          "note": ""
+          "note": "see diagnostics"
         }
       ]
     },
@@ -1280,7 +1280,7 @@
           "typeFidelity": 62.9,
           "structureFidelity": 100.0,
           "overallFidelity": 76.9,
-          "note": ""
+          "note": "see diagnostics"
         }
       ]
     },
@@ -1365,7 +1365,7 @@
           "typeFidelity": 99.4,
           "structureFidelity": 100.0,
           "overallFidelity": 99.6,
-          "note": ""
+          "note": "see diagnostics"
         }
       ]
     },
@@ -1450,7 +1450,7 @@
           "typeFidelity": 85.0,
           "structureFidelity": 100.0,
           "overallFidelity": 94.3,
-          "note": ""
+          "note": "see diagnostics"
         }
       ]
     },
@@ -1535,7 +1535,7 @@
           "typeFidelity": 68.9,
           "structureFidelity": 100.0,
           "overallFidelity": 86.7,
-          "note": ""
+          "note": "see diagnostics"
         }
       ]
     },
@@ -1603,8 +1603,8 @@
           "note": ""
         },
         {
-          "format": "TOON",
-          "bytes": 770,
+          "format": "SDIF AI",
+          "bytes": 691,
           "parseSuccess": true,
           "valueFidelity": 100.0,
           "typeFidelity": 100.0,
@@ -1613,13 +1613,13 @@
           "note": ""
         },
         {
-          "format": "SDIF AI",
-          "bytes": 691,
+          "format": "TOON",
+          "bytes": 770,
           "parseSuccess": true,
-          "valueFidelity": 88.9,
+          "valueFidelity": 100.0,
           "typeFidelity": 100.0,
           "structureFidelity": 100.0,
-          "overallFidelity": 96.0,
+          "overallFidelity": 100.0,
           "note": ""
         }
       ]
@@ -1705,7 +1705,7 @@
           "typeFidelity": 9.1,
           "structureFidelity": 100.0,
           "overallFidelity": 23.2,
-          "note": ""
+          "note": "see diagnostics"
         }
       ]
     }
