@@ -5,6 +5,8 @@ import subprocess
 import sys
 from pathlib import Path
 
+import pytest
+
 
 def load_token_efficiency_module():
     module_path = Path("scripts/token_efficiency.py")
@@ -268,6 +270,7 @@ def test_benchmark_main_publishes_compared_corpus_files(monkeypatch, tmp_path):
     monkeypatch.setattr(token_efficiency, "REPO_ROOT", tmp_path)
     monkeypatch.setenv("SDIF_BENCHMARK_OUTPUT_DIR", str(tmp_path))
     monkeypatch.setenv("SDIF_BENCHMARK_TOON", "0")
+    monkeypatch.setenv("SDIF_ENV_OVERRIDE", "0")
     monkeypatch.setattr(
         token_efficiency,
         "available_tokenizers",
@@ -317,3 +320,86 @@ def test_roundtrip_parse_sdif_large_document():
 
     result = rt.parse_sdif(text)
     assert result is not None, "parse_sdif must succeed for large-audit-trail"
+
+
+def test_roundtrip_no_na_formats():
+    rt = load_roundtrip_fidelity_module()
+    assert not hasattr(rt, "NA_FORMATS") or rt.NA_FORMATS == set()
+
+
+def test_roundtrip_format_parsers_include_sdif_ai_and_toon():
+    rt = load_roundtrip_fidelity_module()
+    assert "SDIF AI" in rt.FORMAT_PARSERS
+    assert "TOON" in rt.FORMAT_PARSERS
+
+
+def test_roundtrip_parse_sdif_ai_basic():
+    rt = load_roundtrip_fidelity_module()
+    import formats as fmt_mod
+    data = {"kind": "Plan", "id": "demo", "items": [{"id": "I1", "status": "open"}]}
+    sdif_text = __import__("sdif.json", fromlist=["json_data_to_sdif"]).json_data_to_sdif(data, include_header=True)
+    ai_text = fmt_mod.compact_ai_projection(sdif_text)
+    result = rt.parse_sdif_ai(ai_text)
+    assert result == data
+
+
+def test_roundtrip_parse_sdif_ai_with_explicit_header():
+    rt = load_roundtrip_fidelity_module()
+    # Force the header-present branch by using ai_view directly
+    from sdif.ai import ai_view
+    from sdif.json import json_data_to_sdif
+    data = {"name": "test", "count": 3}
+    sdif_text = json_data_to_sdif(data, include_header=True)
+    ai_text = ai_view(sdif_text, {}, include_header=True)
+    assert ai_text.startswith("@sdif.ai")
+    result = rt.parse_sdif_ai(ai_text)
+    assert result == data
+
+
+def test_roundtrip_parse_sdif_ai_scalar_ambiguity():
+    rt = load_roundtrip_fidelity_module()
+    import formats as fmt_mod
+    from sdif.json import json_data_to_sdif
+    data = {
+        "a": None,
+        "b": "null",
+        "c": 42,
+        "d": "42",
+        "e": True,
+        "f": "true",
+        "g": "",
+        "h": "  spaces  ",
+    }
+    sdif_text = json_data_to_sdif(data, include_header=True)
+    ai_text = fmt_mod.compact_ai_projection(sdif_text)
+    result = rt.parse_sdif_ai(ai_text)
+    assert result == data, f"scalar round-trip mismatch: {result!r} != {data!r}"
+
+
+def test_roundtrip_parse_toon_basic(monkeypatch):
+    rt = load_roundtrip_fidelity_module()
+    import formats as fmt_mod
+    data = {"kind": "Plan", "id": "demo", "items": [{"id": "I1", "status": "open"}]}
+    toon_text = fmt_mod.toon_from_cli(data)
+    if toon_text is None:
+        pytest.skip("TOON encoder not available")
+    result = rt.parse_toon(toon_text)
+    assert result == data
+
+
+def test_roundtrip_parse_toon_scalar_ambiguity(monkeypatch):
+    rt = load_roundtrip_fidelity_module()
+    import formats as fmt_mod
+    data = {"a": None, "b": True, "c": 42, "d": "42", "e": "null", "f": "true"}
+    toon_text = fmt_mod.toon_from_cli(data)
+    if toon_text is None:
+        pytest.skip("TOON encoder not available")
+    result = rt.parse_toon(toon_text)
+    assert result == data, f"scalar round-trip mismatch: {result!r} != {data!r}"
+
+
+def test_roundtrip_parse_toon_unavailable(monkeypatch):
+    rt = load_roundtrip_fidelity_module()
+    monkeypatch.setattr(rt.shutil, "which", lambda _name: None)
+    result = rt.parse_toon("name: test\n")
+    assert result is None
