@@ -403,3 +403,79 @@ def test_roundtrip_parse_toon_unavailable(monkeypatch):
     monkeypatch.setattr(rt.shutil, "which", lambda _name: None)
     result = rt.parse_toon("name: test\n")
     assert result is None
+
+
+def test_roundtrip_collect_diagnostics_all_four_categories():
+    rt = load_roundtrip_fidelity_module()
+    original = {"a": 1, "b": "hello", "c": True, "d": "gone"}
+    roundtripped = {"a": 2, "b": 42, "extra": "new"}
+
+    diag = rt.collect_diagnostics(original, roundtripped)
+
+    assert "d" in diag["missing_paths"]
+    assert "extra" in diag["extra_paths"]
+    assert any(m["path"] == "a" for m in diag["value_mismatches"])
+    assert any(m["path"] == "b" for m in diag["type_mismatches"])
+
+
+def test_roundtrip_collect_diagnostics_toon_int_float_coercion_cause():
+    rt = load_roundtrip_fidelity_module()
+    original = {"x": 5.0, "y": 3.0}
+    roundtripped = {"x": 5, "y": 3}
+
+    diag = rt.collect_diagnostics(original, roundtripped, format_name="TOON")
+
+    assert diag.get("cause") == "external_decoder_int_float_coercion"
+    assert diag["type_mismatches"][0]["expected_type"] == "float"
+    assert diag["type_mismatches"][0]["actual_type"] == "int"
+
+
+def test_roundtrip_diagnostic_files_produced_below_100(monkeypatch, tmp_path):
+    golden = tmp_path / "examples" / "golden" / "plan"
+    golden.mkdir(parents=True)
+    (golden / "equivalent.json").write_text(
+        '{"kind":"Plan","id":"demo","items":[{"id":"I1","status":"open"}]}',
+        encoding="utf-8",
+    )
+
+    rt = load_roundtrip_fidelity_module()
+    monkeypatch.setattr(rt, "REPO_ROOT", tmp_path)
+    monkeypatch.setenv("SDIF_BENCHMARK_OUTPUT_DIR", str(tmp_path))
+    monkeypatch.setenv("SDIF_BENCHMARK_TOON", "0")
+    monkeypatch.setenv("SDIF_ENV_OVERRIDE", "0")
+
+    # Inject a broken parser for JSON Compact that loses a field
+    original_parsers = dict(rt.FORMAT_PARSERS)
+    rt.FORMAT_PARSERS["JSON Compact"] = lambda text: {"kind": "Plan"}  # missing id, items
+    try:
+        rt.main()
+    finally:
+        rt.FORMAT_PARSERS.update(original_parsers)
+
+    run_dir = tmp_path / "results" / "roundtrip_fidelity"
+    diag_path = run_dir / "diagnostics" / "plan" / "json_compact.json"
+    assert diag_path.is_file(), "diagnostic file not written for below-100% format"
+
+    diag = json.loads(diag_path.read_text(encoding="utf-8"))
+    assert "missing_paths" in diag
+    assert "extra_paths" in diag
+    assert "value_mismatches" in diag
+    assert "type_mismatches" in diag
+
+
+def test_roundtrip_sdif_ai_plan_at_100_after_expand_fix():
+    rt = load_roundtrip_fidelity_module()
+    import formats as fmt_mod
+    from sdif.json import json_data_to_sdif
+
+    data = {
+        "kind": "Plan",
+        "id": "demo",
+        "scope": {"in": ["a", "b"], "out": ["c"]},
+        "items": [{"id": "I1", "status": "open"}, {"id": "I2", "status": "done"}],
+    }
+    sdif_text = json_data_to_sdif(data, include_header=True)
+    ai_text = fmt_mod.compact_ai_projection(sdif_text)
+    result = rt.parse_sdif_ai(ai_text)
+
+    assert result == data, f"SDIF AI round-trip mismatch: {result!r}"
