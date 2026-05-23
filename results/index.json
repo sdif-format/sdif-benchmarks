@@ -1,7 +1,7 @@
 {
   "kind": "BenchmarkSuiteReport",
   "version": "1.0",
-  "generatedAt": "2026-05-23T19:38:53Z",
+  "generatedAt": "2026-05-23T21:25:14Z",
   "corpus": {
     "source": "examples/golden",
     "documents": 20
