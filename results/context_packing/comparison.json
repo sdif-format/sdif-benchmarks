@@ -1,8 +1,8 @@
 {
   "kind": "ContextPackingReport",
   "version": "1.1",
-  "generatedAt": "2026-05-23T08:48:39Z",
-  "tokenizer": "estimate (4 bytes/token)",
+  "generatedAt": "2026-05-23T19:39:59Z",
+  "tokenizer": "tiktoken/cl100k_base",
   "documentCount": 20,
   "budgets": [
     4096,
@@ -17,152 +17,108 @@
     "b131072": "128K"
   },
   "perFormatSummary": {
-    "CSV_Bundle": {
-      "avgTokens": 35395.8,
-      "vsJsonCompactPct": 55.3,
+    "SDIF_AI": {
+      "avgTokens": 44741.0,
+      "vsJsonCompactPct": 64.6,
       "fitRate": {
         "b4096": 35.0,
-        "b8192": 40.0,
+        "b8192": 35.0,
         "b32768": 60.0,
-        "b131072": 100.0
+        "b131072": 90.0
+      },
+      "avgDocs": {
+        "b4096": 5.2,
+        "b8192": 10.5,
+        "b32768": 42.9,
+        "b131072": 172.9
+      },
+      "medianDocs": {
+        "b4096": 0.0,
+        "b8192": 0.0,
+        "b32768": 1.0,
+        "b131072": 6.5
+      }
+    },
+    "CSV_Bundle": {
+      "avgTokens": 45207.1,
+      "vsJsonCompactPct": 65.3,
+      "fitRate": {
+        "b4096": 35.0,
+        "b8192": 35.0,
+        "b32768": 60.0,
+        "b131072": 90.0
+      },
+      "avgDocs": {
+        "b4096": 4.5,
+        "b8192": 9.1,
+        "b32768": 37.0,
+        "b131072": 149.0
+      },
+      "medianDocs": {
+        "b4096": 0.0,
+        "b8192": 0.0,
+        "b32768": 1.0,
+        "b131072": 6.0
+      }
+    },
+    "SDIF": {
+      "avgTokens": 47247.9,
+      "vsJsonCompactPct": 68.2,
+      "fitRate": {
+        "b4096": 35.0,
+        "b8192": 35.0,
+        "b32768": 60.0,
+        "b131072": 90.0
       },
       "avgDocs": {
         "b4096": 4.9,
         "b8192": 10.0,
-        "b32768": 41.0,
-        "b131072": 165.6
-      },
-      "medianDocs": {
-        "b4096": 0.0,
-        "b8192": 0.0,
-        "b32768": 2.0,
-        "b131072": 9.5
-      }
-    },
-    "SDIF_AI": {
-      "avgTokens": 35462.7,
-      "vsJsonCompactPct": 55.4,
-      "fitRate": {
-        "b4096": 35.0,
-        "b8192": 40.0,
-        "b32768": 60.0,
-        "b131072": 100.0
-      },
-      "avgDocs": {
-        "b4096": 5.2,
-        "b8192": 10.6,
-        "b32768": 43.6,
-        "b131072": 175.8
-      },
-      "medianDocs": {
-        "b4096": 0.0,
-        "b8192": 0.0,
-        "b32768": 2.0,
-        "b131072": 9.5
-      }
-    },
-    "SDIF": {
-      "avgTokens": 36664.0,
-      "vsJsonCompactPct": 57.3,
-      "fitRate": {
-        "b4096": 35.0,
-        "b8192": 40.0,
-        "b32768": 60.0,
-        "b131072": 100.0
-      },
-      "avgDocs": {
-        "b4096": 5.1,
-        "b8192": 10.3,
-        "b32768": 42.2,
-        "b131072": 170.2
-      },
-      "medianDocs": {
-        "b4096": 0.0,
-        "b8192": 0.0,
-        "b32768": 2.0,
-        "b131072": 9.0
-      }
-    },
-    "TOON": {
-      "avgTokens": 36689.7,
-      "vsJsonCompactPct": 57.4,
-      "fitRate": {
-        "b4096": 35.0,
-        "b8192": 40.0,
-        "b32768": 60.0,
-        "b131072": 100.0
-      },
-      "avgDocs": {
-        "b4096": 5.0,
-        "b8192": 10.1,
-        "b32768": 41.1,
-        "b131072": 166.2
-      },
-      "medianDocs": {
-        "b4096": 0.0,
-        "b8192": 0.0,
-        "b32768": 2.0,
-        "b131072": 9.0
-      }
-    },
-    "YAML": {
-      "avgTokens": 61707.6,
-      "vsJsonCompactPct": 96.5,
-      "fitRate": {
-        "b4096": 35.0,
-        "b8192": 35.0,
-        "b32768": 55.0,
-        "b131072": 80.0
-      },
-      "avgDocs": {
-        "b4096": 3.5,
-        "b8192": 7.2,
-        "b32768": 29.6,
-        "b131072": 119.4
+        "b32768": 40.6,
+        "b131072": 163.3
       },
       "medianDocs": {
         "b4096": 0.0,
         "b8192": 0.0,
         "b32768": 1.0,
-        "b131072": 4.5
+        "b131072": 5.5
+      }
+    },
+    "TOON": {
+      "avgTokens": 47769.4,
+      "vsJsonCompactPct": 69.0,
+      "fitRate": {
+        "b4096": 35.0,
+        "b8192": 35.0,
+        "b32768": 60.0,
+        "b131072": 90.0
+      },
+      "avgDocs": {
+        "b4096": 4.4,
+        "b8192": 9.1,
+        "b32768": 37.0,
+        "b131072": 149.2
+      },
+      "medianDocs": {
+        "b4096": 0.0,
+        "b8192": 0.0,
+        "b32768": 1.0,
+        "b131072": 5.5
       }
     },
     "JSON_Compact": {
-      "avgTokens": 63957.2,
+      "avgTokens": 69248.1,
       "vsJsonCompactPct": 100.0,
       "fitRate": {
         "b4096": 35.0,
         "b8192": 35.0,
-        "b32768": 55.0,
-        "b131072": 80.0
+        "b32768": 45.0,
+        "b131072": 70.0
       },
       "avgDocs": {
-        "b4096": 3.3,
-        "b8192": 6.8,
-        "b32768": 27.8,
-        "b131072": 112.0
-      },
-      "medianDocs": {
-        "b4096": 0.0,
-        "b8192": 0.0,
-        "b32768": 1.0,
-        "b131072": 4.0
-      }
-    },
-    "JSON_Pretty": {
-      "avgTokens": 88630.1,
-      "vsJsonCompactPct": 138.6,
-      "fitRate": {
-        "b4096": 35.0,
-        "b8192": 35.0,
-        "b32768": 40.0,
-        "b131072": 65.0
-      },
-      "avgDocs": {
-        "b4096": 2.3,
-        "b8192": 4.8,
-        "b32768": 19.8,
-        "b131072": 80.5
+        "b4096": 3.5,
+        "b8192": 7.2,
+        "b32768": 29.2,
+        "b131072": 118.4
       },
       "medianDocs": {
         "b4096": 0.0,
@@ -171,9 +127,31 @@
         "b131072": 3.0
       }
     },
-    "XML": {
-      "avgTokens": 108112.9,
-      "vsJsonCompactPct": 169.0,
+    "YAML": {
+      "avgTokens": 78746.6,
+      "vsJsonCompactPct": 113.7,
+      "fitRate": {
+        "b4096": 35.0,
+        "b8192": 35.0,
+        "b32768": 40.0,
+        "b131072": 65.0
+      },
+      "avgDocs": {
+        "b4096": 3.1,
+        "b8192": 6.5,
+        "b32768": 26.4,
+        "b131072": 106.3
+      },
+      "medianDocs": {
+        "b4096": 0.0,
+        "b8192": 0.0,
+        "b32768": 0.0,
+        "b131072": 2.5
+      }
+    },
+    "JSON_Pretty": {
+      "avgTokens": 105690.9,
+      "vsJsonCompactPct": 152.6,
       "fitRate": {
         "b4096": 35.0,
         "b8192": 35.0,
@@ -181,16 +159,38 @@
         "b131072": 65.0
       },
       "avgDocs": {
-        "b4096": 1.8,
-        "b8192": 3.8,
-        "b32768": 16.1,
-        "b131072": 65.2
+        "b4096": 2.0,
+        "b8192": 4.3,
+        "b32768": 17.5,
+        "b131072": 71.2
       },
       "medianDocs": {
         "b4096": 0.0,
         "b8192": 0.0,
         "b32768": 0.0,
         "b131072": 2.0
+      }
+    },
+    "XML": {
+      "avgTokens": 127519.8,
+      "vsJsonCompactPct": 184.1,
+      "fitRate": {
+        "b4096": 35.0,
+        "b8192": 35.0,
+        "b32768": 35.0,
+        "b131072": 65.0
+      },
+      "avgDocs": {
+        "b4096": 1.6,
+        "b8192": 3.4,
+        "b32768": 13.9,
+        "b131072": 56.6
+      },
+      "medianDocs": {
+        "b4096": 0.0,
+        "b8192": 0.0,
+        "b32768": 0.0,
+        "b131072": 1.0
       }
     }
   },
@@ -199,28 +199,17 @@
   "envFileLoaded": false,
   "environment": {
     "SDIF_BENCHMARK_GOLDEN_DIR": null,
-    "SDIF_BENCHMARK_TOON": "1",
-    "SDIF_TIKTOKEN_ENCODING": "cl100k_base"
+    "SDIF_BENCHMARK_TOON": null,
+    "SDIF_TIKTOKEN_ENCODING": null
   },
   "documents": [
     {
       "name": "deep-hierarchy-project",
       "formats": [
         {
-          "format": "SDIF AI",
-          "bytes": 292716,
-          "tokens": 73179,
-          "recordsByBudget": {
-            "b4096": 0,
-            "b8192": 0,
-            "b32768": 0,
-            "b131072": 1
-          }
-        },
-        {
           "format": "CSV Bundle",
           "bytes": 292754,
-          "tokens": 73189,
+          "tokens": 101645,
           "recordsByBudget": {
             "b4096": 0,
             "b8192": 0,
@@ -229,9 +218,9 @@
           }
         },
         {
-          "format": "SDIF",
-          "bytes": 302202,
-          "tokens": 75551,
+          "format": "SDIF AI",
+          "bytes": 292716,
+          "tokens": 103205,
           "recordsByBudget": {
             "b4096": 0,
             "b8192": 0,
@@ -242,7 +231,7 @@
         {
           "format": "TOON",
           "bytes": 302214,
-          "tokens": 75554,
+          "tokens": 106382,
           "recordsByBudget": {
             "b4096": 0,
             "b8192": 0,
@@ -251,9 +240,9 @@
           }
         },
         {
-          "format": "YAML",
-          "bytes": 452163,
-          "tokens": 113041,
+          "format": "SDIF",
+          "bytes": 302202,
+          "tokens": 107951,
           "recordsByBudget": {
             "b4096": 0,
             "b8192": 0,
@@ -264,18 +253,29 @@
         {
           "format": "JSON Compact",
           "bytes": 474294,
-          "tokens": 118574,
+          "tokens": 137942,
           "recordsByBudget": {
             "b4096": 0,
             "b8192": 0,
             "b32768": 0,
-            "b131072": 1
+            "b131072": 0
+          }
+        },
+        {
+          "format": "YAML",
+          "bytes": 452163,
+          "tokens": 153735,
+          "recordsByBudget": {
+            "b4096": 0,
+            "b8192": 0,
+            "b32768": 0,
+            "b131072": 0
           }
         },
         {
           "format": "JSON Pretty",
           "bytes": 648068,
-          "tokens": 162017,
+          "tokens": 204303,
           "recordsByBudget": {
             "b4096": 0,
             "b8192": 0,
@@ -286,7 +286,7 @@
         {
           "format": "XML",
           "bytes": 768236,
-          "tokens": 192059,
+          "tokens": 243817,
           "recordsByBudget": {
             "b4096": 0,
             "b8192": 0,
@@ -302,7 +302,7 @@
         {
           "format": "SDIF AI",
           "bytes": 167369,
-          "tokens": 41843,
+          "tokens": 37829,
           "recordsByBudget": {
             "b4096": 0,
             "b8192": 0,
@@ -313,18 +313,7 @@
         {
           "format": "CSV Bundle",
           "bytes": 167539,
-          "tokens": 41885,
-          "recordsByBudget": {
-            "b4096": 0,
-            "b8192": 0,
-            "b32768": 0,
-            "b131072": 3
-          }
-        },
-        {
-          "format": "SDIF",
-          "bytes": 173649,
-          "tokens": 43413,
+          "tokens": 39074,
           "recordsByBudget": {
             "b4096": 0,
             "b8192": 0,
@@ -335,7 +324,7 @@
         {
           "format": "TOON",
           "bytes": 174452,
-          "tokens": 43613,
+          "tokens": 41529,
           "recordsByBudget": {
             "b4096": 0,
             "b8192": 0,
@@ -344,20 +333,31 @@
           }
         },
         {
-          "format": "YAML",
-          "bytes": 283256,
-          "tokens": 70814,
+          "format": "SDIF",
+          "bytes": 173649,
+          "tokens": 41867,
           "recordsByBudget": {
             "b4096": 0,
             "b8192": 0,
             "b32768": 0,
-            "b131072": 1
+            "b131072": 3
           }
         },
         {
           "format": "JSON Compact",
           "bytes": 292422,
-          "tokens": 73106,
+          "tokens": 62704,
+          "recordsByBudget": {
+            "b4096": 0,
+            "b8192": 0,
+            "b32768": 0,
+            "b131072": 2
+          }
+        },
+        {
+          "format": "YAML",
+          "bytes": 283256,
+          "tokens": 72783,
           "recordsByBudget": {
             "b4096": 0,
             "b8192": 0,
@@ -368,7 +368,7 @@
         {
           "format": "JSON Pretty",
           "bytes": 386842,
-          "tokens": 96711,
+          "tokens": 97266,
           "recordsByBudget": {
             "b4096": 0,
             "b8192": 0,
@@ -379,7 +379,7 @@
         {
           "format": "XML",
           "bytes": 472655,
-          "tokens": 118164,
+          "tokens": 117756,
           "recordsByBudget": {
             "b4096": 0,
             "b8192": 0,
@@ -395,7 +395,7 @@
         {
           "format": "SDIF AI",
           "bytes": 279580,
-          "tokens": 69895,
+          "tokens": 86155,
           "recordsByBudget": {
             "b4096": 0,
             "b8192": 0,
@@ -406,18 +406,7 @@
         {
           "format": "CSV Bundle",
           "bytes": 279620,
-          "tokens": 69905,
-          "recordsByBudget": {
-            "b4096": 0,
-            "b8192": 0,
-            "b32768": 0,
-            "b131072": 1
-          }
-        },
-        {
-          "format": "TOON",
-          "bytes": 288966,
-          "tokens": 72242,
+          "tokens": 88495,
           "recordsByBudget": {
             "b4096": 0,
             "b8192": 0,
@@ -428,7 +417,7 @@
         {
           "format": "SDIF",
           "bytes": 289242,
-          "tokens": 72311,
+          "tokens": 90989,
           "recordsByBudget": {
             "b4096": 0,
             "b8192": 0,
@@ -437,9 +426,9 @@
           }
         },
         {
-          "format": "YAML",
-          "bytes": 495208,
-          "tokens": 123802,
+          "format": "TOON",
+          "bytes": 288966,
+          "tokens": 93032,
           "recordsByBudget": {
             "b4096": 0,
             "b8192": 0,
@@ -450,18 +439,29 @@
         {
           "format": "JSON Compact",
           "bytes": 518882,
-          "tokens": 129721,
+          "tokens": 132864,
           "recordsByBudget": {
             "b4096": 0,
             "b8192": 0,
             "b32768": 0,
-            "b131072": 1
+            "b131072": 0
+          }
+        },
+        {
+          "format": "YAML",
+          "bytes": 495208,
+          "tokens": 153731,
+          "recordsByBudget": {
+            "b4096": 0,
+            "b8192": 0,
+            "b32768": 0,
+            "b131072": 0
           }
         },
         {
           "format": "JSON Pretty",
           "bytes": 733208,
-          "tokens": 183302,
+          "tokens": 213005,
           "recordsByBudget": {
             "b4096": 0,
             "b8192": 0,
@@ -472,7 +472,7 @@
         {
           "format": "XML",
           "bytes": 884387,
-          "tokens": 221097,
+          "tokens": 254541,
           "recordsByBudget": {
             "b4096": 0,
             "b8192": 0,
@@ -488,51 +488,40 @@
         {
           "format": "SDIF AI",
           "bytes": 492354,
-          "tokens": 123089,
+          "tokens": 141145,
           "recordsByBudget": {
             "b4096": 0,
             "b8192": 0,
             "b32768": 0,
-            "b131072": 1
+            "b131072": 0
           }
         },
         {
           "format": "CSV Bundle",
           "bytes": 492413,
-          "tokens": 123104,
+          "tokens": 144465,
           "recordsByBudget": {
             "b4096": 0,
             "b8192": 0,
             "b32768": 0,
-            "b131072": 1
+            "b131072": 0
           }
         },
         {
           "format": "SDIF",
           "bytes": 504796,
-          "tokens": 126199,
+          "tokens": 147369,
           "recordsByBudget": {
             "b4096": 0,
             "b8192": 0,
             "b32768": 0,
-            "b131072": 1
+            "b131072": 0
           }
         },
         {
           "format": "TOON",
           "bytes": 504817,
-          "tokens": 126205,
-          "recordsByBudget": {
-            "b4096": 0,
-            "b8192": 0,
-            "b32768": 0,
-            "b131072": 1
-          }
-        },
-        {
-          "format": "YAML",
-          "bytes": 780329,
-          "tokens": 195083,
+          "tokens": 150679,
           "recordsByBudget": {
             "b4096": 0,
             "b8192": 0,
@@ -543,7 +532,18 @@
         {
           "format": "JSON Compact",
           "bytes": 804703,
-          "tokens": 201176,
+          "tokens": 213238,
+          "recordsByBudget": {
+            "b4096": 0,
+            "b8192": 0,
+            "b32768": 0,
+            "b131072": 0
+          }
+        },
+        {
+          "format": "YAML",
+          "bytes": 780329,
+          "tokens": 229718,
           "recordsByBudget": {
             "b4096": 0,
             "b8192": 0,
@@ -554,7 +554,7 @@
         {
           "format": "JSON Pretty",
           "bytes": 1048494,
-          "tokens": 262124,
+          "tokens": 302381,
           "recordsByBudget": {
             "b4096": 0,
             "b8192": 0,
@@ -565,7 +565,7 @@
         {
           "format": "XML",
           "bytes": 1273626,
-          "tokens": 318407,
+          "tokens": 366170,
           "recordsByBudget": {
             "b4096": 0,
             "b8192": 0,
@@ -581,51 +581,40 @@
         {
           "format": "SDIF AI",
           "bytes": 402720,
-          "tokens": 100680,
+          "tokens": 154451,
           "recordsByBudget": {
             "b4096": 0,
             "b8192": 0,
             "b32768": 0,
-            "b131072": 1
+            "b131072": 0
           }
         },
         {
           "format": "CSV Bundle",
           "bytes": 402772,
-          "tokens": 100693,
+          "tokens": 159696,
           "recordsByBudget": {
             "b4096": 0,
             "b8192": 0,
             "b32768": 0,
-            "b131072": 1
+            "b131072": 0
           }
         },
         {
           "format": "SDIF",
           "bytes": 426166,
-          "tokens": 106542,
+          "tokens": 166177,
           "recordsByBudget": {
             "b4096": 0,
             "b8192": 0,
             "b32768": 0,
-            "b131072": 1
+            "b131072": 0
           }
         },
         {
           "format": "TOON",
           "bytes": 426185,
-          "tokens": 106547,
-          "recordsByBudget": {
-            "b4096": 0,
-            "b8192": 0,
-            "b32768": 0,
-            "b131072": 1
-          }
-        },
-        {
-          "format": "YAML",
-          "bytes": 839949,
-          "tokens": 209988,
+          "tokens": 171412,
           "recordsByBudget": {
             "b4096": 0,
             "b8192": 0,
@@ -636,7 +625,18 @@
         {
           "format": "JSON Compact",
           "bytes": 883824,
-          "tokens": 220956,
+          "tokens": 253063,
+          "recordsByBudget": {
+            "b4096": 0,
+            "b8192": 0,
+            "b32768": 0,
+            "b131072": 0
+          }
+        },
+        {
+          "format": "YAML",
+          "bytes": 839949,
+          "tokens": 283892,
           "recordsByBudget": {
             "b4096": 0,
             "b8192": 0,
@@ -647,7 +647,7 @@
         {
           "format": "JSON Pretty",
           "bytes": 1285316,
-          "tokens": 321329,
+          "tokens": 399186,
           "recordsByBudget": {
             "b4096": 0,
             "b8192": 0,
@@ -658,7 +658,7 @@
         {
           "format": "XML",
           "bytes": 1652261,
-          "tokens": 413066,
+          "tokens": 494780,
           "recordsByBudget": {
             "b4096": 0,
             "b8192": 0,
@@ -674,51 +674,40 @@
         {
           "format": "CSV Bundle",
           "bytes": 215257,
-          "tokens": 53815,
+          "tokens": 71357,
           "recordsByBudget": {
             "b4096": 0,
             "b8192": 0,
             "b32768": 0,
-            "b131072": 2
+            "b131072": 1
           }
         },
         {
           "format": "SDIF AI",
           "bytes": 221599,
-          "tokens": 55400,
+          "tokens": 75464,
           "recordsByBudget": {
             "b4096": 0,
             "b8192": 0,
             "b32768": 0,
-            "b131072": 2
-          }
-        },
-        {
-          "format": "SDIF",
-          "bytes": 228953,
-          "tokens": 57239,
-          "recordsByBudget": {
-            "b4096": 0,
-            "b8192": 0,
-            "b32768": 0,
-            "b131072": 2
+            "b131072": 1
           }
         },
         {
           "format": "TOON",
           "bytes": 229126,
-          "tokens": 57282,
+          "tokens": 78231,
           "recordsByBudget": {
             "b4096": 0,
             "b8192": 0,
             "b32768": 0,
-            "b131072": 2
+            "b131072": 1
           }
         },
         {
-          "format": "YAML",
-          "bytes": 435031,
-          "tokens": 108758,
+          "format": "SDIF",
+          "bytes": 228953,
+          "tokens": 79144,
           "recordsByBudget": {
             "b4096": 0,
             "b8192": 0,
@@ -729,7 +718,7 @@
         {
           "format": "JSON Compact",
           "bytes": 447520,
-          "tokens": 111880,
+          "tokens": 126532,
           "recordsByBudget": {
             "b4096": 0,
             "b8192": 0,
@@ -738,9 +727,20 @@
           }
         },
         {
+          "format": "YAML",
+          "bytes": 435031,
+          "tokens": 149601,
+          "recordsByBudget": {
+            "b4096": 0,
+            "b8192": 0,
+            "b32768": 0,
+            "b131072": 0
+          }
+        },
+        {
           "format": "JSON Pretty",
           "bytes": 653078,
-          "tokens": 163270,
+          "tokens": 199367,
           "recordsByBudget": {
             "b4096": 0,
             "b8192": 0,
@@ -751,7 +751,7 @@
         {
           "format": "XML",
           "bytes": 790035,
-          "tokens": 197509,
+          "tokens": 235726,
           "recordsByBudget": {
             "b4096": 0,
             "b8192": 0,
@@ -767,7 +767,7 @@
         {
           "format": "SDIF AI",
           "bytes": 342047,
-          "tokens": 85512,
+          "tokens": 94839,
           "recordsByBudget": {
             "b4096": 0,
             "b8192": 0,
@@ -778,7 +778,7 @@
         {
           "format": "CSV Bundle",
           "bytes": 342094,
-          "tokens": 85524,
+          "tokens": 96002,
           "recordsByBudget": {
             "b4096": 0,
             "b8192": 0,
@@ -789,7 +789,7 @@
         {
           "format": "SDIF",
           "bytes": 352437,
-          "tokens": 88110,
+          "tokens": 100037,
           "recordsByBudget": {
             "b4096": 0,
             "b8192": 0,
@@ -800,7 +800,7 @@
         {
           "format": "TOON",
           "bytes": 352453,
-          "tokens": 88114,
+          "tokens": 101190,
           "recordsByBudget": {
             "b4096": 0,
             "b8192": 0,
@@ -809,9 +809,9 @@
           }
         },
         {
-          "format": "YAML",
-          "bytes": 573388,
-          "tokens": 143347,
+          "format": "JSON Compact",
+          "bytes": 592098,
+          "tokens": 149622,
           "recordsByBudget": {
             "b4096": 0,
             "b8192": 0,
@@ -820,9 +820,9 @@
           }
         },
         {
-          "format": "JSON Compact",
-          "bytes": 592098,
-          "tokens": 148025,
+          "format": "YAML",
+          "bytes": 573388,
+          "tokens": 169236,
           "recordsByBudget": {
             "b4096": 0,
             "b8192": 0,
@@ -833,7 +833,7 @@
         {
           "format": "JSON Pretty",
           "bytes": 810127,
-          "tokens": 202532,
+          "tokens": 229579,
           "recordsByBudget": {
             "b4096": 0,
             "b8192": 0,
@@ -844,7 +844,7 @@
         {
           "format": "XML",
           "bytes": 986732,
-          "tokens": 246683,
+          "tokens": 274660,
           "recordsByBudget": {
             "b4096": 0,
             "b8192": 0,
@@ -860,7 +860,7 @@
         {
           "format": "SDIF AI",
           "bytes": 383776,
-          "tokens": 95944,
+          "tokens": 99633,
           "recordsByBudget": {
             "b4096": 0,
             "b8192": 0,
@@ -871,7 +871,7 @@
         {
           "format": "CSV Bundle",
           "bytes": 383821,
-          "tokens": 95956,
+          "tokens": 99656,
           "recordsByBudget": {
             "b4096": 0,
             "b8192": 0,
@@ -882,7 +882,7 @@
         {
           "format": "SDIF",
           "bytes": 390534,
-          "tokens": 97634,
+          "tokens": 103015,
           "recordsByBudget": {
             "b4096": 0,
             "b8192": 0,
@@ -893,7 +893,7 @@
         {
           "format": "TOON",
           "bytes": 391666,
-          "tokens": 97917,
+          "tokens": 103027,
           "recordsByBudget": {
             "b4096": 0,
             "b8192": 0,
@@ -902,9 +902,9 @@
           }
         },
         {
-          "format": "YAML",
-          "bytes": 549978,
-          "tokens": 137495,
+          "format": "JSON Compact",
+          "bytes": 559328,
+          "tokens": 134533,
           "recordsByBudget": {
             "b4096": 0,
             "b8192": 0,
@@ -913,9 +913,9 @@
           }
         },
         {
-          "format": "JSON Compact",
-          "bytes": 559328,
-          "tokens": 139832,
+          "format": "YAML",
+          "bytes": 549978,
+          "tokens": 150198,
           "recordsByBudget": {
             "b4096": 0,
             "b8192": 0,
@@ -926,7 +926,7 @@
         {
           "format": "JSON Pretty",
           "bytes": 710381,
-          "tokens": 177596,
+          "tokens": 192034,
           "recordsByBudget": {
             "b4096": 0,
             "b8192": 0,
@@ -937,7 +937,7 @@
         {
           "format": "XML",
           "bytes": 818657,
-          "tokens": 204665,
+          "tokens": 225834,
           "recordsByBudget": {
             "b4096": 0,
             "b8192": 0,
@@ -951,64 +951,53 @@
       "name": "medium-invoice-batch",
       "formats": [
         {
-          "format": "SDIF AI",
-          "bytes": 73903,
-          "tokens": 18476,
-          "recordsByBudget": {
-            "b4096": 0,
-            "b8192": 0,
-            "b32768": 1,
-            "b131072": 7
-          }
-        },
-        {
           "format": "CSV Bundle",
           "bytes": 73941,
-          "tokens": 18486,
+          "tokens": 25965,
           "recordsByBudget": {
             "b4096": 0,
             "b8192": 0,
             "b32768": 1,
-            "b131072": 7
+            "b131072": 5
           }
         },
         {
-          "format": "SDIF",
-          "bytes": 75859,
-          "tokens": 18965,
+          "format": "SDIF AI",
+          "bytes": 73903,
+          "tokens": 26707,
           "recordsByBudget": {
             "b4096": 0,
             "b8192": 0,
             "b32768": 1,
-            "b131072": 6
+            "b131072": 4
           }
         },
         {
           "format": "TOON",
           "bytes": 75867,
-          "tokens": 18967,
+          "tokens": 26932,
           "recordsByBudget": {
             "b4096": 0,
             "b8192": 0,
             "b32768": 1,
-            "b131072": 6
+            "b131072": 4
           }
         },
         {
-          "format": "YAML",
-          "bytes": 137030,
-          "tokens": 34258,
+          "format": "SDIF",
+          "bytes": 75859,
+          "tokens": 27688,
           "recordsByBudget": {
             "b4096": 0,
             "b8192": 0,
-            "b32768": 0,
-            "b131072": 3
+            "b32768": 1,
+            "b131072": 4
           }
         },
         {
           "format": "JSON Compact",
           "bytes": 139558,
-          "tokens": 34890,
+          "tokens": 39858,
           "recordsByBudget": {
             "b4096": 0,
             "b8192": 0,
@@ -1017,9 +1006,20 @@
           }
         },
         {
+          "format": "YAML",
+          "bytes": 137030,
+          "tokens": 46758,
+          "recordsByBudget": {
+            "b4096": 0,
+            "b8192": 0,
+            "b32768": 0,
+            "b131072": 2
+          }
+        },
+        {
           "format": "JSON Pretty",
           "bytes": 191590,
-          "tokens": 47898,
+          "tokens": 58931,
           "recordsByBudget": {
             "b4096": 0,
             "b8192": 0,
@@ -1030,12 +1030,12 @@
         {
           "format": "XML",
           "bytes": 238165,
-          "tokens": 59542,
+          "tokens": 70501,
           "recordsByBudget": {
             "b4096": 0,
             "b8192": 0,
             "b32768": 0,
-            "b131072": 2
+            "b131072": 1
           }
         }
       ]
@@ -1046,62 +1046,51 @@
         {
           "format": "SDIF AI",
           "bytes": 55931,
-          "tokens": 13983,
+          "tokens": 18170,
           "recordsByBudget": {
             "b4096": 0,
             "b8192": 0,
-            "b32768": 2,
-            "b131072": 9
+            "b32768": 1,
+            "b131072": 7
           }
         },
         {
           "format": "CSV Bundle",
           "bytes": 55978,
-          "tokens": 13995,
+          "tokens": 19018,
           "recordsByBudget": {
             "b4096": 0,
             "b8192": 0,
-            "b32768": 2,
-            "b131072": 9
+            "b32768": 1,
+            "b131072": 6
           }
         },
         {
           "format": "SDIF",
           "bytes": 58377,
-          "tokens": 14595,
+          "tokens": 20572,
           "recordsByBudget": {
             "b4096": 0,
             "b8192": 0,
-            "b32768": 2,
-            "b131072": 8
+            "b32768": 1,
+            "b131072": 6
           }
         },
         {
           "format": "TOON",
           "bytes": 58391,
-          "tokens": 14598,
-          "recordsByBudget": {
-            "b4096": 0,
-            "b8192": 0,
-            "b32768": 2,
-            "b131072": 8
-          }
-        },
-        {
-          "format": "YAML",
-          "bytes": 109099,
-          "tokens": 27275,
+          "tokens": 21408,
           "recordsByBudget": {
             "b4096": 0,
             "b8192": 0,
             "b32768": 1,
-            "b131072": 4
+            "b131072": 6
           }
         },
         {
           "format": "JSON Compact",
           "bytes": 114756,
-          "tokens": 28689,
+          "tokens": 32253,
           "recordsByBudget": {
             "b4096": 0,
             "b8192": 0,
@@ -1110,9 +1099,9 @@
           }
         },
         {
-          "format": "JSON Pretty",
-          "bytes": 167981,
-          "tokens": 41996,
+          "format": "YAML",
+          "bytes": 109099,
+          "tokens": 38569,
           "recordsByBudget": {
             "b4096": 0,
             "b8192": 0,
@@ -1121,9 +1110,20 @@
           }
         },
         {
+          "format": "JSON Pretty",
+          "bytes": 167981,
+          "tokens": 52300,
+          "recordsByBudget": {
+            "b4096": 0,
+            "b8192": 0,
+            "b32768": 0,
+            "b131072": 2
+          }
+        },
+        {
           "format": "XML",
           "bytes": 205986,
-          "tokens": 51497,
+          "tokens": 63274,
           "recordsByBudget": {
             "b4096": 0,
             "b8192": 0,
@@ -1139,155 +1139,62 @@
         {
           "format": "SDIF AI",
           "bytes": 49782,
-          "tokens": 12446,
+          "tokens": 18106,
           "recordsByBudget": {
             "b4096": 0,
             "b8192": 0,
-            "b32768": 2,
-            "b131072": 10
-          }
-        },
-        {
-          "format": "CSV Bundle",
-          "bytes": 49822,
-          "tokens": 12456,
-          "recordsByBudget": {
-            "b4096": 0,
-            "b8192": 0,
-            "b32768": 2,
-            "b131072": 10
+            "b32768": 1,
+            "b131072": 7
           }
         },
         {
           "format": "SDIF",
           "bytes": 51672,
-          "tokens": 12918,
+          "tokens": 19054,
           "recordsByBudget": {
             "b4096": 0,
             "b8192": 0,
-            "b32768": 2,
-            "b131072": 10
+            "b32768": 1,
+            "b131072": 6
+          }
+        },
+        {
+          "format": "CSV Bundle",
+          "bytes": 49822,
+          "tokens": 19159,
+          "recordsByBudget": {
+            "b4096": 0,
+            "b8192": 0,
+            "b32768": 1,
+            "b131072": 6
           }
         },
         {
           "format": "TOON",
           "bytes": 51680,
-          "tokens": 12920,
-          "recordsByBudget": {
-            "b4096": 0,
-            "b8192": 0,
-            "b32768": 2,
-            "b131072": 10
-          }
-        },
-        {
-          "format": "YAML",
-          "bytes": 91628,
-          "tokens": 22907,
+          "tokens": 20095,
           "recordsByBudget": {
             "b4096": 0,
             "b8192": 0,
             "b32768": 1,
-            "b131072": 5
+            "b131072": 6
           }
         },
         {
           "format": "JSON Compact",
           "bytes": 97573,
-          "tokens": 24394,
+          "tokens": 28086,
           "recordsByBudget": {
             "b4096": 0,
             "b8192": 0,
             "b32768": 1,
-            "b131072": 5
-          }
-        },
-        {
-          "format": "JSON Pretty",
-          "bytes": 139351,
-          "tokens": 34838,
-          "recordsByBudget": {
-            "b4096": 0,
-            "b8192": 0,
-            "b32768": 0,
-            "b131072": 3
-          }
-        },
-        {
-          "format": "XML",
-          "bytes": 167499,
-          "tokens": 41875,
-          "recordsByBudget": {
-            "b4096": 0,
-            "b8192": 0,
-            "b32768": 0,
-            "b131072": 3
-          }
-        }
-      ]
-    },
-    {
-      "name": "medium-product-catalog",
-      "formats": [
-        {
-          "format": "SDIF AI",
-          "bytes": 47552,
-          "tokens": 11888,
-          "recordsByBudget": {
-            "b4096": 0,
-            "b8192": 0,
-            "b32768": 2,
-            "b131072": 11
-          }
-        },
-        {
-          "format": "CSV Bundle",
-          "bytes": 47599,
-          "tokens": 11900,
-          "recordsByBudget": {
-            "b4096": 0,
-            "b8192": 0,
-            "b32768": 2,
-            "b131072": 11
-          }
-        },
-        {
-          "format": "SDIF",
-          "bytes": 50784,
-          "tokens": 12696,
-          "recordsByBudget": {
-            "b4096": 0,
-            "b8192": 0,
-            "b32768": 2,
-            "b131072": 10
-          }
-        },
-        {
-          "format": "TOON",
-          "bytes": 50798,
-          "tokens": 12700,
-          "recordsByBudget": {
-            "b4096": 0,
-            "b8192": 0,
-            "b32768": 2,
-            "b131072": 10
+            "b131072": 4
           }
         },
         {
           "format": "YAML",
-          "bytes": 104720,
-          "tokens": 26180,
-          "recordsByBudget": {
-            "b4096": 0,
-            "b8192": 0,
-            "b32768": 1,
-            "b131072": 5
-          }
-        },
-        {
-          "format": "JSON Compact",
-          "bytes": 111369,
-          "tokens": 27843,
+          "bytes": 91628,
+          "tokens": 32094,
           "recordsByBudget": {
             "b4096": 0,
             "b8192": 0,
@@ -1297,19 +1204,19 @@
         },
         {
           "format": "JSON Pretty",
-          "bytes": 169056,
-          "tokens": 42264,
+          "bytes": 139351,
+          "tokens": 43999,
           "recordsByBudget": {
             "b4096": 0,
             "b8192": 0,
             "b32768": 0,
-            "b131072": 3
+            "b131072": 2
           }
         },
         {
           "format": "XML",
-          "bytes": 214848,
-          "tokens": 53712,
+          "bytes": 167499,
+          "tokens": 52678,
           "recordsByBudget": {
             "b4096": 0,
             "b8192": 0,
@@ -1320,33 +1227,104 @@
       ]
     },
     {
-      "name": "plan",
+      "name": "medium-product-catalog",
       "formats": [
         {
-          "format": "SDIF",
-          "bytes": 984,
-          "tokens": 246,
+          "format": "SDIF AI",
+          "bytes": 47552,
+          "tokens": 21319,
           "recordsByBudget": {
-            "b4096": 16,
-            "b8192": 33,
-            "b32768": 133,
-            "b131072": 532
+            "b4096": 0,
+            "b8192": 0,
+            "b32768": 1,
+            "b131072": 6
           }
         },
         {
-          "format": "SDIF AI",
-          "bytes": 1000,
-          "tokens": 250,
+          "format": "CSV Bundle",
+          "bytes": 47599,
+          "tokens": 21445,
           "recordsByBudget": {
-            "b4096": 16,
-            "b8192": 32,
-            "b32768": 131,
-            "b131072": 524
+            "b4096": 0,
+            "b8192": 0,
+            "b32768": 1,
+            "b131072": 6
+          }
+        },
+        {
+          "format": "SDIF",
+          "bytes": 50784,
+          "tokens": 22938,
+          "recordsByBudget": {
+            "b4096": 0,
+            "b8192": 0,
+            "b32768": 1,
+            "b131072": 5
           }
         },
         {
           "format": "TOON",
-          "bytes": 1002,
+          "bytes": 50798,
+          "tokens": 23051,
+          "recordsByBudget": {
+            "b4096": 0,
+            "b8192": 0,
+            "b32768": 1,
+            "b131072": 5
+          }
+        },
+        {
+          "format": "JSON Compact",
+          "bytes": 111369,
+          "tokens": 33936,
+          "recordsByBudget": {
+            "b4096": 0,
+            "b8192": 0,
+            "b32768": 0,
+            "b131072": 3
+          }
+        },
+        {
+          "format": "YAML",
+          "bytes": 104720,
+          "tokens": 39958,
+          "recordsByBudget": {
+            "b4096": 0,
+            "b8192": 0,
+            "b32768": 0,
+            "b131072": 3
+          }
+        },
+        {
+          "format": "JSON Pretty",
+          "bytes": 169056,
+          "tokens": 55984,
+          "recordsByBudget": {
+            "b4096": 0,
+            "b8192": 0,
+            "b32768": 0,
+            "b131072": 2
+          }
+        },
+        {
+          "format": "XML",
+          "bytes": 214848,
+          "tokens": 69082,
+          "recordsByBudget": {
+            "b4096": 0,
+            "b8192": 0,
+            "b32768": 0,
+            "b131072": 1
+          }
+        }
+      ]
+    },
+    {
+      "name": "plan",
+      "formats": [
+        {
+          "format": "SDIF AI",
+          "bytes": 1000,
           "tokens": 251,
           "recordsByBudget": {
             "b4096": 16,
@@ -1356,58 +1334,80 @@
           }
         },
         {
-          "format": "CSV Bundle",
-          "bytes": 1039,
-          "tokens": 260,
+          "format": "SDIF",
+          "bytes": 984,
+          "tokens": 252,
           "recordsByBudget": {
-            "b4096": 15,
-            "b8192": 31,
-            "b32768": 126,
-            "b131072": 504
+            "b4096": 16,
+            "b8192": 32,
+            "b32768": 130,
+            "b131072": 520
           }
         },
         {
-          "format": "YAML",
-          "bytes": 1197,
-          "tokens": 300,
+          "format": "TOON",
+          "bytes": 1002,
+          "tokens": 276,
           "recordsByBudget": {
-            "b4096": 13,
-            "b8192": 27,
-            "b32768": 109,
-            "b131072": 436
+            "b4096": 14,
+            "b8192": 29,
+            "b32768": 118,
+            "b131072": 474
+          }
+        },
+        {
+          "format": "CSV Bundle",
+          "bytes": 1039,
+          "tokens": 288,
+          "recordsByBudget": {
+            "b4096": 14,
+            "b8192": 28,
+            "b32768": 113,
+            "b131072": 455
           }
         },
         {
           "format": "JSON Compact",
           "bytes": 1268,
-          "tokens": 317,
+          "tokens": 302,
+          "recordsByBudget": {
+            "b4096": 13,
+            "b8192": 27,
+            "b32768": 108,
+            "b131072": 434
+          }
+        },
+        {
+          "format": "YAML",
+          "bytes": 1197,
+          "tokens": 334,
           "recordsByBudget": {
             "b4096": 12,
-            "b8192": 25,
-            "b32768": 103,
-            "b131072": 413
+            "b8192": 24,
+            "b32768": 98,
+            "b131072": 392
           }
         },
         {
           "format": "JSON Pretty",
           "bytes": 1688,
-          "tokens": 422,
+          "tokens": 479,
           "recordsByBudget": {
-            "b4096": 9,
-            "b8192": 19,
-            "b32768": 77,
-            "b131072": 310
+            "b4096": 8,
+            "b8192": 17,
+            "b32768": 68,
+            "b131072": 273
           }
         },
         {
           "format": "XML",
           "bytes": 2080,
-          "tokens": 520,
+          "tokens": 602,
           "recordsByBudget": {
-            "b4096": 7,
-            "b8192": 15,
-            "b32768": 63,
-            "b131072": 252
+            "b4096": 6,
+            "b8192": 13,
+            "b32768": 54,
+            "b131072": 217
           }
         }
       ]
@@ -1418,17 +1418,28 @@
         {
           "format": "SDIF AI",
           "bytes": 662,
-          "tokens": 166,
+          "tokens": 149,
           "recordsByBudget": {
-            "b4096": 24,
-            "b8192": 49,
-            "b32768": 197,
-            "b131072": 789
+            "b4096": 27,
+            "b8192": 54,
+            "b32768": 219,
+            "b131072": 879
           }
         },
         {
           "format": "SDIF",
           "bytes": 674,
+          "tokens": 154,
+          "recordsByBudget": {
+            "b4096": 26,
+            "b8192": 53,
+            "b32768": 212,
+            "b131072": 851
+          }
+        },
+        {
+          "format": "TOON",
+          "bytes": 697,
           "tokens": 169,
           "recordsByBudget": {
             "b4096": 24,
@@ -1438,8 +1449,8 @@
           }
         },
         {
-          "format": "TOON",
-          "bytes": 697,
+          "format": "CSV Bundle",
+          "bytes": 720,
           "tokens": 175,
           "recordsByBudget": {
             "b4096": 23,
@@ -1449,58 +1460,47 @@
           }
         },
         {
-          "format": "CSV Bundle",
-          "bytes": 720,
-          "tokens": 180,
+          "format": "JSON Compact",
+          "bytes": 960,
+          "tokens": 205,
           "recordsByBudget": {
-            "b4096": 22,
-            "b8192": 45,
-            "b32768": 182,
-            "b131072": 728
+            "b4096": 19,
+            "b8192": 39,
+            "b32768": 159,
+            "b131072": 639
           }
         },
         {
           "format": "YAML",
           "bytes": 896,
-          "tokens": 224,
+          "tokens": 220,
           "recordsByBudget": {
             "b4096": 18,
-            "b8192": 36,
-            "b32768": 146,
-            "b131072": 585
-          }
-        },
-        {
-          "format": "JSON Compact",
-          "bytes": 960,
-          "tokens": 240,
-          "recordsByBudget": {
-            "b4096": 17,
-            "b8192": 34,
-            "b32768": 136,
-            "b131072": 546
+            "b8192": 37,
+            "b32768": 148,
+            "b131072": 595
           }
         },
         {
           "format": "JSON Pretty",
           "bytes": 1293,
-          "tokens": 324,
+          "tokens": 341,
           "recordsByBudget": {
             "b4096": 12,
-            "b8192": 25,
-            "b32768": 101,
-            "b131072": 404
+            "b8192": 24,
+            "b32768": 96,
+            "b131072": 384
           }
         },
         {
           "format": "XML",
           "bytes": 1601,
-          "tokens": 401,
+          "tokens": 438,
           "recordsByBudget": {
-            "b4096": 10,
-            "b8192": 20,
-            "b32768": 81,
-            "b131072": 326
+            "b4096": 9,
+            "b8192": 18,
+            "b32768": 74,
+            "b131072": 299
           }
         }
       ]
@@ -1511,89 +1511,89 @@
         {
           "format": "SDIF AI",
           "bytes": 1097,
-          "tokens": 275,
+          "tokens": 298,
           "recordsByBudget": {
-            "b4096": 14,
-            "b8192": 29,
-            "b32768": 119,
-            "b131072": 476
-          }
-        },
-        {
-          "format": "CSV Bundle",
-          "bytes": 1161,
-          "tokens": 291,
-          "recordsByBudget": {
-            "b4096": 14,
-            "b8192": 28,
-            "b32768": 112,
-            "b131072": 450
+            "b4096": 13,
+            "b8192": 27,
+            "b32768": 109,
+            "b131072": 439
           }
         },
         {
           "format": "SDIF",
           "bytes": 1161,
-          "tokens": 291,
+          "tokens": 323,
           "recordsByBudget": {
-            "b4096": 14,
-            "b8192": 28,
-            "b32768": 112,
-            "b131072": 450
+            "b4096": 12,
+            "b8192": 25,
+            "b32768": 101,
+            "b131072": 405
+          }
+        },
+        {
+          "format": "CSV Bundle",
+          "bytes": 1161,
+          "tokens": 331,
+          "recordsByBudget": {
+            "b4096": 12,
+            "b8192": 24,
+            "b32768": 98,
+            "b131072": 395
           }
         },
         {
           "format": "TOON",
           "bytes": 1181,
-          "tokens": 296,
+          "tokens": 342,
           "recordsByBudget": {
-            "b4096": 13,
-            "b8192": 27,
-            "b32768": 110,
-            "b131072": 442
-          }
-        },
-        {
-          "format": "YAML",
-          "bytes": 2004,
-          "tokens": 501,
-          "recordsByBudget": {
-            "b4096": 8,
-            "b8192": 16,
-            "b32768": 65,
-            "b131072": 261
+            "b4096": 11,
+            "b8192": 23,
+            "b32768": 95,
+            "b131072": 383
           }
         },
         {
           "format": "JSON Compact",
           "bytes": 2113,
-          "tokens": 529,
+          "tokens": 534,
           "recordsByBudget": {
             "b4096": 7,
             "b8192": 15,
             "b32768": 61,
-            "b131072": 247
+            "b131072": 245
+          }
+        },
+        {
+          "format": "YAML",
+          "bytes": 2004,
+          "tokens": 630,
+          "recordsByBudget": {
+            "b4096": 6,
+            "b8192": 13,
+            "b32768": 52,
+            "b131072": 208
           }
         },
         {
           "format": "JSON Pretty",
           "bytes": 3235,
-          "tokens": 809,
+          "tokens": 953,
           "recordsByBudget": {
-            "b4096": 5,
-            "b8192": 10,
-            "b32768": 40,
-            "b131072": 162
+            "b4096": 4,
+            "b8192": 8,
+            "b32768": 34,
+            "b131072": 137
           }
         },
         {
           "format": "XML",
           "bytes": 4189,
-          "tokens": 1048,
+          "tokens": 1213,
           "recordsByBudget": {
             "b4096": 3,
-            "b8192": 7,
-            "b32768": 31,
-            "b131072": 125
+            "b8192": 6,
+            "b32768": 27,
+            "b131072": 108
           }
         }
       ]
@@ -1604,89 +1604,89 @@
         {
           "format": "SDIF AI",
           "bytes": 1640,
-          "tokens": 410,
+          "tokens": 544,
           "recordsByBudget": {
-            "b4096": 9,
-            "b8192": 19,
-            "b32768": 79,
-            "b131072": 319
+            "b4096": 7,
+            "b8192": 15,
+            "b32768": 60,
+            "b131072": 240
           }
         },
         {
           "format": "CSV Bundle",
           "bytes": 1666,
-          "tokens": 417,
+          "tokens": 585,
           "recordsByBudget": {
-            "b4096": 9,
-            "b8192": 19,
-            "b32768": 78,
-            "b131072": 314
+            "b4096": 7,
+            "b8192": 14,
+            "b32768": 56,
+            "b131072": 224
           }
         },
         {
           "format": "SDIF",
           "bytes": 1716,
-          "tokens": 429,
+          "tokens": 585,
           "recordsByBudget": {
-            "b4096": 9,
-            "b8192": 19,
-            "b32768": 76,
-            "b131072": 305
+            "b4096": 7,
+            "b8192": 14,
+            "b32768": 56,
+            "b131072": 224
           }
         },
         {
           "format": "TOON",
           "bytes": 1718,
-          "tokens": 430,
+          "tokens": 615,
           "recordsByBudget": {
-            "b4096": 9,
-            "b8192": 19,
-            "b32768": 76,
-            "b131072": 304
-          }
-        },
-        {
-          "format": "YAML",
-          "bytes": 2909,
-          "tokens": 728,
-          "recordsByBudget": {
-            "b4096": 5,
-            "b8192": 11,
-            "b32768": 45,
-            "b131072": 180
+            "b4096": 6,
+            "b8192": 13,
+            "b32768": 53,
+            "b131072": 213
           }
         },
         {
           "format": "JSON Compact",
           "bytes": 3163,
-          "tokens": 791,
+          "tokens": 912,
           "recordsByBudget": {
-            "b4096": 5,
-            "b8192": 10,
-            "b32768": 41,
-            "b131072": 165
+            "b4096": 4,
+            "b8192": 8,
+            "b32768": 35,
+            "b131072": 143
+          }
+        },
+        {
+          "format": "YAML",
+          "bytes": 2909,
+          "tokens": 1109,
+          "recordsByBudget": {
+            "b4096": 3,
+            "b8192": 7,
+            "b32768": 29,
+            "b131072": 118
           }
         },
         {
           "format": "JSON Pretty",
           "bytes": 4849,
-          "tokens": 1213,
+          "tokens": 1564,
           "recordsByBudget": {
-            "b4096": 3,
-            "b8192": 6,
-            "b32768": 27,
-            "b131072": 108
+            "b4096": 2,
+            "b8192": 5,
+            "b32768": 20,
+            "b131072": 83
           }
         },
         {
           "format": "XML",
           "bytes": 5647,
-          "tokens": 1412,
+          "tokens": 1894,
           "recordsByBudget": {
             "b4096": 2,
-            "b8192": 5,
-            "b32768": 23,
-            "b131072": 92
+            "b8192": 4,
+            "b32768": 17,
+            "b131072": 69
           }
         }
       ]
@@ -1697,89 +1697,89 @@
         {
           "format": "SDIF AI",
           "bytes": 2563,
-          "tokens": 641,
+          "tokens": 706,
           "recordsByBudget": {
-            "b4096": 6,
-            "b8192": 12,
-            "b32768": 51,
-            "b131072": 204
-          }
-        },
-        {
-          "format": "CSV Bundle",
-          "bytes": 2594,
-          "tokens": 649,
-          "recordsByBudget": {
-            "b4096": 6,
-            "b8192": 12,
-            "b32768": 50,
-            "b131072": 201
+            "b4096": 5,
+            "b8192": 11,
+            "b32768": 46,
+            "b131072": 185
           }
         },
         {
           "format": "SDIF",
           "bytes": 2637,
-          "tokens": 660,
+          "tokens": 723,
           "recordsByBudget": {
-            "b4096": 6,
-            "b8192": 12,
-            "b32768": 49,
-            "b131072": 198
+            "b4096": 5,
+            "b8192": 11,
+            "b32768": 45,
+            "b131072": 181
+          }
+        },
+        {
+          "format": "CSV Bundle",
+          "bytes": 2594,
+          "tokens": 740,
+          "recordsByBudget": {
+            "b4096": 5,
+            "b8192": 11,
+            "b32768": 44,
+            "b131072": 177
           }
         },
         {
           "format": "TOON",
           "bytes": 2640,
-          "tokens": 660,
+          "tokens": 742,
           "recordsByBudget": {
-            "b4096": 6,
-            "b8192": 12,
-            "b32768": 49,
-            "b131072": 198
-          }
-        },
-        {
-          "format": "YAML",
-          "bytes": 3947,
-          "tokens": 987,
-          "recordsByBudget": {
-            "b4096": 4,
-            "b8192": 8,
-            "b32768": 33,
-            "b131072": 132
+            "b4096": 5,
+            "b8192": 11,
+            "b32768": 44,
+            "b131072": 176
           }
         },
         {
           "format": "JSON Compact",
           "bytes": 4148,
-          "tokens": 1037,
+          "tokens": 1064,
           "recordsByBudget": {
             "b4096": 3,
             "b8192": 7,
-            "b32768": 31,
-            "b131072": 126
+            "b32768": 30,
+            "b131072": 123
+          }
+        },
+        {
+          "format": "YAML",
+          "bytes": 3947,
+          "tokens": 1157,
+          "recordsByBudget": {
+            "b4096": 3,
+            "b8192": 7,
+            "b32768": 28,
+            "b131072": 113
           }
         },
         {
           "format": "JSON Pretty",
           "bytes": 5727,
-          "tokens": 1432,
+          "tokens": 1657,
           "recordsByBudget": {
             "b4096": 2,
-            "b8192": 5,
-            "b32768": 22,
-            "b131072": 91
+            "b8192": 4,
+            "b32768": 19,
+            "b131072": 79
           }
         },
         {
           "format": "XML",
           "bytes": 6808,
-          "tokens": 1702,
+          "tokens": 1941,
           "recordsByBudget": {
             "b4096": 2,
             "b8192": 4,
-            "b32768": 19,
-            "b131072": 77
+            "b32768": 16,
+            "b131072": 67
           }
         }
       ]
@@ -1790,89 +1790,89 @@
         {
           "format": "SDIF AI",
           "bytes": 1406,
-          "tokens": 352,
+          "tokens": 476,
           "recordsByBudget": {
-            "b4096": 11,
-            "b8192": 23,
-            "b32768": 93,
-            "b131072": 372
+            "b4096": 8,
+            "b8192": 17,
+            "b32768": 68,
+            "b131072": 275
           }
         },
         {
           "format": "CSV Bundle",
           "bytes": 1439,
-          "tokens": 360,
+          "tokens": 485,
           "recordsByBudget": {
-            "b4096": 11,
-            "b8192": 22,
-            "b32768": 91,
-            "b131072": 364
-          }
-        },
-        {
-          "format": "SDIF",
-          "bytes": 1454,
-          "tokens": 364,
-          "recordsByBudget": {
-            "b4096": 11,
-            "b8192": 22,
-            "b32768": 90,
-            "b131072": 360
+            "b4096": 8,
+            "b8192": 16,
+            "b32768": 67,
+            "b131072": 270
           }
         },
         {
           "format": "TOON",
           "bytes": 1459,
-          "tokens": 365,
+          "tokens": 501,
           "recordsByBudget": {
-            "b4096": 11,
-            "b8192": 22,
-            "b32768": 89,
-            "b131072": 359
+            "b4096": 8,
+            "b8192": 16,
+            "b32768": 65,
+            "b131072": 261
           }
         },
         {
-          "format": "YAML",
-          "bytes": 2537,
-          "tokens": 635,
+          "format": "SDIF",
+          "bytes": 1454,
+          "tokens": 503,
           "recordsByBudget": {
-            "b4096": 6,
-            "b8192": 12,
-            "b32768": 51,
-            "b131072": 206
+            "b4096": 8,
+            "b8192": 16,
+            "b32768": 65,
+            "b131072": 260
           }
         },
         {
           "format": "JSON Compact",
           "bytes": 2643,
-          "tokens": 661,
+          "tokens": 718,
           "recordsByBudget": {
-            "b4096": 6,
-            "b8192": 12,
-            "b32768": 49,
-            "b131072": 198
+            "b4096": 5,
+            "b8192": 11,
+            "b32768": 45,
+            "b131072": 182
+          }
+        },
+        {
+          "format": "YAML",
+          "bytes": 2537,
+          "tokens": 850,
+          "recordsByBudget": {
+            "b4096": 4,
+            "b8192": 9,
+            "b32768": 38,
+            "b131072": 154
           }
         },
         {
           "format": "JSON Pretty",
           "bytes": 3764,
-          "tokens": 941,
+          "tokens": 1159,
           "recordsByBudget": {
-            "b4096": 4,
-            "b8192": 8,
-            "b32768": 34,
-            "b131072": 139
+            "b4096": 3,
+            "b8192": 7,
+            "b32768": 28,
+            "b131072": 113
           }
         },
         {
           "format": "XML",
           "bytes": 4738,
-          "tokens": 1185,
+          "tokens": 1414,
           "recordsByBudget": {
-            "b4096": 3,
-            "b8192": 6,
-            "b32768": 27,
-            "b131072": 110
+            "b4096": 2,
+            "b8192": 5,
+            "b32768": 23,
+            "b131072": 92
           }
         }
       ]
@@ -1883,89 +1883,89 @@
         {
           "format": "SDIF AI",
           "bytes": 691,
-          "tokens": 173,
+          "tokens": 149,
           "recordsByBudget": {
-            "b4096": 23,
-            "b8192": 47,
-            "b32768": 189,
-            "b131072": 757
+            "b4096": 27,
+            "b8192": 54,
+            "b32768": 219,
+            "b131072": 879
           }
         },
         {
           "format": "SDIF",
           "bytes": 735,
-          "tokens": 184,
+          "tokens": 166,
           "recordsByBudget": {
-            "b4096": 22,
-            "b8192": 44,
-            "b32768": 178,
-            "b131072": 712
-          }
-        },
-        {
-          "format": "TOON",
-          "bytes": 770,
-          "tokens": 193,
-          "recordsByBudget": {
-            "b4096": 21,
-            "b8192": 42,
-            "b32768": 169,
-            "b131072": 679
+            "b4096": 24,
+            "b8192": 49,
+            "b32768": 197,
+            "b131072": 789
           }
         },
         {
           "format": "CSV Bundle",
           "bytes": 773,
-          "tokens": 194,
+          "tokens": 195,
           "recordsByBudget": {
             "b4096": 21,
             "b8192": 42,
             "b32768": 168,
-            "b131072": 675
+            "b131072": 672
           }
         },
         {
-          "format": "YAML",
-          "bytes": 934,
-          "tokens": 234,
+          "format": "TOON",
+          "bytes": 770,
+          "tokens": 197,
           "recordsByBudget": {
-            "b4096": 17,
-            "b8192": 35,
-            "b32768": 140,
-            "b131072": 560
+            "b4096": 20,
+            "b8192": 41,
+            "b32768": 166,
+            "b131072": 665
           }
         },
         {
           "format": "JSON Compact",
           "bytes": 1014,
-          "tokens": 254,
+          "tokens": 225,
+          "recordsByBudget": {
+            "b4096": 18,
+            "b8192": 36,
+            "b32768": 145,
+            "b131072": 582
+          }
+        },
+        {
+          "format": "YAML",
+          "bytes": 934,
+          "tokens": 246,
           "recordsByBudget": {
             "b4096": 16,
-            "b8192": 32,
-            "b32768": 129,
-            "b131072": 516
+            "b8192": 33,
+            "b32768": 133,
+            "b131072": 532
           }
         },
         {
           "format": "JSON Pretty",
           "bytes": 1378,
-          "tokens": 345,
+          "tokens": 382,
           "recordsByBudget": {
-            "b4096": 11,
-            "b8192": 23,
-            "b32768": 94,
-            "b131072": 379
+            "b4096": 10,
+            "b8192": 21,
+            "b32768": 85,
+            "b131072": 343
           }
         },
         {
           "format": "XML",
           "bytes": 1685,
-          "tokens": 422,
+          "tokens": 480,
           "recordsByBudget": {
-            "b4096": 9,
-            "b8192": 19,
-            "b32768": 77,
-            "b131072": 310
+            "b4096": 8,
+            "b8192": 17,
+            "b32768": 68,
+            "b131072": 273
           }
         }
       ]
@@ -1976,51 +1976,7 @@
         {
           "format": "SDIF AI",
           "bytes": 18606,
-          "tokens": 4652,
-          "recordsByBudget": {
-            "b4096": 0,
-            "b8192": 1,
-            "b32768": 7,
-            "b131072": 28
-          }
-        },
-        {
-          "format": "CSV Bundle",
-          "bytes": 18632,
-          "tokens": 4658,
-          "recordsByBudget": {
-            "b4096": 0,
-            "b8192": 1,
-            "b32768": 7,
-            "b131072": 28
-          }
-        },
-        {
-          "format": "SDIF",
-          "bytes": 19054,
-          "tokens": 4764,
-          "recordsByBudget": {
-            "b4096": 0,
-            "b8192": 1,
-            "b32768": 6,
-            "b131072": 27
-          }
-        },
-        {
-          "format": "TOON",
-          "bytes": 19053,
-          "tokens": 4764,
-          "recordsByBudget": {
-            "b4096": 0,
-            "b8192": 1,
-            "b32768": 6,
-            "b131072": 27
-          }
-        },
-        {
-          "format": "JSON Compact",
-          "bytes": 64917,
-          "tokens": 16230,
+          "tokens": 15224,
           "recordsByBudget": {
             "b4096": 0,
             "b8192": 0,
@@ -2029,36 +1985,80 @@
           }
         },
         {
-          "format": "YAML",
-          "bytes": 70375,
-          "tokens": 17594,
+          "format": "CSV Bundle",
+          "bytes": 18632,
+          "tokens": 15365,
           "recordsByBudget": {
             "b4096": 0,
             "b8192": 0,
-            "b32768": 1,
-            "b131072": 7
+            "b32768": 2,
+            "b131072": 8
           }
         },
         {
-          "format": "JSON Pretty",
-          "bytes": 124951,
-          "tokens": 31238,
+          "format": "SDIF",
+          "bytes": 19054,
+          "tokens": 15451,
           "recordsByBudget": {
             "b4096": 0,
             "b8192": 0,
-            "b32768": 1,
-            "b131072": 4
+            "b32768": 2,
+            "b131072": 8
           }
         },
         {
-          "format": "XML",
-          "bytes": 149167,
-          "tokens": 37292,
+          "format": "TOON",
+          "bytes": 19053,
+          "tokens": 15579,
+          "recordsByBudget": {
+            "b4096": 0,
+            "b8192": 0,
+            "b32768": 2,
+            "b131072": 8
+          }
+        },
+        {
+          "format": "JSON Compact",
+          "bytes": 64917,
+          "tokens": 36372,
           "recordsByBudget": {
             "b4096": 0,
             "b8192": 0,
             "b32768": 0,
             "b131072": 3
+          }
+        },
+        {
+          "format": "YAML",
+          "bytes": 70375,
+          "tokens": 50113,
+          "recordsByBudget": {
+            "b4096": 0,
+            "b8192": 0,
+            "b32768": 0,
+            "b131072": 2
+          }
+        },
+        {
+          "format": "JSON Pretty",
+          "bytes": 124951,
+          "tokens": 58948,
+          "recordsByBudget": {
+            "b4096": 0,
+            "b8192": 0,
+            "b32768": 0,
+            "b131072": 2
+          }
+        },
+        {
+          "format": "XML",
+          "bytes": 149167,
+          "tokens": 73594,
+          "recordsByBudget": {
+            "b4096": 0,
+            "b8192": 0,
+            "b32768": 0,
+            "b131072": 1
           }
         }
       ]

@@ -3,8 +3,8 @@
 > **Framing**: this benchmark measures full-document resend overhead after a 10% leaf mutation.
 > It is NOT a true SDIF delta benchmark. A semantic delta (base + patch) would be even smaller.
 
-- Generated at: `2026-05-23T08:50:12Z`
-- Tokenizer: `estimate (4 bytes/token)`
+- Generated at: `2026-05-23T19:41:35Z`
+- Tokenizer: `tiktoken/cl100k_base`
 - Mutation: `10%` of leaf values changed
 - Documents: `20`
 
@@ -15,14 +15,14 @@ Formats with smaller token delta and fewer diff lines produce less noise on full
 
 | Format | Avg Δ tokens % | Avg diff lines |
 | --- | ---: | ---: |
-| XML | +0.7% | 2835.7 |
-| JSON Pretty | +0.8% | 2835.7 |
-| JSON Compact | +1.2% | 2.0 |
-| YAML | +1.2% | 1880.6 |
-| TOON | +2.2% | 484.9 |
-| SDIF | +2.2% | 484.9 |
-| CSV Bundle | +2.3% | 484.9 |
-| SDIF AI | +2.3% | 484.9 |
+| XML | +1.6% | 2835.7 |
+| JSON Pretty | +1.9% | 2835.7 |
+| YAML | +2.6% | 1880.6 |
+| JSON Compact | +3.0% | 2.0 |
+| TOON | +4.4% | 484.9 |
+| SDIF | +4.6% | 484.9 |
+| CSV Bundle | +4.6% | 484.9 |
+| SDIF AI | +4.8% | 484.9 |
 
 ## Methodology
 

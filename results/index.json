@@ -1,7 +1,7 @@
 {
   "kind": "BenchmarkSuiteReport",
   "version": "1.0",
-  "generatedAt": "2026-05-23T08:47:43Z",
+  "generatedAt": "2026-05-23T19:38:53Z",
   "corpus": {
     "source": "examples/golden",
     "documents": 20
@@ -18,11 +18,11 @@
       "label": "Token Efficiency",
       "claim": "SDIF AI reduces token usage vs JSON Compact",
       "metric": "medianRatioVsJsonCompact",
-      "value": 51.9,
+      "value": 56.6,
       "unit": "%",
-      "description": "SDIF AI median token ratio vs JSON Compact: 51.9%",
+      "description": "SDIF AI median token ratio vs JSON Compact: 56.6%",
       "bestRatio": 26.3,
-      "worstRatio": 78.9,
+      "worstRatio": 83.1,
       "evidence": "token_efficiency/summary.md"
     },
     {
@@ -32,9 +32,9 @@
       "metric": "fitRateAt32K",
       "value": 60.0,
       "unit": "%",
-      "description": "SDIF AI 32K fit rate: 60% vs JSON Compact 55%",
-      "fitRateAt32K_jsonCompact": 55.0,
-      "fitRateAt128K_sdifAI": 100.0,
+      "description": "SDIF AI 32K fit rate: 60% vs JSON Compact 45%",
+      "fitRateAt32K_jsonCompact": 45.0,
+      "fitRateAt128K_sdifAI": 90.0,
       "evidence": "context_packing/summary.md"
     },
     {
@@ -53,10 +53,10 @@
       "label": "Mutation Sensitivity",
       "claim": "SDIF produces less noise on full-document re-send after mutation",
       "metric": "avgTokenDeltaPct",
-      "value": 2.24,
+      "value": 4.56,
       "unit": "%",
-      "description": "SDIF avg token delta on full-resend: 2.2% vs JSON Compact 1.2%",
-      "jsonCompactAvgDelta": 1.18,
+      "description": "SDIF avg token delta on full-resend: 4.6% vs JSON Compact 3.0%",
+      "jsonCompactAvgDelta": 2.97,
       "note": "full-resend model — not true SDIF delta encoding",
       "evidence": "delta_compactness/summary.md"
     }
