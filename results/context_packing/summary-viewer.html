@@ -33,16 +33,17 @@ body{margin:0;padding:32px;background:#f6f7f9;color:#1f2937;font-family:system-u
 <article class="md">
 <h1>SDIF Context Packing Benchmark — Summary</h1>
 <ul>
-<li>Generated at: <code>2026-05-22T08:11:06Z</code></li>
-<li>Tokenizer: <code>tiktoken/cl100k_base</code></li>
-<li>Documents: <code>21</code></li>
+<li>Generated at: <code>2026-05-23T08:48:39Z</code></li>
+<li>Tokenizer: <code>estimate (4 bytes/token)</code></li>
+<li>Documents: <code>20</code></li>
 <li>Budgets: <code>4K</code>, <code>8K</code>, <code>32K</code>, <code>128K</code> tokens</li>
 </ul>
 <h2>Key Finding</h2>
 <ul>
-<li><strong>SDIF AI</strong> is the most compact format: avg 62274 tokens (67.9% of JSON Compact).</li>
+<li><strong>CSV Bundle</strong> is the most compact format: avg 35396 tokens (55.3% of JSON Compact).</li>
+<li>In an 8K context, CSV Bundle fits 40% of documents vs 35% for JSON Compact.</li>
 </ul>
-<h2>Fit Rate: % of 21 documents that fit at least once</h2>
+<h2>Fit Rate: % of 20 documents that fit at least once</h2>
 <table>
 <thead>
 <tr>
@@ -57,76 +58,76 @@ body{margin:0;padding:32px;background:#f6f7f9;color:#1f2937;font-family:system-u
 </thead>
 <tbody>
 <tr>
-<td>SDIF AI</td>
-<td style="text-align: right;">62274</td>
-<td style="text-align: right;">67.9%</td>
-<td style="text-align: right;">33%</td>
-<td style="text-align: right;">33%</td>
-<td style="text-align: right;">57%</td>
-<td style="text-align: right;">86%</td>
+<td>CSV Bundle</td>
+<td style="text-align: right;">35396</td>
+<td style="text-align: right;">55.3%</td>
+<td style="text-align: right;">35%</td>
+<td style="text-align: right;">40%</td>
+<td style="text-align: right;">60%</td>
+<td style="text-align: right;">100%</td>
 </tr>
 <tr>
-<td>CSV Bundle</td>
-<td style="text-align: right;">63167</td>
-<td style="text-align: right;">68.9%</td>
-<td style="text-align: right;">33%</td>
-<td style="text-align: right;">33%</td>
-<td style="text-align: right;">57%</td>
-<td style="text-align: right;">86%</td>
+<td>SDIF AI</td>
+<td style="text-align: right;">35463</td>
+<td style="text-align: right;">55.4%</td>
+<td style="text-align: right;">35%</td>
+<td style="text-align: right;">40%</td>
+<td style="text-align: right;">60%</td>
+<td style="text-align: right;">100%</td>
 </tr>
 <tr>
 <td>SDIF</td>
-<td style="text-align: right;">65174</td>
-<td style="text-align: right;">71.1%</td>
-<td style="text-align: right;">33%</td>
-<td style="text-align: right;">33%</td>
-<td style="text-align: right;">57%</td>
-<td style="text-align: right;">86%</td>
+<td style="text-align: right;">36664</td>
+<td style="text-align: right;">57.3%</td>
+<td style="text-align: right;">35%</td>
+<td style="text-align: right;">40%</td>
+<td style="text-align: right;">60%</td>
+<td style="text-align: right;">100%</td>
 </tr>
 <tr>
 <td>TOON</td>
-<td style="text-align: right;">66119</td>
-<td style="text-align: right;">72.1%</td>
-<td style="text-align: right;">33%</td>
-<td style="text-align: right;">33%</td>
-<td style="text-align: right;">57%</td>
-<td style="text-align: right;">86%</td>
-</tr>
-<tr>
-<td>JSON Compact</td>
-<td style="text-align: right;">91696</td>
-<td style="text-align: right;">100.0%</td>
-<td style="text-align: right;">33%</td>
-<td style="text-align: right;">33%</td>
-<td style="text-align: right;">43%</td>
-<td style="text-align: right;">67%</td>
+<td style="text-align: right;">36690</td>
+<td style="text-align: right;">57.4%</td>
+<td style="text-align: right;">35%</td>
+<td style="text-align: right;">40%</td>
+<td style="text-align: right;">60%</td>
+<td style="text-align: right;">100%</td>
 </tr>
 <tr>
 <td>YAML</td>
-<td style="text-align: right;">102826</td>
-<td style="text-align: right;">112.1%</td>
-<td style="text-align: right;">33%</td>
-<td style="text-align: right;">33%</td>
-<td style="text-align: right;">38%</td>
-<td style="text-align: right;">62%</td>
+<td style="text-align: right;">61708</td>
+<td style="text-align: right;">96.5%</td>
+<td style="text-align: right;">35%</td>
+<td style="text-align: right;">35%</td>
+<td style="text-align: right;">55%</td>
+<td style="text-align: right;">80%</td>
+</tr>
+<tr>
+<td>JSON Compact</td>
+<td style="text-align: right;">63957</td>
+<td style="text-align: right;">100.0%</td>
+<td style="text-align: right;">35%</td>
+<td style="text-align: right;">35%</td>
+<td style="text-align: right;">55%</td>
+<td style="text-align: right;">80%</td>
 </tr>
 <tr>
 <td>JSON Pretty</td>
-<td style="text-align: right;">135099</td>
-<td style="text-align: right;">147.3%</td>
-<td style="text-align: right;">33%</td>
-<td style="text-align: right;">33%</td>
-<td style="text-align: right;">33%</td>
-<td style="text-align: right;">62%</td>
+<td style="text-align: right;">88630</td>
+<td style="text-align: right;">138.6%</td>
+<td style="text-align: right;">35%</td>
+<td style="text-align: right;">35%</td>
+<td style="text-align: right;">40%</td>
+<td style="text-align: right;">65%</td>
 </tr>
 <tr>
 <td>XML</td>
-<td style="text-align: right;">161032</td>
-<td style="text-align: right;">175.6%</td>
-<td style="text-align: right;">33%</td>
-<td style="text-align: right;">33%</td>
-<td style="text-align: right;">33%</td>
-<td style="text-align: right;">62%</td>
+<td style="text-align: right;">108113</td>
+<td style="text-align: right;">169.0%</td>
+<td style="text-align: right;">35%</td>
+<td style="text-align: right;">35%</td>
+<td style="text-align: right;">35%</td>
+<td style="text-align: right;">65%</td>
 </tr>
 </tbody>
 </table>
@@ -143,60 +144,60 @@ body{margin:0;padding:32px;background:#f6f7f9;color:#1f2937;font-family:system-u
 </thead>
 <tbody>
 <tr>
-<td>SDIF AI</td>
+<td>CSV Bundle</td>
 <td style="text-align: right;">4.9</td>
 <td style="text-align: right;">10.0</td>
-<td style="text-align: right;">40.8</td>
-<td style="text-align: right;">164.7</td>
+<td style="text-align: right;">41.0</td>
+<td style="text-align: right;">165.6</td>
 </tr>
 <tr>
-<td>CSV Bundle</td>
-<td style="text-align: right;">4.3</td>
-<td style="text-align: right;">8.6</td>
-<td style="text-align: right;">35.2</td>
-<td style="text-align: right;">141.9</td>
+<td>SDIF AI</td>
+<td style="text-align: right;">5.2</td>
+<td style="text-align: right;">10.6</td>
+<td style="text-align: right;">43.6</td>
+<td style="text-align: right;">175.8</td>
 </tr>
 <tr>
 <td>SDIF</td>
-<td style="text-align: right;">4.7</td>
-<td style="text-align: right;">9.5</td>
-<td style="text-align: right;">38.7</td>
-<td style="text-align: right;">155.6</td>
+<td style="text-align: right;">5.1</td>
+<td style="text-align: right;">10.3</td>
+<td style="text-align: right;">42.2</td>
+<td style="text-align: right;">170.2</td>
 </tr>
 <tr>
 <td>TOON</td>
-<td style="text-align: right;">4.2</td>
-<td style="text-align: right;">8.6</td>
-<td style="text-align: right;">35.2</td>
-<td style="text-align: right;">142.1</td>
+<td style="text-align: right;">5.0</td>
+<td style="text-align: right;">10.1</td>
+<td style="text-align: right;">41.1</td>
+<td style="text-align: right;">166.2</td>
+</tr>
+<tr>
+<td>YAML</td>
+<td style="text-align: right;">3.5</td>
+<td style="text-align: right;">7.2</td>
+<td style="text-align: right;">29.6</td>
+<td style="text-align: right;">119.4</td>
 </tr>
 <tr>
 <td>JSON Compact</td>
 <td style="text-align: right;">3.3</td>
 <td style="text-align: right;">6.8</td>
-<td style="text-align: right;">27.9</td>
-<td style="text-align: right;">112.8</td>
-</tr>
-<tr>
-<td>YAML</td>
-<td style="text-align: right;">3.0</td>
-<td style="text-align: right;">6.2</td>
-<td style="text-align: right;">25.1</td>
-<td style="text-align: right;">101.3</td>
+<td style="text-align: right;">27.8</td>
+<td style="text-align: right;">112.0</td>
 </tr>
 <tr>
 <td>JSON Pretty</td>
-<td style="text-align: right;">2.0</td>
-<td style="text-align: right;">4.1</td>
-<td style="text-align: right;">16.7</td>
-<td style="text-align: right;">67.8</td>
+<td style="text-align: right;">2.3</td>
+<td style="text-align: right;">4.8</td>
+<td style="text-align: right;">19.8</td>
+<td style="text-align: right;">80.5</td>
 </tr>
 <tr>
 <td>XML</td>
-<td style="text-align: right;">1.5</td>
-<td style="text-align: right;">3.2</td>
-<td style="text-align: right;">13.3</td>
-<td style="text-align: right;">54.0</td>
+<td style="text-align: right;">1.8</td>
+<td style="text-align: right;">3.8</td>
+<td style="text-align: right;">16.1</td>
+<td style="text-align: right;">65.2</td>
 </tr>
 </tbody>
 </table>
@@ -205,7 +206,7 @@ body{margin:0;padding:32px;background:#f6f7f9;color:#1f2937;font-family:system-u
 <li>All formats are derived from the same canonical <code>equivalent.json</code> source.</li>
 <li><strong>Fit rate</strong>: % of corpus documents where <code>floor(budget / tokens) &gt;= 1</code>.</li>
 <li><strong>Avg docs</strong>: mean number of copies that fit per document across the corpus.</li>
-<li>Tokenizer: <code>tiktoken/cl100k_base</code>.</li>
+<li>Tokenizer: <code>estimate (4 bytes/token)</code>.</li>
 <li>Ratios computed against JSON Compact as the stable baseline.</li>
 </ul>
 </article>

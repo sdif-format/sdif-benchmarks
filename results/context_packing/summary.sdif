@@ -1,9 +1,9 @@
 @sdif 1.0
 kind ContextPackingReport
 version "1.1"
-generatedAt 2026-05-22T08:11:06Z
-tokenizer tiktoken/cl100k_base
-documentCount 21
+generatedAt 2026-05-23T08:48:39Z
+tokenizer "estimate (4 bytes/token)"
+documentCount 20
 budgets [4096,8192,32768,131072]
 budgetLabels:
   b4096 4K
@@ -11,147 +11,147 @@ budgetLabels:
   b32768 32K
   b131072 128K
 perFormatSummary:
-  SDIF_AI:
-    avgTokens 62273.6
-    vsJsonCompactPct 67.9
+  CSV_Bundle:
+    avgTokens 35395.8
+    vsJsonCompactPct 55.3
     fitRate:
-      b4096 33.3
-      b8192 33.3
-      b32768 57.1
-      b131072 85.7
+      b4096 35.0
+      b8192 40.0
+      b32768 60.0
+      b131072 100.0
     avgDocs:
       b4096 4.9
       b8192 10.0
-      b32768 40.8
-      b131072 164.7
+      b32768 41.0
+      b131072 165.6
     medianDocs:
       b4096 0.0
       b8192 0.0
-      b32768 1.0
-      b131072 6.0
-  CSV_Bundle:
-    avgTokens 63166.6
-    vsJsonCompactPct 68.9
+      b32768 2.0
+      b131072 9.5
+  SDIF_AI:
+    avgTokens 35462.7
+    vsJsonCompactPct 55.4
     fitRate:
-      b4096 33.3
-      b8192 33.3
-      b32768 57.1
-      b131072 85.7
+      b4096 35.0
+      b8192 40.0
+      b32768 60.0
+      b131072 100.0
     avgDocs:
-      b4096 4.3
-      b8192 8.6
-      b32768 35.2
-      b131072 141.9
+      b4096 5.2
+      b8192 10.6
+      b32768 43.6
+      b131072 175.8
     medianDocs:
       b4096 0.0
       b8192 0.0
-      b32768 1.0
-      b131072 6.0
+      b32768 2.0
+      b131072 9.5
   SDIF:
-    avgTokens 65174.1
-    vsJsonCompactPct 71.1
+    avgTokens 36664.0
+    vsJsonCompactPct 57.3
     fitRate:
-      b4096 33.3
-      b8192 33.3
-      b32768 57.1
-      b131072 85.7
+      b4096 35.0
+      b8192 40.0
+      b32768 60.0
+      b131072 100.0
     avgDocs:
-      b4096 4.7
-      b8192 9.5
-      b32768 38.7
-      b131072 155.6
+      b4096 5.1
+      b8192 10.3
+      b32768 42.2
+      b131072 170.2
     medianDocs:
       b4096 0.0
       b8192 0.0
-      b32768 1.0
-      b131072 5.0
+      b32768 2.0
+      b131072 9.0
   TOON:
-    avgTokens 66119.5
-    vsJsonCompactPct 72.1
+    avgTokens 36689.7
+    vsJsonCompactPct 57.4
     fitRate:
-      b4096 33.3
-      b8192 33.3
-      b32768 57.1
-      b131072 85.7
+      b4096 35.0
+      b8192 40.0
+      b32768 60.0
+      b131072 100.0
     avgDocs:
-      b4096 4.2
-      b8192 8.6
-      b32768 35.2
-      b131072 142.1
+      b4096 5.0
+      b8192 10.1
+      b32768 41.1
+      b131072 166.2
+    medianDocs:
+      b4096 0.0
+      b8192 0.0
+      b32768 2.0
+      b131072 9.0
+  YAML:
+    avgTokens 61707.6
+    vsJsonCompactPct 96.5
+    fitRate:
+      b4096 35.0
+      b8192 35.0
+      b32768 55.0
+      b131072 80.0
+    avgDocs:
+      b4096 3.5
+      b8192 7.2
+      b32768 29.6
+      b131072 119.4
     medianDocs:
       b4096 0.0
       b8192 0.0
       b32768 1.0
-      b131072 5.0
+      b131072 4.5
   JSON_Compact:
-    avgTokens 91696.5
+    avgTokens 63957.2
     vsJsonCompactPct 100.0
     fitRate:
-      b4096 33.3
-      b8192 33.3
-      b32768 42.9
-      b131072 66.7
+      b4096 35.0
+      b8192 35.0
+      b32768 55.0
+      b131072 80.0
     avgDocs:
       b4096 3.3
       b8192 6.8
-      b32768 27.9
-      b131072 112.8
+      b32768 27.8
+      b131072 112.0
+    medianDocs:
+      b4096 0.0
+      b8192 0.0
+      b32768 1.0
+      b131072 4.0
+  JSON_Pretty:
+    avgTokens 88630.1
+    vsJsonCompactPct 138.6
+    fitRate:
+      b4096 35.0
+      b8192 35.0
+      b32768 40.0
+      b131072 65.0
+    avgDocs:
+      b4096 2.3
+      b8192 4.8
+      b32768 19.8
+      b131072 80.5
     medianDocs:
       b4096 0.0
       b8192 0.0
       b32768 0.0
       b131072 3.0
-  YAML:
-    avgTokens 102825.6
-    vsJsonCompactPct 112.1
-    fitRate:
-      b4096 33.3
-      b8192 33.3
-      b32768 38.1
-      b131072 61.9
-    avgDocs:
-      b4096 3.0
-      b8192 6.2
-      b32768 25.1
-      b131072 101.3
-    medianDocs:
-      b4096 0.0
-      b8192 0.0
-      b32768 0.0
-      b131072 2.0
-  JSON_Pretty:
-    avgTokens 135099.3
-    vsJsonCompactPct 147.3
-    fitRate:
-      b4096 33.3
-      b8192 33.3
-      b32768 33.3
-      b131072 61.9
-    avgDocs:
-      b4096 2.0
-      b8192 4.1
-      b32768 16.7
-      b131072 67.8
-    medianDocs:
-      b4096 0.0
-      b8192 0.0
-      b32768 0.0
-      b131072 2.0
   XML:
-    avgTokens 161032.4
-    vsJsonCompactPct 175.6
+    avgTokens 108112.9
+    vsJsonCompactPct 169.0
     fitRate:
-      b4096 33.3
-      b8192 33.3
-      b32768 33.3
-      b131072 61.9
+      b4096 35.0
+      b8192 35.0
+      b32768 35.0
+      b131072 65.0
     avgDocs:
-      b4096 1.5
-      b8192 3.2
-      b32768 13.3
-      b131072 54.0
+      b4096 1.8
+      b8192 3.8
+      b32768 16.1
+      b131072 65.2
     medianDocs:
       b4096 0.0
       b8192 0.0
       b32768 0.0
-      b131072 1.0
+      b131072 2.0

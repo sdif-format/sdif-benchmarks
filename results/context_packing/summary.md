@@ -1,44 +1,45 @@
 # SDIF Context Packing Benchmark — Summary
 
-- Generated at: `2026-05-22T08:11:06Z`
-- Tokenizer: `tiktoken/cl100k_base`
-- Documents: `21`
+- Generated at: `2026-05-23T08:48:39Z`
+- Tokenizer: `estimate (4 bytes/token)`
+- Documents: `20`
 - Budgets: `4K`, `8K`, `32K`, `128K` tokens
 
 ## Key Finding
 
-- **SDIF AI** is the most compact format: avg 62274 tokens (67.9% of JSON Compact).
+- **CSV Bundle** is the most compact format: avg 35396 tokens (55.3% of JSON Compact).
+- In an 8K context, CSV Bundle fits 40% of documents vs 35% for JSON Compact.
 
-## Fit Rate: % of 21 documents that fit at least once
+## Fit Rate: % of 20 documents that fit at least once
 
 | Format | Avg tokens | vs JSON | `4K` | `8K` | `32K` | `128K` |
 | --- | ---: | ---: | ---: | ---: | ---: | ---: |
-| SDIF AI | 62274 | 67.9% | 33% | 33% | 57% | 86% |
-| CSV Bundle | 63167 | 68.9% | 33% | 33% | 57% | 86% |
-| SDIF | 65174 | 71.1% | 33% | 33% | 57% | 86% |
-| TOON | 66119 | 72.1% | 33% | 33% | 57% | 86% |
-| JSON Compact | 91696 | 100.0% | 33% | 33% | 43% | 67% |
-| YAML | 102826 | 112.1% | 33% | 33% | 38% | 62% |
-| JSON Pretty | 135099 | 147.3% | 33% | 33% | 33% | 62% |
-| XML | 161032 | 175.6% | 33% | 33% | 33% | 62% |
+| CSV Bundle | 35396 | 55.3% | 35% | 40% | 60% | 100% |
+| SDIF AI | 35463 | 55.4% | 35% | 40% | 60% | 100% |
+| SDIF | 36664 | 57.3% | 35% | 40% | 60% | 100% |
+| TOON | 36690 | 57.4% | 35% | 40% | 60% | 100% |
+| YAML | 61708 | 96.5% | 35% | 35% | 55% | 80% |
+| JSON Compact | 63957 | 100.0% | 35% | 35% | 55% | 80% |
+| JSON Pretty | 88630 | 138.6% | 35% | 35% | 40% | 65% |
+| XML | 108113 | 169.0% | 35% | 35% | 35% | 65% |
 
 ## Avg documents per context budget
 
 | Format | `4K` | `8K` | `32K` | `128K` |
 | --- | ---: | ---: | ---: | ---: |
-| SDIF AI | 4.9 | 10.0 | 40.8 | 164.7 |
-| CSV Bundle | 4.3 | 8.6 | 35.2 | 141.9 |
-| SDIF | 4.7 | 9.5 | 38.7 | 155.6 |
-| TOON | 4.2 | 8.6 | 35.2 | 142.1 |
-| JSON Compact | 3.3 | 6.8 | 27.9 | 112.8 |
-| YAML | 3.0 | 6.2 | 25.1 | 101.3 |
-| JSON Pretty | 2.0 | 4.1 | 16.7 | 67.8 |
-| XML | 1.5 | 3.2 | 13.3 | 54.0 |
+| CSV Bundle | 4.9 | 10.0 | 41.0 | 165.6 |
+| SDIF AI | 5.2 | 10.6 | 43.6 | 175.8 |
+| SDIF | 5.1 | 10.3 | 42.2 | 170.2 |
+| TOON | 5.0 | 10.1 | 41.1 | 166.2 |
+| YAML | 3.5 | 7.2 | 29.6 | 119.4 |
+| JSON Compact | 3.3 | 6.8 | 27.8 | 112.0 |
+| JSON Pretty | 2.3 | 4.8 | 19.8 | 80.5 |
+| XML | 1.8 | 3.8 | 16.1 | 65.2 |
 
 ## Methodology
 
 - All formats are derived from the same canonical `equivalent.json` source.
 - **Fit rate**: % of corpus documents where `floor(budget / tokens) >= 1`.
 - **Avg docs**: mean number of copies that fit per document across the corpus.
-- Tokenizer: `tiktoken/cl100k_base`.
+- Tokenizer: `estimate (4 bytes/token)`.
 - Ratios computed against JSON Compact as the stable baseline.
