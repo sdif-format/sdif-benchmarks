@@ -3,7 +3,7 @@
 > **Framing**: this benchmark measures full-document resend overhead after a 10% leaf mutation.
 > It is NOT a true SDIF delta benchmark. A semantic delta (base + patch) would be even smaller.
 
-- Generated at: `2026-05-23T19:41:35Z`
+- Generated at: `2026-05-23T21:28:15Z`
 - Tokenizer: `tiktoken/cl100k_base`
 - Mutation: `10%` of leaf values changed
 - Documents: `20`

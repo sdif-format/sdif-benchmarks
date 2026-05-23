@@ -1,6 +1,6 @@
 # SDIF Mutation Sensitivity Benchmark — Document Detail
 
-- Generated at: `2026-05-23T19:41:35Z`
+- Generated at: `2026-05-23T21:28:15Z`
 - Mutation: `10%` of leaf values changed
 
 ## deep-hierarchy-project

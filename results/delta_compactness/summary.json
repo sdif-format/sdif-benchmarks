@@ -2,7 +2,7 @@
   "kind": "MutationSensitivityReport",
   "version": "1.0",
   "note": "Full-resend overhead benchmark. Not a true SDIF delta encoding benchmark.",
-  "generatedAt": "2026-05-23T19:41:35Z",
+  "generatedAt": "2026-05-23T21:28:15Z",
   "runDirectory": "results/delta_compactness",
   "semanticSource": "examples/golden/<document>/equivalent.json",
   "tokenizer": "tiktoken/cl100k_base",
