@@ -15,7 +15,8 @@ Scores (0-100%) per document per format:
 - structure_fidelity: % of key paths that exist in both original and round-tripped.
 - overall_fidelity:   harmonic mean of the three above.
 
-SDIF AI and TOON are marked N/A (they are projections or have no standard parser).
+SDIF AI and TOON are evaluated when their decoders are available.
+Optional decoder failures are reported per format.
 
 Each run writes persistent evidence to:
 
@@ -26,7 +27,7 @@ Environment variables:
 
 - SDIF_BENCHMARK_OUTPUT_DIR=<path>     Redirect evidence. Default: benchmarks/.
 - SDIF_BENCHMARK_GOLDEN_DIR=<path>     Corpus directory. Default: examples/golden.
-- SDIF_BENCHMARK_TOON=0               Disable TOON (it cannot round-trip anyway).
+- SDIF_BENCHMARK_TOON=0               Disable TOON round-trip evaluation.
 - SDIF_BENCHMARK_VERBOSE=1            Print diagnostic warnings.
 - SDIF_ENV_OVERRIDE=0                 Keep existing env vars instead of .env overrides.
 """
@@ -36,7 +37,10 @@ from __future__ import annotations
 import contextlib
 import json
 import os
+import shutil
+import subprocess
 import sys
+import tempfile
 import xml.etree.ElementTree as ET
 from dataclasses import dataclass
 from pathlib import Path
@@ -68,6 +72,7 @@ from infra import (  # noqa: E402
 
 import yaml  # type: ignore[import-untyped]
 
+from sdif.ai import sdif_from_ai  # noqa: E402
 from sdif.json.converter import document_to_json_data  # noqa: E402
 from sdif import parse_text  # noqa: E402
 from sdif.core.policy import Policy  # noqa: E402
@@ -79,8 +84,6 @@ _BENCHMARK_POLICY = Policy(
 )
 
 BENCHMARK_TRACK_NAME = "roundtrip_fidelity"
-
-NA_FORMATS = {"SDIF AI", "TOON"}
 
 
 # ====================
@@ -220,6 +223,52 @@ def parse_sdif(text: str) -> dict[str, Any] | None:
         return None
 
 
+def parse_sdif_ai(text: str) -> dict[str, Any] | None:
+    try:
+        # compact_ai_projection may omit the header when it wins on size
+        if not text.startswith("@sdif"):
+            text = "@sdif.ai 1.0\n" + text
+        canonical = sdif_from_ai(text, policy=_BENCHMARK_POLICY)
+        doc = parse_text(canonical, policy=_BENCHMARK_POLICY)
+        return document_to_json_data(doc)
+    except Exception as exc:
+        verbose_warning(f"SDIF AI parse failed: {exc}")
+        return None
+
+
+def parse_toon(text: str) -> dict[str, Any] | None:
+    toon_bin = shutil.which("toon")
+    npx_bin = shutil.which("npx")
+    if toon_bin is None and npx_bin is None:
+        verbose_warning("TOON decode skipped: neither `toon` nor `npx` found.")
+        return None
+    try:
+        with tempfile.TemporaryDirectory() as tmp:
+            src = Path(tmp) / "input.toon"
+            src.write_text(text, encoding="utf-8")
+            cmd = (
+                [toon_bin, "--decode", str(src)]
+                if toon_bin is not None
+                else [npx_bin, "-y", "@toon-format/cli", "--decode", str(src)]
+            )
+            completed = subprocess.run(
+                cmd,
+                text=True,
+                stdout=subprocess.PIPE,
+                stderr=subprocess.PIPE,
+                check=False,
+                timeout=60,
+            )
+        if completed.returncode != 0:
+            verbose_warning(f"TOON decode failed: {completed.stderr.strip()}")
+            return None
+        result = json.loads(completed.stdout)
+        return result if isinstance(result, dict) else None
+    except Exception as exc:
+        verbose_warning(f"TOON decode error: {exc}")
+        return None
+
+
 FORMAT_PARSERS = {
     "JSON Compact": parse_json_compact,
     "JSON Pretty": parse_json_compact,
@@ -227,6 +276,8 @@ FORMAT_PARSERS = {
     "XML": parse_xml,
     "CSV Bundle": parse_csv_bundle,
     "SDIF": parse_sdif,
+    "SDIF AI": parse_sdif_ai,
+    "TOON": parse_toon,
 }
 
 
@@ -366,7 +417,8 @@ def run_benchmark(run_dir: Path, *, env_file_loaded: bool) -> FidelityEvidence:
         first = True
 
         for format_name, text in format_pairs:
-            if format_name in NA_FORMATS:
+            parser = FORMAT_PARSERS.get(format_name)
+            if parser is None:
                 result = FidelityResult(
                     format_name=format_name,
                     text=text,
@@ -376,12 +428,11 @@ def run_benchmark(run_dir: Path, *, env_file_loaded: bool) -> FidelityEvidence:
                     type_fidelity=None,
                     structure_fidelity=None,
                     overall_fidelity=None,
-                    note="N/A (projection/no parser)",
+                    note="no parser",
                 )
             else:
-                parser = FORMAT_PARSERS.get(format_name)
-                if parser is None:
-                    note = "no parser"
+                roundtripped = parser(text)
+                if roundtripped is None:
                     result = FidelityResult(
                         format_name=format_name,
                         text=text,
@@ -391,41 +442,27 @@ def run_benchmark(run_dir: Path, *, env_file_loaded: bool) -> FidelityEvidence:
                         type_fidelity=None,
                         structure_fidelity=None,
                         overall_fidelity=None,
-                        note=note,
+                        note="decoder unavailable" if format_name in ("SDIF AI", "TOON") else "parse error",
                     )
                 else:
-                    roundtripped = parser(text)
-                    if roundtripped is None:
-                        result = FidelityResult(
-                            format_name=format_name,
-                            text=text,
-                            bytes_size=len(text.encode("utf-8")),
-                            parse_success=False,
-                            value_fidelity=None,
-                            type_fidelity=None,
-                            structure_fidelity=None,
-                            overall_fidelity=None,
-                            note="parse error",
-                        )
-                    else:
-                        # Unwrap XML top-level wrapper
-                        if format_name == "XML" and isinstance(roundtripped, dict):
-                            unwrapped = roundtripped.get("document", roundtripped)
-                            if isinstance(unwrapped, dict):
-                                roundtripped = unwrapped
+                    # Unwrap XML top-level wrapper
+                    if format_name == "XML" and isinstance(roundtripped, dict):
+                        unwrapped = roundtripped.get("document", roundtripped)
+                        if isinstance(unwrapped, dict):
+                            roundtripped = unwrapped
 
-                        scores = score_fidelity(original, roundtripped)
-                        result = FidelityResult(
-                            format_name=format_name,
-                            text=text,
-                            bytes_size=len(text.encode("utf-8")),
-                            parse_success=True,
-                            value_fidelity=scores["value_fidelity"],
-                            type_fidelity=scores["type_fidelity"],
-                            structure_fidelity=scores["structure_fidelity"],
-                            overall_fidelity=scores["overall_fidelity"],
-                            note="",
-                        )
+                    scores = score_fidelity(original, roundtripped)
+                    result = FidelityResult(
+                        format_name=format_name,
+                        text=text,
+                        bytes_size=len(text.encode("utf-8")),
+                        parse_success=True,
+                        value_fidelity=scores["value_fidelity"],
+                        type_fidelity=scores["type_fidelity"],
+                        structure_fidelity=scores["structure_fidelity"],
+                        overall_fidelity=scores["overall_fidelity"],
+                        note="",
+                    )
 
             rows.append(result)
 
