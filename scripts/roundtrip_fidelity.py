@@ -72,7 +72,7 @@ from infra import (  # noqa: E402
 
 import yaml  # type: ignore[import-untyped]
 
-from sdif.ai import sdif_from_ai  # noqa: E402
+from sdif.ai import expand_ai_doc  # noqa: E402
 from sdif.json.converter import document_to_json_data  # noqa: E402
 from sdif import parse_text  # noqa: E402
 from sdif.core.policy import Policy  # noqa: E402
@@ -228,8 +228,7 @@ def parse_sdif_ai(text: str) -> dict[str, Any] | None:
         # compact_ai_projection may omit the header when it wins on size
         if not text.startswith("@sdif"):
             text = "@sdif.ai 1.0\n" + text
-        canonical = sdif_from_ai(text, policy=_BENCHMARK_POLICY)
-        doc = parse_text(canonical, policy=_BENCHMARK_POLICY)
+        doc = expand_ai_doc(text, policy=_BENCHMARK_POLICY)
         return document_to_json_data(doc)
     except Exception as exc:
         verbose_warning(f"SDIF AI parse failed: {exc}")
@@ -246,10 +245,10 @@ def parse_toon(text: str) -> dict[str, Any] | None:
         with tempfile.TemporaryDirectory() as tmp:
             src = Path(tmp) / "input.toon"
             src.write_text(text, encoding="utf-8")
-            cmd = (
+            cmd: list[str] = (
                 [toon_bin, "--decode", str(src)]
                 if toon_bin is not None
-                else [npx_bin, "-y", "@toon-format/cli", "--decode", str(src)]
+                else [str(npx_bin), "-y", "@toon-format/cli", "--decode", str(src)]
             )
             completed = subprocess.run(
                 cmd,
@@ -358,6 +357,76 @@ def score_fidelity(original: dict[str, Any], roundtripped: dict[str, Any]) -> di
     }
 
 
+def slugify_format(name: str) -> str:
+    return name.lower().replace(" ", "_").replace(".", "_")
+
+
+def collect_diagnostics(
+    original: dict[str, Any],
+    roundtripped: dict[str, Any],
+    *,
+    format_name: str = "",
+) -> dict[str, Any]:
+    orig_leaves = dict(collect_leaves(original))
+    rt_leaves = dict(collect_leaves(roundtripped))
+    orig_paths = set(orig_leaves.keys())
+    rt_paths = set(rt_leaves.keys())
+    missing_paths = sorted(orig_paths - rt_paths)
+    extra_paths = sorted(rt_paths - orig_paths)
+    value_mismatches: list[dict[str, Any]] = []
+    type_mismatches: list[dict[str, Any]] = []
+    for path in sorted(orig_paths & rt_paths):
+        orig_val = orig_leaves[path]
+        rt_val = rt_leaves[path]
+        value_ok = orig_val == rt_val
+        if not value_ok and orig_val is not None and rt_val is not None:
+            if str(orig_val) == str(rt_val):
+                value_ok = True
+            else:
+                try:
+                    value_ok = float(str(orig_val)) == float(str(rt_val))
+                except (ValueError, TypeError):
+                    pass
+        if not value_ok:
+            value_mismatches.append({"path": path, "expected": orig_val, "actual": rt_val})
+        if type(orig_val) is not type(rt_val):
+            type_mismatches.append({
+                "path": path,
+                "expected_type": type(orig_val).__name__,
+                "actual_type": type(rt_val).__name__,
+            })
+    result: dict[str, Any] = {
+        "missing_paths": missing_paths,
+        "extra_paths": extra_paths,
+        "value_mismatches": value_mismatches,
+        "type_mismatches": type_mismatches,
+    }
+    # TOON external decoder coerces whole-number floats (5.0) to ints (5).
+    if format_name == "TOON" and not missing_paths and not extra_paths and not value_mismatches:
+        if type_mismatches and all(
+            m["expected_type"] == "float" and m["actual_type"] == "int"
+            for m in type_mismatches
+        ):
+            result["cause"] = "external_decoder_int_float_coercion"
+    return result
+
+
+def write_format_diagnostics(
+    run_dir: Path,
+    doc_name: str,
+    format_name: str,
+    original: dict[str, Any],
+    roundtripped: dict[str, Any],
+) -> Path:
+    diag_dir = run_dir / "diagnostics" / doc_name
+    diag_dir.mkdir(parents=True, exist_ok=True)
+    slug = slugify_format(format_name)
+    path = diag_dir / f"{slug}.json"
+    data = collect_diagnostics(original, roundtripped, format_name=format_name)
+    path.write_text(json.dumps(data, indent=2, default=str), encoding="utf-8")
+    return path
+
+
 # ====================
 # Data model
 # ====================
@@ -452,6 +521,10 @@ def run_benchmark(run_dir: Path, *, env_file_loaded: bool) -> FidelityEvidence:
                             roundtripped = unwrapped
 
                     scores = score_fidelity(original, roundtripped)
+                    note = ""
+                    if scores["overall_fidelity"] < 100.0:
+                        write_format_diagnostics(run_dir, doc_name, format_name, original, roundtripped)
+                        note = "see diagnostics"
                     result = FidelityResult(
                         format_name=format_name,
                         text=text,
@@ -461,7 +534,7 @@ def run_benchmark(run_dir: Path, *, env_file_loaded: bool) -> FidelityEvidence:
                         type_fidelity=scores["type_fidelity"],
                         structure_fidelity=scores["structure_fidelity"],
                         overall_fidelity=scores["overall_fidelity"],
-                        note="",
+                        note=note,
                     )
 
             rows.append(result)
