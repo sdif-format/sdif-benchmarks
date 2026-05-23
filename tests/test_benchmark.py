@@ -479,3 +479,29 @@ def test_roundtrip_sdif_ai_plan_at_100_after_expand_fix():
     result = rt.parse_sdif_ai(ai_text)
 
     assert result == data, f"SDIF AI round-trip mismatch: {result!r}"
+
+
+def test_roundtrip_sdif_ai_numeric_string_table_cells_preserved():
+    # Regression: HTTP-status-code strings like "200", "404" in a $-suffixed
+    # column must survive the SDIF AI → expand_ai_doc → document_to_json_data
+    # path as strings, not be coerced to integers.
+    rt = load_roundtrip_fidelity_module()
+    import formats as fmt_mod
+    from sdif.json import json_data_to_sdif
+
+    ambiguous = ["200", "404", "0", "-1", "1.0", "true", "false", "null"]
+    data = {"responses": [{"code": s, "status": s} for s in ambiguous]}
+    sdif_text = json_data_to_sdif(data, include_header=True)
+    ai_text = fmt_mod.compact_ai_projection(sdif_text)
+    result = rt.parse_sdif_ai(ai_text)
+
+    assert isinstance(result, dict), "parse_sdif_ai must return a dict"
+    for original, row in zip(ambiguous, result.get("responses", [])):
+        for col in ("code", "status"):
+            cell = row[col]
+            assert cell == original, (
+                f"SDIF AI expand lost {original!r} in column {col!r}: got {cell!r}"
+            )
+            assert isinstance(cell, str), (
+                f"SDIF AI expand coerced {original!r} to {type(cell).__name__}"
+            )
