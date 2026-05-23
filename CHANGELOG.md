@@ -4,17 +4,22 @@
 
 ### Fixed
 
+- SDIF canonical and SDIF AI both round-trip losslessly across the full benchmark corpus.
 - `github.openapi` / SDIF AI now reaches 100% overall fidelity. Root cause: after
   `expand_ai_doc()` strips the `$` suffix from column names and records their indices in
   `Table.quoted_columns`, the core decoder (`_parse_table_cell` in `sdif.json.converter`)
   ignored that set and coerced numeric-looking HTTP status codes (e.g. `"200"`, `"404"`)
-  to integers. Fixed in the core library (`sdif.json.converter` and
-  `sdif.canonical.canonicalizer`); benchmarks inherit the fix via `sdif` package.
+  to integers. Fixed in the core library; benchmarks inherit the fix via the `sdif` package.
 - `parse_sdif_ai()` in `roundtrip_fidelity.py` now uses `expand_ai_doc()` instead of
   `sdif_from_ai()`. The previous path called `canonicalize()`, which reordered rules
-  alphabetically, sorted relations, and requoted list literals containing double-quotes —
-  causing `plan`, `registry`, and `validation-report` to score below 100% despite valid
-  encoding. All three now reach 100% overall fidelity.
+  alphabetically, sorted relations, and converted list literals containing quoted strings
+  into quoted strings — causing `plan`, `registry`, and `validation-report` to score below
+  100% despite valid encoding. All three now reach 100% overall fidelity.
+
+### Benchmark
+
+- Re-ran the round-trip fidelity benchmark after the SDIF AI and canonicalization fixes.
+  SDIF AI now reaches 100% round-trip fidelity across all 20 benchmark documents.
 - Fixed a mypy `arg-type` error in `parse_toon()` where the `subprocess.run()` call
   received `list[str | None]` instead of `list[str]`.
 
