@@ -1,7 +1,7 @@
 {
   "kind": "RoundTripFidelityReport",
   "version": "1.0",
-  "generatedAt": "2026-05-23T20:48:25Z",
+  "generatedAt": "2026-05-23T21:12:36Z",
   "runDirectory": "results/roundtrip_fidelity",
   "semanticSource": "examples/golden/<document>/equivalent.json",
   "envFileLoaded": false,
@@ -138,6 +138,16 @@
           "note": ""
         },
         {
+          "format": "SDIF AI",
+          "bytes": 167369,
+          "parseSuccess": true,
+          "valueFidelity": 100.0,
+          "typeFidelity": 100.0,
+          "structureFidelity": 100.0,
+          "overallFidelity": 100.0,
+          "note": ""
+        },
+        {
           "format": "TOON",
           "bytes": 174452,
           "parseSuccess": true,
@@ -150,16 +160,6 @@
         {
           "format": "CSV Bundle",
           "bytes": 167539,
-          "parseSuccess": true,
-          "valueFidelity": 100.0,
-          "typeFidelity": 89.3,
-          "structureFidelity": 100.0,
-          "overallFidelity": 96.2,
-          "note": "see diagnostics"
-        },
-        {
-          "format": "SDIF AI",
-          "bytes": 167369,
           "parseSuccess": true,
           "valueFidelity": 100.0,
           "typeFidelity": 89.3,

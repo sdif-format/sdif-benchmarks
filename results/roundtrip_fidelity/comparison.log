@@ -16,9 +16,9 @@ github.openapi               JSON Compact      100.0%  100.0%  100.0%   100.0%
                              JSON Pretty       100.0%  100.0%  100.0%   100.0%  
                              YAML              100.0%  100.0%  100.0%   100.0%  
                              SDIF              100.0%  100.0%  100.0%   100.0%  
+                             SDIF AI           100.0%  100.0%  100.0%   100.0%  
                              TOON              100.0%  100.0%  100.0%   100.0%  
                              CSV Bundle         96.2%  100.0%   89.3%   100.0%  see diagnostics
-                             SDIF AI            96.2%  100.0%   89.3%   100.0%  see diagnostics
                              XML                91.3%   87.4%   87.4%   100.0%  see diagnostics
 ----------------------------------------------------------------------------------------------------
 large-knowledge-graph        JSON Compact      100.0%  100.0%  100.0%   100.0%  
@@ -190,8 +190,8 @@ wide-table-survey            JSON Compact      100.0%  100.0%  100.0%   100.0%
   JSON Pretty     100.0%  (20 docs)
   YAML            100.0%  (20 docs)
   SDIF            100.0%  (20 docs)
+  SDIF AI         100.0%  (20 docs)
   TOON            100.0%  (20 docs)
-  SDIF AI          99.8%  (20 docs)
   CSV Bundle       98.6%  (20 docs)
   XML              88.7%  (20 docs)
 

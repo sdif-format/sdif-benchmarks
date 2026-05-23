@@ -1,6 +1,6 @@
 # SDIF Round-Trip Fidelity Benchmark — Document Detail
 
-- Generated at: `2026-05-23T20:48:25Z`
+- Generated at: `2026-05-23T21:12:36Z`
 
 ## deep-hierarchy-project
 
@@ -23,9 +23,9 @@
 | JSON Pretty | 100.0% | 100.0% | 100.0% | 100.0% |  |
 | YAML | 100.0% | 100.0% | 100.0% | 100.0% |  |
 | SDIF | 100.0% | 100.0% | 100.0% | 100.0% |  |
+| SDIF AI | 100.0% | 100.0% | 100.0% | 100.0% |  |
 | TOON | 100.0% | 100.0% | 100.0% | 100.0% |  |
 | CSV Bundle | 96.2% | 100.0% | 89.3% | 100.0% | see diagnostics |
-| SDIF AI | 96.2% | 100.0% | 89.3% | 100.0% | see diagnostics |
 | XML | 91.3% | 87.4% | 87.4% | 100.0% | see diagnostics |
 
 ## large-knowledge-graph

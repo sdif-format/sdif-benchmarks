@@ -1,6 +1,6 @@
 kind RoundTripFidelityReport
 version "1.0"
-generatedAt 2026-05-23T20:48:25Z
+generatedAt 2026-05-23T21:12:36Z
 runDirectory results/roundtrip_fidelity
 semanticSource examples/golden/<document>/equivalent.json
 envFileLoaded false
@@ -25,9 +25,9 @@ documents:
     JSON Pretty	386842	true	100.0	100.0	100.0	100.0	""
     YAML	283256	true	100.0	100.0	100.0	100.0	""
     SDIF	173649	true	100.0	100.0	100.0	100.0	""
+    SDIF AI	167369	true	100.0	100.0	100.0	100.0	""
     TOON	174452	true	100.0	100.0	100.0	100.0	""
     CSV Bundle	167539	true	100.0	89.3	100.0	96.2	see diagnostics
-    SDIF AI	167369	true	100.0	89.3	100.0	96.2	see diagnostics
     XML	472655	true	87.4	87.4	100.0	91.3	see diagnostics
   __item:
     name large-knowledge-graph

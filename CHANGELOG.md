@@ -4,6 +4,12 @@
 
 ### Fixed
 
+- `github.openapi` / SDIF AI now reaches 100% overall fidelity. Root cause: after
+  `expand_ai_doc()` strips the `$` suffix from column names and records their indices in
+  `Table.quoted_columns`, the core decoder (`_parse_table_cell` in `sdif.json.converter`)
+  ignored that set and coerced numeric-looking HTTP status codes (e.g. `"200"`, `"404"`)
+  to integers. Fixed in the core library (`sdif.json.converter` and
+  `sdif.canonical.canonicalizer`); benchmarks inherit the fix via `sdif` package.
 - `parse_sdif_ai()` in `roundtrip_fidelity.py` now uses `expand_ai_doc()` instead of
   `sdif_from_ai()`. The previous path called `canonicalize()`, which reordered rules
   alphabetically, sorted relations, and requoted list literals containing double-quotes —
@@ -31,6 +37,9 @@
   lossy parser and verifies diagnostic file creation.
 - `test_roundtrip_sdif_ai_plan_at_100_after_expand_fix` — regression guard for array
   fields (e.g. `scope.in`) that previously lost structure through canonicalization.
+- `test_roundtrip_sdif_ai_numeric_string_table_cells_preserved` — regression guard for
+  numeric-looking strings in `$`-suffixed table columns (HTTP status codes, booleans, null)
+  surviving the SDIF AI → `expand_ai_doc` → JSON decode path as strings.
 
 ## 1.0.0 - 2026-05-22
 
