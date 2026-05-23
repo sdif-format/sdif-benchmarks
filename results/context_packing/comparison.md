@@ -1,6 +1,6 @@
 # SDIF Context Packing Benchmark — Document Detail
 
-- Generated at: `2026-05-23T19:39:59Z`
+- Generated at: `2026-05-23T21:26:18Z`
 - Tokenizer: `tiktoken/cl100k_base`
 
 ## deep-hierarchy-project

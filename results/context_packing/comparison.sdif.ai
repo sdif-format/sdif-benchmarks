@@ -1,6 +1,6 @@
 kind ContextPackingReport
 version "1.1"
-generatedAt 2026-05-23T19:39:59Z
+generatedAt 2026-05-23T21:26:18Z
 tokenizer tiktoken/cl100k_base
 documentCount 20
 budgets [4096,8192,32768,131072]

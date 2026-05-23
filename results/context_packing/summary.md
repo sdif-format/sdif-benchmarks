@@ -1,6 +1,6 @@
 # SDIF Context Packing Benchmark — Summary
 
-- Generated at: `2026-05-23T19:39:59Z`
+- Generated at: `2026-05-23T21:26:18Z`
 - Tokenizer: `tiktoken/cl100k_base`
 - Documents: `20`
 - Budgets: `4K`, `8K`, `32K`, `128K` tokens
