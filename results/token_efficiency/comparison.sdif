@@ -1,7 +1,7 @@
 @sdif 1.0
 kind BenchmarkReport
 version "1.0"
-generatedAt 2026-05-23T19:39:30Z
+generatedAt 2026-05-23T21:25:50Z
 runDirectory results/token_efficiency
 semanticSource examples/golden/<document>/equivalent.json
 ratiosBaseline "JSON Compact"

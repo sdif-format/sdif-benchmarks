@@ -1,6 +1,6 @@
 # SDIF Benchmark Summary
 
-- Generated at: `2026-05-23T19:39:30Z`
+- Generated at: `2026-05-23T21:25:50Z`
 - Run directory: `results/token_efficiency`
 - Full report: `results/token_efficiency/comparison.md`
 - Structured JSON: `results/token_efficiency/comparison.json`
