@@ -107,7 +107,7 @@ import yaml  # type: ignore[import-untyped]
 
 BENCHMARK_DIR = Path(__file__).resolve().parents[1]
 BENCHMARK_REPO_ROOT = BENCHMARK_DIR
-SDIF_CORE_REPO = Path(os.environ.get("SDIF_CORE_REPO", BENCHMARK_REPO_ROOT.parent)).expanduser().resolve()
+SDIF_CORE_REPO = Path(os.environ.get("SDIF_CORE_REPO") or str(BENCHMARK_REPO_ROOT.parent)).expanduser().resolve()
 REPO_ROOT = SDIF_CORE_REPO
 sys.path.insert(0, str(SDIF_CORE_REPO / "src"))
 sys.path.insert(0, str(BENCHMARK_DIR / "src"))

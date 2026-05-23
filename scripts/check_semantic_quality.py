@@ -15,7 +15,7 @@ import sys
 from pathlib import Path
 
 BENCHMARK_ROOT = Path(__file__).resolve().parents[1]
-ROOT = Path(os.environ.get("SDIF_CORE_REPO", BENCHMARK_ROOT.parent)).expanduser().resolve()
+ROOT = Path(os.environ.get("SDIF_CORE_REPO") or str(BENCHMARK_ROOT.parent)).expanduser().resolve()
 SRC = ROOT / "src"
 if str(SRC) not in sys.path:
     sys.path.insert(0, str(SRC))
