@@ -1,6 +1,6 @@
 # SDIF Round-Trip Fidelity Benchmark — Summary
 
-- Generated at: `2026-05-24T14:37:35Z`
+- Generated at: `2026-05-24T20:36:51Z`
 - Documents: `24`
 
 ## Key Findings

@@ -1,7 +1,7 @@
 {
   "kind": "BenchmarkSuiteReport",
   "version": "1.0",
-  "generatedAt": "2026-05-24T14:35:11Z",
+  "generatedAt": "2026-05-24T20:34:17Z",
   "corpus": {
     "source": "examples/golden",
     "documents": 24
@@ -53,11 +53,11 @@
     {
       "track": "operability",
       "label": "Operability",
-      "claim": "Documents format capability matrix: canonical forms, stable hashing, native relation support, and rule handling.",
-      "metric": "sdifDeclaredCapabilities",
+      "claim": "Format capability matrix for canonicalization, stable hashing, native relations, and rule declarations.",
+      "metric": "sdifDocumentContractCapabilities",
       "value": 8,
       "unit": "/8",
-      "description": "SDIF declares 8/8 deterministic-workflow capabilities; rule evaluation support is False",
+      "description": "SDIF implements 8/8 benchmarked document-contract capabilities; rule evaluation is intentionally outside this operability matrix.",
       "evidence": "operability/summary.md"
     }
   ],
@@ -65,7 +65,7 @@
     {
       "track": "delta_compactness",
       "label": "Mutation Sensitivity — Full-resend baseline",
-      "claim": "This track measures full-document resend sensitivity after mutation. It is not yet a semantic patch/delta benchmark."
+      "claim": "This track measures full-document resend sensitivity after mutation. It is not a semantic patch/delta benchmark."
     }
   ],
   "artifacts": [

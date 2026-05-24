@@ -1,7 +1,7 @@
 {
   "kind": "RoundTripFidelityReport",
   "version": "1.0",
-  "generatedAt": "2026-05-24T14:37:35Z",
+  "generatedAt": "2026-05-24T20:36:51Z",
   "runDirectory": "results/roundtrip_fidelity",
   "semanticSource": "examples/golden/<document>/equivalent.json",
   "envFileLoaded": false,

@@ -1,6 +1,6 @@
 # SDIF Benchmark Evidence Report
 
-- Generated at: `2026-05-24T14:35:52Z`
+- Generated at: `2026-05-24T20:35:02Z`
 - Run directory: `results/token_efficiency`
 - Semantic source: `examples/golden/<document>/equivalent.json`
 - Ratios are computed independently per tokenizer against `JSON Compact`.

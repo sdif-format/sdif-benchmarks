@@ -2,7 +2,7 @@
 alias[desc=description,ev=evidence,v=version]
 kind BenchmarkSuiteReport
 v "1.0"
-generatedAt 2026-05-24T14:35:11Z
+generatedAt 2026-05-24T20:34:17Z
 corpus:
   source examples/golden
   documents 24
@@ -43,14 +43,14 @@ scorecard:
   __item:
     track operability
     label Operability
-    claim "Documents format capability matrix: canonical forms, stable hashing, native relation support, and rule handling."
-    metric sdifDeclaredCapabilities
+    claim "Format capability matrix for canonicalization, stable hashing, native relations, and rule declarations."
+    metric sdifDocumentContractCapabilities
     value 8
     unit /8
-    desc "SDIF declares 8/8 deterministic-workflow capabilities; rule evaluation support is False"
+    desc "SDIF implements 8/8 benchmarked document-contract capabilities; rule evaluation is intentionally outside this operability matrix."
     ev operability/summary.md
 experimental_tracks[track,label,claim]:
-delta_compactness	Mutation Sensitivity — Full-resend baseline	This track measures full-document resend sensitivity after mutation. It is not yet a semantic patch/delta benchmark.
+delta_compactness	Mutation Sensitivity — Full-resend baseline	This track measures full-document resend sensitivity after mutation. It is not a semantic patch/delta benchmark.
 artifacts[track,label,summaryMd,summaryJson,summarySdif,summarySdifAi,dashboard]:
 token_efficiency	Token Efficiency	token_efficiency/summary.md	token_efficiency/summary.json	token_efficiency/summary.sdif	token_efficiency/summary.sdif.ai	token_efficiency/dashboard.html
 context_packing	Context Packing	context_packing/summary.md	context_packing/summary.json	context_packing/summary.sdif	context_packing/summary.sdif.ai	context_packing/dashboard.html

@@ -1,17 +1,18 @@
 # SDIF Mutation Sensitivity Benchmark — Summary
 
 > **Framing**: this benchmark measures full-document resend overhead after a 10% leaf mutation.
-> It is NOT a true SDIF delta benchmark. A semantic delta (base + patch) would be even smaller.
+> It is not a semantic patch/delta benchmark; patch-only payloads should be measured separately.
 
-- Generated at: `2026-05-24T14:38:40Z`
+- Generated at: `2026-05-24T20:38:06Z`
 - Tokenizer: `tiktoken/cl100k_base`
 - Mutation: `10%` of leaf values changed
 - Documents: `24`
 
 ## Key Findings
 
-A 10% leaf mutation simulates a typical incremental document update.
-Formats with smaller token delta and fewer diff lines produce less noise on full-resend.
+A 10% leaf mutation provides a repeatable full-resend sensitivity baseline.
+Token delta measures the cost of resending the whole mutated document, not the size of a semantic patch.
+Diff-line counts are a coarse text-level signal and should not be interpreted as semantic delta size.
 
 | Format | Avg Δ tokens % | Avg diff lines |
 | --- | ---: | ---: |
@@ -31,6 +32,6 @@ Formats with smaller token delta and fewer diff lines produce less noise on full
   - Numbers: multiply by `1.1`.
   - Booleans: flip.
 - **Token delta**: `tokens(mutated) - tokens(original)` — full-document resend model.
-- **Diff lines**: unified diff added + removed lines — format-level verbosity in patches.
-- This benchmark does **not** measure SDIF semantic delta encoding (`kind Delta`), which
-  would transmit only changed fields as a patch. That is a separate benchmark.
+- **Diff lines**: unified diff added + removed lines — coarse text-level churn, not semantic patch size.
+- This benchmark does **not** measure SDIF semantic delta encoding (`kind Delta`).
+- A dedicated delta benchmark should compare patch-only payloads separately from full-document resend.

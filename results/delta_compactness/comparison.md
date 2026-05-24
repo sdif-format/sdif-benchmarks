@@ -1,6 +1,6 @@
 # SDIF Mutation Sensitivity Benchmark — Document Detail
 
-- Generated at: `2026-05-24T14:38:40Z`
+- Generated at: `2026-05-24T20:38:06Z`
 - Mutation: `10%` of leaf values changed
 
 ## agent-workflow

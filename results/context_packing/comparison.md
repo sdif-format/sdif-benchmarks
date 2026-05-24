@@ -1,6 +1,6 @@
 # SDIF Context Packing Benchmark — Document Detail
 
-- Generated at: `2026-05-24T14:36:25Z`
+- Generated at: `2026-05-24T20:35:37Z`
 - Tokenizer: `tiktoken/cl100k_base`
 
 ## agent-workflow

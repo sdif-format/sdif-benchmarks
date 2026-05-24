@@ -1,7 +1,7 @@
 @sdif 1.0
 kind ContextPackingReport
 version "1.1"
-generatedAt 2026-05-24T14:36:25Z
+generatedAt 2026-05-24T20:35:37Z
 tokenizer tiktoken/cl100k_base
 documentCount 24
 budgets [4096,8192,32768,131072]
