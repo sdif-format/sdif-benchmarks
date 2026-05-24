@@ -393,7 +393,7 @@ def _parse_csv_bundle(text: str) -> dict[str, Any] | None:
         return None
 
 
-def _recover_csv_scalar(value: str) -> Any:
+def _recover_csv_scalar(value: str) -> str | int | float | bool | None:
     """Recover typed scalar from CSV string."""
     if value == "null":
         return None
