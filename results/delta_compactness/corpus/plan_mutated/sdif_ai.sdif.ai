@@ -1,3 +1,4 @@
+@sdif.ai 1.0
 kind Plan-v2
 id release.v2.validation_plan-v2
 schema example.plan.v1

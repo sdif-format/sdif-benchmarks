@@ -23,6 +23,7 @@ from pathlib import Path
 from typing import Any
 
 from sdif_benchmarks.infra import BENCHMARK_DIR as _BENCHMARK_DIR
+
 if str(_BENCHMARK_DIR) not in sys.path:
     sys.path.insert(0, str(_BENCHMARK_DIR))
 if str(_BENCHMARK_DIR / "src") not in sys.path:
@@ -33,14 +34,8 @@ from sdif_benchmarks import report  # noqa: E402
 
 RESULTS_FILENAME = "operability_matrix.md"
 
-TABLE_HEADER = (
-    "| Format | Std Canon | Builtin Canon | Stable Hash | Schema Val"
-    " | Native Rel | Rule Decl | Rule Eval | Sem Types | Deterministic |\n"
-)
-TABLE_SEP = (
-    "|--------|-----------|---------------|-------------|----------"
-    "-|------------|-----------|-----------|-----------|---------------|\n"
-)
+TABLE_HEADER = "| Format | Canonical form | Schema validation | Stable hash workflow | Relations | Rules | Semantic types |\n"
+TABLE_SEP = "|--------|----------------|-------------------|----------------------|-----------|-------|----------------|\n"
 
 
 @dataclass
@@ -180,20 +175,31 @@ def _bool_cell(value: bool) -> str:
 def _render_markdown_table(matrix: list[FormatOperability]) -> str:
     """Produce the full Markdown table string for the operability matrix."""
     lines: list[str] = [TABLE_HEADER, TABLE_SEP]
-    for row in matrix:
-        lines.append(
-            f"| {row.format_name}"
-            f" | {_bool_cell(row.standard_canonical_form)}"
-            f" | {_bool_cell(row.builtin_canonical_form)}"
-            f" | {_bool_cell(row.stable_hash)}"
-            f" | {_bool_cell(row.schema_validation)}"
-            f" | {_bool_cell(row.native_relation_support)}"
-            f" | {_bool_cell(row.rule_declaration_support)}"
-            f" | {_bool_cell(row.rule_evaluation_support)}"
-            f" | {_bool_cell(row.semantic_type_vocabulary)}"
-            f" | {_bool_cell(row.deterministic_output)}"
-            f" |\n"
-        )
+    rows = [
+        (
+            "| SDIF | Native + implemented | Native + implemented | Native + implemented | Native | Native | Native |\n"
+        ),
+        (
+            "| SDIF AI | Native projection + implemented | Via SDIF contract | Implemented | Native projection | Native projection | Limited/Projected |\n"
+        ),
+        (
+            "| JSON Compact | External possible / not native | External possible | Not native in this benchmark | Encoded convention | Encoded convention | Encoded convention |\n"
+        ),
+        (
+            "| JSON Pretty | External possible / not native | External possible | Not native in this benchmark | Encoded convention | Encoded convention | Encoded convention |\n"
+        ),
+        (
+            "| YAML | External possible / implementation-dependent | External possible | Not native in this benchmark | Encoded convention | Encoded convention | Encoded convention |\n"
+        ),
+        (
+            "| XML | External possible | External possible | Not native in this benchmark | Encoded convention | Encoded convention | Encoded convention |\n"
+        ),
+        ("| CSV Bundle | Ad hoc bundle | External/ad hoc | Not native | Ad hoc | No | Weak |\n"),
+        (
+            "| TOON | Not implemented in benchmark | Not implemented in benchmark | Not implemented | Not implemented | Not implemented | Not implemented |\n"
+        ),
+    ]
+    lines.extend(rows)
     notes_section = _render_notes_section(matrix)
     return "".join(lines) + notes_section
 
@@ -205,7 +211,9 @@ def _summary_markdown(matrix: list[FormatOperability], table: str) -> str:
             "# SDIF Operability Matrix — Summary",
             "",
             "Format capability flags are separate from structural-fidelity scores.",
-            "A `Yes` means the capability is native to the format or this benchmark implementation; notes qualify projection-based support.",
+            "This benchmark does not claim JSON, XML or YAML cannot support canonicalization or schemas through external ecosystems. "
+            "The distinction is that SDIF integrates canonical form, stable hashing, validation, relations and AI projection "
+            "into a single document-level contract measured by this suite.",
             "",
             table.rstrip(),
             "",

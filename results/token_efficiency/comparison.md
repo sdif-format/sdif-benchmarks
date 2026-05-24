@@ -1,6 +1,6 @@
 # SDIF Benchmark Evidence Report
 
-- Generated at: `2026-05-24T12:15:24Z`
+- Generated at: `2026-05-24T14:35:52Z`
 - Run directory: `results/token_efficiency`
 - Semantic source: `examples/golden/<document>/equivalent.json`
 - Ratios are computed independently per tokenizer against `JSON Compact`.
@@ -24,10 +24,10 @@
 
 | Format | Avg Rank | Median Ratio | Best Ratio | Worst Ratio | Rank Spread | Coverage |
 | --- | ---: | ---: | ---: | ---: | ---: | ---: |
-| SDIF AI | 1.15 | 57.2% | 26.3% | 83.1% | 1 | 72/72 |
-| SDIF | 2.43 | 60.0% | 26.3% | 83.4% | 3 | 72/72 |
+| SDIF AI | 1.54 | 57.9% | 26.3% | 86.1% | 2 | 72/72 |
+| SDIF | 2.06 | 60.0% | 26.3% | 83.4% | 3 | 72/72 |
 | CSV Bundle | 2.89 | 62.3% | 28.7% | 95.4% | 3 | 72/72 |
-| TOON | 3.53 | 63.9% | 29.4% | 91.4% | 1 | 72/72 |
+| TOON | 3.51 | 63.9% | 29.4% | 91.4% | 2 | 72/72 |
 | YAML | 5.35 | 95.1% | 75.7% | 137.8% | 1 | 72/72 |
 | JSON Compact | 5.65 | 100.0% | 100.0% | 100.0% | 1 | 72/72 |
 | JSON Pretty | 7.00 | 141.6% | 100.7% | 192.5% | 0 | 72/72 |
@@ -37,12 +37,13 @@
 
 | Tokenizer | Winner Format | Wins | Documents |
 | --- | --- | ---: | ---: |
-| `Estimate` | SDIF AI | 21 | 24 |
-| `Estimate` | SDIF | 2 | 24 |
+| `Estimate` | SDIF AI | 17 | 24 |
+| `Estimate` | SDIF | 6 | 24 |
 | `Estimate` | CSV Bundle | 1 | 24 |
-| `TokenX` | SDIF AI | 19 | 24 |
-| `TokenX` | SDIF | 5 | 24 |
-| `tiktoken` | SDIF AI | 21 | 24 |
+| `TokenX` | SDIF | 23 | 24 |
+| `TokenX` | SDIF AI | 1 | 24 |
+| `tiktoken` | SDIF AI | 16 | 24 |
+| `tiktoken` | SDIF | 5 | 24 |
 | `tiktoken` | CSV Bundle | 3 | 24 |
 
 ## Tokenizer Results
@@ -53,10 +54,10 @@
 
 | Format | Avg Rank | Avg Ratio | Median Ratio | Avg Saved Tokens | Wins | Coverage |
 | --- | ---: | ---: | ---: | ---: | ---: | ---: |
-| SDIF AI | 1.12 | 56.6% | 56.1% | 23766 | 21 | 24/24 |
+| SDIF AI | 1.33 | 57.0% | 56.6% | 23762 | 17 | 24/24 |
 | CSV Bundle | 2.54 | 58.0% | 57.5% | 23820 | 1 | 24/24 |
-| SDIF | 2.71 | 58.2% | 57.6% | 22765 | 2 | 24/24 |
-| TOON | 3.62 | 59.0% | 58.6% | 22742 | 0 | 24/24 |
+| SDIF | 2.54 | 58.2% | 57.6% | 22765 | 6 | 24/24 |
+| TOON | 3.58 | 59.0% | 58.6% | 22742 | 0 | 24/24 |
 | YAML | 5.04 | 95.5% | 95.1% | 1878 | 0 | 24/24 |
 | JSON Compact | 5.96 | 100.0% | 100.0% | 0 | 0 | 24/24 |
 | JSON Pretty | 7.00 | 143.3% | 141.8% | -20584 | 0 | 24/24 |
@@ -66,23 +67,23 @@
 
 | Document | Rank | Format | Tokens | JSON Compact Tokens | Saved Tokens | Ratio |
 | --- | ---: | --- | ---: | ---: | ---: | ---: |
-| `agent-workflow` | 1 | SDIF AI | 157 | 286 | 129 | 54.9% |
-| `agent-workflow` | 2 | SDIF | 159 | 286 | 127 | 55.6% |
+| `agent-workflow` | 1 | SDIF | 159 | 286 | 127 | 55.6% |
+| `agent-workflow` | 2 | SDIF AI | 160 | 286 | 126 | 55.9% |
 | `agent-workflow` | 3 | TOON | 165 | 286 | 121 | 57.7% |
 | `agent-workflow` | 4 | CSV Bundle | 167 | 286 | 119 | 58.4% |
 | `agent-workflow` | 5 | YAML | 264 | 286 | 22 | 92.3% |
 | `agent-workflow` | 6 | JSON Compact | 286 | 286 | 0 | 100.0% |
 | `agent-workflow` | 7 | JSON Pretty | 439 | 286 | -153 | 153.5% |
 | `agent-workflow` | 8 | XML | 558 | 286 | -272 | 195.1% |
-| `audit-provenance` | 1 | SDIF AI | 174 | 284 | 110 | 61.3% |
-| `audit-provenance` | 2 | SDIF | 176 | 284 | 108 | 62.0% |
+| `audit-provenance` | 1 | SDIF | 176 | 284 | 108 | 62.0% |
+| `audit-provenance` | 2 | SDIF AI | 178 | 284 | 106 | 62.7% |
 | `audit-provenance` | 3 | TOON | 185 | 284 | 99 | 65.1% |
 | `audit-provenance` | 4 | CSV Bundle | 186 | 284 | 98 | 65.5% |
 | `audit-provenance` | 5 | YAML | 262 | 284 | 22 | 92.3% |
 | `audit-provenance` | 6 | JSON Compact | 284 | 284 | 0 | 100.0% |
 | `audit-provenance` | 7 | JSON Pretty | 409 | 284 | -125 | 144.0% |
 | `audit-provenance` | 8 | XML | 515 | 284 | -231 | 181.3% |
-| `deep-hierarchy-project` | 1 | SDIF AI | 73179 | 118574 | 45395 | 61.7% |
+| `deep-hierarchy-project` | 1 | SDIF AI | 73183 | 118574 | 45391 | 61.7% |
 | `deep-hierarchy-project` | 2 | CSV Bundle | 73189 | 118574 | 45385 | 61.7% |
 | `deep-hierarchy-project` | 3 | SDIF | 75551 | 118574 | 43023 | 63.7% |
 | `deep-hierarchy-project` | 4 | TOON | 75554 | 118574 | 43020 | 63.7% |
@@ -90,7 +91,7 @@
 | `deep-hierarchy-project` | 6 | JSON Compact | 118574 | 118574 | 0 | 100.0% |
 | `deep-hierarchy-project` | 7 | JSON Pretty | 162017 | 118574 | -43443 | 136.6% |
 | `deep-hierarchy-project` | 8 | XML | 192059 | 118574 | -73485 | 162.0% |
-| `github.openapi` | 1 | SDIF AI | 41843 | 73106 | 31263 | 57.2% |
+| `github.openapi` | 1 | SDIF AI | 41846 | 73106 | 31260 | 57.2% |
 | `github.openapi` | 2 | CSV Bundle | 41885 | 73106 | 31221 | 57.3% |
 | `github.openapi` | 3 | SDIF | 43413 | 73106 | 29693 | 59.4% |
 | `github.openapi` | 4 | TOON | 43613 | 73106 | 29493 | 59.7% |
@@ -98,7 +99,7 @@
 | `github.openapi` | 6 | JSON Compact | 73106 | 73106 | 0 | 100.0% |
 | `github.openapi` | 7 | JSON Pretty | 96711 | 73106 | -23605 | 132.3% |
 | `github.openapi` | 8 | XML | 118164 | 73106 | -45058 | 161.6% |
-| `large-knowledge-graph` | 1 | SDIF AI | 69895 | 129721 | 59826 | 53.9% |
+| `large-knowledge-graph` | 1 | SDIF AI | 69899 | 129721 | 59822 | 53.9% |
 | `large-knowledge-graph` | 2 | CSV Bundle | 69905 | 129721 | 59816 | 53.9% |
 | `large-knowledge-graph` | 3 | TOON | 72242 | 129721 | 57479 | 55.7% |
 | `large-knowledge-graph` | 4 | SDIF | 72311 | 129721 | 57410 | 55.7% |
@@ -106,7 +107,7 @@
 | `large-knowledge-graph` | 6 | JSON Compact | 129721 | 129721 | 0 | 100.0% |
 | `large-knowledge-graph` | 7 | JSON Pretty | 183302 | 129721 | -53581 | 141.3% |
 | `large-knowledge-graph` | 8 | XML | 221097 | 129721 | -91376 | 170.4% |
-| `large-plan` | 1 | SDIF AI | 123089 | 201176 | 78087 | 61.2% |
+| `large-plan` | 1 | SDIF AI | 123092 | 201176 | 78084 | 61.2% |
 | `large-plan` | 2 | CSV Bundle | 123104 | 201176 | 78072 | 61.2% |
 | `large-plan` | 3 | SDIF | 126199 | 201176 | 74977 | 62.7% |
 | `large-plan` | 4 | TOON | 126205 | 201176 | 74971 | 62.7% |
@@ -114,7 +115,7 @@
 | `large-plan` | 6 | JSON Compact | 201176 | 201176 | 0 | 100.0% |
 | `large-plan` | 7 | JSON Pretty | 262124 | 201176 | -60948 | 130.3% |
 | `large-plan` | 8 | XML | 318407 | 201176 | -117231 | 158.3% |
-| `large-registry` | 1 | SDIF AI | 100680 | 220956 | 120276 | 45.6% |
+| `large-registry` | 1 | SDIF AI | 100684 | 220956 | 120272 | 45.6% |
 | `large-registry` | 2 | CSV Bundle | 100693 | 220956 | 120263 | 45.6% |
 | `large-registry` | 3 | SDIF | 106542 | 220956 | 114414 | 48.2% |
 | `large-registry` | 4 | TOON | 106547 | 220956 | 114409 | 48.2% |
@@ -123,14 +124,14 @@
 | `large-registry` | 7 | JSON Pretty | 321329 | 220956 | -100373 | 145.4% |
 | `large-registry` | 8 | XML | 413066 | 220956 | -192110 | 186.9% |
 | `large-schema-catalog` | 1 | CSV Bundle | 53815 | 111880 | 58065 | 48.1% |
-| `large-schema-catalog` | 2 | SDIF AI | 55400 | 111880 | 56480 | 49.5% |
+| `large-schema-catalog` | 2 | SDIF AI | 55403 | 111880 | 56477 | 49.5% |
 | `large-schema-catalog` | 3 | SDIF | 57239 | 111880 | 54641 | 51.2% |
 | `large-schema-catalog` | 4 | TOON | 57282 | 111880 | 54598 | 51.2% |
 | `large-schema-catalog` | 5 | YAML | 108758 | 111880 | 3122 | 97.2% |
 | `large-schema-catalog` | 6 | JSON Compact | 111880 | 111880 | 0 | 100.0% |
 | `large-schema-catalog` | 7 | JSON Pretty | 163270 | 111880 | -51390 | 145.9% |
 | `large-schema-catalog` | 8 | XML | 197509 | 111880 | -85629 | 176.5% |
-| `large-support-export` | 1 | SDIF AI | 85512 | 148025 | 62513 | 57.8% |
+| `large-support-export` | 1 | SDIF AI | 85515 | 148025 | 62510 | 57.8% |
 | `large-support-export` | 2 | CSV Bundle | 85524 | 148025 | 62501 | 57.8% |
 | `large-support-export` | 3 | SDIF | 88110 | 148025 | 59915 | 59.5% |
 | `large-support-export` | 4 | TOON | 88114 | 148025 | 59911 | 59.5% |
@@ -138,7 +139,7 @@
 | `large-support-export` | 6 | JSON Compact | 148025 | 148025 | 0 | 100.0% |
 | `large-support-export` | 7 | JSON Pretty | 202532 | 148025 | -54507 | 136.8% |
 | `large-support-export` | 8 | XML | 246683 | 148025 | -98658 | 166.6% |
-| `large-validation-report` | 1 | SDIF AI | 95944 | 139832 | 43888 | 68.6% |
+| `large-validation-report` | 1 | SDIF AI | 95948 | 139832 | 43884 | 68.6% |
 | `large-validation-report` | 2 | CSV Bundle | 95956 | 139832 | 43876 | 68.6% |
 | `large-validation-report` | 3 | SDIF | 97634 | 139832 | 42198 | 69.8% |
 | `large-validation-report` | 4 | TOON | 97917 | 139832 | 41915 | 70.0% |
@@ -146,15 +147,15 @@
 | `large-validation-report` | 6 | JSON Compact | 139832 | 139832 | 0 | 100.0% |
 | `large-validation-report` | 7 | JSON Pretty | 177596 | 139832 | -37764 | 127.0% |
 | `large-validation-report` | 8 | XML | 204665 | 139832 | -64833 | 146.4% |
-| `llm-api-response` | 1 | SDIF AI | 206 | 332 | 126 | 62.0% |
-| `llm-api-response` | 2 | SDIF | 208 | 332 | 124 | 62.7% |
+| `llm-api-response` | 1 | SDIF | 208 | 332 | 124 | 62.7% |
+| `llm-api-response` | 2 | SDIF AI | 209 | 332 | 123 | 63.0% |
 | `llm-api-response` | 3 | TOON | 216 | 332 | 116 | 65.1% |
 | `llm-api-response` | 4 | CSV Bundle | 218 | 332 | 114 | 65.7% |
 | `llm-api-response` | 5 | YAML | 312 | 332 | 20 | 94.0% |
 | `llm-api-response` | 6 | JSON Compact | 332 | 332 | 0 | 100.0% |
 | `llm-api-response` | 7 | JSON Pretty | 475 | 332 | -143 | 143.1% |
 | `llm-api-response` | 8 | XML | 612 | 332 | -280 | 184.3% |
-| `medium-invoice-batch` | 1 | SDIF AI | 18476 | 34890 | 16414 | 53.0% |
+| `medium-invoice-batch` | 1 | SDIF AI | 18479 | 34890 | 16411 | 53.0% |
 | `medium-invoice-batch` | 2 | CSV Bundle | 18486 | 34890 | 16404 | 53.0% |
 | `medium-invoice-batch` | 3 | SDIF | 18965 | 34890 | 15925 | 54.4% |
 | `medium-invoice-batch` | 4 | TOON | 18967 | 34890 | 15923 | 54.4% |
@@ -162,7 +163,7 @@
 | `medium-invoice-batch` | 6 | JSON Compact | 34890 | 34890 | 0 | 100.0% |
 | `medium-invoice-batch` | 7 | JSON Pretty | 47898 | 34890 | -13008 | 137.3% |
 | `medium-invoice-batch` | 8 | XML | 59542 | 34890 | -24652 | 170.7% |
-| `medium-observability-run` | 1 | SDIF AI | 13983 | 28689 | 14706 | 48.7% |
+| `medium-observability-run` | 1 | SDIF AI | 13986 | 28689 | 14703 | 48.8% |
 | `medium-observability-run` | 2 | CSV Bundle | 13995 | 28689 | 14694 | 48.8% |
 | `medium-observability-run` | 3 | SDIF | 14595 | 28689 | 14094 | 50.9% |
 | `medium-observability-run` | 4 | TOON | 14598 | 28689 | 14091 | 50.9% |
@@ -170,7 +171,7 @@
 | `medium-observability-run` | 6 | JSON Compact | 28689 | 28689 | 0 | 100.0% |
 | `medium-observability-run` | 7 | JSON Pretty | 41996 | 28689 | -13307 | 146.4% |
 | `medium-observability-run` | 8 | XML | 51497 | 28689 | -22808 | 179.5% |
-| `medium-policy-catalog` | 1 | SDIF AI | 12446 | 24394 | 11948 | 51.0% |
+| `medium-policy-catalog` | 1 | SDIF AI | 12449 | 24394 | 11945 | 51.0% |
 | `medium-policy-catalog` | 2 | CSV Bundle | 12456 | 24394 | 11938 | 51.1% |
 | `medium-policy-catalog` | 3 | SDIF | 12918 | 24394 | 11476 | 53.0% |
 | `medium-policy-catalog` | 4 | TOON | 12920 | 24394 | 11474 | 53.0% |
@@ -178,7 +179,7 @@
 | `medium-policy-catalog` | 6 | JSON Compact | 24394 | 24394 | 0 | 100.0% |
 | `medium-policy-catalog` | 7 | JSON Pretty | 34838 | 24394 | -10444 | 142.8% |
 | `medium-policy-catalog` | 8 | XML | 41875 | 24394 | -17481 | 171.7% |
-| `medium-product-catalog` | 1 | SDIF AI | 11888 | 27843 | 15955 | 42.7% |
+| `medium-product-catalog` | 1 | SDIF AI | 11892 | 27843 | 15951 | 42.7% |
 | `medium-product-catalog` | 2 | CSV Bundle | 11900 | 27843 | 15943 | 42.7% |
 | `medium-product-catalog` | 3 | SDIF | 12696 | 27843 | 15147 | 45.6% |
 | `medium-product-catalog` | 4 | TOON | 12700 | 27843 | 15143 | 45.6% |
@@ -187,22 +188,22 @@
 | `medium-product-catalog` | 7 | JSON Pretty | 42264 | 27843 | -14421 | 151.8% |
 | `medium-product-catalog` | 8 | XML | 53712 | 27843 | -25869 | 192.9% |
 | `plan` | 1 | SDIF | 246 | 317 | 71 | 77.6% |
-| `plan` | 2 | SDIF AI | 250 | 317 | 67 | 78.9% |
-| `plan` | 3 | TOON | 251 | 317 | 66 | 79.2% |
+| `plan` | 2 | TOON | 251 | 317 | 66 | 79.2% |
+| `plan` | 3 | SDIF AI | 254 | 317 | 63 | 80.1% |
 | `plan` | 4 | CSV Bundle | 260 | 317 | 57 | 82.0% |
 | `plan` | 5 | YAML | 300 | 317 | 17 | 94.6% |
 | `plan` | 6 | JSON Compact | 317 | 317 | 0 | 100.0% |
 | `plan` | 7 | JSON Pretty | 422 | 317 | -105 | 133.1% |
 | `plan` | 8 | XML | 520 | 317 | -203 | 164.0% |
-| `registry` | 1 | SDIF AI | 166 | 240 | 74 | 69.2% |
-| `registry` | 2 | SDIF | 169 | 240 | 71 | 70.4% |
+| `registry` | 1 | SDIF | 169 | 240 | 71 | 70.4% |
+| `registry` | 2 | SDIF AI | 169 | 240 | 71 | 70.4% |
 | `registry` | 3 | TOON | 175 | 240 | 65 | 72.9% |
 | `registry` | 4 | CSV Bundle | 180 | 240 | 60 | 75.0% |
 | `registry` | 5 | YAML | 224 | 240 | 16 | 93.3% |
 | `registry` | 6 | JSON Compact | 240 | 240 | 0 | 100.0% |
 | `registry` | 7 | JSON Pretty | 324 | 240 | -84 | 135.0% |
 | `registry` | 8 | XML | 401 | 240 | -161 | 167.1% |
-| `schema` | 1 | SDIF AI | 275 | 529 | 254 | 52.0% |
+| `schema` | 1 | SDIF AI | 278 | 529 | 251 | 52.6% |
 | `schema` | 2 | CSV Bundle | 291 | 529 | 238 | 55.0% |
 | `schema` | 3 | SDIF | 291 | 529 | 238 | 55.0% |
 | `schema` | 4 | TOON | 296 | 529 | 233 | 56.0% |
@@ -211,14 +212,14 @@
 | `schema` | 7 | JSON Pretty | 809 | 529 | -280 | 152.9% |
 | `schema` | 8 | XML | 1048 | 529 | -519 | 198.1% |
 | `semantic-narrative` | 1 | SDIF | 226 | 352 | 126 | 64.2% |
-| `semantic-narrative` | 2 | SDIF AI | 227 | 352 | 125 | 64.5% |
+| `semantic-narrative` | 2 | SDIF AI | 231 | 352 | 121 | 65.6% |
 | `semantic-narrative` | 3 | TOON | 232 | 352 | 120 | 65.9% |
 | `semantic-narrative` | 4 | CSV Bundle | 234 | 352 | 118 | 66.5% |
 | `semantic-narrative` | 5 | YAML | 327 | 352 | 25 | 92.9% |
 | `semantic-narrative` | 6 | JSON Compact | 352 | 352 | 0 | 100.0% |
 | `semantic-narrative` | 7 | JSON Pretty | 495 | 352 | -143 | 140.6% |
 | `semantic-narrative` | 8 | XML | 623 | 352 | -271 | 177.0% |
-| `small-api-catalog` | 1 | SDIF AI | 410 | 791 | 381 | 51.8% |
+| `small-api-catalog` | 1 | SDIF AI | 414 | 791 | 377 | 52.3% |
 | `small-api-catalog` | 2 | CSV Bundle | 417 | 791 | 374 | 52.7% |
 | `small-api-catalog` | 3 | SDIF | 429 | 791 | 362 | 54.2% |
 | `small-api-catalog` | 4 | TOON | 430 | 791 | 361 | 54.4% |
@@ -226,7 +227,7 @@
 | `small-api-catalog` | 6 | JSON Compact | 791 | 791 | 0 | 100.0% |
 | `small-api-catalog` | 7 | JSON Pretty | 1213 | 791 | -422 | 153.4% |
 | `small-api-catalog` | 8 | XML | 1412 | 791 | -621 | 178.5% |
-| `small-incident` | 1 | SDIF AI | 641 | 1037 | 396 | 61.8% |
+| `small-incident` | 1 | SDIF AI | 644 | 1037 | 393 | 62.1% |
 | `small-incident` | 2 | CSV Bundle | 649 | 1037 | 388 | 62.6% |
 | `small-incident` | 3 | SDIF | 660 | 1037 | 377 | 63.6% |
 | `small-incident` | 4 | TOON | 660 | 1037 | 377 | 63.6% |
@@ -234,7 +235,7 @@
 | `small-incident` | 6 | JSON Compact | 1037 | 1037 | 0 | 100.0% |
 | `small-incident` | 7 | JSON Pretty | 1432 | 1037 | -395 | 138.1% |
 | `small-incident` | 8 | XML | 1702 | 1037 | -665 | 164.1% |
-| `small-invoice` | 1 | SDIF AI | 352 | 661 | 309 | 53.3% |
+| `small-invoice` | 1 | SDIF AI | 355 | 661 | 306 | 53.7% |
 | `small-invoice` | 2 | CSV Bundle | 360 | 661 | 301 | 54.5% |
 | `small-invoice` | 3 | SDIF | 364 | 661 | 297 | 55.1% |
 | `small-invoice` | 4 | TOON | 365 | 661 | 296 | 55.2% |
@@ -242,7 +243,7 @@
 | `small-invoice` | 6 | JSON Compact | 661 | 661 | 0 | 100.0% |
 | `small-invoice` | 7 | JSON Pretty | 941 | 661 | -280 | 142.4% |
 | `small-invoice` | 8 | XML | 1185 | 661 | -524 | 179.3% |
-| `validation-report` | 1 | SDIF AI | 173 | 254 | 81 | 68.1% |
+| `validation-report` | 1 | SDIF AI | 176 | 254 | 78 | 69.3% |
 | `validation-report` | 2 | SDIF | 184 | 254 | 70 | 72.4% |
 | `validation-report` | 3 | TOON | 193 | 254 | 61 | 76.0% |
 | `validation-report` | 4 | CSV Bundle | 194 | 254 | 60 | 76.4% |
@@ -250,7 +251,7 @@
 | `validation-report` | 6 | JSON Compact | 254 | 254 | 0 | 100.0% |
 | `validation-report` | 7 | JSON Pretty | 345 | 254 | -91 | 135.8% |
 | `validation-report` | 8 | XML | 422 | 254 | -168 | 166.1% |
-| `wide-table-survey` | 1 | SDIF AI | 4652 | 16230 | 11578 | 28.7% |
+| `wide-table-survey` | 1 | SDIF AI | 4655 | 16230 | 11575 | 28.7% |
 | `wide-table-survey` | 2 | CSV Bundle | 4658 | 16230 | 11572 | 28.7% |
 | `wide-table-survey` | 3 | TOON | 4764 | 16230 | 11466 | 29.4% |
 | `wide-table-survey` | 4 | SDIF | 4764 | 16230 | 11466 | 29.4% |
@@ -265,8 +266,8 @@
 
 | Format | Avg Rank | Avg Ratio | Median Ratio | Avg Saved Tokens | Wins | Coverage |
 | --- | ---: | ---: | ---: | ---: | ---: | ---: |
-| SDIF AI | 1.21 | 49.9% | 48.0% | 35165 | 19 | 24/24 |
-| SDIF | 1.79 | 49.8% | 48.0% | 35162 | 5 | 24/24 |
+| SDIF | 1.04 | 49.8% | 48.0% | 35162 | 23 | 24/24 |
+| SDIF AI | 1.96 | 50.6% | 48.5% | 35158 | 1 | 24/24 |
 | TOON | 3.29 | 60.4% | 58.8% | 29331 | 0 | 24/24 |
 | CSV Bundle | 3.71 | 61.1% | 58.5% | 29598 | 0 | 24/24 |
 | YAML | 5.00 | 83.6% | 83.5% | 9778 | 0 | 24/24 |
@@ -279,7 +280,7 @@
 | Document | Rank | Format | Tokens | JSON Compact Tokens | Saved Tokens | Ratio |
 | --- | ---: | --- | ---: | ---: | ---: | ---: |
 | `agent-workflow` | 1 | SDIF | 168 | 372 | 204 | 45.2% |
-| `agent-workflow` | 2 | SDIF AI | 174 | 372 | 198 | 46.8% |
+| `agent-workflow` | 2 | SDIF AI | 181 | 372 | 191 | 48.7% |
 | `agent-workflow` | 3 | TOON | 220 | 372 | 152 | 59.1% |
 | `agent-workflow` | 4 | CSV Bundle | 230 | 372 | 142 | 61.8% |
 | `agent-workflow` | 5 | YAML | 287 | 372 | 85 | 77.2% |
@@ -287,71 +288,71 @@
 | `agent-workflow` | 7 | JSON Pretty | 394 | 372 | -22 | 105.9% |
 | `agent-workflow` | 8 | XML | 649 | 372 | -277 | 174.5% |
 | `audit-provenance` | 1 | SDIF | 210 | 375 | 165 | 56.0% |
-| `audit-provenance` | 2 | SDIF AI | 214 | 375 | 161 | 57.1% |
+| `audit-provenance` | 2 | SDIF AI | 221 | 375 | 154 | 58.9% |
 | `audit-provenance` | 3 | TOON | 252 | 375 | 123 | 67.2% |
 | `audit-provenance` | 4 | CSV Bundle | 262 | 375 | 113 | 69.9% |
 | `audit-provenance` | 5 | YAML | 308 | 375 | 67 | 82.1% |
 | `audit-provenance` | 6 | JSON Compact | 375 | 375 | 0 | 100.0% |
 | `audit-provenance` | 7 | JSON Pretty | 395 | 375 | -20 | 105.3% |
 | `audit-provenance` | 8 | XML | 614 | 375 | -239 | 163.7% |
-| `deep-hierarchy-project` | 1 | SDIF AI | 81733 | 150426 | 68693 | 54.3% |
-| `deep-hierarchy-project` | 2 | SDIF | 81738 | 150426 | 68688 | 54.3% |
+| `deep-hierarchy-project` | 1 | SDIF | 81738 | 150426 | 68688 | 54.3% |
+| `deep-hierarchy-project` | 2 | SDIF AI | 81740 | 150426 | 68686 | 54.3% |
 | `deep-hierarchy-project` | 3 | CSV Bundle | 91221 | 150426 | 59205 | 60.6% |
 | `deep-hierarchy-project` | 4 | TOON | 91221 | 150426 | 59205 | 60.6% |
 | `deep-hierarchy-project` | 5 | YAML | 125936 | 150426 | 24490 | 83.7% |
 | `deep-hierarchy-project` | 6 | JSON Compact | 150426 | 150426 | 0 | 100.0% |
 | `deep-hierarchy-project` | 7 | JSON Pretty | 155171 | 150426 | -4745 | 103.2% |
 | `deep-hierarchy-project` | 8 | XML | 219188 | 150426 | -68762 | 145.7% |
-| `github.openapi` | 1 | SDIF AI | 46327 | 90705 | 44378 | 51.1% |
-| `github.openapi` | 2 | SDIF | 46333 | 90705 | 44372 | 51.1% |
+| `github.openapi` | 1 | SDIF | 46333 | 90705 | 44372 | 51.1% |
+| `github.openapi` | 2 | SDIF AI | 46334 | 90705 | 44371 | 51.1% |
 | `github.openapi` | 3 | CSV Bundle | 52839 | 90705 | 37866 | 58.3% |
 | `github.openapi` | 4 | TOON | 53807 | 90705 | 36898 | 59.3% |
 | `github.openapi` | 5 | YAML | 77837 | 90705 | 12868 | 85.8% |
 | `github.openapi` | 6 | JSON Compact | 90705 | 90705 | 0 | 100.0% |
 | `github.openapi` | 7 | JSON Pretty | 92880 | 90705 | -2175 | 102.4% |
 | `github.openapi` | 8 | XML | 135694 | 90705 | -44989 | 149.6% |
-| `large-knowledge-graph` | 1 | SDIF AI | 73765 | 157533 | 83768 | 46.8% |
-| `large-knowledge-graph` | 2 | SDIF | 73770 | 157533 | 83763 | 46.8% |
+| `large-knowledge-graph` | 1 | SDIF | 73770 | 157533 | 83763 | 46.8% |
+| `large-knowledge-graph` | 2 | SDIF AI | 73772 | 157533 | 83761 | 46.8% |
 | `large-knowledge-graph` | 3 | TOON | 89415 | 157533 | 68118 | 56.8% |
 | `large-knowledge-graph` | 4 | CSV Bundle | 89705 | 157533 | 67828 | 56.9% |
 | `large-knowledge-graph` | 5 | YAML | 129722 | 157533 | 27811 | 82.3% |
 | `large-knowledge-graph` | 6 | JSON Compact | 157533 | 157533 | 0 | 100.0% |
 | `large-knowledge-graph` | 7 | JSON Pretty | 162366 | 157533 | -4833 | 103.1% |
 | `large-knowledge-graph` | 8 | XML | 245137 | 157533 | -87604 | 155.6% |
-| `large-plan` | 1 | SDIF AI | 143535 | 255952 | 112417 | 56.1% |
-| `large-plan` | 2 | SDIF | 143540 | 255952 | 112412 | 56.1% |
+| `large-plan` | 1 | SDIF | 143540 | 255952 | 112412 | 56.1% |
+| `large-plan` | 2 | SDIF AI | 143542 | 255952 | 112410 | 56.1% |
 | `large-plan` | 3 | CSV Bundle | 159261 | 255952 | 96691 | 62.2% |
 | `large-plan` | 4 | TOON | 159262 | 255952 | 96690 | 62.2% |
 | `large-plan` | 5 | YAML | 229824 | 255952 | 26128 | 89.8% |
 | `large-plan` | 6 | JSON Compact | 255952 | 255952 | 0 | 100.0% |
 | `large-plan` | 7 | JSON Pretty | 262181 | 255952 | -6229 | 102.4% |
 | `large-plan` | 8 | XML | 381913 | 255952 | -125961 | 149.2% |
-| `large-registry` | 1 | SDIF AI | 148687 | 307177 | 158490 | 48.4% |
-| `large-registry` | 2 | SDIF | 148692 | 307177 | 158485 | 48.4% |
+| `large-registry` | 1 | SDIF | 148692 | 307177 | 158485 | 48.4% |
+| `large-registry` | 2 | SDIF AI | 148694 | 307177 | 158483 | 48.4% |
 | `large-registry` | 3 | CSV Bundle | 172514 | 307177 | 134663 | 56.2% |
 | `large-registry` | 4 | TOON | 172514 | 307177 | 134663 | 56.2% |
 | `large-registry` | 5 | YAML | 279687 | 307177 | 27490 | 91.1% |
 | `large-registry` | 6 | JSON Compact | 307177 | 307177 | 0 | 100.0% |
 | `large-registry` | 7 | JSON Pretty | 318906 | 307177 | -11729 | 103.8% |
 | `large-registry` | 8 | XML | 528580 | 307177 | -221403 | 172.1% |
-| `large-schema-catalog` | 1 | SDIF AI | 59885 | 146598 | 86713 | 40.8% |
-| `large-schema-catalog` | 2 | SDIF | 59890 | 146598 | 86708 | 40.9% |
+| `large-schema-catalog` | 1 | SDIF | 59890 | 146598 | 86708 | 40.9% |
+| `large-schema-catalog` | 2 | SDIF AI | 59892 | 146598 | 86706 | 40.9% |
 | `large-schema-catalog` | 3 | CSV Bundle | 77252 | 146598 | 69346 | 52.7% |
 | `large-schema-catalog` | 4 | TOON | 77470 | 146598 | 69128 | 52.8% |
 | `large-schema-catalog` | 5 | YAML | 119551 | 146598 | 27047 | 81.6% |
 | `large-schema-catalog` | 6 | JSON Compact | 146598 | 146598 | 0 | 100.0% |
 | `large-schema-catalog` | 7 | JSON Pretty | 150285 | 146598 | -3687 | 102.5% |
 | `large-schema-catalog` | 8 | XML | 235160 | 146598 | -88562 | 160.4% |
-| `large-support-export` | 1 | SDIF AI | 81684 | 188515 | 106831 | 43.3% |
-| `large-support-export` | 2 | SDIF | 81689 | 188515 | 106826 | 43.3% |
+| `large-support-export` | 1 | SDIF | 81689 | 188515 | 106826 | 43.3% |
+| `large-support-export` | 2 | SDIF AI | 81691 | 188515 | 106824 | 43.3% |
 | `large-support-export` | 3 | TOON | 94672 | 188515 | 93843 | 50.2% |
 | `large-support-export` | 4 | CSV Bundle | 94673 | 188515 | 93842 | 50.2% |
 | `large-support-export` | 5 | YAML | 149111 | 188515 | 39404 | 79.1% |
 | `large-support-export` | 6 | JSON Compact | 188515 | 188515 | 0 | 100.0% |
 | `large-support-export` | 7 | JSON Pretty | 193714 | 188515 | -5199 | 102.8% |
 | `large-support-export` | 8 | XML | 276343 | 188515 | -87828 | 146.6% |
-| `large-validation-report` | 1 | SDIF AI | 91318 | 160800 | 69482 | 56.8% |
-| `large-validation-report` | 2 | SDIF | 91323 | 160800 | 69477 | 56.8% |
+| `large-validation-report` | 1 | SDIF | 91323 | 160800 | 69477 | 56.8% |
+| `large-validation-report` | 2 | SDIF AI | 91325 | 160800 | 69475 | 56.8% |
 | `large-validation-report` | 3 | CSV Bundle | 100374 | 160800 | 60426 | 62.4% |
 | `large-validation-report` | 4 | TOON | 105973 | 160800 | 54827 | 65.9% |
 | `large-validation-report` | 5 | YAML | 142953 | 160800 | 17847 | 88.9% |
@@ -359,39 +360,39 @@
 | `large-validation-report` | 7 | JSON Pretty | 164183 | 160800 | -3383 | 102.1% |
 | `large-validation-report` | 8 | XML | 227604 | 160800 | -66804 | 141.5% |
 | `llm-api-response` | 1 | SDIF | 245 | 443 | 198 | 55.3% |
-| `llm-api-response` | 2 | SDIF AI | 249 | 443 | 194 | 56.2% |
+| `llm-api-response` | 2 | SDIF AI | 256 | 443 | 187 | 57.8% |
 | `llm-api-response` | 3 | TOON | 296 | 443 | 147 | 66.8% |
 | `llm-api-response` | 4 | CSV Bundle | 306 | 443 | 137 | 69.1% |
 | `llm-api-response` | 5 | YAML | 368 | 443 | 75 | 83.1% |
 | `llm-api-response` | 6 | JSON Compact | 443 | 443 | 0 | 100.0% |
 | `llm-api-response` | 7 | JSON Pretty | 464 | 443 | -21 | 104.7% |
 | `llm-api-response` | 8 | XML | 750 | 443 | -307 | 169.3% |
-| `medium-invoice-batch` | 1 | SDIF AI | 20702 | 45845 | 25143 | 45.2% |
-| `medium-invoice-batch` | 2 | SDIF | 20707 | 45845 | 25138 | 45.2% |
+| `medium-invoice-batch` | 1 | SDIF | 20707 | 45845 | 25138 | 45.2% |
+| `medium-invoice-batch` | 2 | SDIF AI | 20709 | 45845 | 25136 | 45.2% |
 | `medium-invoice-batch` | 3 | TOON | 24954 | 45845 | 20891 | 54.4% |
 | `medium-invoice-batch` | 4 | CSV Bundle | 24956 | 45845 | 20889 | 54.4% |
 | `medium-invoice-batch` | 5 | YAML | 39703 | 45845 | 6142 | 86.6% |
 | `medium-invoice-batch` | 6 | JSON Compact | 45845 | 45845 | 0 | 100.0% |
 | `medium-invoice-batch` | 7 | JSON Pretty | 46892 | 45845 | -1047 | 102.3% |
 | `medium-invoice-batch` | 8 | XML | 72517 | 45845 | -26672 | 158.2% |
-| `medium-observability-run` | 1 | SDIF AI | 16712 | 39221 | 22509 | 42.6% |
-| `medium-observability-run` | 2 | SDIF | 16717 | 39221 | 22504 | 42.6% |
+| `medium-observability-run` | 1 | SDIF | 16717 | 39221 | 22504 | 42.6% |
+| `medium-observability-run` | 2 | SDIF AI | 16719 | 39221 | 22502 | 42.6% |
 | `medium-observability-run` | 3 | TOON | 20632 | 39221 | 18589 | 52.6% |
 | `medium-observability-run` | 4 | CSV Bundle | 20633 | 39221 | 18588 | 52.6% |
 | `medium-observability-run` | 5 | YAML | 33200 | 39221 | 6021 | 84.6% |
 | `medium-observability-run` | 6 | JSON Compact | 39221 | 39221 | 0 | 100.0% |
 | `medium-observability-run` | 7 | JSON Pretty | 40448 | 39221 | -1227 | 103.1% |
 | `medium-observability-run` | 8 | XML | 64697 | 39221 | -25476 | 165.0% |
-| `medium-policy-catalog` | 1 | SDIF AI | 16021 | 33616 | 17595 | 47.7% |
-| `medium-policy-catalog` | 2 | SDIF | 16026 | 33616 | 17590 | 47.7% |
+| `medium-policy-catalog` | 1 | SDIF | 16026 | 33616 | 17590 | 47.7% |
+| `medium-policy-catalog` | 2 | SDIF AI | 16028 | 33616 | 17588 | 47.7% |
 | `medium-policy-catalog` | 3 | TOON | 19134 | 33616 | 14482 | 56.9% |
 | `medium-policy-catalog` | 4 | CSV Bundle | 19136 | 33616 | 14480 | 56.9% |
 | `medium-policy-catalog` | 5 | YAML | 27840 | 33616 | 5776 | 82.8% |
 | `medium-policy-catalog` | 6 | JSON Compact | 33616 | 33616 | 0 | 100.0% |
 | `medium-policy-catalog` | 7 | JSON Pretty | 34563 | 33616 | -947 | 102.8% |
 | `medium-policy-catalog` | 8 | XML | 51599 | 33616 | -17983 | 153.5% |
-| `medium-product-catalog` | 1 | SDIF AI | 14784 | 37474 | 22690 | 39.5% |
-| `medium-product-catalog` | 2 | SDIF | 14789 | 37474 | 22685 | 39.5% |
+| `medium-product-catalog` | 1 | SDIF | 14789 | 37474 | 22685 | 39.5% |
+| `medium-product-catalog` | 2 | SDIF AI | 14791 | 37474 | 22683 | 39.5% |
 | `medium-product-catalog` | 3 | TOON | 18377 | 37474 | 19097 | 49.0% |
 | `medium-product-catalog` | 4 | CSV Bundle | 18378 | 37474 | 19096 | 49.0% |
 | `medium-product-catalog` | 5 | YAML | 32289 | 37474 | 5185 | 86.2% |
@@ -399,23 +400,23 @@
 | `medium-product-catalog` | 7 | JSON Pretty | 39094 | 37474 | -1620 | 104.3% |
 | `medium-product-catalog` | 8 | XML | 66733 | 37474 | -29259 | 178.1% |
 | `plan` | 1 | SDIF | 266 | 389 | 123 | 68.4% |
-| `plan` | 2 | SDIF AI | 274 | 389 | 115 | 70.4% |
+| `plan` | 2 | SDIF AI | 281 | 389 | 108 | 72.2% |
 | `plan` | 3 | TOON | 307 | 389 | 82 | 78.9% |
 | `plan` | 4 | CSV Bundle | 324 | 389 | 65 | 83.3% |
 | `plan` | 5 | YAML | 333 | 389 | 56 | 85.6% |
 | `plan` | 6 | JSON Compact | 389 | 389 | 0 | 100.0% |
 | `plan` | 7 | JSON Pretty | 406 | 389 | -17 | 104.4% |
 | `plan` | 8 | XML | 614 | 389 | -225 | 157.8% |
-| `registry` | 1 | SDIF AI | 190 | 301 | 111 | 63.1% |
-| `registry` | 2 | SDIF | 192 | 301 | 109 | 63.8% |
+| `registry` | 1 | SDIF | 192 | 301 | 109 | 63.8% |
+| `registry` | 2 | SDIF AI | 197 | 301 | 104 | 65.4% |
 | `registry` | 3 | TOON | 227 | 301 | 74 | 75.4% |
 | `registry` | 4 | CSV Bundle | 240 | 301 | 61 | 79.7% |
 | `registry` | 5 | YAML | 255 | 301 | 46 | 84.7% |
 | `registry` | 6 | JSON Compact | 301 | 301 | 0 | 100.0% |
 | `registry` | 7 | JSON Pretty | 313 | 301 | -12 | 104.0% |
 | `registry` | 8 | XML | 478 | 301 | -177 | 158.8% |
-| `schema` | 1 | SDIF AI | 291 | 665 | 374 | 43.8% |
-| `schema` | 2 | SDIF | 296 | 665 | 369 | 44.5% |
+| `schema` | 1 | SDIF | 296 | 665 | 369 | 44.5% |
+| `schema` | 2 | SDIF AI | 298 | 665 | 367 | 44.8% |
 | `schema` | 3 | CSV Bundle | 384 | 665 | 281 | 57.7% |
 | `schema` | 4 | TOON | 384 | 665 | 281 | 57.7% |
 | `schema` | 5 | YAML | 554 | 665 | 111 | 83.3% |
@@ -423,38 +424,38 @@
 | `schema` | 7 | JSON Pretty | 703 | 665 | -38 | 105.7% |
 | `schema` | 8 | XML | 1242 | 665 | -577 | 186.8% |
 | `semantic-narrative` | 1 | SDIF | 219 | 407 | 188 | 53.8% |
-| `semantic-narrative` | 2 | SDIF AI | 229 | 407 | 178 | 56.3% |
+| `semantic-narrative` | 2 | SDIF AI | 236 | 407 | 171 | 58.0% |
 | `semantic-narrative` | 3 | TOON | 267 | 407 | 140 | 65.6% |
 | `semantic-narrative` | 4 | CSV Bundle | 277 | 407 | 130 | 68.1% |
 | `semantic-narrative` | 5 | YAML | 339 | 407 | 68 | 83.3% |
 | `semantic-narrative` | 6 | JSON Compact | 407 | 407 | 0 | 100.0% |
 | `semantic-narrative` | 7 | JSON Pretty | 428 | 407 | -21 | 105.2% |
 | `semantic-narrative` | 8 | XML | 704 | 407 | -297 | 173.0% |
-| `small-api-catalog` | 1 | SDIF AI | 516 | 1126 | 610 | 45.8% |
-| `small-api-catalog` | 2 | SDIF | 521 | 1126 | 605 | 46.3% |
+| `small-api-catalog` | 1 | SDIF | 521 | 1126 | 605 | 46.3% |
+| `small-api-catalog` | 2 | SDIF AI | 523 | 1126 | 603 | 46.4% |
 | `small-api-catalog` | 3 | TOON | 624 | 1126 | 502 | 55.4% |
 | `small-api-catalog` | 4 | CSV Bundle | 628 | 1126 | 498 | 55.8% |
 | `small-api-catalog` | 5 | YAML | 876 | 1126 | 250 | 77.8% |
 | `small-api-catalog` | 6 | JSON Compact | 1126 | 1126 | 0 | 100.0% |
 | `small-api-catalog` | 7 | JSON Pretty | 1162 | 1126 | -36 | 103.2% |
 | `small-api-catalog` | 8 | XML | 1742 | 1126 | -616 | 154.7% |
-| `small-incident` | 1 | SDIF AI | 693 | 1304 | 611 | 53.1% |
-| `small-incident` | 2 | SDIF | 698 | 1304 | 606 | 53.5% |
+| `small-incident` | 1 | SDIF | 698 | 1304 | 606 | 53.5% |
+| `small-incident` | 2 | SDIF AI | 700 | 1304 | 604 | 53.7% |
 | `small-incident` | 3 | TOON | 824 | 1304 | 480 | 63.2% |
 | `small-incident` | 4 | CSV Bundle | 827 | 1304 | 477 | 63.4% |
 | `small-incident` | 5 | YAML | 1077 | 1304 | 227 | 82.6% |
 | `small-incident` | 6 | JSON Compact | 1304 | 1304 | 0 | 100.0% |
 | `small-incident` | 7 | JSON Pretty | 1341 | 1304 | -37 | 102.8% |
 | `small-incident` | 8 | XML | 1968 | 1304 | -664 | 150.9% |
-| `small-invoice` | 1 | SDIF AI | 391 | 848 | 457 | 46.1% |
-| `small-invoice` | 2 | SDIF | 396 | 848 | 452 | 46.7% |
+| `small-invoice` | 1 | SDIF | 396 | 848 | 452 | 46.7% |
+| `small-invoice` | 2 | SDIF AI | 398 | 848 | 450 | 46.9% |
 | `small-invoice` | 3 | TOON | 495 | 848 | 353 | 58.4% |
 | `small-invoice` | 4 | CSV Bundle | 498 | 848 | 350 | 58.7% |
 | `small-invoice` | 5 | YAML | 715 | 848 | 133 | 84.3% |
 | `small-invoice` | 6 | JSON Compact | 848 | 848 | 0 | 100.0% |
 | `small-invoice` | 7 | JSON Pretty | 872 | 848 | -24 | 102.8% |
 | `small-invoice` | 8 | XML | 1443 | 848 | -595 | 170.2% |
-| `validation-report` | 1 | SDIF AI | 180 | 300 | 120 | 60.0% |
+| `validation-report` | 1 | SDIF AI | 187 | 300 | 113 | 62.3% |
 | `validation-report` | 2 | SDIF | 190 | 300 | 110 | 63.3% |
 | `validation-report` | 3 | TOON | 226 | 300 | 74 | 75.3% |
 | `validation-report` | 4 | CSV Bundle | 228 | 300 | 72 | 76.0% |
@@ -462,8 +463,8 @@
 | `validation-report` | 6 | JSON Compact | 300 | 300 | 0 | 100.0% |
 | `validation-report` | 7 | JSON Pretty | 316 | 300 | -16 | 105.3% |
 | `validation-report` | 8 | XML | 494 | 300 | -194 | 164.7% |
-| `wide-table-survey` | 1 | SDIF AI | 7878 | 29998 | 22120 | 26.3% |
-| `wide-table-survey` | 2 | SDIF | 7883 | 29998 | 22115 | 26.3% |
+| `wide-table-survey` | 1 | SDIF | 7883 | 29998 | 22115 | 26.3% |
+| `wide-table-survey` | 2 | SDIF AI | 7885 | 29998 | 22113 | 26.3% |
 | `wide-table-survey` | 3 | TOON | 14893 | 29998 | 15105 | 49.6% |
 | `wide-table-survey` | 4 | CSV Bundle | 14897 | 29998 | 15101 | 49.7% |
 | `wide-table-survey` | 5 | YAML | 22708 | 29998 | 7290 | 75.7% |
@@ -477,9 +478,9 @@
 
 | Format | Avg Rank | Avg Ratio | Median Ratio | Avg Saved Tokens | Wins | Coverage |
 | --- | ---: | ---: | ---: | ---: | ---: | ---: |
-| SDIF AI | 1.12 | 65.5% | 65.5% | 20439 | 21 | 24/24 |
+| SDIF AI | 1.33 | 66.6% | 66.6% | 20430 | 16 | 24/24 |
 | CSV Bundle | 2.42 | 69.9% | 67.6% | 20046 | 3 | 24/24 |
-| SDIF | 2.79 | 68.9% | 68.2% | 18349 | 0 | 24/24 |
+| SDIF | 2.58 | 68.9% | 68.2% | 18349 | 5 | 24/24 |
 | TOON | 3.67 | 72.0% | 69.9% | 17910 | 0 | 24/24 |
 | JSON Compact | 5.00 | 100.0% | 100.0% | 0 | 0 | 24/24 |
 | YAML | 6.00 | 114.8% | 113.7% | -7922 | 0 | 24/24 |
@@ -490,7 +491,7 @@
 
 | Document | Rank | Format | Tokens | JSON Compact Tokens | Saved Tokens | Ratio |
 | --- | ---: | --- | ---: | ---: | ---: | ---: |
-| `agent-workflow` | 1 | SDIF AI | 206 | 320 | 114 | 64.4% |
+| `agent-workflow` | 1 | SDIF AI | 215 | 320 | 105 | 67.2% |
 | `agent-workflow` | 2 | SDIF | 217 | 320 | 103 | 67.8% |
 | `agent-workflow` | 3 | CSV Bundle | 241 | 320 | 79 | 75.3% |
 | `agent-workflow` | 4 | TOON | 246 | 320 | 74 | 76.9% |
@@ -498,8 +499,8 @@
 | `agent-workflow` | 6 | YAML | 373 | 320 | -53 | 116.6% |
 | `agent-workflow` | 7 | JSON Pretty | 563 | 320 | -243 | 175.9% |
 | `agent-workflow` | 8 | XML | 692 | 320 | -372 | 216.2% |
-| `audit-provenance` | 1 | SDIF AI | 258 | 346 | 88 | 74.6% |
-| `audit-provenance` | 2 | SDIF | 259 | 346 | 87 | 74.9% |
+| `audit-provenance` | 1 | SDIF | 259 | 346 | 87 | 74.9% |
+| `audit-provenance` | 2 | SDIF AI | 267 | 346 | 79 | 77.2% |
 | `audit-provenance` | 3 | TOON | 287 | 346 | 59 | 82.9% |
 | `audit-provenance` | 4 | CSV Bundle | 293 | 346 | 53 | 84.7% |
 | `audit-provenance` | 5 | JSON Compact | 346 | 346 | 0 | 100.0% |
@@ -507,14 +508,14 @@
 | `audit-provenance` | 7 | JSON Pretty | 545 | 346 | -199 | 157.5% |
 | `audit-provenance` | 8 | XML | 658 | 346 | -312 | 190.2% |
 | `deep-hierarchy-project` | 1 | CSV Bundle | 101645 | 137942 | 36297 | 73.7% |
-| `deep-hierarchy-project` | 2 | SDIF AI | 103205 | 137942 | 34737 | 74.8% |
+| `deep-hierarchy-project` | 2 | SDIF AI | 103214 | 137942 | 34728 | 74.8% |
 | `deep-hierarchy-project` | 3 | TOON | 106382 | 137942 | 31560 | 77.1% |
 | `deep-hierarchy-project` | 4 | SDIF | 107951 | 137942 | 29991 | 78.3% |
 | `deep-hierarchy-project` | 5 | JSON Compact | 137942 | 137942 | 0 | 100.0% |
 | `deep-hierarchy-project` | 6 | YAML | 153735 | 137942 | -15793 | 111.4% |
 | `deep-hierarchy-project` | 7 | JSON Pretty | 204303 | 137942 | -66361 | 148.1% |
 | `deep-hierarchy-project` | 8 | XML | 243817 | 137942 | -105875 | 176.8% |
-| `github.openapi` | 1 | SDIF AI | 37829 | 62704 | 24875 | 60.3% |
+| `github.openapi` | 1 | SDIF AI | 37838 | 62704 | 24866 | 60.3% |
 | `github.openapi` | 2 | CSV Bundle | 39074 | 62704 | 23630 | 62.3% |
 | `github.openapi` | 3 | TOON | 41529 | 62704 | 21175 | 66.2% |
 | `github.openapi` | 4 | SDIF | 41867 | 62704 | 20837 | 66.8% |
@@ -522,7 +523,7 @@
 | `github.openapi` | 6 | YAML | 72783 | 62704 | -10079 | 116.1% |
 | `github.openapi` | 7 | JSON Pretty | 97266 | 62704 | -34562 | 155.1% |
 | `github.openapi` | 8 | XML | 117756 | 62704 | -55052 | 187.8% |
-| `large-knowledge-graph` | 1 | SDIF AI | 86155 | 132864 | 46709 | 64.8% |
+| `large-knowledge-graph` | 1 | SDIF AI | 86164 | 132864 | 46700 | 64.9% |
 | `large-knowledge-graph` | 2 | CSV Bundle | 88495 | 132864 | 44369 | 66.6% |
 | `large-knowledge-graph` | 3 | SDIF | 90989 | 132864 | 41875 | 68.5% |
 | `large-knowledge-graph` | 4 | TOON | 93032 | 132864 | 39832 | 70.0% |
@@ -530,7 +531,7 @@
 | `large-knowledge-graph` | 6 | YAML | 153731 | 132864 | -20867 | 115.7% |
 | `large-knowledge-graph` | 7 | JSON Pretty | 213005 | 132864 | -80141 | 160.3% |
 | `large-knowledge-graph` | 8 | XML | 254541 | 132864 | -121677 | 191.6% |
-| `large-plan` | 1 | SDIF AI | 141145 | 213238 | 72093 | 66.2% |
+| `large-plan` | 1 | SDIF AI | 141154 | 213238 | 72084 | 66.2% |
 | `large-plan` | 2 | CSV Bundle | 144465 | 213238 | 68773 | 67.7% |
 | `large-plan` | 3 | SDIF | 147369 | 213238 | 65869 | 69.1% |
 | `large-plan` | 4 | TOON | 150679 | 213238 | 62559 | 70.7% |
@@ -538,7 +539,7 @@
 | `large-plan` | 6 | YAML | 229718 | 213238 | -16480 | 107.7% |
 | `large-plan` | 7 | JSON Pretty | 302381 | 213238 | -89143 | 141.8% |
 | `large-plan` | 8 | XML | 366170 | 213238 | -152932 | 171.7% |
-| `large-registry` | 1 | SDIF AI | 154451 | 253063 | 98612 | 61.0% |
+| `large-registry` | 1 | SDIF AI | 154460 | 253063 | 98603 | 61.0% |
 | `large-registry` | 2 | CSV Bundle | 159696 | 253063 | 93367 | 63.1% |
 | `large-registry` | 3 | SDIF | 166177 | 253063 | 86886 | 65.7% |
 | `large-registry` | 4 | TOON | 171412 | 253063 | 81651 | 67.7% |
@@ -547,14 +548,14 @@
 | `large-registry` | 7 | JSON Pretty | 399186 | 253063 | -146123 | 157.7% |
 | `large-registry` | 8 | XML | 494780 | 253063 | -241717 | 195.5% |
 | `large-schema-catalog` | 1 | CSV Bundle | 71357 | 126532 | 55175 | 56.4% |
-| `large-schema-catalog` | 2 | SDIF AI | 75464 | 126532 | 51068 | 59.6% |
+| `large-schema-catalog` | 2 | SDIF AI | 75473 | 126532 | 51059 | 59.6% |
 | `large-schema-catalog` | 3 | TOON | 78231 | 126532 | 48301 | 61.8% |
 | `large-schema-catalog` | 4 | SDIF | 79144 | 126532 | 47388 | 62.5% |
 | `large-schema-catalog` | 5 | JSON Compact | 126532 | 126532 | 0 | 100.0% |
 | `large-schema-catalog` | 6 | YAML | 149601 | 126532 | -23069 | 118.2% |
 | `large-schema-catalog` | 7 | JSON Pretty | 199367 | 126532 | -72835 | 157.6% |
 | `large-schema-catalog` | 8 | XML | 235726 | 126532 | -109194 | 186.3% |
-| `large-support-export` | 1 | SDIF AI | 94839 | 149622 | 54783 | 63.4% |
+| `large-support-export` | 1 | SDIF AI | 94848 | 149622 | 54774 | 63.4% |
 | `large-support-export` | 2 | CSV Bundle | 96002 | 149622 | 53620 | 64.2% |
 | `large-support-export` | 3 | SDIF | 100037 | 149622 | 49585 | 66.9% |
 | `large-support-export` | 4 | TOON | 101190 | 149622 | 48432 | 67.6% |
@@ -562,7 +563,7 @@
 | `large-support-export` | 6 | YAML | 169236 | 149622 | -19614 | 113.1% |
 | `large-support-export` | 7 | JSON Pretty | 229579 | 149622 | -79957 | 153.4% |
 | `large-support-export` | 8 | XML | 274660 | 149622 | -125038 | 183.6% |
-| `large-validation-report` | 1 | SDIF AI | 99633 | 134533 | 34900 | 74.1% |
+| `large-validation-report` | 1 | SDIF AI | 99642 | 134533 | 34891 | 74.1% |
 | `large-validation-report` | 2 | CSV Bundle | 99656 | 134533 | 34877 | 74.1% |
 | `large-validation-report` | 3 | SDIF | 103015 | 134533 | 31518 | 76.6% |
 | `large-validation-report` | 4 | TOON | 103027 | 134533 | 31506 | 76.6% |
@@ -570,8 +571,8 @@
 | `large-validation-report` | 6 | YAML | 150198 | 134533 | -15665 | 111.6% |
 | `large-validation-report` | 7 | JSON Pretty | 192034 | 134533 | -57501 | 142.7% |
 | `large-validation-report` | 8 | XML | 225834 | 134533 | -91301 | 167.9% |
-| `llm-api-response` | 1 | SDIF AI | 299 | 404 | 105 | 74.0% |
-| `llm-api-response` | 2 | SDIF | 307 | 404 | 97 | 76.0% |
+| `llm-api-response` | 1 | SDIF | 307 | 404 | 97 | 76.0% |
+| `llm-api-response` | 2 | SDIF AI | 308 | 404 | 96 | 76.2% |
 | `llm-api-response` | 3 | CSV Bundle | 331 | 404 | 73 | 81.9% |
 | `llm-api-response` | 4 | TOON | 337 | 404 | 67 | 83.4% |
 | `llm-api-response` | 5 | JSON Compact | 404 | 404 | 0 | 100.0% |
@@ -579,14 +580,14 @@
 | `llm-api-response` | 7 | JSON Pretty | 637 | 404 | -233 | 157.7% |
 | `llm-api-response` | 8 | XML | 792 | 404 | -388 | 196.0% |
 | `medium-invoice-batch` | 1 | CSV Bundle | 25965 | 39858 | 13893 | 65.1% |
-| `medium-invoice-batch` | 2 | SDIF AI | 26707 | 39858 | 13151 | 67.0% |
+| `medium-invoice-batch` | 2 | SDIF AI | 26716 | 39858 | 13142 | 67.0% |
 | `medium-invoice-batch` | 3 | TOON | 26932 | 39858 | 12926 | 67.6% |
 | `medium-invoice-batch` | 4 | SDIF | 27688 | 39858 | 12170 | 69.5% |
 | `medium-invoice-batch` | 5 | JSON Compact | 39858 | 39858 | 0 | 100.0% |
 | `medium-invoice-batch` | 6 | YAML | 46758 | 39858 | -6900 | 117.3% |
 | `medium-invoice-batch` | 7 | JSON Pretty | 58931 | 39858 | -19073 | 147.9% |
 | `medium-invoice-batch` | 8 | XML | 70501 | 39858 | -30643 | 176.9% |
-| `medium-observability-run` | 1 | SDIF AI | 18170 | 32253 | 14083 | 56.3% |
+| `medium-observability-run` | 1 | SDIF AI | 18179 | 32253 | 14074 | 56.4% |
 | `medium-observability-run` | 2 | CSV Bundle | 19018 | 32253 | 13235 | 59.0% |
 | `medium-observability-run` | 3 | SDIF | 20572 | 32253 | 11681 | 63.8% |
 | `medium-observability-run` | 4 | TOON | 21408 | 32253 | 10845 | 66.4% |
@@ -594,7 +595,7 @@
 | `medium-observability-run` | 6 | YAML | 38569 | 32253 | -6316 | 119.6% |
 | `medium-observability-run` | 7 | JSON Pretty | 52300 | 32253 | -20047 | 162.2% |
 | `medium-observability-run` | 8 | XML | 63274 | 32253 | -31021 | 196.2% |
-| `medium-policy-catalog` | 1 | SDIF AI | 18106 | 28086 | 9980 | 64.5% |
+| `medium-policy-catalog` | 1 | SDIF AI | 18115 | 28086 | 9971 | 64.5% |
 | `medium-policy-catalog` | 2 | SDIF | 19054 | 28086 | 9032 | 67.8% |
 | `medium-policy-catalog` | 3 | CSV Bundle | 19159 | 28086 | 8927 | 68.2% |
 | `medium-policy-catalog` | 4 | TOON | 20095 | 28086 | 7991 | 71.5% |
@@ -602,7 +603,7 @@
 | `medium-policy-catalog` | 6 | YAML | 32094 | 28086 | -4008 | 114.3% |
 | `medium-policy-catalog` | 7 | JSON Pretty | 43999 | 28086 | -15913 | 156.7% |
 | `medium-policy-catalog` | 8 | XML | 52678 | 28086 | -24592 | 187.6% |
-| `medium-product-catalog` | 1 | SDIF AI | 21319 | 33936 | 12617 | 62.8% |
+| `medium-product-catalog` | 1 | SDIF AI | 21328 | 33936 | 12608 | 62.8% |
 | `medium-product-catalog` | 2 | CSV Bundle | 21445 | 33936 | 12491 | 63.2% |
 | `medium-product-catalog` | 3 | SDIF | 22938 | 33936 | 10998 | 67.6% |
 | `medium-product-catalog` | 4 | TOON | 23051 | 33936 | 10885 | 67.9% |
@@ -610,23 +611,23 @@
 | `medium-product-catalog` | 6 | YAML | 39958 | 33936 | -6022 | 117.7% |
 | `medium-product-catalog` | 7 | JSON Pretty | 55984 | 33936 | -22048 | 165.0% |
 | `medium-product-catalog` | 8 | XML | 69082 | 33936 | -35146 | 203.6% |
-| `plan` | 1 | SDIF AI | 251 | 302 | 51 | 83.1% |
-| `plan` | 2 | SDIF | 252 | 302 | 50 | 83.4% |
+| `plan` | 1 | SDIF | 252 | 302 | 50 | 83.4% |
+| `plan` | 2 | SDIF AI | 260 | 302 | 42 | 86.1% |
 | `plan` | 3 | TOON | 276 | 302 | 26 | 91.4% |
 | `plan` | 4 | CSV Bundle | 288 | 302 | 14 | 95.4% |
 | `plan` | 5 | JSON Compact | 302 | 302 | 0 | 100.0% |
 | `plan` | 6 | YAML | 334 | 302 | -32 | 110.6% |
 | `plan` | 7 | JSON Pretty | 479 | 302 | -177 | 158.6% |
 | `plan` | 8 | XML | 602 | 302 | -300 | 199.3% |
-| `registry` | 1 | SDIF AI | 149 | 205 | 56 | 72.7% |
-| `registry` | 2 | SDIF | 154 | 205 | 51 | 75.1% |
+| `registry` | 1 | SDIF | 154 | 205 | 51 | 75.1% |
+| `registry` | 2 | SDIF AI | 158 | 205 | 47 | 77.1% |
 | `registry` | 3 | TOON | 169 | 205 | 36 | 82.4% |
 | `registry` | 4 | CSV Bundle | 175 | 205 | 30 | 85.4% |
 | `registry` | 5 | JSON Compact | 205 | 205 | 0 | 100.0% |
 | `registry` | 6 | YAML | 220 | 205 | -15 | 107.3% |
 | `registry` | 7 | JSON Pretty | 341 | 205 | -136 | 166.3% |
 | `registry` | 8 | XML | 438 | 205 | -233 | 213.7% |
-| `schema` | 1 | SDIF AI | 298 | 534 | 236 | 55.8% |
+| `schema` | 1 | SDIF AI | 307 | 534 | 227 | 57.5% |
 | `schema` | 2 | SDIF | 323 | 534 | 211 | 60.5% |
 | `schema` | 3 | CSV Bundle | 331 | 534 | 203 | 62.0% |
 | `schema` | 4 | TOON | 342 | 534 | 192 | 64.0% |
@@ -634,15 +635,15 @@
 | `schema` | 6 | YAML | 630 | 534 | -96 | 118.0% |
 | `schema` | 7 | JSON Pretty | 953 | 534 | -419 | 178.5% |
 | `schema` | 8 | XML | 1213 | 534 | -679 | 227.2% |
-| `semantic-narrative` | 1 | SDIF AI | 253 | 350 | 97 | 72.3% |
-| `semantic-narrative` | 2 | SDIF | 259 | 350 | 91 | 74.0% |
+| `semantic-narrative` | 1 | SDIF | 259 | 350 | 91 | 74.0% |
+| `semantic-narrative` | 2 | SDIF AI | 262 | 350 | 88 | 74.9% |
 | `semantic-narrative` | 3 | CSV Bundle | 273 | 350 | 77 | 78.0% |
 | `semantic-narrative` | 4 | TOON | 277 | 350 | 73 | 79.1% |
 | `semantic-narrative` | 5 | JSON Compact | 350 | 350 | 0 | 100.0% |
 | `semantic-narrative` | 6 | YAML | 392 | 350 | -42 | 112.0% |
 | `semantic-narrative` | 7 | JSON Pretty | 580 | 350 | -230 | 165.7% |
 | `semantic-narrative` | 8 | XML | 702 | 350 | -352 | 200.6% |
-| `small-api-catalog` | 1 | SDIF AI | 544 | 912 | 368 | 59.6% |
+| `small-api-catalog` | 1 | SDIF AI | 553 | 912 | 359 | 60.6% |
 | `small-api-catalog` | 2 | CSV Bundle | 585 | 912 | 327 | 64.1% |
 | `small-api-catalog` | 3 | SDIF | 585 | 912 | 327 | 64.1% |
 | `small-api-catalog` | 4 | TOON | 615 | 912 | 297 | 67.4% |
@@ -650,7 +651,7 @@
 | `small-api-catalog` | 6 | YAML | 1109 | 912 | -197 | 121.6% |
 | `small-api-catalog` | 7 | JSON Pretty | 1564 | 912 | -652 | 171.5% |
 | `small-api-catalog` | 8 | XML | 1894 | 912 | -982 | 207.7% |
-| `small-incident` | 1 | SDIF AI | 706 | 1064 | 358 | 66.4% |
+| `small-incident` | 1 | SDIF AI | 715 | 1064 | 349 | 67.2% |
 | `small-incident` | 2 | SDIF | 723 | 1064 | 341 | 68.0% |
 | `small-incident` | 3 | CSV Bundle | 740 | 1064 | 324 | 69.5% |
 | `small-incident` | 4 | TOON | 742 | 1064 | 322 | 69.7% |
@@ -658,7 +659,7 @@
 | `small-incident` | 6 | YAML | 1157 | 1064 | -93 | 108.7% |
 | `small-incident` | 7 | JSON Pretty | 1657 | 1064 | -593 | 155.7% |
 | `small-incident` | 8 | XML | 1941 | 1064 | -877 | 182.4% |
-| `small-invoice` | 1 | SDIF AI | 476 | 718 | 242 | 66.3% |
+| `small-invoice` | 1 | SDIF AI | 485 | 718 | 233 | 67.5% |
 | `small-invoice` | 2 | CSV Bundle | 485 | 718 | 233 | 67.5% |
 | `small-invoice` | 3 | TOON | 501 | 718 | 217 | 69.8% |
 | `small-invoice` | 4 | SDIF | 503 | 718 | 215 | 70.1% |
@@ -666,7 +667,7 @@
 | `small-invoice` | 6 | YAML | 850 | 718 | -132 | 118.4% |
 | `small-invoice` | 7 | JSON Pretty | 1159 | 718 | -441 | 161.4% |
 | `small-invoice` | 8 | XML | 1414 | 718 | -696 | 196.9% |
-| `validation-report` | 1 | SDIF AI | 149 | 225 | 76 | 66.2% |
+| `validation-report` | 1 | SDIF AI | 158 | 225 | 67 | 70.2% |
 | `validation-report` | 2 | SDIF | 166 | 225 | 59 | 73.8% |
 | `validation-report` | 3 | CSV Bundle | 195 | 225 | 30 | 86.7% |
 | `validation-report` | 4 | TOON | 197 | 225 | 28 | 87.6% |
@@ -674,7 +675,7 @@
 | `validation-report` | 6 | YAML | 246 | 225 | -21 | 109.3% |
 | `validation-report` | 7 | JSON Pretty | 382 | 225 | -157 | 169.8% |
 | `validation-report` | 8 | XML | 480 | 225 | -255 | 213.3% |
-| `wide-table-survey` | 1 | SDIF AI | 15224 | 36372 | 21148 | 41.9% |
+| `wide-table-survey` | 1 | SDIF AI | 15233 | 36372 | 21139 | 41.9% |
 | `wide-table-survey` | 2 | CSV Bundle | 15365 | 36372 | 21007 | 42.2% |
 | `wide-table-survey` | 3 | SDIF | 15451 | 36372 | 20921 | 42.5% |
 | `wide-table-survey` | 4 | TOON | 15579 | 36372 | 20793 | 42.8% |
@@ -699,16 +700,16 @@ Disabled. Disabled. Set SDIF_BENCHMARK_CLAUDE=1 to enable API token counting.
 
 | Tokenizer | Winner | Tokens | JSON Compact Tokens | Saved Tokens | Ratio |
 | --- | --- | ---: | ---: | ---: | ---: |
-| `Estimate` | SDIF AI | 157 | 286 | 129 | 54.9% |
+| `Estimate` | SDIF | 159 | 286 | 127 | 55.6% |
 | `TokenX` | SDIF | 168 | 372 | 204 | 45.2% |
-| `tiktoken` | SDIF AI | 206 | 320 | 114 | 64.4% |
+| `tiktoken` | SDIF AI | 215 | 320 | 105 | 67.2% |
 
 #### Ratio Matrix
 
 | Format | `Estimate` | `TokenX` | `tiktoken` |
 |---|---:|---:|---:|
-| SDIF AI | 54.9% | 46.8% | 64.4% |
 | SDIF | 55.6% | 45.2% | 67.8% |
+| SDIF AI | 55.9% | 48.7% | 67.2% |
 | TOON | 57.7% | 59.1% | 76.9% |
 | CSV Bundle | 58.4% | 61.8% | 75.3% |
 | YAML | 92.3% | 77.2% | 116.6% |
@@ -722,16 +723,16 @@ Disabled. Disabled. Set SDIF_BENCHMARK_CLAUDE=1 to enable API token counting.
 
 | Tokenizer | Winner | Tokens | JSON Compact Tokens | Saved Tokens | Ratio |
 | --- | --- | ---: | ---: | ---: | ---: |
-| `Estimate` | SDIF AI | 174 | 284 | 110 | 61.3% |
+| `Estimate` | SDIF | 176 | 284 | 108 | 62.0% |
 | `TokenX` | SDIF | 210 | 375 | 165 | 56.0% |
-| `tiktoken` | SDIF AI | 258 | 346 | 88 | 74.6% |
+| `tiktoken` | SDIF | 259 | 346 | 87 | 74.9% |
 
 #### Ratio Matrix
 
 | Format | `Estimate` | `TokenX` | `tiktoken` |
 |---|---:|---:|---:|
-| SDIF AI | 61.3% | 57.1% | 74.6% |
 | SDIF | 62.0% | 56.0% | 74.9% |
+| SDIF AI | 62.7% | 58.9% | 77.2% |
 | TOON | 65.1% | 67.2% | 82.9% |
 | CSV Bundle | 65.5% | 69.9% | 84.7% |
 | YAML | 92.3% | 82.1% | 107.8% |
@@ -745,8 +746,8 @@ Disabled. Disabled. Set SDIF_BENCHMARK_CLAUDE=1 to enable API token counting.
 
 | Tokenizer | Winner | Tokens | JSON Compact Tokens | Saved Tokens | Ratio |
 | --- | --- | ---: | ---: | ---: | ---: |
-| `Estimate` | SDIF AI | 73179 | 118574 | 45395 | 61.7% |
-| `TokenX` | SDIF AI | 81733 | 150426 | 68693 | 54.3% |
+| `Estimate` | SDIF AI | 73183 | 118574 | 45391 | 61.7% |
+| `TokenX` | SDIF | 81738 | 150426 | 68688 | 54.3% |
 | `tiktoken` | CSV Bundle | 101645 | 137942 | 36297 | 73.7% |
 
 #### Ratio Matrix
@@ -768,9 +769,9 @@ Disabled. Disabled. Set SDIF_BENCHMARK_CLAUDE=1 to enable API token counting.
 
 | Tokenizer | Winner | Tokens | JSON Compact Tokens | Saved Tokens | Ratio |
 | --- | --- | ---: | ---: | ---: | ---: |
-| `Estimate` | SDIF AI | 41843 | 73106 | 31263 | 57.2% |
-| `TokenX` | SDIF AI | 46327 | 90705 | 44378 | 51.1% |
-| `tiktoken` | SDIF AI | 37829 | 62704 | 24875 | 60.3% |
+| `Estimate` | SDIF AI | 41846 | 73106 | 31260 | 57.2% |
+| `TokenX` | SDIF | 46333 | 90705 | 44372 | 51.1% |
+| `tiktoken` | SDIF AI | 37838 | 62704 | 24866 | 60.3% |
 
 #### Ratio Matrix
 
@@ -791,17 +792,17 @@ Disabled. Disabled. Set SDIF_BENCHMARK_CLAUDE=1 to enable API token counting.
 
 | Tokenizer | Winner | Tokens | JSON Compact Tokens | Saved Tokens | Ratio |
 | --- | --- | ---: | ---: | ---: | ---: |
-| `Estimate` | SDIF AI | 69895 | 129721 | 59826 | 53.9% |
-| `TokenX` | SDIF AI | 73765 | 157533 | 83768 | 46.8% |
-| `tiktoken` | SDIF AI | 86155 | 132864 | 46709 | 64.8% |
+| `Estimate` | SDIF AI | 69899 | 129721 | 59822 | 53.9% |
+| `TokenX` | SDIF | 73770 | 157533 | 83763 | 46.8% |
+| `tiktoken` | SDIF AI | 86164 | 132864 | 46700 | 64.9% |
 
 #### Ratio Matrix
 
 | Format | `Estimate` | `TokenX` | `tiktoken` |
 |---|---:|---:|---:|
-| SDIF AI | 53.9% | 46.8% | 64.8% |
-| CSV Bundle | 53.9% | 56.9% | 66.6% |
+| SDIF AI | 53.9% | 46.8% | 64.9% |
 | SDIF | 55.7% | 46.8% | 68.5% |
+| CSV Bundle | 53.9% | 56.9% | 66.6% |
 | TOON | 55.7% | 56.8% | 70.0% |
 | YAML | 95.4% | 82.3% | 115.7% |
 | JSON Compact | 100.0% | 100.0% | 100.0% |
@@ -814,17 +815,17 @@ Disabled. Disabled. Set SDIF_BENCHMARK_CLAUDE=1 to enable API token counting.
 
 | Tokenizer | Winner | Tokens | JSON Compact Tokens | Saved Tokens | Ratio |
 | --- | --- | ---: | ---: | ---: | ---: |
-| `Estimate` | SDIF AI | 123089 | 201176 | 78087 | 61.2% |
-| `TokenX` | SDIF AI | 143535 | 255952 | 112417 | 56.1% |
-| `tiktoken` | SDIF AI | 141145 | 213238 | 72093 | 66.2% |
+| `Estimate` | SDIF AI | 123092 | 201176 | 78084 | 61.2% |
+| `TokenX` | SDIF | 143540 | 255952 | 112412 | 56.1% |
+| `tiktoken` | SDIF AI | 141154 | 213238 | 72084 | 66.2% |
 
 #### Ratio Matrix
 
 | Format | `Estimate` | `TokenX` | `tiktoken` |
 |---|---:|---:|---:|
 | SDIF AI | 61.2% | 56.1% | 66.2% |
-| CSV Bundle | 61.2% | 62.2% | 67.7% |
 | SDIF | 62.7% | 56.1% | 69.1% |
+| CSV Bundle | 61.2% | 62.2% | 67.7% |
 | TOON | 62.7% | 62.2% | 70.7% |
 | YAML | 97.0% | 89.8% | 107.7% |
 | JSON Compact | 100.0% | 100.0% | 100.0% |
@@ -837,17 +838,17 @@ Disabled. Disabled. Set SDIF_BENCHMARK_CLAUDE=1 to enable API token counting.
 
 | Tokenizer | Winner | Tokens | JSON Compact Tokens | Saved Tokens | Ratio |
 | --- | --- | ---: | ---: | ---: | ---: |
-| `Estimate` | SDIF AI | 100680 | 220956 | 120276 | 45.6% |
-| `TokenX` | SDIF AI | 148687 | 307177 | 158490 | 48.4% |
-| `tiktoken` | SDIF AI | 154451 | 253063 | 98612 | 61.0% |
+| `Estimate` | SDIF AI | 100684 | 220956 | 120272 | 45.6% |
+| `TokenX` | SDIF | 148692 | 307177 | 158485 | 48.4% |
+| `tiktoken` | SDIF AI | 154460 | 253063 | 98603 | 61.0% |
 
 #### Ratio Matrix
 
 | Format | `Estimate` | `TokenX` | `tiktoken` |
 |---|---:|---:|---:|
 | SDIF AI | 45.6% | 48.4% | 61.0% |
-| CSV Bundle | 45.6% | 56.2% | 63.1% |
 | SDIF | 48.2% | 48.4% | 65.7% |
+| CSV Bundle | 45.6% | 56.2% | 63.1% |
 | TOON | 48.2% | 56.2% | 67.7% |
 | YAML | 95.0% | 91.1% | 112.2% |
 | JSON Compact | 100.0% | 100.0% | 100.0% |
@@ -861,15 +862,15 @@ Disabled. Disabled. Set SDIF_BENCHMARK_CLAUDE=1 to enable API token counting.
 | Tokenizer | Winner | Tokens | JSON Compact Tokens | Saved Tokens | Ratio |
 | --- | --- | ---: | ---: | ---: | ---: |
 | `Estimate` | CSV Bundle | 53815 | 111880 | 58065 | 48.1% |
-| `TokenX` | SDIF AI | 59885 | 146598 | 86713 | 40.8% |
+| `TokenX` | SDIF | 59890 | 146598 | 86708 | 40.9% |
 | `tiktoken` | CSV Bundle | 71357 | 126532 | 55175 | 56.4% |
 
 #### Ratio Matrix
 
 | Format | `Estimate` | `TokenX` | `tiktoken` |
 |---|---:|---:|---:|
-| SDIF AI | 49.5% | 40.8% | 59.6% |
 | CSV Bundle | 48.1% | 52.7% | 56.4% |
+| SDIF AI | 49.5% | 40.9% | 59.6% |
 | SDIF | 51.2% | 40.9% | 62.5% |
 | TOON | 51.2% | 52.8% | 61.8% |
 | YAML | 97.2% | 81.6% | 118.2% |
@@ -883,9 +884,9 @@ Disabled. Disabled. Set SDIF_BENCHMARK_CLAUDE=1 to enable API token counting.
 
 | Tokenizer | Winner | Tokens | JSON Compact Tokens | Saved Tokens | Ratio |
 | --- | --- | ---: | ---: | ---: | ---: |
-| `Estimate` | SDIF AI | 85512 | 148025 | 62513 | 57.8% |
-| `TokenX` | SDIF AI | 81684 | 188515 | 106831 | 43.3% |
-| `tiktoken` | SDIF AI | 94839 | 149622 | 54783 | 63.4% |
+| `Estimate` | SDIF AI | 85515 | 148025 | 62510 | 57.8% |
+| `TokenX` | SDIF | 81689 | 188515 | 106826 | 43.3% |
+| `tiktoken` | SDIF AI | 94848 | 149622 | 54774 | 63.4% |
 
 #### Ratio Matrix
 
@@ -906,17 +907,17 @@ Disabled. Disabled. Set SDIF_BENCHMARK_CLAUDE=1 to enable API token counting.
 
 | Tokenizer | Winner | Tokens | JSON Compact Tokens | Saved Tokens | Ratio |
 | --- | --- | ---: | ---: | ---: | ---: |
-| `Estimate` | SDIF AI | 95944 | 139832 | 43888 | 68.6% |
-| `TokenX` | SDIF AI | 91318 | 160800 | 69482 | 56.8% |
-| `tiktoken` | SDIF AI | 99633 | 134533 | 34900 | 74.1% |
+| `Estimate` | SDIF AI | 95948 | 139832 | 43884 | 68.6% |
+| `TokenX` | SDIF | 91323 | 160800 | 69477 | 56.8% |
+| `tiktoken` | SDIF AI | 99642 | 134533 | 34891 | 74.1% |
 
 #### Ratio Matrix
 
 | Format | `Estimate` | `TokenX` | `tiktoken` |
 |---|---:|---:|---:|
 | SDIF AI | 68.6% | 56.8% | 74.1% |
-| CSV Bundle | 68.6% | 62.4% | 74.1% |
 | SDIF | 69.8% | 56.8% | 76.6% |
+| CSV Bundle | 68.6% | 62.4% | 74.1% |
 | TOON | 70.0% | 65.9% | 76.6% |
 | YAML | 98.3% | 88.9% | 111.6% |
 | JSON Compact | 100.0% | 100.0% | 100.0% |
@@ -929,16 +930,16 @@ Disabled. Disabled. Set SDIF_BENCHMARK_CLAUDE=1 to enable API token counting.
 
 | Tokenizer | Winner | Tokens | JSON Compact Tokens | Saved Tokens | Ratio |
 | --- | --- | ---: | ---: | ---: | ---: |
-| `Estimate` | SDIF AI | 206 | 332 | 126 | 62.0% |
+| `Estimate` | SDIF | 208 | 332 | 124 | 62.7% |
 | `TokenX` | SDIF | 245 | 443 | 198 | 55.3% |
-| `tiktoken` | SDIF AI | 299 | 404 | 105 | 74.0% |
+| `tiktoken` | SDIF | 307 | 404 | 97 | 76.0% |
 
 #### Ratio Matrix
 
 | Format | `Estimate` | `TokenX` | `tiktoken` |
 |---|---:|---:|---:|
-| SDIF AI | 62.0% | 56.2% | 74.0% |
 | SDIF | 62.7% | 55.3% | 76.0% |
+| SDIF AI | 63.0% | 57.8% | 76.2% |
 | TOON | 65.1% | 66.8% | 83.4% |
 | CSV Bundle | 65.7% | 69.1% | 81.9% |
 | YAML | 94.0% | 83.1% | 111.6% |
@@ -952,8 +953,8 @@ Disabled. Disabled. Set SDIF_BENCHMARK_CLAUDE=1 to enable API token counting.
 
 | Tokenizer | Winner | Tokens | JSON Compact Tokens | Saved Tokens | Ratio |
 | --- | --- | ---: | ---: | ---: | ---: |
-| `Estimate` | SDIF AI | 18476 | 34890 | 16414 | 53.0% |
-| `TokenX` | SDIF AI | 20702 | 45845 | 25143 | 45.2% |
+| `Estimate` | SDIF AI | 18479 | 34890 | 16411 | 53.0% |
+| `TokenX` | SDIF | 20707 | 45845 | 25138 | 45.2% |
 | `tiktoken` | CSV Bundle | 25965 | 39858 | 13893 | 65.1% |
 
 #### Ratio Matrix
@@ -975,15 +976,15 @@ Disabled. Disabled. Set SDIF_BENCHMARK_CLAUDE=1 to enable API token counting.
 
 | Tokenizer | Winner | Tokens | JSON Compact Tokens | Saved Tokens | Ratio |
 | --- | --- | ---: | ---: | ---: | ---: |
-| `Estimate` | SDIF AI | 13983 | 28689 | 14706 | 48.7% |
-| `TokenX` | SDIF AI | 16712 | 39221 | 22509 | 42.6% |
-| `tiktoken` | SDIF AI | 18170 | 32253 | 14083 | 56.3% |
+| `Estimate` | SDIF AI | 13986 | 28689 | 14703 | 48.8% |
+| `TokenX` | SDIF | 16717 | 39221 | 22504 | 42.6% |
+| `tiktoken` | SDIF AI | 18179 | 32253 | 14074 | 56.4% |
 
 #### Ratio Matrix
 
 | Format | `Estimate` | `TokenX` | `tiktoken` |
 |---|---:|---:|---:|
-| SDIF AI | 48.7% | 42.6% | 56.3% |
+| SDIF AI | 48.8% | 42.6% | 56.4% |
 | SDIF | 50.9% | 42.6% | 63.8% |
 | CSV Bundle | 48.8% | 52.6% | 59.0% |
 | TOON | 50.9% | 52.6% | 66.4% |
@@ -998,9 +999,9 @@ Disabled. Disabled. Set SDIF_BENCHMARK_CLAUDE=1 to enable API token counting.
 
 | Tokenizer | Winner | Tokens | JSON Compact Tokens | Saved Tokens | Ratio |
 | --- | --- | ---: | ---: | ---: | ---: |
-| `Estimate` | SDIF AI | 12446 | 24394 | 11948 | 51.0% |
-| `TokenX` | SDIF AI | 16021 | 33616 | 17595 | 47.7% |
-| `tiktoken` | SDIF AI | 18106 | 28086 | 9980 | 64.5% |
+| `Estimate` | SDIF AI | 12449 | 24394 | 11945 | 51.0% |
+| `TokenX` | SDIF | 16026 | 33616 | 17590 | 47.7% |
+| `tiktoken` | SDIF AI | 18115 | 28086 | 9971 | 64.5% |
 
 #### Ratio Matrix
 
@@ -1021,9 +1022,9 @@ Disabled. Disabled. Set SDIF_BENCHMARK_CLAUDE=1 to enable API token counting.
 
 | Tokenizer | Winner | Tokens | JSON Compact Tokens | Saved Tokens | Ratio |
 | --- | --- | ---: | ---: | ---: | ---: |
-| `Estimate` | SDIF AI | 11888 | 27843 | 15955 | 42.7% |
-| `TokenX` | SDIF AI | 14784 | 37474 | 22690 | 39.5% |
-| `tiktoken` | SDIF AI | 21319 | 33936 | 12617 | 62.8% |
+| `Estimate` | SDIF AI | 11892 | 27843 | 15951 | 42.7% |
+| `TokenX` | SDIF | 14789 | 37474 | 22685 | 39.5% |
+| `tiktoken` | SDIF AI | 21328 | 33936 | 12608 | 62.8% |
 
 #### Ratio Matrix
 
@@ -1046,14 +1047,14 @@ Disabled. Disabled. Set SDIF_BENCHMARK_CLAUDE=1 to enable API token counting.
 | --- | --- | ---: | ---: | ---: | ---: |
 | `Estimate` | SDIF | 246 | 317 | 71 | 77.6% |
 | `TokenX` | SDIF | 266 | 389 | 123 | 68.4% |
-| `tiktoken` | SDIF AI | 251 | 302 | 51 | 83.1% |
+| `tiktoken` | SDIF | 252 | 302 | 50 | 83.4% |
 
 #### Ratio Matrix
 
 | Format | `Estimate` | `TokenX` | `tiktoken` |
 |---|---:|---:|---:|
 | SDIF | 77.6% | 68.4% | 83.4% |
-| SDIF AI | 78.9% | 70.4% | 83.1% |
+| SDIF AI | 80.1% | 72.2% | 86.1% |
 | TOON | 79.2% | 78.9% | 91.4% |
 | CSV Bundle | 82.0% | 83.3% | 95.4% |
 | YAML | 94.6% | 85.6% | 110.6% |
@@ -1067,16 +1068,16 @@ Disabled. Disabled. Set SDIF_BENCHMARK_CLAUDE=1 to enable API token counting.
 
 | Tokenizer | Winner | Tokens | JSON Compact Tokens | Saved Tokens | Ratio |
 | --- | --- | ---: | ---: | ---: | ---: |
-| `Estimate` | SDIF AI | 166 | 240 | 74 | 69.2% |
-| `TokenX` | SDIF AI | 190 | 301 | 111 | 63.1% |
-| `tiktoken` | SDIF AI | 149 | 205 | 56 | 72.7% |
+| `Estimate` | SDIF | 169 | 240 | 71 | 70.4% |
+| `TokenX` | SDIF | 192 | 301 | 109 | 63.8% |
+| `tiktoken` | SDIF | 154 | 205 | 51 | 75.1% |
 
 #### Ratio Matrix
 
 | Format | `Estimate` | `TokenX` | `tiktoken` |
 |---|---:|---:|---:|
-| SDIF AI | 69.2% | 63.1% | 72.7% |
 | SDIF | 70.4% | 63.8% | 75.1% |
+| SDIF AI | 70.4% | 65.4% | 77.1% |
 | TOON | 72.9% | 75.4% | 82.4% |
 | CSV Bundle | 75.0% | 79.7% | 85.4% |
 | YAML | 93.3% | 84.7% | 107.3% |
@@ -1090,15 +1091,15 @@ Disabled. Disabled. Set SDIF_BENCHMARK_CLAUDE=1 to enable API token counting.
 
 | Tokenizer | Winner | Tokens | JSON Compact Tokens | Saved Tokens | Ratio |
 | --- | --- | ---: | ---: | ---: | ---: |
-| `Estimate` | SDIF AI | 275 | 529 | 254 | 52.0% |
-| `TokenX` | SDIF AI | 291 | 665 | 374 | 43.8% |
-| `tiktoken` | SDIF AI | 298 | 534 | 236 | 55.8% |
+| `Estimate` | SDIF AI | 278 | 529 | 251 | 52.6% |
+| `TokenX` | SDIF | 296 | 665 | 369 | 44.5% |
+| `tiktoken` | SDIF AI | 307 | 534 | 227 | 57.5% |
 
 #### Ratio Matrix
 
 | Format | `Estimate` | `TokenX` | `tiktoken` |
 |---|---:|---:|---:|
-| SDIF AI | 52.0% | 43.8% | 55.8% |
+| SDIF AI | 52.6% | 44.8% | 57.5% |
 | SDIF | 55.0% | 44.5% | 60.5% |
 | CSV Bundle | 55.0% | 57.7% | 62.0% |
 | TOON | 56.0% | 57.7% | 64.0% |
@@ -1115,14 +1116,14 @@ Disabled. Disabled. Set SDIF_BENCHMARK_CLAUDE=1 to enable API token counting.
 | --- | --- | ---: | ---: | ---: | ---: |
 | `Estimate` | SDIF | 226 | 352 | 126 | 64.2% |
 | `TokenX` | SDIF | 219 | 407 | 188 | 53.8% |
-| `tiktoken` | SDIF AI | 253 | 350 | 97 | 72.3% |
+| `tiktoken` | SDIF | 259 | 350 | 91 | 74.0% |
 
 #### Ratio Matrix
 
 | Format | `Estimate` | `TokenX` | `tiktoken` |
 |---|---:|---:|---:|
 | SDIF | 64.2% | 53.8% | 74.0% |
-| SDIF AI | 64.5% | 56.3% | 72.3% |
+| SDIF AI | 65.6% | 58.0% | 74.9% |
 | TOON | 65.9% | 65.6% | 79.1% |
 | CSV Bundle | 66.5% | 68.1% | 78.0% |
 | YAML | 92.9% | 83.3% | 112.0% |
@@ -1136,15 +1137,15 @@ Disabled. Disabled. Set SDIF_BENCHMARK_CLAUDE=1 to enable API token counting.
 
 | Tokenizer | Winner | Tokens | JSON Compact Tokens | Saved Tokens | Ratio |
 | --- | --- | ---: | ---: | ---: | ---: |
-| `Estimate` | SDIF AI | 410 | 791 | 381 | 51.8% |
-| `TokenX` | SDIF AI | 516 | 1126 | 610 | 45.8% |
-| `tiktoken` | SDIF AI | 544 | 912 | 368 | 59.6% |
+| `Estimate` | SDIF AI | 414 | 791 | 377 | 52.3% |
+| `TokenX` | SDIF | 521 | 1126 | 605 | 46.3% |
+| `tiktoken` | SDIF AI | 553 | 912 | 359 | 60.6% |
 
 #### Ratio Matrix
 
 | Format | `Estimate` | `TokenX` | `tiktoken` |
 |---|---:|---:|---:|
-| SDIF AI | 51.8% | 45.8% | 59.6% |
+| SDIF AI | 52.3% | 46.4% | 60.6% |
 | SDIF | 54.2% | 46.3% | 64.1% |
 | CSV Bundle | 52.7% | 55.8% | 64.1% |
 | TOON | 54.4% | 55.4% | 67.4% |
@@ -1159,15 +1160,15 @@ Disabled. Disabled. Set SDIF_BENCHMARK_CLAUDE=1 to enable API token counting.
 
 | Tokenizer | Winner | Tokens | JSON Compact Tokens | Saved Tokens | Ratio |
 | --- | --- | ---: | ---: | ---: | ---: |
-| `Estimate` | SDIF AI | 641 | 1037 | 396 | 61.8% |
-| `TokenX` | SDIF AI | 693 | 1304 | 611 | 53.1% |
-| `tiktoken` | SDIF AI | 706 | 1064 | 358 | 66.4% |
+| `Estimate` | SDIF AI | 644 | 1037 | 393 | 62.1% |
+| `TokenX` | SDIF | 698 | 1304 | 606 | 53.5% |
+| `tiktoken` | SDIF AI | 715 | 1064 | 349 | 67.2% |
 
 #### Ratio Matrix
 
 | Format | `Estimate` | `TokenX` | `tiktoken` |
 |---|---:|---:|---:|
-| SDIF AI | 61.8% | 53.1% | 66.4% |
+| SDIF AI | 62.1% | 53.7% | 67.2% |
 | SDIF | 63.6% | 53.5% | 68.0% |
 | CSV Bundle | 62.6% | 63.4% | 69.5% |
 | TOON | 63.6% | 63.2% | 69.7% |
@@ -1182,17 +1183,17 @@ Disabled. Disabled. Set SDIF_BENCHMARK_CLAUDE=1 to enable API token counting.
 
 | Tokenizer | Winner | Tokens | JSON Compact Tokens | Saved Tokens | Ratio |
 | --- | --- | ---: | ---: | ---: | ---: |
-| `Estimate` | SDIF AI | 352 | 661 | 309 | 53.3% |
-| `TokenX` | SDIF AI | 391 | 848 | 457 | 46.1% |
-| `tiktoken` | SDIF AI | 476 | 718 | 242 | 66.3% |
+| `Estimate` | SDIF AI | 355 | 661 | 306 | 53.7% |
+| `TokenX` | SDIF | 396 | 848 | 452 | 46.7% |
+| `tiktoken` | SDIF AI | 485 | 718 | 233 | 67.5% |
 
 #### Ratio Matrix
 
 | Format | `Estimate` | `TokenX` | `tiktoken` |
 |---|---:|---:|---:|
-| SDIF AI | 53.3% | 46.1% | 66.3% |
-| CSV Bundle | 54.5% | 58.7% | 67.5% |
+| SDIF AI | 53.7% | 46.9% | 67.5% |
 | SDIF | 55.1% | 46.7% | 70.1% |
+| CSV Bundle | 54.5% | 58.7% | 67.5% |
 | TOON | 55.2% | 58.4% | 69.8% |
 | YAML | 96.1% | 84.3% | 118.4% |
 | JSON Compact | 100.0% | 100.0% | 100.0% |
@@ -1205,15 +1206,15 @@ Disabled. Disabled. Set SDIF_BENCHMARK_CLAUDE=1 to enable API token counting.
 
 | Tokenizer | Winner | Tokens | JSON Compact Tokens | Saved Tokens | Ratio |
 | --- | --- | ---: | ---: | ---: | ---: |
-| `Estimate` | SDIF AI | 173 | 254 | 81 | 68.1% |
-| `TokenX` | SDIF AI | 180 | 300 | 120 | 60.0% |
-| `tiktoken` | SDIF AI | 149 | 225 | 76 | 66.2% |
+| `Estimate` | SDIF AI | 176 | 254 | 78 | 69.3% |
+| `TokenX` | SDIF AI | 187 | 300 | 113 | 62.3% |
+| `tiktoken` | SDIF AI | 158 | 225 | 67 | 70.2% |
 
 #### Ratio Matrix
 
 | Format | `Estimate` | `TokenX` | `tiktoken` |
 |---|---:|---:|---:|
-| SDIF AI | 68.1% | 60.0% | 66.2% |
+| SDIF AI | 69.3% | 62.3% | 70.2% |
 | SDIF | 72.4% | 63.3% | 73.8% |
 | TOON | 76.0% | 75.3% | 87.6% |
 | CSV Bundle | 76.4% | 76.0% | 86.7% |
@@ -1228,17 +1229,17 @@ Disabled. Disabled. Set SDIF_BENCHMARK_CLAUDE=1 to enable API token counting.
 
 | Tokenizer | Winner | Tokens | JSON Compact Tokens | Saved Tokens | Ratio |
 | --- | --- | ---: | ---: | ---: | ---: |
-| `Estimate` | SDIF AI | 4652 | 16230 | 11578 | 28.7% |
-| `TokenX` | SDIF AI | 7878 | 29998 | 22120 | 26.3% |
-| `tiktoken` | SDIF AI | 15224 | 36372 | 21148 | 41.9% |
+| `Estimate` | SDIF AI | 4655 | 16230 | 11575 | 28.7% |
+| `TokenX` | SDIF | 7883 | 29998 | 22115 | 26.3% |
+| `tiktoken` | SDIF AI | 15233 | 36372 | 21139 | 41.9% |
 
 #### Ratio Matrix
 
 | Format | `Estimate` | `TokenX` | `tiktoken` |
 |---|---:|---:|---:|
 | SDIF AI | 28.7% | 26.3% | 41.9% |
-| CSV Bundle | 28.7% | 49.7% | 42.2% |
 | SDIF | 29.4% | 26.3% | 42.5% |
+| CSV Bundle | 28.7% | 49.7% | 42.2% |
 | TOON | 29.4% | 49.6% | 42.8% |
 | JSON Compact | 100.0% | 100.0% | 100.0% |
 | YAML | 108.4% | 75.7% | 137.8% |
@@ -1253,7 +1254,7 @@ This section contains raw counts only. Ratios are intentionally excluded here be
 
 | Format | Bytes | `Estimate` | `TokenX` | `tiktoken` | `Llama3` | `Claude` |
 | --- | ---: |---:|---:|---:|---:|---:|
-| SDIF AI | 626 | 157 | 174 | 206 | - | - |
+| SDIF AI | 639 | 160 | 181 | 215 | - | - |
 | SDIF | 633 | 159 | 168 | 217 | - | - |
 | CSV Bundle | 668 | 167 | 230 | 241 | - | - |
 | TOON | 660 | 165 | 220 | 246 | - | - |
@@ -1266,8 +1267,8 @@ This section contains raw counts only. Ratios are intentionally excluded here be
 
 | Format | Bytes | `Estimate` | `TokenX` | `tiktoken` | `Llama3` | `Claude` |
 | --- | ---: |---:|---:|---:|---:|---:|
-| SDIF AI | 696 | 174 | 214 | 258 | - | - |
 | SDIF | 702 | 176 | 210 | 259 | - | - |
+| SDIF AI | 709 | 178 | 221 | 267 | - | - |
 | TOON | 738 | 185 | 252 | 287 | - | - |
 | CSV Bundle | 741 | 186 | 262 | 293 | - | - |
 | JSON Compact | 1134 | 284 | 375 | 346 | - | - |
@@ -1280,7 +1281,7 @@ This section contains raw counts only. Ratios are intentionally excluded here be
 | Format | Bytes | `Estimate` | `TokenX` | `tiktoken` | `Llama3` | `Claude` |
 | --- | ---: |---:|---:|---:|---:|---:|
 | CSV Bundle | 292754 | 73189 | 91221 | 101645 | - | - |
-| SDIF AI | 292716 | 73179 | 81733 | 103205 | - | - |
+| SDIF AI | 292729 | 73183 | 81740 | 103214 | - | - |
 | TOON | 302214 | 75554 | 91221 | 106382 | - | - |
 | SDIF | 302202 | 75551 | 81738 | 107951 | - | - |
 | JSON Compact | 474294 | 118574 | 150426 | 137942 | - | - |
@@ -1292,7 +1293,7 @@ This section contains raw counts only. Ratios are intentionally excluded here be
 
 | Format | Bytes | `Estimate` | `TokenX` | `tiktoken` | `Llama3` | `Claude` |
 | --- | ---: |---:|---:|---:|---:|---:|
-| SDIF AI | 167369 | 41843 | 46327 | 37829 | - | - |
+| SDIF AI | 167382 | 41846 | 46334 | 37838 | - | - |
 | CSV Bundle | 167539 | 41885 | 52839 | 39074 | - | - |
 | TOON | 174452 | 43613 | 53807 | 41529 | - | - |
 | SDIF | 173649 | 43413 | 46333 | 41867 | - | - |
@@ -1305,7 +1306,7 @@ This section contains raw counts only. Ratios are intentionally excluded here be
 
 | Format | Bytes | `Estimate` | `TokenX` | `tiktoken` | `Llama3` | `Claude` |
 | --- | ---: |---:|---:|---:|---:|---:|
-| SDIF AI | 279580 | 69895 | 73765 | 86155 | - | - |
+| SDIF AI | 279593 | 69899 | 73772 | 86164 | - | - |
 | CSV Bundle | 279620 | 69905 | 89705 | 88495 | - | - |
 | SDIF | 289242 | 72311 | 73770 | 90989 | - | - |
 | TOON | 288966 | 72242 | 89415 | 93032 | - | - |
@@ -1318,7 +1319,7 @@ This section contains raw counts only. Ratios are intentionally excluded here be
 
 | Format | Bytes | `Estimate` | `TokenX` | `tiktoken` | `Llama3` | `Claude` |
 | --- | ---: |---:|---:|---:|---:|---:|
-| SDIF AI | 492354 | 123089 | 143535 | 141145 | - | - |
+| SDIF AI | 492367 | 123092 | 143542 | 141154 | - | - |
 | CSV Bundle | 492413 | 123104 | 159261 | 144465 | - | - |
 | SDIF | 504796 | 126199 | 143540 | 147369 | - | - |
 | TOON | 504817 | 126205 | 159262 | 150679 | - | - |
@@ -1331,7 +1332,7 @@ This section contains raw counts only. Ratios are intentionally excluded here be
 
 | Format | Bytes | `Estimate` | `TokenX` | `tiktoken` | `Llama3` | `Claude` |
 | --- | ---: |---:|---:|---:|---:|---:|
-| SDIF AI | 402720 | 100680 | 148687 | 154451 | - | - |
+| SDIF AI | 402733 | 100684 | 148694 | 154460 | - | - |
 | CSV Bundle | 402772 | 100693 | 172514 | 159696 | - | - |
 | SDIF | 426166 | 106542 | 148692 | 166177 | - | - |
 | TOON | 426185 | 106547 | 172514 | 171412 | - | - |
@@ -1345,7 +1346,7 @@ This section contains raw counts only. Ratios are intentionally excluded here be
 | Format | Bytes | `Estimate` | `TokenX` | `tiktoken` | `Llama3` | `Claude` |
 | --- | ---: |---:|---:|---:|---:|---:|
 | CSV Bundle | 215257 | 53815 | 77252 | 71357 | - | - |
-| SDIF AI | 221599 | 55400 | 59885 | 75464 | - | - |
+| SDIF AI | 221612 | 55403 | 59892 | 75473 | - | - |
 | TOON | 229126 | 57282 | 77470 | 78231 | - | - |
 | SDIF | 228953 | 57239 | 59890 | 79144 | - | - |
 | JSON Compact | 447520 | 111880 | 146598 | 126532 | - | - |
@@ -1357,7 +1358,7 @@ This section contains raw counts only. Ratios are intentionally excluded here be
 
 | Format | Bytes | `Estimate` | `TokenX` | `tiktoken` | `Llama3` | `Claude` |
 | --- | ---: |---:|---:|---:|---:|---:|
-| SDIF AI | 342047 | 85512 | 81684 | 94839 | - | - |
+| SDIF AI | 342060 | 85515 | 81691 | 94848 | - | - |
 | CSV Bundle | 342094 | 85524 | 94673 | 96002 | - | - |
 | SDIF | 352437 | 88110 | 81689 | 100037 | - | - |
 | TOON | 352453 | 88114 | 94672 | 101190 | - | - |
@@ -1370,7 +1371,7 @@ This section contains raw counts only. Ratios are intentionally excluded here be
 
 | Format | Bytes | `Estimate` | `TokenX` | `tiktoken` | `Llama3` | `Claude` |
 | --- | ---: |---:|---:|---:|---:|---:|
-| SDIF AI | 383776 | 95944 | 91318 | 99633 | - | - |
+| SDIF AI | 383789 | 95948 | 91325 | 99642 | - | - |
 | CSV Bundle | 383821 | 95956 | 100374 | 99656 | - | - |
 | SDIF | 390534 | 97634 | 91323 | 103015 | - | - |
 | TOON | 391666 | 97917 | 105973 | 103027 | - | - |
@@ -1383,8 +1384,8 @@ This section contains raw counts only. Ratios are intentionally excluded here be
 
 | Format | Bytes | `Estimate` | `TokenX` | `tiktoken` | `Llama3` | `Claude` |
 | --- | ---: |---:|---:|---:|---:|---:|
-| SDIF AI | 823 | 206 | 249 | 299 | - | - |
 | SDIF | 832 | 208 | 245 | 307 | - | - |
+| SDIF AI | 836 | 209 | 256 | 308 | - | - |
 | CSV Bundle | 869 | 218 | 306 | 331 | - | - |
 | TOON | 864 | 216 | 296 | 337 | - | - |
 | JSON Compact | 1325 | 332 | 443 | 404 | - | - |
@@ -1397,7 +1398,7 @@ This section contains raw counts only. Ratios are intentionally excluded here be
 | Format | Bytes | `Estimate` | `TokenX` | `tiktoken` | `Llama3` | `Claude` |
 | --- | ---: |---:|---:|---:|---:|---:|
 | CSV Bundle | 73941 | 18486 | 24956 | 25965 | - | - |
-| SDIF AI | 73903 | 18476 | 20702 | 26707 | - | - |
+| SDIF AI | 73916 | 18479 | 20709 | 26716 | - | - |
 | TOON | 75867 | 18967 | 24954 | 26932 | - | - |
 | SDIF | 75859 | 18965 | 20707 | 27688 | - | - |
 | JSON Compact | 139558 | 34890 | 45845 | 39858 | - | - |
@@ -1409,7 +1410,7 @@ This section contains raw counts only. Ratios are intentionally excluded here be
 
 | Format | Bytes | `Estimate` | `TokenX` | `tiktoken` | `Llama3` | `Claude` |
 | --- | ---: |---:|---:|---:|---:|---:|
-| SDIF AI | 55931 | 13983 | 16712 | 18170 | - | - |
+| SDIF AI | 55944 | 13986 | 16719 | 18179 | - | - |
 | CSV Bundle | 55978 | 13995 | 20633 | 19018 | - | - |
 | SDIF | 58377 | 14595 | 16717 | 20572 | - | - |
 | TOON | 58391 | 14598 | 20632 | 21408 | - | - |
@@ -1422,7 +1423,7 @@ This section contains raw counts only. Ratios are intentionally excluded here be
 
 | Format | Bytes | `Estimate` | `TokenX` | `tiktoken` | `Llama3` | `Claude` |
 | --- | ---: |---:|---:|---:|---:|---:|
-| SDIF AI | 49782 | 12446 | 16021 | 18106 | - | - |
+| SDIF AI | 49795 | 12449 | 16028 | 18115 | - | - |
 | SDIF | 51672 | 12918 | 16026 | 19054 | - | - |
 | CSV Bundle | 49822 | 12456 | 19136 | 19159 | - | - |
 | TOON | 51680 | 12920 | 19134 | 20095 | - | - |
@@ -1435,7 +1436,7 @@ This section contains raw counts only. Ratios are intentionally excluded here be
 
 | Format | Bytes | `Estimate` | `TokenX` | `tiktoken` | `Llama3` | `Claude` |
 | --- | ---: |---:|---:|---:|---:|---:|
-| SDIF AI | 47552 | 11888 | 14784 | 21319 | - | - |
+| SDIF AI | 47565 | 11892 | 14791 | 21328 | - | - |
 | CSV Bundle | 47599 | 11900 | 18378 | 21445 | - | - |
 | SDIF | 50784 | 12696 | 14789 | 22938 | - | - |
 | TOON | 50798 | 12700 | 18377 | 23051 | - | - |
@@ -1448,8 +1449,8 @@ This section contains raw counts only. Ratios are intentionally excluded here be
 
 | Format | Bytes | `Estimate` | `TokenX` | `tiktoken` | `Llama3` | `Claude` |
 | --- | ---: |---:|---:|---:|---:|---:|
-| SDIF AI | 1000 | 250 | 274 | 251 | - | - |
 | SDIF | 984 | 246 | 266 | 252 | - | - |
+| SDIF AI | 1013 | 254 | 281 | 260 | - | - |
 | TOON | 1002 | 251 | 307 | 276 | - | - |
 | CSV Bundle | 1039 | 260 | 324 | 288 | - | - |
 | JSON Compact | 1268 | 317 | 389 | 302 | - | - |
@@ -1461,8 +1462,8 @@ This section contains raw counts only. Ratios are intentionally excluded here be
 
 | Format | Bytes | `Estimate` | `TokenX` | `tiktoken` | `Llama3` | `Claude` |
 | --- | ---: |---:|---:|---:|---:|---:|
-| SDIF AI | 662 | 166 | 190 | 149 | - | - |
 | SDIF | 674 | 169 | 192 | 154 | - | - |
+| SDIF AI | 675 | 169 | 197 | 158 | - | - |
 | TOON | 697 | 175 | 227 | 169 | - | - |
 | CSV Bundle | 720 | 180 | 240 | 175 | - | - |
 | JSON Compact | 960 | 240 | 301 | 205 | - | - |
@@ -1474,7 +1475,7 @@ This section contains raw counts only. Ratios are intentionally excluded here be
 
 | Format | Bytes | `Estimate` | `TokenX` | `tiktoken` | `Llama3` | `Claude` |
 | --- | ---: |---:|---:|---:|---:|---:|
-| SDIF AI | 1097 | 275 | 291 | 298 | - | - |
+| SDIF AI | 1110 | 278 | 298 | 307 | - | - |
 | SDIF | 1161 | 291 | 296 | 323 | - | - |
 | CSV Bundle | 1161 | 291 | 384 | 331 | - | - |
 | TOON | 1181 | 296 | 384 | 342 | - | - |
@@ -1487,8 +1488,8 @@ This section contains raw counts only. Ratios are intentionally excluded here be
 
 | Format | Bytes | `Estimate` | `TokenX` | `tiktoken` | `Llama3` | `Claude` |
 | --- | ---: |---:|---:|---:|---:|---:|
-| SDIF AI | 908 | 227 | 229 | 253 | - | - |
 | SDIF | 902 | 226 | 219 | 259 | - | - |
+| SDIF AI | 921 | 231 | 236 | 262 | - | - |
 | CSV Bundle | 933 | 234 | 277 | 273 | - | - |
 | TOON | 925 | 232 | 267 | 277 | - | - |
 | JSON Compact | 1408 | 352 | 407 | 350 | - | - |
@@ -1500,7 +1501,7 @@ This section contains raw counts only. Ratios are intentionally excluded here be
 
 | Format | Bytes | `Estimate` | `TokenX` | `tiktoken` | `Llama3` | `Claude` |
 | --- | ---: |---:|---:|---:|---:|---:|
-| SDIF AI | 1640 | 410 | 516 | 544 | - | - |
+| SDIF AI | 1653 | 414 | 523 | 553 | - | - |
 | CSV Bundle | 1666 | 417 | 628 | 585 | - | - |
 | SDIF | 1716 | 429 | 521 | 585 | - | - |
 | TOON | 1718 | 430 | 624 | 615 | - | - |
@@ -1513,7 +1514,7 @@ This section contains raw counts only. Ratios are intentionally excluded here be
 
 | Format | Bytes | `Estimate` | `TokenX` | `tiktoken` | `Llama3` | `Claude` |
 | --- | ---: |---:|---:|---:|---:|---:|
-| SDIF AI | 2563 | 641 | 693 | 706 | - | - |
+| SDIF AI | 2576 | 644 | 700 | 715 | - | - |
 | SDIF | 2637 | 660 | 698 | 723 | - | - |
 | CSV Bundle | 2594 | 649 | 827 | 740 | - | - |
 | TOON | 2640 | 660 | 824 | 742 | - | - |
@@ -1526,7 +1527,7 @@ This section contains raw counts only. Ratios are intentionally excluded here be
 
 | Format | Bytes | `Estimate` | `TokenX` | `tiktoken` | `Llama3` | `Claude` |
 | --- | ---: |---:|---:|---:|---:|---:|
-| SDIF AI | 1406 | 352 | 391 | 476 | - | - |
+| SDIF AI | 1419 | 355 | 398 | 485 | - | - |
 | CSV Bundle | 1439 | 360 | 498 | 485 | - | - |
 | TOON | 1459 | 365 | 495 | 501 | - | - |
 | SDIF | 1454 | 364 | 396 | 503 | - | - |
@@ -1539,7 +1540,7 @@ This section contains raw counts only. Ratios are intentionally excluded here be
 
 | Format | Bytes | `Estimate` | `TokenX` | `tiktoken` | `Llama3` | `Claude` |
 | --- | ---: |---:|---:|---:|---:|---:|
-| SDIF AI | 691 | 173 | 180 | 149 | - | - |
+| SDIF AI | 704 | 176 | 187 | 158 | - | - |
 | SDIF | 735 | 184 | 190 | 166 | - | - |
 | CSV Bundle | 773 | 194 | 228 | 195 | - | - |
 | TOON | 770 | 193 | 226 | 197 | - | - |
@@ -1552,7 +1553,7 @@ This section contains raw counts only. Ratios are intentionally excluded here be
 
 | Format | Bytes | `Estimate` | `TokenX` | `tiktoken` | `Llama3` | `Claude` |
 | --- | ---: |---:|---:|---:|---:|---:|
-| SDIF AI | 18606 | 4652 | 7878 | 15224 | - | - |
+| SDIF AI | 18619 | 4655 | 7885 | 15233 | - | - |
 | CSV Bundle | 18632 | 4658 | 14897 | 15365 | - | - |
 | SDIF | 19054 | 4764 | 7883 | 15451 | - | - |
 | TOON | 19053 | 4764 | 14893 | 15579 | - | - |

@@ -5,8 +5,8 @@
     "tests"
   ],
   "extraPaths": [
-    "src",
-    "../sdif/src"
+    "../sdif/src",
+    "./src"
   ],
   "pythonVersion": "3.10"
 }

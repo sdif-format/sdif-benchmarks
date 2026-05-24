@@ -321,6 +321,9 @@
   <p class="section-label">Benchmark Tracks</p>
   <div class="tracks-grid" id="tracks"></div>
 
+  <p class="section-label" id="experimental-label">Experimental / Upcoming Benchmarks</p>
+  <div class="tracks-grid" id="experimental-tracks"></div>
+
   <p class="section-label">Suite Artifacts</p>
   <div class="artifact-table">
     <table>
@@ -379,7 +382,6 @@ function metricColor(track, value) {
   if (track === 'token_efficiency' && value < 75) return '';
   if (track === 'context_packing' && value > 50) return 'good';
   if (track === 'roundtrip_fidelity' && value > 95) return 'good';
-  if (track === 'delta_compactness' && value < 5) return 'good';
   return '';
 }
 INDEX.scorecard.forEach(entry => {
@@ -400,6 +402,9 @@ INDEX.scorecard.forEach(entry => {
 // Tracks
 const tracksEl = document.getElementById('tracks');
 INDEX.artifacts.forEach(a => {
+  if (INDEX.experimental_tracks && INDEX.experimental_tracks.some(et => et.track === a.track)) {
+    return;
+  }
   const card = document.createElement('div');
   card.className = 'track-card';
   card.innerHTML = `
@@ -412,6 +417,30 @@ INDEX.artifacts.forEach(a => {
   `;
   tracksEl.appendChild(card);
 });
+
+// Experimental Tracks
+const experimentalTracksEl = document.getElementById('experimental-tracks');
+if (INDEX.experimental_tracks && INDEX.experimental_tracks.length > 0) {
+  INDEX.experimental_tracks.forEach(t => {
+    const a = INDEX.artifacts.find(art => art.track === t.track);
+    if (a) {
+      const card = document.createElement('div');
+      card.className = 'track-card';
+      card.innerHTML = `
+        <h3>${t.label}</h3>
+        <p style="font-size: 0.8rem; color: var(--text-muted); margin-bottom: 0.75rem; line-height: 1.4;">${t.claim}</p>
+        <div class="links">
+          <a class="lnk-primary" href="${a.dashboard}">Dashboard</a>
+          <a class="lnk-secondary" href="${a.summaryMd.replace('.md', '-viewer.html')}">Summary</a>
+          <a class="lnk-secondary" href="${a.summarySdifAi.replace('.sdif.ai', '-sdif-ai-viewer.html')}">SDIF AI</a>
+        </div>
+      `;
+      experimentalTracksEl.appendChild(card);
+    }
+  });
+} else {
+  document.getElementById('experimental-label').style.display = 'none';
+}
 
 // Artifacts table
 const tbody = document.getElementById('artifacts-body');

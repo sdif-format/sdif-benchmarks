@@ -18,6 +18,7 @@ from pathlib import Path
 from typing import Any
 
 from sdif_benchmarks.infra import BENCHMARK_DIR as BENCHMARKS_ROOT
+
 SDIF_CORE_REPO = (
     Path(os.environ.get("SDIF_CORE_REPO") or str(BENCHMARKS_ROOT.parent)).expanduser().resolve()
 )
@@ -270,8 +271,13 @@ FIXTURE_BUILDERS: dict[str, Callable[[], JsonObject]] = {
 def write_fixture(output_dir: Path, name: str, data: JsonObject) -> None:
     """Write equivalent.json, source.sdif, canonical.sdif, and canonical.sha256."""
     _ensure_sdif_on_path()
-    from sdif import canonicalize, sdif_hash  # deferred: SDIF src path injected by _ensure_sdif_on_path() above
-    from sdif.json import json_data_to_sdif  # deferred: SDIF src path injected by _ensure_sdif_on_path() above
+    from sdif import (
+        canonicalize,
+        sdif_hash,
+    )  # deferred: SDIF src path injected by _ensure_sdif_on_path() above
+    from sdif.json import (
+        json_data_to_sdif,
+    )  # deferred: SDIF src path injected by _ensure_sdif_on_path() above
 
     fixture_dir = output_dir / name
     fixture_dir.mkdir(parents=True, exist_ok=True)

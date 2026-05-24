@@ -1,7 +1,7 @@
 {
   "kind": "RoundTripFidelityReport",
   "version": "1.0",
-  "generatedAt": "2026-05-24T12:17:12Z",
+  "generatedAt": "2026-05-24T14:37:35Z",
   "runDirectory": "results/roundtrip_fidelity",
   "semanticSource": "examples/golden/<document>/equivalent.json",
   "envFileLoaded": false,
@@ -53,6 +53,16 @@
           "note": ""
         },
         {
+          "format": "SDIF AI",
+          "bytes": 639,
+          "parseSuccess": true,
+          "valueFidelity": 100.0,
+          "typeFidelity": 100.0,
+          "structureFidelity": 100.0,
+          "overallFidelity": 100.0,
+          "note": ""
+        },
+        {
           "format": "TOON",
           "bytes": 660,
           "parseSuccess": true,
@@ -70,16 +80,6 @@
           "typeFidelity": 100.0,
           "structureFidelity": 96.6,
           "overallFidelity": 98.8,
-          "note": "see diagnostics"
-        },
-        {
-          "format": "SDIF AI",
-          "bytes": 626,
-          "parseSuccess": true,
-          "valueFidelity": 89.7,
-          "typeFidelity": 100.0,
-          "structureFidelity": 100.0,
-          "overallFidelity": 96.3,
           "note": "see diagnostics"
         },
         {
@@ -148,6 +148,16 @@
           "note": ""
         },
         {
+          "format": "SDIF AI",
+          "bytes": 709,
+          "parseSuccess": true,
+          "valueFidelity": 100.0,
+          "typeFidelity": 100.0,
+          "structureFidelity": 100.0,
+          "overallFidelity": 100.0,
+          "note": ""
+        },
+        {
           "format": "TOON",
           "bytes": 738,
           "parseSuccess": true,
@@ -165,16 +175,6 @@
           "typeFidelity": 100.0,
           "structureFidelity": 95.7,
           "overallFidelity": 98.5,
-          "note": "see diagnostics"
-        },
-        {
-          "format": "SDIF AI",
-          "bytes": 696,
-          "parseSuccess": true,
-          "valueFidelity": 87.0,
-          "typeFidelity": 100.0,
-          "structureFidelity": 100.0,
-          "overallFidelity": 95.2,
           "note": "see diagnostics"
         }
       ]
@@ -234,7 +234,7 @@
         },
         {
           "format": "SDIF AI",
-          "bytes": 292716,
+          "bytes": 292729,
           "parseSuccess": true,
           "valueFidelity": 100.0,
           "typeFidelity": 100.0,
@@ -309,7 +309,7 @@
         },
         {
           "format": "SDIF AI",
-          "bytes": 167369,
+          "bytes": 167382,
           "parseSuccess": true,
           "valueFidelity": 100.0,
           "typeFidelity": 100.0,
@@ -404,7 +404,7 @@
         },
         {
           "format": "SDIF AI",
-          "bytes": 279580,
+          "bytes": 279593,
           "parseSuccess": true,
           "valueFidelity": 100.0,
           "typeFidelity": 100.0,
@@ -489,7 +489,7 @@
         },
         {
           "format": "SDIF AI",
-          "bytes": 492354,
+          "bytes": 492367,
           "parseSuccess": true,
           "valueFidelity": 100.0,
           "typeFidelity": 100.0,
@@ -574,7 +574,7 @@
         },
         {
           "format": "SDIF AI",
-          "bytes": 402720,
+          "bytes": 402733,
           "parseSuccess": true,
           "valueFidelity": 100.0,
           "typeFidelity": 100.0,
@@ -649,7 +649,7 @@
         },
         {
           "format": "SDIF AI",
-          "bytes": 221599,
+          "bytes": 221612,
           "parseSuccess": true,
           "valueFidelity": 100.0,
           "typeFidelity": 100.0,
@@ -744,7 +744,7 @@
         },
         {
           "format": "SDIF AI",
-          "bytes": 342047,
+          "bytes": 342060,
           "parseSuccess": true,
           "valueFidelity": 100.0,
           "typeFidelity": 100.0,
@@ -819,7 +819,7 @@
         },
         {
           "format": "SDIF AI",
-          "bytes": 383776,
+          "bytes": 383789,
           "parseSuccess": true,
           "valueFidelity": 100.0,
           "typeFidelity": 100.0,
@@ -903,6 +903,16 @@
           "note": ""
         },
         {
+          "format": "SDIF AI",
+          "bytes": 836,
+          "parseSuccess": true,
+          "valueFidelity": 100.0,
+          "typeFidelity": 100.0,
+          "structureFidelity": 100.0,
+          "overallFidelity": 100.0,
+          "note": ""
+        },
+        {
           "format": "TOON",
           "bytes": 864,
           "parseSuccess": true,
@@ -920,16 +930,6 @@
           "typeFidelity": 100.0,
           "structureFidelity": 96.4,
           "overallFidelity": 98.8,
-          "note": "see diagnostics"
-        },
-        {
-          "format": "SDIF AI",
-          "bytes": 823,
-          "parseSuccess": true,
-          "valueFidelity": 85.7,
-          "typeFidelity": 100.0,
-          "structureFidelity": 100.0,
-          "overallFidelity": 94.7,
           "note": "see diagnostics"
         },
         {
@@ -999,7 +999,7 @@
         },
         {
           "format": "SDIF AI",
-          "bytes": 73903,
+          "bytes": 73916,
           "parseSuccess": true,
           "valueFidelity": 100.0,
           "typeFidelity": 100.0,
@@ -1084,7 +1084,7 @@
         },
         {
           "format": "SDIF AI",
-          "bytes": 55931,
+          "bytes": 55944,
           "parseSuccess": true,
           "valueFidelity": 100.0,
           "typeFidelity": 100.0,
@@ -1179,7 +1179,7 @@
         },
         {
           "format": "SDIF AI",
-          "bytes": 49782,
+          "bytes": 49795,
           "parseSuccess": true,
           "valueFidelity": 100.0,
           "typeFidelity": 100.0,
@@ -1254,7 +1254,7 @@
         },
         {
           "format": "SDIF AI",
-          "bytes": 47552,
+          "bytes": 47565,
           "parseSuccess": true,
           "valueFidelity": 100.0,
           "typeFidelity": 100.0,
@@ -1339,7 +1339,7 @@
         },
         {
           "format": "SDIF AI",
-          "bytes": 1000,
+          "bytes": 1013,
           "parseSuccess": true,
           "valueFidelity": 100.0,
           "typeFidelity": 100.0,
@@ -1424,7 +1424,7 @@
         },
         {
           "format": "SDIF AI",
-          "bytes": 662,
+          "bytes": 675,
           "parseSuccess": true,
           "valueFidelity": 100.0,
           "typeFidelity": 100.0,
@@ -1509,7 +1509,7 @@
         },
         {
           "format": "SDIF AI",
-          "bytes": 1097,
+          "bytes": 1110,
           "parseSuccess": true,
           "valueFidelity": 100.0,
           "typeFidelity": 100.0,
@@ -1594,7 +1594,7 @@
         },
         {
           "format": "SDIF AI",
-          "bytes": 908,
+          "bytes": 921,
           "parseSuccess": true,
           "valueFidelity": 100.0,
           "typeFidelity": 100.0,
@@ -1679,7 +1679,7 @@
         },
         {
           "format": "SDIF AI",
-          "bytes": 1640,
+          "bytes": 1653,
           "parseSuccess": true,
           "valueFidelity": 100.0,
           "typeFidelity": 100.0,
@@ -1764,7 +1764,7 @@
         },
         {
           "format": "SDIF AI",
-          "bytes": 2563,
+          "bytes": 2576,
           "parseSuccess": true,
           "valueFidelity": 100.0,
           "typeFidelity": 100.0,
@@ -1849,7 +1849,7 @@
         },
         {
           "format": "SDIF AI",
-          "bytes": 1406,
+          "bytes": 1419,
           "parseSuccess": true,
           "valueFidelity": 100.0,
           "typeFidelity": 100.0,
@@ -1944,7 +1944,7 @@
         },
         {
           "format": "SDIF AI",
-          "bytes": 691,
+          "bytes": 704,
           "parseSuccess": true,
           "valueFidelity": 100.0,
           "typeFidelity": 100.0,
@@ -2019,7 +2019,7 @@
         },
         {
           "format": "SDIF AI",
-          "bytes": 18606,
+          "bytes": 18619,
           "parseSuccess": true,
           "valueFidelity": 100.0,
           "typeFidelity": 100.0,

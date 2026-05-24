@@ -1,3 +1,4 @@
+@sdif.ai 1.0
 kind Registry
 id example.registry
 schema example.semantic_registry.v1

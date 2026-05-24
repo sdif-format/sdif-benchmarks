@@ -1,7 +1,7 @@
 {
   "kind": "BenchmarkSuiteReport",
   "version": "1.0",
-  "generatedAt": "2026-05-24T12:14:41Z",
+  "generatedAt": "2026-05-24T14:35:11Z",
   "corpus": {
     "source": "examples/golden",
     "documents": 24
@@ -20,11 +20,11 @@
       "label": "Token Efficiency",
       "claim": "SDIF AI reduces token usage vs JSON Compact",
       "metric": "medianRatioVsJsonCompact",
-      "value": 57.2,
+      "value": 57.9,
       "unit": "%",
-      "description": "SDIF AI median token ratio vs JSON Compact: 57.2%",
+      "description": "SDIF AI median token ratio vs JSON Compact: 57.9%",
       "bestRatio": 26.3,
-      "worstRatio": 83.1,
+      "worstRatio": 86.1,
       "evidence": "token_efficiency/summary.md"
     },
     {
@@ -51,28 +51,6 @@
       "evidence": "roundtrip_fidelity/summary.md"
     },
     {
-      "track": "delta_compactness",
-      "label": "Mutation Sensitivity",
-      "claim": "SDIF produces less noise on full-document re-send after mutation",
-      "metric": "avgTokenDeltaPct",
-      "value": 4.55,
-      "unit": "%",
-      "description": "SDIF avg token delta on full-resend: 4.6% vs JSON Compact 3.0%",
-      "jsonCompactAvgDelta": 3.02,
-      "note": "full-resend model — not true SDIF delta encoding",
-      "evidence": "delta_compactness/summary.md"
-    },
-    {
-      "track": "semantic_fidelity",
-      "label": "Semantic Fidelity",
-      "claim": "Measures structural recovery fidelity across JSON, YAML, XML, CSV Bundle, SDIF, and SDIF AI after format conversion.",
-      "metric": "sdifSemanticAxisFidelity",
-      "value": 100.0,
-      "unit": "%",
-      "description": "SDIF structural semantic-axis recovery: 100.0%",
-      "evidence": "semantic_fidelity/summary.md"
-    },
-    {
       "track": "operability",
       "label": "Operability",
       "claim": "Documents format capability matrix: canonical forms, stable hashing, native relation support, and rule handling.",
@@ -81,6 +59,13 @@
       "unit": "/8",
       "description": "SDIF declares 8/8 deterministic-workflow capabilities; rule evaluation support is False",
       "evidence": "operability/summary.md"
+    }
+  ],
+  "experimental_tracks": [
+    {
+      "track": "delta_compactness",
+      "label": "Mutation Sensitivity — Full-resend baseline",
+      "claim": "This track measures full-document resend sensitivity after mutation. It is not yet a semantic patch/delta benchmark."
     }
   ],
   "artifacts": [
@@ -113,7 +98,7 @@
     },
     {
       "track": "delta_compactness",
-      "label": "Mutation Sensitivity",
+      "label": "Mutation Sensitivity — Full-resend baseline",
       "summaryMd": "delta_compactness/summary.md",
       "summaryJson": "delta_compactness/summary.json",
       "summarySdif": "delta_compactness/summary.sdif",

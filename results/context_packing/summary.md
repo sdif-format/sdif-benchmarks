@@ -1,19 +1,19 @@
 # SDIF Context Packing Benchmark — Summary
 
-- Generated at: `2026-05-24T12:15:58Z`
+- Generated at: `2026-05-24T14:36:25Z`
 - Tokenizer: `tiktoken/cl100k_base`
 - Documents: `24`
 - Budgets: `4K`, `8K`, `32K`, `128K` tokens
 
 ## Key Finding
 
-- **SDIF AI** is the most compact format: avg 37326 tokens (64.6% of JSON Compact).
+- **SDIF AI** is the most compact format: avg 37336 tokens (64.6% of JSON Compact).
 
 ## Fit Rate: % of 24 documents that fit at least once
 
 | Format | Avg tokens | vs JSON | `4K` | `8K` | `32K` | `128K` |
 | --- | ---: | ---: | ---: | ---: | ---: | ---: |
-| SDIF AI | 37326 | 64.6% | 46% | 46% | 67% | 92% |
+| SDIF AI | 37336 | 64.6% | 46% | 46% | 67% | 92% |
 | CSV Bundle | 37720 | 65.3% | 46% | 46% | 67% | 92% |
 | SDIF | 39417 | 68.2% | 46% | 46% | 67% | 92% |
 | TOON | 39856 | 69.0% | 46% | 46% | 67% | 92% |
@@ -26,7 +26,7 @@
 
 | Format | `4K` | `8K` | `32K` | `128K` |
 | --- | ---: | ---: | ---: | ---: |
-| SDIF AI | 6.9 | 14.1 | 57.5 | 231.6 |
+| SDIF AI | 6.7 | 13.5 | 55.3 | 222.6 |
 | CSV Bundle | 6.1 | 12.3 | 50.1 | 201.9 |
 | SDIF | 6.6 | 13.5 | 55.0 | 221.2 |
 | TOON | 6.0 | 12.3 | 50.1 | 201.4 |

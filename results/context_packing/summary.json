@@ -1,7 +1,7 @@
 {
   "kind": "ContextPackingReport",
   "version": "1.1",
-  "generatedAt": "2026-05-24T12:15:58Z",
+  "generatedAt": "2026-05-24T14:36:25Z",
   "tokenizer": "tiktoken/cl100k_base",
   "documentCount": 24,
   "budgets": [
@@ -18,7 +18,7 @@
   },
   "perFormatSummary": {
     "SDIF_AI": {
-      "avgTokens": 37326.5,
+      "avgTokens": 37335.5,
       "vsJsonCompactPct": 64.6,
       "fitRate": {
         "b4096": 45.8,
@@ -27,10 +27,10 @@
         "b131072": 91.7
       },
       "avgDocs": {
-        "b4096": 6.9,
-        "b8192": 14.1,
-        "b32768": 57.5,
-        "b131072": 231.6
+        "b4096": 6.7,
+        "b8192": 13.5,
+        "b32768": 55.3,
+        "b131072": 222.6
       },
       "medianDocs": {
         "b4096": 0.0,

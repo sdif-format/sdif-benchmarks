@@ -1,7 +1,7 @@
 {
   "kind": "BenchmarkReport",
   "version": "1.0",
-  "generatedAt": "2026-05-24T12:15:24Z",
+  "generatedAt": "2026-05-24T14:35:52Z",
   "runDirectory": "results/token_efficiency",
   "semanticSource": "examples/golden/<document>/equivalent.json",
   "ratiosBaseline": "JSON Compact",
@@ -48,17 +48,17 @@
   "consensusRanking": [
     {
       "format": "SDIF AI",
-      "avgRank": 1.1527777777777777,
-      "medianRatio": 57.15136742082273,
-      "bestRatio": 26.26175078338556,
-      "worstRatio": 83.11258278145695,
-      "rankSpread": 1.0,
+      "avgRank": 1.5416666666666667,
+      "medianRatio": 57.88653418450258,
+      "bestRatio": 26.285085672378163,
+      "worstRatio": 86.09271523178808,
+      "rankSpread": 2.0,
       "coverage": 72,
       "coverageTotal": 72
     },
     {
       "format": "SDIF",
-      "avgRank": 2.4305555555555554,
+      "avgRank": 2.0555555555555554,
       "medianRatio": 60.005310242791005,
       "bestRatio": 26.278418561237416,
       "worstRatio": 83.44370860927152,
@@ -78,11 +78,11 @@
     },
     {
       "format": "TOON",
-      "avgRank": 3.5277777777777777,
+      "avgRank": 3.513888888888889,
       "medianRatio": 63.88190146465214,
       "bestRatio": 29.35304990757856,
       "worstRatio": 91.3907284768212,
-      "rankSpread": 1.0,
+      "rankSpread": 2.0,
       "coverage": 72,
       "coverageTotal": 72
     },
@@ -131,13 +131,13 @@
     {
       "tokenizer": "Estimate",
       "format": "SDIF AI",
-      "wins": 21,
+      "wins": 17,
       "documents": 24
     },
     {
       "tokenizer": "Estimate",
       "format": "SDIF",
-      "wins": 2,
+      "wins": 6,
       "documents": 24
     },
     {
@@ -148,20 +148,26 @@
     },
     {
       "tokenizer": "TokenX",
-      "format": "SDIF AI",
-      "wins": 19,
+      "format": "SDIF",
+      "wins": 23,
       "documents": 24
     },
     {
       "tokenizer": "TokenX",
-      "format": "SDIF",
-      "wins": 5,
+      "format": "SDIF AI",
+      "wins": 1,
       "documents": 24
     },
     {
       "tokenizer": "tiktoken",
       "format": "SDIF AI",
-      "wins": 21,
+      "wins": 16,
+      "documents": 24
+    },
+    {
+      "tokenizer": "tiktoken",
+      "format": "SDIF",
+      "wins": 5,
       "documents": 24
     },
     {
@@ -174,30 +180,30 @@
   "directComparison": [
     {
       "format": "SDIF AI",
-      "consensusAvgRank": 1.1527777777777777,
-      "consensusMedianRatio": 57.15136742082273,
-      "consensusBestRatio": 26.26175078338556,
-      "consensusWorstRatio": 83.11258278145695,
-      "consensusRankSpread": 1.0,
+      "consensusAvgRank": 1.5416666666666667,
+      "consensusMedianRatio": 57.88653418450258,
+      "consensusBestRatio": 26.285085672378163,
+      "consensusWorstRatio": 86.09271523178808,
+      "consensusRankSpread": 2.0,
       "coverage": 72,
       "coverageTotal": 72,
-      "totalWins": 61,
+      "totalWins": 34,
       "avgRatioByTokenizer": {
-        "Estimate": 56.55344312445467,
-        "TokenX": 49.89737520570798,
-        "tiktoken": 65.50595326106622
+        "Estimate": 56.97393884859974,
+        "TokenX": 50.592126511385906,
+        "tiktoken": 66.6119451698166
       }
     },
     {
       "format": "SDIF",
-      "consensusAvgRank": 2.4305555555555554,
+      "consensusAvgRank": 2.0555555555555554,
       "consensusMedianRatio": 60.005310242791005,
       "consensusBestRatio": 26.278418561237416,
       "consensusWorstRatio": 83.44370860927152,
       "consensusRankSpread": 3.0,
       "coverage": 72,
       "coverageTotal": 72,
-      "totalWins": 7,
+      "totalWins": 34,
       "avgRatioByTokenizer": {
         "Estimate": 58.17817298537913,
         "TokenX": 49.82092169856904,
@@ -206,11 +212,11 @@
     },
     {
       "format": "TOON",
-      "consensusAvgRank": 3.5277777777777777,
+      "consensusAvgRank": 3.513888888888889,
       "consensusMedianRatio": 63.88190146465214,
       "consensusBestRatio": 29.35304990757856,
       "consensusWorstRatio": 91.3907284768212,
-      "consensusRankSpread": 1.0,
+      "consensusRankSpread": 2.0,
       "coverage": 72,
       "coverageTotal": 72,
       "totalWins": 0,
@@ -259,11 +265,11 @@
       "winnersByTokenizer": [
         {
           "tokenizer": "Estimate",
-          "format": "SDIF AI",
-          "tokens": 157,
+          "format": "SDIF",
+          "tokens": 159,
           "jsonCompactTokens": 286,
-          "savedTokens": 129,
-          "ratio": 54.89510489510489
+          "savedTokens": 127,
+          "ratio": 55.59440559440559
         },
         {
           "tokenizer": "TokenX",
@@ -276,30 +282,30 @@
         {
           "tokenizer": "tiktoken",
           "format": "SDIF AI",
-          "tokens": 206,
+          "tokens": 215,
           "jsonCompactTokens": 320,
-          "savedTokens": 114,
-          "ratio": 64.375
+          "savedTokens": 105,
+          "ratio": 67.1875
         }
       ],
       "formats": [
         {
           "format": "SDIF AI",
-          "bytes": 626,
+          "bytes": 639,
           "tokens": {
-            "Estimate": 157,
-            "TokenX": 174,
-            "tiktoken": 206,
+            "Estimate": 160,
+            "TokenX": 181,
+            "tiktoken": 215,
             "Llama3": null,
             "Claude": null
           },
           "ratios": {
-            "Estimate": 54.89510489510489,
-            "TokenX": 46.774193548387096,
-            "tiktoken": 64.375
+            "Estimate": 55.94405594405595,
+            "TokenX": 48.655913978494624,
+            "tiktoken": 67.1875
           },
           "ranks": {
-            "Estimate": 1,
+            "Estimate": 2,
             "TokenX": 2,
             "tiktoken": 1
           }
@@ -320,7 +326,7 @@
             "tiktoken": 67.8125
           },
           "ranks": {
-            "Estimate": 2,
+            "Estimate": 1,
             "TokenX": 1,
             "tiktoken": 2
           }
@@ -458,11 +464,11 @@
       "winnersByTokenizer": [
         {
           "tokenizer": "Estimate",
-          "format": "SDIF AI",
-          "tokens": 174,
+          "format": "SDIF",
+          "tokens": 176,
           "jsonCompactTokens": 284,
-          "savedTokens": 110,
-          "ratio": 61.267605633802816
+          "savedTokens": 108,
+          "ratio": 61.97183098591549
         },
         {
           "tokenizer": "TokenX",
@@ -474,35 +480,14 @@
         },
         {
           "tokenizer": "tiktoken",
-          "format": "SDIF AI",
-          "tokens": 258,
+          "format": "SDIF",
+          "tokens": 259,
           "jsonCompactTokens": 346,
-          "savedTokens": 88,
-          "ratio": 74.56647398843931
+          "savedTokens": 87,
+          "ratio": 74.85549132947978
         }
       ],
       "formats": [
-        {
-          "format": "SDIF AI",
-          "bytes": 696,
-          "tokens": {
-            "Estimate": 174,
-            "TokenX": 214,
-            "tiktoken": 258,
-            "Llama3": null,
-            "Claude": null
-          },
-          "ratios": {
-            "Estimate": 61.267605633802816,
-            "TokenX": 57.06666666666666,
-            "tiktoken": 74.56647398843931
-          },
-          "ranks": {
-            "Estimate": 1,
-            "TokenX": 2,
-            "tiktoken": 1
-          }
-        },
         {
           "format": "SDIF",
           "bytes": 702,
@@ -519,8 +504,29 @@
             "tiktoken": 74.85549132947978
           },
           "ranks": {
-            "Estimate": 2,
+            "Estimate": 1,
             "TokenX": 1,
+            "tiktoken": 1
+          }
+        },
+        {
+          "format": "SDIF AI",
+          "bytes": 709,
+          "tokens": {
+            "Estimate": 178,
+            "TokenX": 221,
+            "tiktoken": 267,
+            "Llama3": null,
+            "Claude": null
+          },
+          "ratios": {
+            "Estimate": 62.676056338028175,
+            "TokenX": 58.93333333333334,
+            "tiktoken": 77.16763005780348
+          },
+          "ranks": {
+            "Estimate": 2,
+            "TokenX": 2,
             "tiktoken": 2
           }
         },
@@ -658,18 +664,18 @@
         {
           "tokenizer": "Estimate",
           "format": "SDIF AI",
-          "tokens": 73179,
+          "tokens": 73183,
           "jsonCompactTokens": 118574,
-          "savedTokens": 45395,
-          "ratio": 61.715890498760274
+          "savedTokens": 45391,
+          "ratio": 61.71926391957765
         },
         {
           "tokenizer": "TokenX",
-          "format": "SDIF AI",
-          "tokens": 81733,
+          "format": "SDIF",
+          "tokens": 81738,
           "jsonCompactTokens": 150426,
-          "savedTokens": 68693,
-          "ratio": 54.3343570925239
+          "savedTokens": 68688,
+          "ratio": 54.33768098599976
         },
         {
           "tokenizer": "tiktoken",
@@ -704,22 +710,22 @@
         },
         {
           "format": "SDIF AI",
-          "bytes": 292716,
+          "bytes": 292729,
           "tokens": {
-            "Estimate": 73179,
-            "TokenX": 81733,
-            "tiktoken": 103205,
+            "Estimate": 73183,
+            "TokenX": 81740,
+            "tiktoken": 103214,
             "Llama3": null,
             "Claude": null
           },
           "ratios": {
-            "Estimate": 61.715890498760274,
-            "TokenX": 54.3343570925239,
-            "tiktoken": 74.81767699467893
+            "Estimate": 61.71926391957765,
+            "TokenX": 54.33901054339011,
+            "tiktoken": 74.82420147598265
           },
           "ranks": {
             "Estimate": 1,
-            "TokenX": 1,
+            "TokenX": 2,
             "tiktoken": 2
           }
         },
@@ -761,7 +767,7 @@
           },
           "ranks": {
             "Estimate": 3,
-            "TokenX": 2,
+            "TokenX": 1,
             "tiktoken": 4
           }
         },
@@ -857,47 +863,47 @@
         {
           "tokenizer": "Estimate",
           "format": "SDIF AI",
-          "tokens": 41843,
+          "tokens": 41846,
           "jsonCompactTokens": 73106,
-          "savedTokens": 31263,
-          "ratio": 57.2360681749788
+          "savedTokens": 31260,
+          "ratio": 57.24017180532378
         },
         {
           "tokenizer": "TokenX",
-          "format": "SDIF AI",
-          "tokens": 46327,
+          "format": "SDIF",
+          "tokens": 46333,
           "jsonCompactTokens": 90705,
-          "savedTokens": 44378,
-          "ratio": 51.074361942561055
+          "savedTokens": 44372,
+          "ratio": 51.08097679290006
         },
         {
           "tokenizer": "tiktoken",
           "format": "SDIF AI",
-          "tokens": 37829,
+          "tokens": 37838,
           "jsonCompactTokens": 62704,
-          "savedTokens": 24875,
-          "ratio": 60.329484562388366
+          "savedTokens": 24866,
+          "ratio": 60.34383771370248
         }
       ],
       "formats": [
         {
           "format": "SDIF AI",
-          "bytes": 167369,
+          "bytes": 167382,
           "tokens": {
-            "Estimate": 41843,
-            "TokenX": 46327,
-            "tiktoken": 37829,
+            "Estimate": 41846,
+            "TokenX": 46334,
+            "tiktoken": 37838,
             "Llama3": null,
             "Claude": null
           },
           "ratios": {
-            "Estimate": 57.2360681749788,
-            "TokenX": 51.074361942561055,
-            "tiktoken": 60.329484562388366
+            "Estimate": 57.24017180532378,
+            "TokenX": 51.08207926795656,
+            "tiktoken": 60.34383771370248
           },
           "ranks": {
             "Estimate": 1,
-            "TokenX": 1,
+            "TokenX": 2,
             "tiktoken": 1
           }
         },
@@ -960,7 +966,7 @@
           },
           "ranks": {
             "Estimate": 3,
-            "TokenX": 2,
+            "TokenX": 1,
             "tiktoken": 4
           }
         },
@@ -1056,47 +1062,47 @@
         {
           "tokenizer": "Estimate",
           "format": "SDIF AI",
-          "tokens": 69895,
+          "tokens": 69899,
           "jsonCompactTokens": 129721,
-          "savedTokens": 59826,
-          "ratio": 53.88102157707696
+          "savedTokens": 59822,
+          "ratio": 53.88410511790689
         },
         {
           "tokenizer": "TokenX",
-          "format": "SDIF AI",
-          "tokens": 73765,
+          "format": "SDIF",
+          "tokens": 73770,
           "jsonCompactTokens": 157533,
-          "savedTokens": 83768,
-          "ratio": 46.82510965956339
+          "savedTokens": 83763,
+          "ratio": 46.82828359772238
         },
         {
           "tokenizer": "tiktoken",
           "format": "SDIF AI",
-          "tokens": 86155,
+          "tokens": 86164,
           "jsonCompactTokens": 132864,
-          "savedTokens": 46709,
-          "ratio": 64.84450264932563
+          "savedTokens": 46700,
+          "ratio": 64.85127649325626
         }
       ],
       "formats": [
         {
           "format": "SDIF AI",
-          "bytes": 279580,
+          "bytes": 279593,
           "tokens": {
-            "Estimate": 69895,
-            "TokenX": 73765,
-            "tiktoken": 86155,
+            "Estimate": 69899,
+            "TokenX": 73772,
+            "tiktoken": 86164,
             "Llama3": null,
             "Claude": null
           },
           "ratios": {
-            "Estimate": 53.88102157707696,
-            "TokenX": 46.82510965956339,
-            "tiktoken": 64.84450264932563
+            "Estimate": 53.88410511790689,
+            "TokenX": 46.829553172985975,
+            "tiktoken": 64.85127649325626
           },
           "ranks": {
             "Estimate": 1,
-            "TokenX": 1,
+            "TokenX": 2,
             "tiktoken": 1
           }
         },
@@ -1138,7 +1144,7 @@
           },
           "ranks": {
             "Estimate": 4,
-            "TokenX": 2,
+            "TokenX": 1,
             "tiktoken": 3
           }
         },
@@ -1255,47 +1261,47 @@
         {
           "tokenizer": "Estimate",
           "format": "SDIF AI",
-          "tokens": 123089,
+          "tokens": 123092,
           "jsonCompactTokens": 201176,
-          "savedTokens": 78087,
-          "ratio": 61.1847337654591
+          "savedTokens": 78084,
+          "ratio": 61.18622499701753
         },
         {
           "tokenizer": "TokenX",
-          "format": "SDIF AI",
-          "tokens": 143535,
+          "format": "SDIF",
+          "tokens": 143540,
           "jsonCompactTokens": 255952,
-          "savedTokens": 112417,
-          "ratio": 56.07887416390574
+          "savedTokens": 112412,
+          "ratio": 56.08082765518535
         },
         {
           "tokenizer": "tiktoken",
           "format": "SDIF AI",
-          "tokens": 141145,
+          "tokens": 141154,
           "jsonCompactTokens": 213238,
-          "savedTokens": 72093,
-          "ratio": 66.19129798628762
+          "savedTokens": 72084,
+          "ratio": 66.19551862238437
         }
       ],
       "formats": [
         {
           "format": "SDIF AI",
-          "bytes": 492354,
+          "bytes": 492367,
           "tokens": {
-            "Estimate": 123089,
-            "TokenX": 143535,
-            "tiktoken": 141145,
+            "Estimate": 123092,
+            "TokenX": 143542,
+            "tiktoken": 141154,
             "Llama3": null,
             "Claude": null
           },
           "ratios": {
-            "Estimate": 61.1847337654591,
-            "TokenX": 56.07887416390574,
-            "tiktoken": 66.19129798628762
+            "Estimate": 61.18622499701753,
+            "TokenX": 56.08160905169719,
+            "tiktoken": 66.19551862238437
           },
           "ranks": {
             "Estimate": 1,
-            "TokenX": 1,
+            "TokenX": 2,
             "tiktoken": 1
           }
         },
@@ -1337,7 +1343,7 @@
           },
           "ranks": {
             "Estimate": 3,
-            "TokenX": 2,
+            "TokenX": 1,
             "tiktoken": 3
           }
         },
@@ -1454,47 +1460,47 @@
         {
           "tokenizer": "Estimate",
           "format": "SDIF AI",
-          "tokens": 100680,
+          "tokens": 100684,
           "jsonCompactTokens": 220956,
-          "savedTokens": 120276,
-          "ratio": 45.565632976701245
+          "savedTokens": 120272,
+          "ratio": 45.56744329187711
         },
         {
           "tokenizer": "TokenX",
-          "format": "SDIF AI",
-          "tokens": 148687,
+          "format": "SDIF",
+          "tokens": 148692,
           "jsonCompactTokens": 307177,
-          "savedTokens": 158490,
-          "ratio": 48.40434016869752
+          "savedTokens": 158485,
+          "ratio": 48.4059678947317
         },
         {
           "tokenizer": "tiktoken",
           "format": "SDIF AI",
-          "tokens": 154451,
+          "tokens": 154460,
           "jsonCompactTokens": 253063,
-          "savedTokens": 98612,
-          "ratio": 61.032628238818
+          "savedTokens": 98603,
+          "ratio": 61.03618466547856
         }
       ],
       "formats": [
         {
           "format": "SDIF AI",
-          "bytes": 402720,
+          "bytes": 402733,
           "tokens": {
-            "Estimate": 100680,
-            "TokenX": 148687,
-            "tiktoken": 154451,
+            "Estimate": 100684,
+            "TokenX": 148694,
+            "tiktoken": 154460,
             "Llama3": null,
             "Claude": null
           },
           "ratios": {
-            "Estimate": 45.565632976701245,
-            "TokenX": 48.40434016869752,
-            "tiktoken": 61.032628238818
+            "Estimate": 45.56744329187711,
+            "TokenX": 48.40661898514537,
+            "tiktoken": 61.03618466547856
           },
           "ranks": {
             "Estimate": 1,
-            "TokenX": 1,
+            "TokenX": 2,
             "tiktoken": 1
           }
         },
@@ -1536,7 +1542,7 @@
           },
           "ranks": {
             "Estimate": 3,
-            "TokenX": 2,
+            "TokenX": 1,
             "tiktoken": 3
           }
         },
@@ -1660,11 +1666,11 @@
         },
         {
           "tokenizer": "TokenX",
-          "format": "SDIF AI",
-          "tokens": 59885,
+          "format": "SDIF",
+          "tokens": 59890,
           "jsonCompactTokens": 146598,
-          "savedTokens": 86713,
-          "ratio": 40.84980695507442
+          "savedTokens": 86708,
+          "ratio": 40.8532176428055
         },
         {
           "tokenizer": "tiktoken",
@@ -1699,22 +1705,22 @@
         },
         {
           "format": "SDIF AI",
-          "bytes": 221599,
+          "bytes": 221612,
           "tokens": {
-            "Estimate": 55400,
-            "TokenX": 59885,
-            "tiktoken": 75464,
+            "Estimate": 55403,
+            "TokenX": 59892,
+            "tiktoken": 75473,
             "Llama3": null,
             "Claude": null
           },
           "ratios": {
-            "Estimate": 49.517340007150516,
-            "TokenX": 40.84980695507442,
-            "tiktoken": 59.64024910694528
+            "Estimate": 49.52002145155524,
+            "TokenX": 40.854581917897924,
+            "tiktoken": 59.64736193215945
           },
           "ranks": {
             "Estimate": 2,
-            "TokenX": 1,
+            "TokenX": 2,
             "tiktoken": 2
           }
         },
@@ -1756,7 +1762,7 @@
           },
           "ranks": {
             "Estimate": 3,
-            "TokenX": 2,
+            "TokenX": 1,
             "tiktoken": 4
           }
         },
@@ -1852,47 +1858,47 @@
         {
           "tokenizer": "Estimate",
           "format": "SDIF AI",
-          "tokens": 85512,
+          "tokens": 85515,
           "jsonCompactTokens": 148025,
-          "savedTokens": 62513,
-          "ratio": 57.76862016551259
+          "savedTokens": 62510,
+          "ratio": 57.77064685019423
         },
         {
           "tokenizer": "TokenX",
-          "format": "SDIF AI",
-          "tokens": 81684,
+          "format": "SDIF",
+          "tokens": 81689,
           "jsonCompactTokens": 188515,
-          "savedTokens": 106831,
-          "ratio": 43.33023897302602
+          "savedTokens": 106826,
+          "ratio": 43.33289128186086
         },
         {
           "tokenizer": "tiktoken",
           "format": "SDIF AI",
-          "tokens": 94839,
+          "tokens": 94848,
           "jsonCompactTokens": 149622,
-          "savedTokens": 54783,
-          "ratio": 63.38573204475277
+          "savedTokens": 54774,
+          "ratio": 63.39174720295144
         }
       ],
       "formats": [
         {
           "format": "SDIF AI",
-          "bytes": 342047,
+          "bytes": 342060,
           "tokens": {
-            "Estimate": 85512,
-            "TokenX": 81684,
-            "tiktoken": 94839,
+            "Estimate": 85515,
+            "TokenX": 81691,
+            "tiktoken": 94848,
             "Llama3": null,
             "Claude": null
           },
           "ratios": {
-            "Estimate": 57.76862016551259,
-            "TokenX": 43.33023897302602,
-            "tiktoken": 63.38573204475277
+            "Estimate": 57.77064685019423,
+            "TokenX": 43.333952205394795,
+            "tiktoken": 63.39174720295144
           },
           "ranks": {
             "Estimate": 1,
-            "TokenX": 1,
+            "TokenX": 2,
             "tiktoken": 1
           }
         },
@@ -1934,7 +1940,7 @@
           },
           "ranks": {
             "Estimate": 3,
-            "TokenX": 2,
+            "TokenX": 1,
             "tiktoken": 3
           }
         },
@@ -2051,47 +2057,47 @@
         {
           "tokenizer": "Estimate",
           "format": "SDIF AI",
-          "tokens": 95944,
+          "tokens": 95948,
           "jsonCompactTokens": 139832,
-          "savedTokens": 43888,
-          "ratio": 68.61376508953602
+          "savedTokens": 43884,
+          "ratio": 68.61662566508382
         },
         {
           "tokenizer": "TokenX",
-          "format": "SDIF AI",
-          "tokens": 91318,
+          "format": "SDIF",
+          "tokens": 91323,
           "jsonCompactTokens": 160800,
-          "savedTokens": 69482,
-          "ratio": 56.789800995024876
+          "savedTokens": 69477,
+          "ratio": 56.792910447761194
         },
         {
           "tokenizer": "tiktoken",
           "format": "SDIF AI",
-          "tokens": 99633,
+          "tokens": 99642,
           "jsonCompactTokens": 134533,
-          "savedTokens": 34900,
-          "ratio": 74.05840946087578
+          "savedTokens": 34891,
+          "ratio": 74.06509926932425
         }
       ],
       "formats": [
         {
           "format": "SDIF AI",
-          "bytes": 383776,
+          "bytes": 383789,
           "tokens": {
-            "Estimate": 95944,
-            "TokenX": 91318,
-            "tiktoken": 99633,
+            "Estimate": 95948,
+            "TokenX": 91325,
+            "tiktoken": 99642,
             "Llama3": null,
             "Claude": null
           },
           "ratios": {
-            "Estimate": 68.61376508953602,
-            "TokenX": 56.789800995024876,
-            "tiktoken": 74.05840946087578
+            "Estimate": 68.61662566508382,
+            "TokenX": 56.79415422885572,
+            "tiktoken": 74.06509926932425
           },
           "ranks": {
             "Estimate": 1,
-            "TokenX": 1,
+            "TokenX": 2,
             "tiktoken": 1
           }
         },
@@ -2133,7 +2139,7 @@
           },
           "ranks": {
             "Estimate": 3,
-            "TokenX": 2,
+            "TokenX": 1,
             "tiktoken": 3
           }
         },
@@ -2249,11 +2255,11 @@
       "winnersByTokenizer": [
         {
           "tokenizer": "Estimate",
-          "format": "SDIF AI",
-          "tokens": 206,
+          "format": "SDIF",
+          "tokens": 208,
           "jsonCompactTokens": 332,
-          "savedTokens": 126,
-          "ratio": 62.048192771084345
+          "savedTokens": 124,
+          "ratio": 62.65060240963856
         },
         {
           "tokenizer": "TokenX",
@@ -2265,35 +2271,14 @@
         },
         {
           "tokenizer": "tiktoken",
-          "format": "SDIF AI",
-          "tokens": 299,
+          "format": "SDIF",
+          "tokens": 307,
           "jsonCompactTokens": 404,
-          "savedTokens": 105,
-          "ratio": 74.00990099009901
+          "savedTokens": 97,
+          "ratio": 75.99009900990099
         }
       ],
       "formats": [
-        {
-          "format": "SDIF AI",
-          "bytes": 823,
-          "tokens": {
-            "Estimate": 206,
-            "TokenX": 249,
-            "tiktoken": 299,
-            "Llama3": null,
-            "Claude": null
-          },
-          "ratios": {
-            "Estimate": 62.048192771084345,
-            "TokenX": 56.20767494356659,
-            "tiktoken": 74.00990099009901
-          },
-          "ranks": {
-            "Estimate": 1,
-            "TokenX": 2,
-            "tiktoken": 1
-          }
-        },
         {
           "format": "SDIF",
           "bytes": 832,
@@ -2310,8 +2295,29 @@
             "tiktoken": 75.99009900990099
           },
           "ranks": {
-            "Estimate": 2,
+            "Estimate": 1,
             "TokenX": 1,
+            "tiktoken": 1
+          }
+        },
+        {
+          "format": "SDIF AI",
+          "bytes": 836,
+          "tokens": {
+            "Estimate": 209,
+            "TokenX": 256,
+            "tiktoken": 308,
+            "Llama3": null,
+            "Claude": null
+          },
+          "ratios": {
+            "Estimate": 62.951807228915655,
+            "TokenX": 57.78781038374717,
+            "tiktoken": 76.23762376237624
+          },
+          "ranks": {
+            "Estimate": 2,
+            "TokenX": 2,
             "tiktoken": 2
           }
         },
@@ -2449,18 +2455,18 @@
         {
           "tokenizer": "Estimate",
           "format": "SDIF AI",
-          "tokens": 18476,
+          "tokens": 18479,
           "jsonCompactTokens": 34890,
-          "savedTokens": 16414,
-          "ratio": 52.955001433075374
+          "savedTokens": 16411,
+          "ratio": 52.96359988535397
         },
         {
           "tokenizer": "TokenX",
-          "format": "SDIF AI",
-          "tokens": 20702,
+          "format": "SDIF",
+          "tokens": 20707,
           "jsonCompactTokens": 45845,
-          "savedTokens": 25143,
-          "ratio": 45.1565056167521
+          "savedTokens": 25138,
+          "ratio": 45.16741193150835
         },
         {
           "tokenizer": "tiktoken",
@@ -2495,22 +2501,22 @@
         },
         {
           "format": "SDIF AI",
-          "bytes": 73903,
+          "bytes": 73916,
           "tokens": {
-            "Estimate": 18476,
-            "TokenX": 20702,
-            "tiktoken": 26707,
+            "Estimate": 18479,
+            "TokenX": 20709,
+            "tiktoken": 26716,
             "Llama3": null,
             "Claude": null
           },
           "ratios": {
-            "Estimate": 52.955001433075374,
-            "TokenX": 45.1565056167521,
-            "tiktoken": 67.00536906016357
+            "Estimate": 52.96359988535397,
+            "TokenX": 45.17177445741084,
+            "tiktoken": 67.02794921973005
           },
           "ranks": {
             "Estimate": 1,
-            "TokenX": 1,
+            "TokenX": 2,
             "tiktoken": 2
           }
         },
@@ -2552,7 +2558,7 @@
           },
           "ranks": {
             "Estimate": 3,
-            "TokenX": 2,
+            "TokenX": 1,
             "tiktoken": 4
           }
         },
@@ -2648,47 +2654,47 @@
         {
           "tokenizer": "Estimate",
           "format": "SDIF AI",
-          "tokens": 13983,
+          "tokens": 13986,
           "jsonCompactTokens": 28689,
-          "savedTokens": 14706,
-          "ratio": 48.73993516678867
+          "savedTokens": 14703,
+          "ratio": 48.75039213635888
         },
         {
           "tokenizer": "TokenX",
-          "format": "SDIF AI",
-          "tokens": 16712,
+          "format": "SDIF",
+          "tokens": 16717,
           "jsonCompactTokens": 39221,
-          "savedTokens": 22509,
-          "ratio": 42.60982636852707
+          "savedTokens": 22504,
+          "ratio": 42.622574641136126
         },
         {
           "tokenizer": "tiktoken",
           "format": "SDIF AI",
-          "tokens": 18170,
+          "tokens": 18179,
           "jsonCompactTokens": 32253,
-          "savedTokens": 14083,
-          "ratio": 56.335844727622245
+          "savedTokens": 14074,
+          "ratio": 56.36374910861005
         }
       ],
       "formats": [
         {
           "format": "SDIF AI",
-          "bytes": 55931,
+          "bytes": 55944,
           "tokens": {
-            "Estimate": 13983,
-            "TokenX": 16712,
-            "tiktoken": 18170,
+            "Estimate": 13986,
+            "TokenX": 16719,
+            "tiktoken": 18179,
             "Llama3": null,
             "Claude": null
           },
           "ratios": {
-            "Estimate": 48.73993516678867,
-            "TokenX": 42.60982636852707,
-            "tiktoken": 56.335844727622245
+            "Estimate": 48.75039213635888,
+            "TokenX": 42.62767395017975,
+            "tiktoken": 56.36374910861005
           },
           "ranks": {
             "Estimate": 1,
-            "TokenX": 1,
+            "TokenX": 2,
             "tiktoken": 1
           }
         },
@@ -2730,7 +2736,7 @@
           },
           "ranks": {
             "Estimate": 3,
-            "TokenX": 2,
+            "TokenX": 1,
             "tiktoken": 3
           }
         },
@@ -2847,47 +2853,47 @@
         {
           "tokenizer": "Estimate",
           "format": "SDIF AI",
-          "tokens": 12446,
+          "tokens": 12449,
           "jsonCompactTokens": 24394,
-          "savedTokens": 11948,
-          "ratio": 51.02074280560793
+          "savedTokens": 11945,
+          "ratio": 51.0330409116996
         },
         {
           "tokenizer": "TokenX",
-          "format": "SDIF AI",
-          "tokens": 16021,
+          "format": "SDIF",
+          "tokens": 16026,
           "jsonCompactTokens": 33616,
-          "savedTokens": 17595,
-          "ratio": 47.658852927177534
+          "savedTokens": 17590,
+          "ratio": 47.67372679676345
         },
         {
           "tokenizer": "tiktoken",
           "format": "SDIF AI",
-          "tokens": 18106,
+          "tokens": 18115,
           "jsonCompactTokens": 28086,
-          "savedTokens": 9980,
-          "ratio": 64.46628213344727
+          "savedTokens": 9971,
+          "ratio": 64.49832656839706
         }
       ],
       "formats": [
         {
           "format": "SDIF AI",
-          "bytes": 49782,
+          "bytes": 49795,
           "tokens": {
-            "Estimate": 12446,
-            "TokenX": 16021,
-            "tiktoken": 18106,
+            "Estimate": 12449,
+            "TokenX": 16028,
+            "tiktoken": 18115,
             "Llama3": null,
             "Claude": null
           },
           "ratios": {
-            "Estimate": 51.02074280560793,
-            "TokenX": 47.658852927177534,
-            "tiktoken": 64.46628213344727
+            "Estimate": 51.0330409116996,
+            "TokenX": 47.67967634459781,
+            "tiktoken": 64.49832656839706
           },
           "ranks": {
             "Estimate": 1,
-            "TokenX": 1,
+            "TokenX": 2,
             "tiktoken": 1
           }
         },
@@ -2908,7 +2914,7 @@
           },
           "ranks": {
             "Estimate": 3,
-            "TokenX": 2,
+            "TokenX": 1,
             "tiktoken": 2
           }
         },
@@ -3046,47 +3052,47 @@
         {
           "tokenizer": "Estimate",
           "format": "SDIF AI",
-          "tokens": 11888,
+          "tokens": 11892,
           "jsonCompactTokens": 27843,
-          "savedTokens": 15955,
-          "ratio": 42.69654850411234
+          "savedTokens": 15951,
+          "ratio": 42.710914772115075
         },
         {
           "tokenizer": "TokenX",
-          "format": "SDIF AI",
-          "tokens": 14784,
+          "format": "SDIF",
+          "tokens": 14789,
           "jsonCompactTokens": 37474,
-          "savedTokens": 22690,
-          "ratio": 39.45135293803704
+          "savedTokens": 22685,
+          "ratio": 39.464695522228745
         },
         {
           "tokenizer": "tiktoken",
           "format": "SDIF AI",
-          "tokens": 21319,
+          "tokens": 21328,
           "jsonCompactTokens": 33936,
-          "savedTokens": 12617,
-          "ratio": 62.82119283356907
+          "savedTokens": 12608,
+          "ratio": 62.847713342762844
         }
       ],
       "formats": [
         {
           "format": "SDIF AI",
-          "bytes": 47552,
+          "bytes": 47565,
           "tokens": {
-            "Estimate": 11888,
-            "TokenX": 14784,
-            "tiktoken": 21319,
+            "Estimate": 11892,
+            "TokenX": 14791,
+            "tiktoken": 21328,
             "Llama3": null,
             "Claude": null
           },
           "ratios": {
-            "Estimate": 42.69654850411234,
-            "TokenX": 39.45135293803704,
-            "tiktoken": 62.82119283356907
+            "Estimate": 42.710914772115075,
+            "TokenX": 39.470032555905426,
+            "tiktoken": 62.847713342762844
           },
           "ranks": {
             "Estimate": 1,
-            "TokenX": 1,
+            "TokenX": 2,
             "tiktoken": 1
           }
         },
@@ -3128,7 +3134,7 @@
           },
           "ranks": {
             "Estimate": 3,
-            "TokenX": 2,
+            "TokenX": 1,
             "tiktoken": 3
           }
         },
@@ -3260,35 +3266,14 @@
         },
         {
           "tokenizer": "tiktoken",
-          "format": "SDIF AI",
-          "tokens": 251,
+          "format": "SDIF",
+          "tokens": 252,
           "jsonCompactTokens": 302,
-          "savedTokens": 51,
-          "ratio": 83.11258278145695
+          "savedTokens": 50,
+          "ratio": 83.44370860927152
         }
       ],
       "formats": [
-        {
-          "format": "SDIF AI",
-          "bytes": 1000,
-          "tokens": {
-            "Estimate": 250,
-            "TokenX": 274,
-            "tiktoken": 251,
-            "Llama3": null,
-            "Claude": null
-          },
-          "ratios": {
-            "Estimate": 78.86435331230284,
-            "TokenX": 70.4370179948586,
-            "tiktoken": 83.11258278145695
-          },
-          "ranks": {
-            "Estimate": 2,
-            "TokenX": 2,
-            "tiktoken": 1
-          }
-        },
         {
           "format": "SDIF",
           "bytes": 984,
@@ -3307,6 +3292,27 @@
           "ranks": {
             "Estimate": 1,
             "TokenX": 1,
+            "tiktoken": 1
+          }
+        },
+        {
+          "format": "SDIF AI",
+          "bytes": 1013,
+          "tokens": {
+            "Estimate": 254,
+            "TokenX": 281,
+            "tiktoken": 260,
+            "Llama3": null,
+            "Claude": null
+          },
+          "ratios": {
+            "Estimate": 80.12618296529969,
+            "TokenX": 72.23650385604114,
+            "tiktoken": 86.09271523178808
+          },
+          "ranks": {
+            "Estimate": 3,
+            "TokenX": 2,
             "tiktoken": 2
           }
         },
@@ -3326,7 +3332,7 @@
             "tiktoken": 91.3907284768212
           },
           "ranks": {
-            "Estimate": 3,
+            "Estimate": 2,
             "TokenX": 3,
             "tiktoken": 3
           }
@@ -3443,51 +3449,30 @@
       "winnersByTokenizer": [
         {
           "tokenizer": "Estimate",
-          "format": "SDIF AI",
-          "tokens": 166,
+          "format": "SDIF",
+          "tokens": 169,
           "jsonCompactTokens": 240,
-          "savedTokens": 74,
-          "ratio": 69.16666666666667
+          "savedTokens": 71,
+          "ratio": 70.41666666666667
         },
         {
           "tokenizer": "TokenX",
-          "format": "SDIF AI",
-          "tokens": 190,
+          "format": "SDIF",
+          "tokens": 192,
           "jsonCompactTokens": 301,
-          "savedTokens": 111,
-          "ratio": 63.12292358803987
+          "savedTokens": 109,
+          "ratio": 63.78737541528239
         },
         {
           "tokenizer": "tiktoken",
-          "format": "SDIF AI",
-          "tokens": 149,
+          "format": "SDIF",
+          "tokens": 154,
           "jsonCompactTokens": 205,
-          "savedTokens": 56,
-          "ratio": 72.6829268292683
+          "savedTokens": 51,
+          "ratio": 75.1219512195122
         }
       ],
       "formats": [
-        {
-          "format": "SDIF AI",
-          "bytes": 662,
-          "tokens": {
-            "Estimate": 166,
-            "TokenX": 190,
-            "tiktoken": 149,
-            "Llama3": null,
-            "Claude": null
-          },
-          "ratios": {
-            "Estimate": 69.16666666666667,
-            "TokenX": 63.12292358803987,
-            "tiktoken": 72.6829268292683
-          },
-          "ranks": {
-            "Estimate": 1,
-            "TokenX": 1,
-            "tiktoken": 1
-          }
-        },
         {
           "format": "SDIF",
           "bytes": 674,
@@ -3502,6 +3487,27 @@
             "Estimate": 70.41666666666667,
             "TokenX": 63.78737541528239,
             "tiktoken": 75.1219512195122
+          },
+          "ranks": {
+            "Estimate": 1,
+            "TokenX": 1,
+            "tiktoken": 1
+          }
+        },
+        {
+          "format": "SDIF AI",
+          "bytes": 675,
+          "tokens": {
+            "Estimate": 169,
+            "TokenX": 197,
+            "tiktoken": 158,
+            "Llama3": null,
+            "Claude": null
+          },
+          "ratios": {
+            "Estimate": 70.41666666666667,
+            "TokenX": 65.4485049833887,
+            "tiktoken": 77.07317073170732
           },
           "ranks": {
             "Estimate": 2,
@@ -3643,47 +3649,47 @@
         {
           "tokenizer": "Estimate",
           "format": "SDIF AI",
-          "tokens": 275,
+          "tokens": 278,
           "jsonCompactTokens": 529,
-          "savedTokens": 254,
-          "ratio": 51.98487712665406
+          "savedTokens": 251,
+          "ratio": 52.55198487712666
         },
         {
           "tokenizer": "TokenX",
-          "format": "SDIF AI",
-          "tokens": 291,
+          "format": "SDIF",
+          "tokens": 296,
           "jsonCompactTokens": 665,
-          "savedTokens": 374,
-          "ratio": 43.75939849624061
+          "savedTokens": 369,
+          "ratio": 44.51127819548872
         },
         {
           "tokenizer": "tiktoken",
           "format": "SDIF AI",
-          "tokens": 298,
+          "tokens": 307,
           "jsonCompactTokens": 534,
-          "savedTokens": 236,
-          "ratio": 55.80524344569289
+          "savedTokens": 227,
+          "ratio": 57.490636704119844
         }
       ],
       "formats": [
         {
           "format": "SDIF AI",
-          "bytes": 1097,
+          "bytes": 1110,
           "tokens": {
-            "Estimate": 275,
-            "TokenX": 291,
-            "tiktoken": 298,
+            "Estimate": 278,
+            "TokenX": 298,
+            "tiktoken": 307,
             "Llama3": null,
             "Claude": null
           },
           "ratios": {
-            "Estimate": 51.98487712665406,
-            "TokenX": 43.75939849624061,
-            "tiktoken": 55.80524344569289
+            "Estimate": 52.55198487712666,
+            "TokenX": 44.81203007518797,
+            "tiktoken": 57.490636704119844
           },
           "ranks": {
             "Estimate": 1,
-            "TokenX": 1,
+            "TokenX": 2,
             "tiktoken": 1
           }
         },
@@ -3704,7 +3710,7 @@
           },
           "ranks": {
             "Estimate": 3,
-            "TokenX": 2,
+            "TokenX": 1,
             "tiktoken": 2
           }
         },
@@ -3857,35 +3863,14 @@
         },
         {
           "tokenizer": "tiktoken",
-          "format": "SDIF AI",
-          "tokens": 253,
+          "format": "SDIF",
+          "tokens": 259,
           "jsonCompactTokens": 350,
-          "savedTokens": 97,
-          "ratio": 72.28571428571429
+          "savedTokens": 91,
+          "ratio": 74.0
         }
       ],
       "formats": [
-        {
-          "format": "SDIF AI",
-          "bytes": 908,
-          "tokens": {
-            "Estimate": 227,
-            "TokenX": 229,
-            "tiktoken": 253,
-            "Llama3": null,
-            "Claude": null
-          },
-          "ratios": {
-            "Estimate": 64.48863636363636,
-            "TokenX": 56.26535626535627,
-            "tiktoken": 72.28571428571429
-          },
-          "ranks": {
-            "Estimate": 2,
-            "TokenX": 2,
-            "tiktoken": 1
-          }
-        },
         {
           "format": "SDIF",
           "bytes": 902,
@@ -3904,6 +3889,27 @@
           "ranks": {
             "Estimate": 1,
             "TokenX": 1,
+            "tiktoken": 1
+          }
+        },
+        {
+          "format": "SDIF AI",
+          "bytes": 921,
+          "tokens": {
+            "Estimate": 231,
+            "TokenX": 236,
+            "tiktoken": 262,
+            "Llama3": null,
+            "Claude": null
+          },
+          "ratios": {
+            "Estimate": 65.625,
+            "TokenX": 57.98525798525799,
+            "tiktoken": 74.85714285714286
+          },
+          "ranks": {
+            "Estimate": 2,
+            "TokenX": 2,
             "tiktoken": 2
           }
         },
@@ -4041,47 +4047,47 @@
         {
           "tokenizer": "Estimate",
           "format": "SDIF AI",
-          "tokens": 410,
+          "tokens": 414,
           "jsonCompactTokens": 791,
-          "savedTokens": 381,
-          "ratio": 51.8331226295828
+          "savedTokens": 377,
+          "ratio": 52.338811630847026
         },
         {
           "tokenizer": "TokenX",
-          "format": "SDIF AI",
-          "tokens": 516,
+          "format": "SDIF",
+          "tokens": 521,
           "jsonCompactTokens": 1126,
-          "savedTokens": 610,
-          "ratio": 45.825932504440495
+          "savedTokens": 605,
+          "ratio": 46.26998223801066
         },
         {
           "tokenizer": "tiktoken",
           "format": "SDIF AI",
-          "tokens": 544,
+          "tokens": 553,
           "jsonCompactTokens": 912,
-          "savedTokens": 368,
-          "ratio": 59.64912280701754
+          "savedTokens": 359,
+          "ratio": 60.635964912280706
         }
       ],
       "formats": [
         {
           "format": "SDIF AI",
-          "bytes": 1640,
+          "bytes": 1653,
           "tokens": {
-            "Estimate": 410,
-            "TokenX": 516,
-            "tiktoken": 544,
+            "Estimate": 414,
+            "TokenX": 523,
+            "tiktoken": 553,
             "Llama3": null,
             "Claude": null
           },
           "ratios": {
-            "Estimate": 51.8331226295828,
-            "TokenX": 45.825932504440495,
-            "tiktoken": 59.64912280701754
+            "Estimate": 52.338811630847026,
+            "TokenX": 46.44760213143872,
+            "tiktoken": 60.635964912280706
           },
           "ranks": {
             "Estimate": 1,
-            "TokenX": 1,
+            "TokenX": 2,
             "tiktoken": 1
           }
         },
@@ -4123,7 +4129,7 @@
           },
           "ranks": {
             "Estimate": 3,
-            "TokenX": 2,
+            "TokenX": 1,
             "tiktoken": 3
           }
         },
@@ -4240,47 +4246,47 @@
         {
           "tokenizer": "Estimate",
           "format": "SDIF AI",
-          "tokens": 641,
+          "tokens": 644,
           "jsonCompactTokens": 1037,
-          "savedTokens": 396,
-          "ratio": 61.81292189006751
+          "savedTokens": 393,
+          "ratio": 62.10221793635486
         },
         {
           "tokenizer": "TokenX",
-          "format": "SDIF AI",
-          "tokens": 693,
+          "format": "SDIF",
+          "tokens": 698,
           "jsonCompactTokens": 1304,
-          "savedTokens": 611,
-          "ratio": 53.144171779141104
+          "savedTokens": 606,
+          "ratio": 53.52760736196319
         },
         {
           "tokenizer": "tiktoken",
           "format": "SDIF AI",
-          "tokens": 706,
+          "tokens": 715,
           "jsonCompactTokens": 1064,
-          "savedTokens": 358,
-          "ratio": 66.35338345864662
+          "savedTokens": 349,
+          "ratio": 67.19924812030075
         }
       ],
       "formats": [
         {
           "format": "SDIF AI",
-          "bytes": 2563,
+          "bytes": 2576,
           "tokens": {
-            "Estimate": 641,
-            "TokenX": 693,
-            "tiktoken": 706,
+            "Estimate": 644,
+            "TokenX": 700,
+            "tiktoken": 715,
             "Llama3": null,
             "Claude": null
           },
           "ratios": {
-            "Estimate": 61.81292189006751,
-            "TokenX": 53.144171779141104,
-            "tiktoken": 66.35338345864662
+            "Estimate": 62.10221793635486,
+            "TokenX": 53.68098159509203,
+            "tiktoken": 67.19924812030075
           },
           "ranks": {
             "Estimate": 1,
-            "TokenX": 1,
+            "TokenX": 2,
             "tiktoken": 1
           }
         },
@@ -4301,7 +4307,7 @@
           },
           "ranks": {
             "Estimate": 3,
-            "TokenX": 2,
+            "TokenX": 1,
             "tiktoken": 2
           }
         },
@@ -4439,47 +4445,47 @@
         {
           "tokenizer": "Estimate",
           "format": "SDIF AI",
-          "tokens": 352,
+          "tokens": 355,
           "jsonCompactTokens": 661,
-          "savedTokens": 309,
-          "ratio": 53.25264750378215
+          "savedTokens": 306,
+          "ratio": 53.70650529500757
         },
         {
           "tokenizer": "TokenX",
-          "format": "SDIF AI",
-          "tokens": 391,
+          "format": "SDIF",
+          "tokens": 396,
           "jsonCompactTokens": 848,
-          "savedTokens": 457,
-          "ratio": 46.10849056603774
+          "savedTokens": 452,
+          "ratio": 46.69811320754717
         },
         {
           "tokenizer": "tiktoken",
           "format": "SDIF AI",
-          "tokens": 476,
+          "tokens": 485,
           "jsonCompactTokens": 718,
-          "savedTokens": 242,
-          "ratio": 66.29526462395543
+          "savedTokens": 233,
+          "ratio": 67.54874651810584
         }
       ],
       "formats": [
         {
           "format": "SDIF AI",
-          "bytes": 1406,
+          "bytes": 1419,
           "tokens": {
-            "Estimate": 352,
-            "TokenX": 391,
-            "tiktoken": 476,
+            "Estimate": 355,
+            "TokenX": 398,
+            "tiktoken": 485,
             "Llama3": null,
             "Claude": null
           },
           "ratios": {
-            "Estimate": 53.25264750378215,
-            "TokenX": 46.10849056603774,
-            "tiktoken": 66.29526462395543
+            "Estimate": 53.70650529500757,
+            "TokenX": 46.93396226415094,
+            "tiktoken": 67.54874651810584
           },
           "ranks": {
             "Estimate": 1,
-            "TokenX": 1,
+            "TokenX": 2,
             "tiktoken": 1
           }
         },
@@ -4542,7 +4548,7 @@
           },
           "ranks": {
             "Estimate": 3,
-            "TokenX": 2,
+            "TokenX": 1,
             "tiktoken": 4
           }
         },
@@ -4638,43 +4644,43 @@
         {
           "tokenizer": "Estimate",
           "format": "SDIF AI",
-          "tokens": 173,
+          "tokens": 176,
           "jsonCompactTokens": 254,
-          "savedTokens": 81,
-          "ratio": 68.11023622047244
+          "savedTokens": 78,
+          "ratio": 69.29133858267717
         },
         {
           "tokenizer": "TokenX",
           "format": "SDIF AI",
-          "tokens": 180,
+          "tokens": 187,
           "jsonCompactTokens": 300,
-          "savedTokens": 120,
-          "ratio": 60.0
+          "savedTokens": 113,
+          "ratio": 62.33333333333333
         },
         {
           "tokenizer": "tiktoken",
           "format": "SDIF AI",
-          "tokens": 149,
+          "tokens": 158,
           "jsonCompactTokens": 225,
-          "savedTokens": 76,
-          "ratio": 66.22222222222223
+          "savedTokens": 67,
+          "ratio": 70.22222222222221
         }
       ],
       "formats": [
         {
           "format": "SDIF AI",
-          "bytes": 691,
+          "bytes": 704,
           "tokens": {
-            "Estimate": 173,
-            "TokenX": 180,
-            "tiktoken": 149,
+            "Estimate": 176,
+            "TokenX": 187,
+            "tiktoken": 158,
             "Llama3": null,
             "Claude": null
           },
           "ratios": {
-            "Estimate": 68.11023622047244,
-            "TokenX": 60.0,
-            "tiktoken": 66.22222222222223
+            "Estimate": 69.29133858267717,
+            "TokenX": 62.33333333333333,
+            "tiktoken": 70.22222222222221
           },
           "ranks": {
             "Estimate": 1,
@@ -4837,47 +4843,47 @@
         {
           "tokenizer": "Estimate",
           "format": "SDIF AI",
-          "tokens": 4652,
+          "tokens": 4655,
           "jsonCompactTokens": 16230,
-          "savedTokens": 11578,
-          "ratio": 28.662969808995687
+          "savedTokens": 11575,
+          "ratio": 28.681454097350585
         },
         {
           "tokenizer": "TokenX",
-          "format": "SDIF AI",
-          "tokens": 7878,
+          "format": "SDIF",
+          "tokens": 7883,
           "jsonCompactTokens": 29998,
-          "savedTokens": 22120,
-          "ratio": 26.26175078338556
+          "savedTokens": 22115,
+          "ratio": 26.278418561237416
         },
         {
           "tokenizer": "tiktoken",
           "format": "SDIF AI",
-          "tokens": 15224,
+          "tokens": 15233,
           "jsonCompactTokens": 36372,
-          "savedTokens": 21148,
-          "ratio": 41.856373034202136
+          "savedTokens": 21139,
+          "ratio": 41.88111734301111
         }
       ],
       "formats": [
         {
           "format": "SDIF AI",
-          "bytes": 18606,
+          "bytes": 18619,
           "tokens": {
-            "Estimate": 4652,
-            "TokenX": 7878,
-            "tiktoken": 15224,
+            "Estimate": 4655,
+            "TokenX": 7885,
+            "tiktoken": 15233,
             "Llama3": null,
             "Claude": null
           },
           "ratios": {
-            "Estimate": 28.662969808995687,
-            "TokenX": 26.26175078338556,
-            "tiktoken": 41.856373034202136
+            "Estimate": 28.681454097350585,
+            "TokenX": 26.285085672378163,
+            "tiktoken": 41.88111734301111
           },
           "ranks": {
             "Estimate": 1,
-            "TokenX": 1,
+            "TokenX": 2,
             "tiktoken": 1
           }
         },
@@ -4919,7 +4925,7 @@
           },
           "ranks": {
             "Estimate": 4,
-            "TokenX": 2,
+            "TokenX": 1,
             "tiktoken": 3
           }
         },

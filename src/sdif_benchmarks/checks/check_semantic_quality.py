@@ -15,6 +15,7 @@ import sys
 from pathlib import Path
 
 from sdif_benchmarks.infra import BENCHMARK_DIR as BENCHMARK_ROOT
+
 ROOT = Path(os.environ.get("SDIF_CORE_REPO") or str(BENCHMARK_ROOT.parent)).expanduser().resolve()
 SRC = ROOT / "src"
 if str(SRC) not in sys.path:

@@ -1,6 +1,6 @@
 # SDIF Round-Trip Fidelity Benchmark — Document Detail
 
-- Generated at: `2026-05-24T12:17:12Z`
+- Generated at: `2026-05-24T14:37:35Z`
 
 ## agent-workflow
 
@@ -10,9 +10,9 @@
 | JSON Pretty | 100.0% | 100.0% | 100.0% | 100.0% |  |
 | YAML | 100.0% | 100.0% | 100.0% | 100.0% |  |
 | SDIF | 100.0% | 100.0% | 100.0% | 100.0% |  |
+| SDIF AI | 100.0% | 100.0% | 100.0% | 100.0% |  |
 | TOON | 100.0% | 100.0% | 100.0% | 100.0% |  |
 | CSV Bundle | 98.8% | 100.0% | 100.0% | 96.6% | see diagnostics |
-| SDIF AI | 96.3% | 89.7% | 100.0% | 100.0% | see diagnostics |
 | XML | 94.2% | 100.0% | 84.5% | 100.0% | see diagnostics |
 
 ## audit-provenance
@@ -24,9 +24,9 @@
 | YAML | 100.0% | 100.0% | 100.0% | 100.0% |  |
 | XML | 100.0% | 100.0% | 100.0% | 100.0% |  |
 | SDIF | 100.0% | 100.0% | 100.0% | 100.0% |  |
+| SDIF AI | 100.0% | 100.0% | 100.0% | 100.0% |  |
 | TOON | 100.0% | 100.0% | 100.0% | 100.0% |  |
 | CSV Bundle | 98.5% | 100.0% | 100.0% | 95.7% | see diagnostics |
-| SDIF AI | 95.2% | 87.0% | 100.0% | 100.0% | see diagnostics |
 
 ## deep-hierarchy-project
 
@@ -140,9 +140,9 @@
 | JSON Pretty | 100.0% | 100.0% | 100.0% | 100.0% |  |
 | YAML | 100.0% | 100.0% | 100.0% | 100.0% |  |
 | SDIF | 100.0% | 100.0% | 100.0% | 100.0% |  |
+| SDIF AI | 100.0% | 100.0% | 100.0% | 100.0% |  |
 | TOON | 100.0% | 100.0% | 100.0% | 100.0% |  |
 | CSV Bundle | 98.8% | 100.0% | 100.0% | 96.4% | see diagnostics |
-| SDIF AI | 94.7% | 85.7% | 100.0% | 100.0% | see diagnostics |
 | XML | 93.2% | 100.0% | 82.1% | 100.0% | see diagnostics |
 
 ## medium-invoice-batch

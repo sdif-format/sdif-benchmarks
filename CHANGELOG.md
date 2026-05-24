@@ -4,6 +4,19 @@
 
 ### Changed
 
+- **Scorecard Refinement**: Restricted the public benchmark scorecard to exactly four core dimensions (`token_efficiency`, `context_packing`, `roundtrip_fidelity`, and `operability`) in `run_suite.py` and `suite_dashboard.html`.
+- **Mutation Sensitivity Reclassification**: Classified mutation sensitivity as an experimental track labeled `Mutation Sensitivity — Full-resend baseline` with clear, defensive framing, moving it off the main scorecard.
+- **Defensive Operability Matrix**: Rewrote the operability capability matrix in `operability.py` to explicitly delineate native, external standard, and implemented features, accompanied by a defensive framing note.
+
+### Added
+
+- **Relation Ordering Normalization**: Implemented `canonicalize_relations_in_dict` in `roundtrip_fidelity.py` to recursively and deterministically sort relation lists (preserving duplicates) before comparison, ensuring different relation orderings do not cause false positive fidelity drops.
+- **Table Fidelity Regression Test**: Added `test_small_api_catalog_preserves_auth_in_sdif_ai` to verify that `small-api-catalog` retains the `auth` column name and achieves 100% table fidelity under SDIF AI.
+- **Dashboard & Index Unit Tests**: Added coverage for index building, scorecard constraints, experimental track mapping, and relation sorting in `tests/test_benchmark.py`.
+
+### Fixed
+
+
 - **Package Refactoring**: Relocated all flat benchmark runner scripts and helper files from `scripts/` and `src/` to a structured Python package named `sdif_benchmarks` under `src/sdif_benchmarks/`. Removed the legacy `scripts/` folder entirely.
 - **Entry Points & CLI**: Registered the main runner CLI command `sdif-benchmarks` (points to `sdif_benchmarks.run_suite:main`).
 - **Tests**: Replaced all dynamic file-loading routines (`importlib.util.spec_from_file_location`) in the test suites with standard imports from `sdif_benchmarks`.

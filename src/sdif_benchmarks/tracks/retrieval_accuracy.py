@@ -65,6 +65,7 @@ from pathlib import Path
 from typing import Any
 
 from sdif_benchmarks.infra import BENCHMARK_DIR as _BENCHMARK_DIR
+
 if str(_BENCHMARK_DIR) not in sys.path:
     sys.path.insert(0, str(_BENCHMARK_DIR))
 if str(_BENCHMARK_DIR / "src") not in sys.path:

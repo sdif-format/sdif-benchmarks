@@ -89,10 +89,10 @@ TRACKS = [
     {
         "id": "delta_compactness",
         "short": "delta",
-        "label": "Mutation Sensitivity",
+        "label": "Mutation Sensitivity — Full-resend baseline",
         "script": "delta_compactness.py",
         "optional": False,
-        "claim": "SDIF produces less noise on full-document re-send after mutation",
+        "claim": "This track measures full-document resend sensitivity after mutation. It is not a semantic patch/delta benchmark.",
     },
     {
         "id": "semantic_fidelity",
@@ -108,7 +108,7 @@ TRACKS = [
         "label": "Operability",
         "script": "operability.py",
         "optional": False,
-        "claim": "Documents format capability matrix: canonical forms, stable hashing, native relation support, and rule handling.",
+        "claim": "Format capability matrix for canonicalization, stable hashing, native relations, and rule declarations.",
     },
     {
         "id": "retrieval_accuracy",
@@ -270,6 +270,7 @@ def _extract_operability_scorecard(result_dir: Path) -> dict[str, Any]:
     sdif = next((row for row in summary.get("formats", []) if row.get("format") == "SDIF"), None)
     if not sdif:
         return {"metric": "unavailable", "value": None}
+
     enabled = sum(
         1
         for key in (
@@ -284,13 +285,14 @@ def _extract_operability_scorecard(result_dir: Path) -> dict[str, Any]:
         )
         if sdif.get(key) is True
     )
+
     return {
-        "metric": "sdifDeclaredCapabilities",
+        "metric": "sdifDocumentContractCapabilities",
         "value": enabled,
         "unit": "/8",
         "description": (
-            f"SDIF declares {enabled}/8 deterministic-workflow capabilities; "
-            f"rule evaluation support is {sdif.get('ruleEvaluationSupport')}"
+            f"SDIF implements {enabled}/8 benchmarked document-contract capabilities; "
+            "rule evaluation is intentionally outside this operability matrix."
         ),
     }
 
@@ -342,21 +344,37 @@ def _build_index(
 ) -> dict[str, Any]:
     scorecard = []
     artifacts = []
+    experimental_tracks = []
+    core_scorecard_tracks = {
+        "token_efficiency",
+        "context_packing",
+        "roundtrip_fidelity",
+        "operability",
+    }
     for entry in run_results:
         track = entry["track"]
         if not entry["ran"] or not entry["success"]:
             continue
         result_dir = benchmark_result_dir(track["id"])
-        scorecard_data = _SCORECARD_EXTRACTORS[track["id"]](result_dir)
-        scorecard.append(
-            {
-                "track": track["id"],
-                "label": track["label"],
-                "claim": track["claim"],
-                **scorecard_data,
-                "evidence": f"{track['id']}/summary.md",
-            }
-        )
+        if track["id"] in core_scorecard_tracks:
+            scorecard_data = _SCORECARD_EXTRACTORS[track["id"]](result_dir)
+            scorecard.append(
+                {
+                    "track": track["id"],
+                    "label": track["label"],
+                    "claim": track["claim"],
+                    **scorecard_data,
+                    "evidence": f"{track['id']}/summary.md",
+                }
+            )
+        elif track["id"] == "delta_compactness":
+            experimental_tracks.append(
+                {
+                    "track": track["id"],
+                    "label": track["label"],
+                    "claim": track["claim"],
+                }
+            )
         artifacts.append(
             {
                 "track": track["id"],
@@ -379,6 +397,7 @@ def _build_index(
         },
         "tracks": [e["track"]["id"] for e in run_results if e["ran"] and e["success"]],
         "scorecard": scorecard,
+        "experimental_tracks": experimental_tracks,
         "artifacts": artifacts,
     }
 

@@ -1,6 +1,7 @@
+@sdif.ai 1.0
 kind BenchmarkReport
 version "1.0"
-generatedAt 2026-05-24T12:15:24Z
+generatedAt 2026-05-24T14:35:52Z
 runDirectory results/token_efficiency
 semanticSource examples/golden/<document>/equivalent.json
 ratiosBaseline "JSON Compact"
@@ -15,58 +16,59 @@ tiktoken	available	model tokenizer	Encoding: cl100k_base.
 Llama3	disabled	model tokenizer	Disabled through SDIF_BENCHMARK_LLAMA=0.
 Claude	disabled	API tokenizer	Disabled. Set SDIF_BENCHMARK_CLAUDE=1 to enable API token counting.
 consensusRanking[format,avgRank,medianRatio,bestRatio,worstRatio,rankSpread,coverage,coverageTotal]:
-SDIF AI	1.1527777777777777	57.15136742082273	26.26175078338556	83.11258278145695	1.0	72	72
-SDIF	2.4305555555555554	60.005310242791005	26.278418561237416	83.44370860927152	3.0	72	72
+SDIF AI	1.5416666666666667	57.88653418450258	26.285085672378163	86.09271523178808	2.0	72	72
+SDIF	2.0555555555555554	60.005310242791005	26.278418561237416	83.44370860927152	3.0	72	72
 CSV Bundle	2.888888888888889	62.26899938202881	28.69993838570548	95.36423841059603	3.0	72	72
-TOON	3.5277777777777777	63.88190146465214	29.35304990757856	91.3907284768212	1.0	72	72
+TOON	3.513888888888889	63.88190146465214	29.35304990757856	91.3907284768212	2.0	72	72
 YAML	5.347222222222222	95.05369873183115	75.6983798919928	137.77906081601233	1.0	72	72
 JSON Compact	5.652777777777778	100.0	100.0	100.0	1.0	72	72
 JSON Pretty	7.0	141.55463146070997	100.74004933662243	192.47073321010475	0.0	72	72
 XML	8.0	176.5941222145116	141.544776119403	229.77202711028957	0.0	72	72
 winnersByTokenizer[tokenizer,format,wins,documents]:
-Estimate	SDIF AI	21	24
-Estimate	SDIF	2	24
+Estimate	SDIF AI	17	24
+Estimate	SDIF	6	24
 Estimate	CSV Bundle	1	24
-TokenX	SDIF AI	19	24
-TokenX	SDIF	5	24
-tiktoken	SDIF AI	21	24
+TokenX	SDIF	23	24
+TokenX	SDIF AI	1	24
+tiktoken	SDIF AI	16	24
+tiktoken	SDIF	5	24
 tiktoken	CSV Bundle	3	24
 directComparison:
   __item:
     format "SDIF AI"
-    consensusAvgRank 1.1527777777777777
-    consensusMedianRatio 57.15136742082273
-    consensusBestRatio 26.26175078338556
-    consensusWorstRatio 83.11258278145695
-    consensusRankSpread 1.0
+    consensusAvgRank 1.5416666666666667
+    consensusMedianRatio 57.88653418450258
+    consensusBestRatio 26.285085672378163
+    consensusWorstRatio 86.09271523178808
+    consensusRankSpread 2.0
     coverage 72
     coverageTotal 72
-    totalWins 61
+    totalWins 34
     avgRatioByTokenizer:
-      Estimate 56.55344312445467
-      TokenX 49.89737520570798
-      tiktoken 65.50595326106622
+      Estimate 56.97393884859974
+      TokenX 50.592126511385906
+      tiktoken 66.6119451698166
   __item:
     format SDIF
-    consensusAvgRank 2.4305555555555554
+    consensusAvgRank 2.0555555555555554
     consensusMedianRatio 60.005310242791005
     consensusBestRatio 26.278418561237416
     consensusWorstRatio 83.44370860927152
     consensusRankSpread 3.0
     coverage 72
     coverageTotal 72
-    totalWins 7
+    totalWins 34
     avgRatioByTokenizer:
       Estimate 58.17817298537913
       TokenX 49.82092169856904
       tiktoken 68.87796932814761
   __item:
     format TOON
-    consensusAvgRank 3.5277777777777777
+    consensusAvgRank 3.513888888888889
     consensusMedianRatio 63.88190146465214
     consensusBestRatio 29.35304990757856
     consensusWorstRatio 91.3907284768212
-    consensusRankSpread 1.0
+    consensusRankSpread 2.0
     coverage 72
     coverageTotal 72
     totalWins 0
@@ -106,25 +108,25 @@ documents:
   __item:
     name agent-workflow
     winnersByTokenizer[tokenizer,format,tokens,jsonCompactTokens,savedTokens,ratio]:
-    Estimate	SDIF AI	157	286	129	54.89510489510489
+    Estimate	SDIF	159	286	127	55.59440559440559
     TokenX	SDIF	168	372	204	45.16129032258064
-    tiktoken	SDIF AI	206	320	114	64.375
+    tiktoken	SDIF AI	215	320	105	67.1875
     formats:
       __item:
         format "SDIF AI"
-        bytes 626
+        bytes 639
         tokens:
-          Estimate 157
-          TokenX 174
-          tiktoken 206
+          Estimate 160
+          TokenX 181
+          tiktoken 215
           Llama3 null
           Claude null
         ratios:
-          Estimate 54.89510489510489
-          TokenX 46.774193548387096
-          tiktoken 64.375
+          Estimate 55.94405594405595
+          TokenX 48.655913978494624
+          tiktoken 67.1875
         ranks:
-          Estimate 1
+          Estimate 2
           TokenX 2
           tiktoken 1
       __item:
@@ -141,7 +143,7 @@ documents:
           TokenX 45.16129032258064
           tiktoken 67.8125
         ranks:
-          Estimate 2
+          Estimate 1
           TokenX 1
           tiktoken 2
       __item:
@@ -249,27 +251,10 @@ documents:
   __item:
     name audit-provenance
     winnersByTokenizer[tokenizer,format,tokens,jsonCompactTokens,savedTokens,ratio]:
-    Estimate	SDIF AI	174	284	110	61.267605633802816
+    Estimate	SDIF	176	284	108	61.97183098591549
     TokenX	SDIF	210	375	165	56.00000000000001
-    tiktoken	SDIF AI	258	346	88	74.56647398843931
+    tiktoken	SDIF	259	346	87	74.85549132947978
     formats:
-      __item:
-        format "SDIF AI"
-        bytes 696
-        tokens:
-          Estimate 174
-          TokenX 214
-          tiktoken 258
-          Llama3 null
-          Claude null
-        ratios:
-          Estimate 61.267605633802816
-          TokenX 57.06666666666666
-          tiktoken 74.56647398843931
-        ranks:
-          Estimate 1
-          TokenX 2
-          tiktoken 1
       __item:
         format SDIF
         bytes 702
@@ -284,8 +269,25 @@ documents:
           TokenX 56.00000000000001
           tiktoken 74.85549132947978
         ranks:
-          Estimate 2
+          Estimate 1
           TokenX 1
+          tiktoken 1
+      __item:
+        format "SDIF AI"
+        bytes 709
+        tokens:
+          Estimate 178
+          TokenX 221
+          tiktoken 267
+          Llama3 null
+          Claude null
+        ratios:
+          Estimate 62.676056338028175
+          TokenX 58.93333333333334
+          tiktoken 77.16763005780348
+        ranks:
+          Estimate 2
+          TokenX 2
           tiktoken 2
       __item:
         format TOON
@@ -392,8 +394,8 @@ documents:
   __item:
     name deep-hierarchy-project
     winnersByTokenizer[tokenizer,format,tokens,jsonCompactTokens,savedTokens,ratio]:
-    Estimate	SDIF AI	73179	118574	45395	61.715890498760274
-    TokenX	SDIF AI	81733	150426	68693	54.3343570925239
+    Estimate	SDIF AI	73183	118574	45391	61.71926391957765
+    TokenX	SDIF	81738	150426	68688	54.33768098599976
     tiktoken	CSV Bundle	101645	137942	36297	73.68676690203128
     formats:
       __item:
@@ -415,20 +417,20 @@ documents:
           tiktoken 1
       __item:
         format "SDIF AI"
-        bytes 292716
+        bytes 292729
         tokens:
-          Estimate 73179
-          TokenX 81733
-          tiktoken 103205
+          Estimate 73183
+          TokenX 81740
+          tiktoken 103214
           Llama3 null
           Claude null
         ratios:
-          Estimate 61.715890498760274
-          TokenX 54.3343570925239
-          tiktoken 74.81767699467893
+          Estimate 61.71926391957765
+          TokenX 54.33901054339011
+          tiktoken 74.82420147598265
         ranks:
           Estimate 1
-          TokenX 1
+          TokenX 2
           tiktoken 2
       __item:
         format TOON
@@ -462,7 +464,7 @@ documents:
           tiktoken 78.25825346884923
         ranks:
           Estimate 3
-          TokenX 2
+          TokenX 1
           tiktoken 4
       __item:
         format "JSON Compact"
@@ -535,26 +537,26 @@ documents:
   __item:
     name github.openapi
     winnersByTokenizer[tokenizer,format,tokens,jsonCompactTokens,savedTokens,ratio]:
-    Estimate	SDIF AI	41843	73106	31263	57.2360681749788
-    TokenX	SDIF AI	46327	90705	44378	51.074361942561055
-    tiktoken	SDIF AI	37829	62704	24875	60.329484562388366
+    Estimate	SDIF AI	41846	73106	31260	57.24017180532378
+    TokenX	SDIF	46333	90705	44372	51.08097679290006
+    tiktoken	SDIF AI	37838	62704	24866	60.34383771370248
     formats:
       __item:
         format "SDIF AI"
-        bytes 167369
+        bytes 167382
         tokens:
-          Estimate 41843
-          TokenX 46327
-          tiktoken 37829
+          Estimate 41846
+          TokenX 46334
+          tiktoken 37838
           Llama3 null
           Claude null
         ratios:
-          Estimate 57.2360681749788
-          TokenX 51.074361942561055
-          tiktoken 60.329484562388366
+          Estimate 57.24017180532378
+          TokenX 51.08207926795656
+          tiktoken 60.34383771370248
         ranks:
           Estimate 1
-          TokenX 1
+          TokenX 2
           tiktoken 1
       __item:
         format "CSV Bundle"
@@ -605,7 +607,7 @@ documents:
           tiktoken 66.76926511865273
         ranks:
           Estimate 3
-          TokenX 2
+          TokenX 1
           tiktoken 4
       __item:
         format "JSON Compact"
@@ -678,26 +680,26 @@ documents:
   __item:
     name large-knowledge-graph
     winnersByTokenizer[tokenizer,format,tokens,jsonCompactTokens,savedTokens,ratio]:
-    Estimate	SDIF AI	69895	129721	59826	53.88102157707696
-    TokenX	SDIF AI	73765	157533	83768	46.82510965956339
-    tiktoken	SDIF AI	86155	132864	46709	64.84450264932563
+    Estimate	SDIF AI	69899	129721	59822	53.88410511790689
+    TokenX	SDIF	73770	157533	83763	46.82828359772238
+    tiktoken	SDIF AI	86164	132864	46700	64.85127649325626
     formats:
       __item:
         format "SDIF AI"
-        bytes 279580
+        bytes 279593
         tokens:
-          Estimate 69895
-          TokenX 73765
-          tiktoken 86155
+          Estimate 69899
+          TokenX 73772
+          tiktoken 86164
           Llama3 null
           Claude null
         ratios:
-          Estimate 53.88102157707696
-          TokenX 46.82510965956339
-          tiktoken 64.84450264932563
+          Estimate 53.88410511790689
+          TokenX 46.829553172985975
+          tiktoken 64.85127649325626
         ranks:
           Estimate 1
-          TokenX 1
+          TokenX 2
           tiktoken 1
       __item:
         format "CSV Bundle"
@@ -731,7 +733,7 @@ documents:
           tiktoken 68.4828094894027
         ranks:
           Estimate 4
-          TokenX 2
+          TokenX 1
           tiktoken 3
       __item:
         format TOON
@@ -821,26 +823,26 @@ documents:
   __item:
     name large-plan
     winnersByTokenizer[tokenizer,format,tokens,jsonCompactTokens,savedTokens,ratio]:
-    Estimate	SDIF AI	123089	201176	78087	61.1847337654591
-    TokenX	SDIF AI	143535	255952	112417	56.07887416390574
-    tiktoken	SDIF AI	141145	213238	72093	66.19129798628762
+    Estimate	SDIF AI	123092	201176	78084	61.18622499701753
+    TokenX	SDIF	143540	255952	112412	56.08082765518535
+    tiktoken	SDIF AI	141154	213238	72084	66.19551862238437
     formats:
       __item:
         format "SDIF AI"
-        bytes 492354
+        bytes 492367
         tokens:
-          Estimate 123089
-          TokenX 143535
-          tiktoken 141145
+          Estimate 123092
+          TokenX 143542
+          tiktoken 141154
           Llama3 null
           Claude null
         ratios:
-          Estimate 61.1847337654591
-          TokenX 56.07887416390574
-          tiktoken 66.19129798628762
+          Estimate 61.18622499701753
+          TokenX 56.08160905169719
+          tiktoken 66.19551862238437
         ranks:
           Estimate 1
-          TokenX 1
+          TokenX 2
           tiktoken 1
       __item:
         format "CSV Bundle"
@@ -874,7 +876,7 @@ documents:
           tiktoken 69.11010232697737
         ranks:
           Estimate 3
-          TokenX 2
+          TokenX 1
           tiktoken 3
       __item:
         format TOON
@@ -964,26 +966,26 @@ documents:
   __item:
     name large-registry
     winnersByTokenizer[tokenizer,format,tokens,jsonCompactTokens,savedTokens,ratio]:
-    Estimate	SDIF AI	100680	220956	120276	45.565632976701245
-    TokenX	SDIF AI	148687	307177	158490	48.40434016869752
-    tiktoken	SDIF AI	154451	253063	98612	61.032628238818
+    Estimate	SDIF AI	100684	220956	120272	45.56744329187711
+    TokenX	SDIF	148692	307177	158485	48.4059678947317
+    tiktoken	SDIF AI	154460	253063	98603	61.03618466547856
     formats:
       __item:
         format "SDIF AI"
-        bytes 402720
+        bytes 402733
         tokens:
-          Estimate 100680
-          TokenX 148687
-          tiktoken 154451
+          Estimate 100684
+          TokenX 148694
+          tiktoken 154460
           Llama3 null
           Claude null
         ratios:
-          Estimate 45.565632976701245
-          TokenX 48.40434016869752
-          tiktoken 61.032628238818
+          Estimate 45.56744329187711
+          TokenX 48.40661898514537
+          tiktoken 61.03618466547856
         ranks:
           Estimate 1
-          TokenX 1
+          TokenX 2
           tiktoken 1
       __item:
         format "CSV Bundle"
@@ -1017,7 +1019,7 @@ documents:
           tiktoken 65.66625701900317
         ranks:
           Estimate 3
-          TokenX 2
+          TokenX 1
           tiktoken 3
       __item:
         format TOON
@@ -1108,7 +1110,7 @@ documents:
     name large-schema-catalog
     winnersByTokenizer[tokenizer,format,tokens,jsonCompactTokens,savedTokens,ratio]:
     Estimate	CSV Bundle	53815	111880	58065	48.10064354665713
-    TokenX	SDIF AI	59885	146598	86713	40.84980695507442
+    TokenX	SDIF	59890	146598	86708	40.8532176428055
     tiktoken	CSV Bundle	71357	126532	55175	56.39442986754338
     formats:
       __item:
@@ -1130,20 +1132,20 @@ documents:
           tiktoken 1
       __item:
         format "SDIF AI"
-        bytes 221599
+        bytes 221612
         tokens:
-          Estimate 55400
-          TokenX 59885
-          tiktoken 75464
+          Estimate 55403
+          TokenX 59892
+          tiktoken 75473
           Llama3 null
           Claude null
         ratios:
-          Estimate 49.517340007150516
-          TokenX 40.84980695507442
-          tiktoken 59.64024910694528
+          Estimate 49.52002145155524
+          TokenX 40.854581917897924
+          tiktoken 59.64736193215945
         ranks:
           Estimate 2
-          TokenX 1
+          TokenX 2
           tiktoken 2
       __item:
         format TOON
@@ -1177,7 +1179,7 @@ documents:
           tiktoken 62.54860430563019
         ranks:
           Estimate 3
-          TokenX 2
+          TokenX 1
           tiktoken 4
       __item:
         format "JSON Compact"
@@ -1250,26 +1252,26 @@ documents:
   __item:
     name large-support-export
     winnersByTokenizer[tokenizer,format,tokens,jsonCompactTokens,savedTokens,ratio]:
-    Estimate	SDIF AI	85512	148025	62513	57.76862016551259
-    TokenX	SDIF AI	81684	188515	106831	43.33023897302602
-    tiktoken	SDIF AI	94839	149622	54783	63.38573204475277
+    Estimate	SDIF AI	85515	148025	62510	57.77064685019423
+    TokenX	SDIF	81689	188515	106826	43.33289128186086
+    tiktoken	SDIF AI	94848	149622	54774	63.39174720295144
     formats:
       __item:
         format "SDIF AI"
-        bytes 342047
+        bytes 342060
         tokens:
-          Estimate 85512
-          TokenX 81684
-          tiktoken 94839
+          Estimate 85515
+          TokenX 81691
+          tiktoken 94848
           Llama3 null
           Claude null
         ratios:
-          Estimate 57.76862016551259
-          TokenX 43.33023897302602
-          tiktoken 63.38573204475277
+          Estimate 57.77064685019423
+          TokenX 43.333952205394795
+          tiktoken 63.39174720295144
         ranks:
           Estimate 1
-          TokenX 1
+          TokenX 2
           tiktoken 1
       __item:
         format "CSV Bundle"
@@ -1303,7 +1305,7 @@ documents:
           tiktoken 66.85982007993478
         ranks:
           Estimate 3
-          TokenX 2
+          TokenX 1
           tiktoken 3
       __item:
         format TOON
@@ -1393,26 +1395,26 @@ documents:
   __item:
     name large-validation-report
     winnersByTokenizer[tokenizer,format,tokens,jsonCompactTokens,savedTokens,ratio]:
-    Estimate	SDIF AI	95944	139832	43888	68.61376508953602
-    TokenX	SDIF AI	91318	160800	69482	56.789800995024876
-    tiktoken	SDIF AI	99633	134533	34900	74.05840946087578
+    Estimate	SDIF AI	95948	139832	43884	68.61662566508382
+    TokenX	SDIF	91323	160800	69477	56.792910447761194
+    tiktoken	SDIF AI	99642	134533	34891	74.06509926932425
     formats:
       __item:
         format "SDIF AI"
-        bytes 383776
+        bytes 383789
         tokens:
-          Estimate 95944
-          TokenX 91318
-          tiktoken 99633
+          Estimate 95948
+          TokenX 91325
+          tiktoken 99642
           Llama3 null
           Claude null
         ratios:
-          Estimate 68.61376508953602
-          TokenX 56.789800995024876
-          tiktoken 74.05840946087578
+          Estimate 68.61662566508382
+          TokenX 56.79415422885572
+          tiktoken 74.06509926932425
         ranks:
           Estimate 1
-          TokenX 1
+          TokenX 2
           tiktoken 1
       __item:
         format "CSV Bundle"
@@ -1446,7 +1448,7 @@ documents:
           tiktoken 76.57229081340637
         ranks:
           Estimate 3
-          TokenX 2
+          TokenX 1
           tiktoken 3
       __item:
         format TOON
@@ -1536,27 +1538,10 @@ documents:
   __item:
     name llm-api-response
     winnersByTokenizer[tokenizer,format,tokens,jsonCompactTokens,savedTokens,ratio]:
-    Estimate	SDIF AI	206	332	126	62.048192771084345
+    Estimate	SDIF	208	332	124	62.65060240963856
     TokenX	SDIF	245	443	198	55.30474040632054
-    tiktoken	SDIF AI	299	404	105	74.00990099009901
+    tiktoken	SDIF	307	404	97	75.99009900990099
     formats:
-      __item:
-        format "SDIF AI"
-        bytes 823
-        tokens:
-          Estimate 206
-          TokenX 249
-          tiktoken 299
-          Llama3 null
-          Claude null
-        ratios:
-          Estimate 62.048192771084345
-          TokenX 56.20767494356659
-          tiktoken 74.00990099009901
-        ranks:
-          Estimate 1
-          TokenX 2
-          tiktoken 1
       __item:
         format SDIF
         bytes 832
@@ -1571,8 +1556,25 @@ documents:
           TokenX 55.30474040632054
           tiktoken 75.99009900990099
         ranks:
-          Estimate 2
+          Estimate 1
           TokenX 1
+          tiktoken 1
+      __item:
+        format "SDIF AI"
+        bytes 836
+        tokens:
+          Estimate 209
+          TokenX 256
+          tiktoken 308
+          Llama3 null
+          Claude null
+        ratios:
+          Estimate 62.951807228915655
+          TokenX 57.78781038374717
+          tiktoken 76.23762376237624
+        ranks:
+          Estimate 2
+          TokenX 2
           tiktoken 2
       __item:
         format "CSV Bundle"
@@ -1679,8 +1681,8 @@ documents:
   __item:
     name medium-invoice-batch
     winnersByTokenizer[tokenizer,format,tokens,jsonCompactTokens,savedTokens,ratio]:
-    Estimate	SDIF AI	18476	34890	16414	52.955001433075374
-    TokenX	SDIF AI	20702	45845	25143	45.1565056167521
+    Estimate	SDIF AI	18479	34890	16411	52.96359988535397
+    TokenX	SDIF	20707	45845	25138	45.16741193150835
     tiktoken	CSV Bundle	25965	39858	13893	65.1437603492398
     formats:
       __item:
@@ -1702,20 +1704,20 @@ documents:
           tiktoken 1
       __item:
         format "SDIF AI"
-        bytes 73903
+        bytes 73916
         tokens:
-          Estimate 18476
-          TokenX 20702
-          tiktoken 26707
+          Estimate 18479
+          TokenX 20709
+          tiktoken 26716
           Llama3 null
           Claude null
         ratios:
-          Estimate 52.955001433075374
-          TokenX 45.1565056167521
-          tiktoken 67.00536906016357
+          Estimate 52.96359988535397
+          TokenX 45.17177445741084
+          tiktoken 67.02794921973005
         ranks:
           Estimate 1
-          TokenX 1
+          TokenX 2
           tiktoken 2
       __item:
         format TOON
@@ -1749,7 +1751,7 @@ documents:
           tiktoken 69.46660645290783
         ranks:
           Estimate 3
-          TokenX 2
+          TokenX 1
           tiktoken 4
       __item:
         format "JSON Compact"
@@ -1822,26 +1824,26 @@ documents:
   __item:
     name medium-observability-run
     winnersByTokenizer[tokenizer,format,tokens,jsonCompactTokens,savedTokens,ratio]:
-    Estimate	SDIF AI	13983	28689	14706	48.73993516678867
-    TokenX	SDIF AI	16712	39221	22509	42.60982636852707
-    tiktoken	SDIF AI	18170	32253	14083	56.335844727622245
+    Estimate	SDIF AI	13986	28689	14703	48.75039213635888
+    TokenX	SDIF	16717	39221	22504	42.622574641136126
+    tiktoken	SDIF AI	18179	32253	14074	56.36374910861005
     formats:
       __item:
         format "SDIF AI"
-        bytes 55931
+        bytes 55944
         tokens:
-          Estimate 13983
-          TokenX 16712
-          tiktoken 18170
+          Estimate 13986
+          TokenX 16719
+          tiktoken 18179
           Llama3 null
           Claude null
         ratios:
-          Estimate 48.73993516678867
-          TokenX 42.60982636852707
-          tiktoken 56.335844727622245
+          Estimate 48.75039213635888
+          TokenX 42.62767395017975
+          tiktoken 56.36374910861005
         ranks:
           Estimate 1
-          TokenX 1
+          TokenX 2
           tiktoken 1
       __item:
         format "CSV Bundle"
@@ -1875,7 +1877,7 @@ documents:
           tiktoken 63.78321396459244
         ranks:
           Estimate 3
-          TokenX 2
+          TokenX 1
           tiktoken 3
       __item:
         format TOON
@@ -1965,26 +1967,26 @@ documents:
   __item:
     name medium-policy-catalog
     winnersByTokenizer[tokenizer,format,tokens,jsonCompactTokens,savedTokens,ratio]:
-    Estimate	SDIF AI	12446	24394	11948	51.02074280560793
-    TokenX	SDIF AI	16021	33616	17595	47.658852927177534
-    tiktoken	SDIF AI	18106	28086	9980	64.46628213344727
+    Estimate	SDIF AI	12449	24394	11945	51.0330409116996
+    TokenX	SDIF	16026	33616	17590	47.67372679676345
+    tiktoken	SDIF AI	18115	28086	9971	64.49832656839706
     formats:
       __item:
         format "SDIF AI"
-        bytes 49782
+        bytes 49795
         tokens:
-          Estimate 12446
-          TokenX 16021
-          tiktoken 18106
+          Estimate 12449
+          TokenX 16028
+          tiktoken 18115
           Llama3 null
           Claude null
         ratios:
-          Estimate 51.02074280560793
-          TokenX 47.658852927177534
-          tiktoken 64.46628213344727
+          Estimate 51.0330409116996
+          TokenX 47.67967634459781
+          tiktoken 64.49832656839706
         ranks:
           Estimate 1
-          TokenX 1
+          TokenX 2
           tiktoken 1
       __item:
         format SDIF
@@ -2001,7 +2003,7 @@ documents:
           tiktoken 67.84162928149256
         ranks:
           Estimate 3
-          TokenX 2
+          TokenX 1
           tiktoken 2
       __item:
         format "CSV Bundle"
@@ -2108,26 +2110,26 @@ documents:
   __item:
     name medium-product-catalog
     winnersByTokenizer[tokenizer,format,tokens,jsonCompactTokens,savedTokens,ratio]:
-    Estimate	SDIF AI	11888	27843	15955	42.69654850411234
-    TokenX	SDIF AI	14784	37474	22690	39.45135293803704
-    tiktoken	SDIF AI	21319	33936	12617	62.82119283356907
+    Estimate	SDIF AI	11892	27843	15951	42.710914772115075
+    TokenX	SDIF	14789	37474	22685	39.464695522228745
+    tiktoken	SDIF AI	21328	33936	12608	62.847713342762844
     formats:
       __item:
         format "SDIF AI"
-        bytes 47552
+        bytes 47565
         tokens:
-          Estimate 11888
-          TokenX 14784
-          tiktoken 21319
+          Estimate 11892
+          TokenX 14791
+          tiktoken 21328
           Llama3 null
           Claude null
         ratios:
-          Estimate 42.69654850411234
-          TokenX 39.45135293803704
-          tiktoken 62.82119283356907
+          Estimate 42.710914772115075
+          TokenX 39.470032555905426
+          tiktoken 62.847713342762844
         ranks:
           Estimate 1
-          TokenX 1
+          TokenX 2
           tiktoken 1
       __item:
         format "CSV Bundle"
@@ -2161,7 +2163,7 @@ documents:
           tiktoken 67.59193776520509
         ranks:
           Estimate 3
-          TokenX 2
+          TokenX 1
           tiktoken 3
       __item:
         format TOON
@@ -2253,25 +2255,8 @@ documents:
     winnersByTokenizer[tokenizer,format,tokens,jsonCompactTokens,savedTokens,ratio]:
     Estimate	SDIF	246	317	71	77.60252365930599
     TokenX	SDIF	266	389	123	68.38046272493573
-    tiktoken	SDIF AI	251	302	51	83.11258278145695
+    tiktoken	SDIF	252	302	50	83.44370860927152
     formats:
-      __item:
-        format "SDIF AI"
-        bytes 1000
-        tokens:
-          Estimate 250
-          TokenX 274
-          tiktoken 251
-          Llama3 null
-          Claude null
-        ratios:
-          Estimate 78.86435331230284
-          TokenX 70.4370179948586
-          tiktoken 83.11258278145695
-        ranks:
-          Estimate 2
-          TokenX 2
-          tiktoken 1
       __item:
         format SDIF
         bytes 984
@@ -2288,6 +2273,23 @@ documents:
         ranks:
           Estimate 1
           TokenX 1
+          tiktoken 1
+      __item:
+        format "SDIF AI"
+        bytes 1013
+        tokens:
+          Estimate 254
+          TokenX 281
+          tiktoken 260
+          Llama3 null
+          Claude null
+        ratios:
+          Estimate 80.12618296529969
+          TokenX 72.23650385604114
+          tiktoken 86.09271523178808
+        ranks:
+          Estimate 3
+          TokenX 2
           tiktoken 2
       __item:
         format TOON
@@ -2303,7 +2305,7 @@ documents:
           TokenX 78.9203084832905
           tiktoken 91.3907284768212
         ranks:
-          Estimate 3
+          Estimate 2
           TokenX 3
           tiktoken 3
       __item:
@@ -2394,27 +2396,10 @@ documents:
   __item:
     name registry
     winnersByTokenizer[tokenizer,format,tokens,jsonCompactTokens,savedTokens,ratio]:
-    Estimate	SDIF AI	166	240	74	69.16666666666667
-    TokenX	SDIF AI	190	301	111	63.12292358803987
-    tiktoken	SDIF AI	149	205	56	72.6829268292683
+    Estimate	SDIF	169	240	71	70.41666666666667
+    TokenX	SDIF	192	301	109	63.78737541528239
+    tiktoken	SDIF	154	205	51	75.1219512195122
     formats:
-      __item:
-        format "SDIF AI"
-        bytes 662
-        tokens:
-          Estimate 166
-          TokenX 190
-          tiktoken 149
-          Llama3 null
-          Claude null
-        ratios:
-          Estimate 69.16666666666667
-          TokenX 63.12292358803987
-          tiktoken 72.6829268292683
-        ranks:
-          Estimate 1
-          TokenX 1
-          tiktoken 1
       __item:
         format SDIF
         bytes 674
@@ -2428,6 +2413,23 @@ documents:
           Estimate 70.41666666666667
           TokenX 63.78737541528239
           tiktoken 75.1219512195122
+        ranks:
+          Estimate 1
+          TokenX 1
+          tiktoken 1
+      __item:
+        format "SDIF AI"
+        bytes 675
+        tokens:
+          Estimate 169
+          TokenX 197
+          tiktoken 158
+          Llama3 null
+          Claude null
+        ratios:
+          Estimate 70.41666666666667
+          TokenX 65.4485049833887
+          tiktoken 77.07317073170732
         ranks:
           Estimate 2
           TokenX 2
@@ -2537,26 +2539,26 @@ documents:
   __item:
     name schema
     winnersByTokenizer[tokenizer,format,tokens,jsonCompactTokens,savedTokens,ratio]:
-    Estimate	SDIF AI	275	529	254	51.98487712665406
-    TokenX	SDIF AI	291	665	374	43.75939849624061
-    tiktoken	SDIF AI	298	534	236	55.80524344569289
+    Estimate	SDIF AI	278	529	251	52.55198487712666
+    TokenX	SDIF	296	665	369	44.51127819548872
+    tiktoken	SDIF AI	307	534	227	57.490636704119844
     formats:
       __item:
         format "SDIF AI"
-        bytes 1097
+        bytes 1110
         tokens:
-          Estimate 275
-          TokenX 291
-          tiktoken 298
+          Estimate 278
+          TokenX 298
+          tiktoken 307
           Llama3 null
           Claude null
         ratios:
-          Estimate 51.98487712665406
-          TokenX 43.75939849624061
-          tiktoken 55.80524344569289
+          Estimate 52.55198487712666
+          TokenX 44.81203007518797
+          tiktoken 57.490636704119844
         ranks:
           Estimate 1
-          TokenX 1
+          TokenX 2
           tiktoken 1
       __item:
         format SDIF
@@ -2573,7 +2575,7 @@ documents:
           tiktoken 60.48689138576779
         ranks:
           Estimate 3
-          TokenX 2
+          TokenX 1
           tiktoken 2
       __item:
         format "CSV Bundle"
@@ -2682,25 +2684,8 @@ documents:
     winnersByTokenizer[tokenizer,format,tokens,jsonCompactTokens,savedTokens,ratio]:
     Estimate	SDIF	226	352	126	64.20454545454545
     TokenX	SDIF	219	407	188	53.8083538083538
-    tiktoken	SDIF AI	253	350	97	72.28571428571429
+    tiktoken	SDIF	259	350	91	74.0
     formats:
-      __item:
-        format "SDIF AI"
-        bytes 908
-        tokens:
-          Estimate 227
-          TokenX 229
-          tiktoken 253
-          Llama3 null
-          Claude null
-        ratios:
-          Estimate 64.48863636363636
-          TokenX 56.26535626535627
-          tiktoken 72.28571428571429
-        ranks:
-          Estimate 2
-          TokenX 2
-          tiktoken 1
       __item:
         format SDIF
         bytes 902
@@ -2717,6 +2702,23 @@ documents:
         ranks:
           Estimate 1
           TokenX 1
+          tiktoken 1
+      __item:
+        format "SDIF AI"
+        bytes 921
+        tokens:
+          Estimate 231
+          TokenX 236
+          tiktoken 262
+          Llama3 null
+          Claude null
+        ratios:
+          Estimate 65.625
+          TokenX 57.98525798525799
+          tiktoken 74.85714285714286
+        ranks:
+          Estimate 2
+          TokenX 2
           tiktoken 2
       __item:
         format "CSV Bundle"
@@ -2823,26 +2825,26 @@ documents:
   __item:
     name small-api-catalog
     winnersByTokenizer[tokenizer,format,tokens,jsonCompactTokens,savedTokens,ratio]:
-    Estimate	SDIF AI	410	791	381	51.8331226295828
-    TokenX	SDIF AI	516	1126	610	45.825932504440495
-    tiktoken	SDIF AI	544	912	368	59.64912280701754
+    Estimate	SDIF AI	414	791	377	52.338811630847026
+    TokenX	SDIF	521	1126	605	46.26998223801066
+    tiktoken	SDIF AI	553	912	359	60.635964912280706
     formats:
       __item:
         format "SDIF AI"
-        bytes 1640
+        bytes 1653
         tokens:
-          Estimate 410
-          TokenX 516
-          tiktoken 544
+          Estimate 414
+          TokenX 523
+          tiktoken 553
           Llama3 null
           Claude null
         ratios:
-          Estimate 51.8331226295828
-          TokenX 45.825932504440495
-          tiktoken 59.64912280701754
+          Estimate 52.338811630847026
+          TokenX 46.44760213143872
+          tiktoken 60.635964912280706
         ranks:
           Estimate 1
-          TokenX 1
+          TokenX 2
           tiktoken 1
       __item:
         format "CSV Bundle"
@@ -2876,7 +2878,7 @@ documents:
           tiktoken 64.14473684210526
         ranks:
           Estimate 3
-          TokenX 2
+          TokenX 1
           tiktoken 3
       __item:
         format TOON
@@ -2966,26 +2968,26 @@ documents:
   __item:
     name small-incident
     winnersByTokenizer[tokenizer,format,tokens,jsonCompactTokens,savedTokens,ratio]:
-    Estimate	SDIF AI	641	1037	396	61.81292189006751
-    TokenX	SDIF AI	693	1304	611	53.144171779141104
-    tiktoken	SDIF AI	706	1064	358	66.35338345864662
+    Estimate	SDIF AI	644	1037	393	62.10221793635486
+    TokenX	SDIF	698	1304	606	53.52760736196319
+    tiktoken	SDIF AI	715	1064	349	67.19924812030075
     formats:
       __item:
         format "SDIF AI"
-        bytes 2563
+        bytes 2576
         tokens:
-          Estimate 641
-          TokenX 693
-          tiktoken 706
+          Estimate 644
+          TokenX 700
+          tiktoken 715
           Llama3 null
           Claude null
         ratios:
-          Estimate 61.81292189006751
-          TokenX 53.144171779141104
-          tiktoken 66.35338345864662
+          Estimate 62.10221793635486
+          TokenX 53.68098159509203
+          tiktoken 67.19924812030075
         ranks:
           Estimate 1
-          TokenX 1
+          TokenX 2
           tiktoken 1
       __item:
         format SDIF
@@ -3002,7 +3004,7 @@ documents:
           tiktoken 67.95112781954887
         ranks:
           Estimate 3
-          TokenX 2
+          TokenX 1
           tiktoken 2
       __item:
         format "CSV Bundle"
@@ -3109,26 +3111,26 @@ documents:
   __item:
     name small-invoice
     winnersByTokenizer[tokenizer,format,tokens,jsonCompactTokens,savedTokens,ratio]:
-    Estimate	SDIF AI	352	661	309	53.25264750378215
-    TokenX	SDIF AI	391	848	457	46.10849056603774
-    tiktoken	SDIF AI	476	718	242	66.29526462395543
+    Estimate	SDIF AI	355	661	306	53.70650529500757
+    TokenX	SDIF	396	848	452	46.69811320754717
+    tiktoken	SDIF AI	485	718	233	67.54874651810584
     formats:
       __item:
         format "SDIF AI"
-        bytes 1406
+        bytes 1419
         tokens:
-          Estimate 352
-          TokenX 391
-          tiktoken 476
+          Estimate 355
+          TokenX 398
+          tiktoken 485
           Llama3 null
           Claude null
         ratios:
-          Estimate 53.25264750378215
-          TokenX 46.10849056603774
-          tiktoken 66.29526462395543
+          Estimate 53.70650529500757
+          TokenX 46.93396226415094
+          tiktoken 67.54874651810584
         ranks:
           Estimate 1
-          TokenX 1
+          TokenX 2
           tiktoken 1
       __item:
         format "CSV Bundle"
@@ -3179,7 +3181,7 @@ documents:
           tiktoken 70.05571030640668
         ranks:
           Estimate 3
-          TokenX 2
+          TokenX 1
           tiktoken 4
       __item:
         format "JSON Compact"
@@ -3252,23 +3254,23 @@ documents:
   __item:
     name validation-report
     winnersByTokenizer[tokenizer,format,tokens,jsonCompactTokens,savedTokens,ratio]:
-    Estimate	SDIF AI	173	254	81	68.11023622047244
-    TokenX	SDIF AI	180	300	120	60.0
-    tiktoken	SDIF AI	149	225	76	66.22222222222223
+    Estimate	SDIF AI	176	254	78	69.29133858267717
+    TokenX	SDIF AI	187	300	113	62.33333333333333
+    tiktoken	SDIF AI	158	225	67	70.22222222222221
     formats:
       __item:
         format "SDIF AI"
-        bytes 691
+        bytes 704
         tokens:
-          Estimate 173
-          TokenX 180
-          tiktoken 149
+          Estimate 176
+          TokenX 187
+          tiktoken 158
           Llama3 null
           Claude null
         ratios:
-          Estimate 68.11023622047244
-          TokenX 60.0
-          tiktoken 66.22222222222223
+          Estimate 69.29133858267717
+          TokenX 62.33333333333333
+          tiktoken 70.22222222222221
         ranks:
           Estimate 1
           TokenX 1
@@ -3395,26 +3397,26 @@ documents:
   __item:
     name wide-table-survey
     winnersByTokenizer[tokenizer,format,tokens,jsonCompactTokens,savedTokens,ratio]:
-    Estimate	SDIF AI	4652	16230	11578	28.662969808995687
-    TokenX	SDIF AI	7878	29998	22120	26.26175078338556
-    tiktoken	SDIF AI	15224	36372	21148	41.856373034202136
+    Estimate	SDIF AI	4655	16230	11575	28.681454097350585
+    TokenX	SDIF	7883	29998	22115	26.278418561237416
+    tiktoken	SDIF AI	15233	36372	21139	41.88111734301111
     formats:
       __item:
         format "SDIF AI"
-        bytes 18606
+        bytes 18619
         tokens:
-          Estimate 4652
-          TokenX 7878
-          tiktoken 15224
+          Estimate 4655
+          TokenX 7885
+          tiktoken 15233
           Llama3 null
           Claude null
         ratios:
-          Estimate 28.662969808995687
-          TokenX 26.26175078338556
-          tiktoken 41.856373034202136
+          Estimate 28.681454097350585
+          TokenX 26.285085672378163
+          tiktoken 41.88111734301111
         ranks:
           Estimate 1
-          TokenX 1
+          TokenX 2
           tiktoken 1
       __item:
         format "CSV Bundle"
@@ -3448,7 +3450,7 @@ documents:
           tiktoken 42.48047948971737
         ranks:
           Estimate 4
-          TokenX 2
+          TokenX 1
           tiktoken 3
       __item:
         format TOON

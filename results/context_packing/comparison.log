@@ -4,7 +4,7 @@ Budgets: 4K, 8K, 32K, 128K tokens
 
 Document                     Format          Tokens       4K       8K      32K     128K
 ====================================================================================================
-agent-workflow               SDIF AI            206       19       39      159      636
+agent-workflow               SDIF AI            215       19       38      152      609
                              SDIF               217       18       37      151      604
                              CSV Bundle         241       16       33      135      543
                              TOON               246       16       33      133      532
@@ -13,8 +13,8 @@ agent-workflow               SDIF AI            206       19       39      159  
                              JSON Pretty        563        7       14       58      232
                              XML                692        5       11       47      189
 ----------------------------------------------------------------------------------------------------
-audit-provenance             SDIF AI            258       15       31      127      508
-                             SDIF               259       15       31      126      506
+audit-provenance             SDIF               259       15       31      126      506
+                             SDIF AI            267       15       30      122      490
                              TOON               287       14       28      114      456
                              CSV Bundle         293       13       27      111      447
                              JSON Compact       346       11       23       94      378
@@ -23,7 +23,7 @@ audit-provenance             SDIF AI            258       15       31      127  
                              XML                658        6       12       49      199
 ----------------------------------------------------------------------------------------------------
 deep-hierarchy-project       CSV Bundle      101645        0        0        0        1
-                             SDIF AI         103205        0        0        0        1
+                             SDIF AI         103214        0        0        0        1
                              TOON            106382        0        0        0        1
                              SDIF            107951        0        0        0        1
                              JSON Compact    137942        0        0        0        0
@@ -31,7 +31,7 @@ deep-hierarchy-project       CSV Bundle      101645        0        0        0  
                              JSON Pretty     204303        0        0        0        0
                              XML             243817        0        0        0        0
 ----------------------------------------------------------------------------------------------------
-github.openapi               SDIF AI          37829        0        0        0        3
+github.openapi               SDIF AI          37838        0        0        0        3
                              CSV Bundle       39074        0        0        0        3
                              TOON             41529        0        0        0        3
                              SDIF             41867        0        0        0        3
@@ -40,7 +40,7 @@ github.openapi               SDIF AI          37829        0        0        0  
                              JSON Pretty      97266        0        0        0        1
                              XML             117756        0        0        0        1
 ----------------------------------------------------------------------------------------------------
-large-knowledge-graph        SDIF AI          86155        0        0        0        1
+large-knowledge-graph        SDIF AI          86164        0        0        0        1
                              CSV Bundle       88495        0        0        0        1
                              SDIF             90989        0        0        0        1
                              TOON             93032        0        0        0        1
@@ -49,7 +49,7 @@ large-knowledge-graph        SDIF AI          86155        0        0        0  
                              JSON Pretty     213005        0        0        0        0
                              XML             254541        0        0        0        0
 ----------------------------------------------------------------------------------------------------
-large-plan                   SDIF AI         141145        0        0        0        0
+large-plan                   SDIF AI         141154        0        0        0        0
                              CSV Bundle      144465        0        0        0        0
                              SDIF            147369        0        0        0        0
                              TOON            150679        0        0        0        0
@@ -58,7 +58,7 @@ large-plan                   SDIF AI         141145        0        0        0  
                              JSON Pretty     302381        0        0        0        0
                              XML             366170        0        0        0        0
 ----------------------------------------------------------------------------------------------------
-large-registry               SDIF AI         154451        0        0        0        0
+large-registry               SDIF AI         154460        0        0        0        0
                              CSV Bundle      159696        0        0        0        0
                              SDIF            166177        0        0        0        0
                              TOON            171412        0        0        0        0
@@ -68,7 +68,7 @@ large-registry               SDIF AI         154451        0        0        0  
                              XML             494780        0        0        0        0
 ----------------------------------------------------------------------------------------------------
 large-schema-catalog         CSV Bundle       71357        0        0        0        1
-                             SDIF AI          75464        0        0        0        1
+                             SDIF AI          75473        0        0        0        1
                              TOON             78231        0        0        0        1
                              SDIF             79144        0        0        0        1
                              JSON Compact    126532        0        0        0        1
@@ -76,7 +76,7 @@ large-schema-catalog         CSV Bundle       71357        0        0        0  
                              JSON Pretty     199367        0        0        0        0
                              XML             235726        0        0        0        0
 ----------------------------------------------------------------------------------------------------
-large-support-export         SDIF AI          94839        0        0        0        1
+large-support-export         SDIF AI          94848        0        0        0        1
                              CSV Bundle       96002        0        0        0        1
                              SDIF            100037        0        0        0        1
                              TOON            101190        0        0        0        1
@@ -85,7 +85,7 @@ large-support-export         SDIF AI          94839        0        0        0  
                              JSON Pretty     229579        0        0        0        0
                              XML             274660        0        0        0        0
 ----------------------------------------------------------------------------------------------------
-large-validation-report      SDIF AI          99633        0        0        0        1
+large-validation-report      SDIF AI          99642        0        0        0        1
                              CSV Bundle       99656        0        0        0        1
                              SDIF            103015        0        0        0        1
                              TOON            103027        0        0        0        1
@@ -94,8 +94,8 @@ large-validation-report      SDIF AI          99633        0        0        0  
                              JSON Pretty     192034        0        0        0        0
                              XML             225834        0        0        0        0
 ----------------------------------------------------------------------------------------------------
-llm-api-response             SDIF AI            299       13       27      109      438
-                             SDIF               307       13       26      106      426
+llm-api-response             SDIF               307       13       26      106      426
+                             SDIF AI            308       13       26      106      425
                              CSV Bundle         331       12       24       98      395
                              TOON               337       12       24       97      388
                              JSON Compact       404       10       20       81      324
@@ -104,7 +104,7 @@ llm-api-response             SDIF AI            299       13       27      109  
                              XML                792        5       10       41      165
 ----------------------------------------------------------------------------------------------------
 medium-invoice-batch         CSV Bundle       25965        0        0        1        5
-                             SDIF AI          26707        0        0        1        4
+                             SDIF AI          26716        0        0        1        4
                              TOON             26932        0        0        1        4
                              SDIF             27688        0        0        1        4
                              JSON Compact     39858        0        0        0        3
@@ -112,7 +112,7 @@ medium-invoice-batch         CSV Bundle       25965        0        0        1  
                              JSON Pretty      58931        0        0        0        2
                              XML              70501        0        0        0        1
 ----------------------------------------------------------------------------------------------------
-medium-observability-run     SDIF AI          18170        0        0        1        7
+medium-observability-run     SDIF AI          18179        0        0        1        7
                              CSV Bundle       19018        0        0        1        6
                              SDIF             20572        0        0        1        6
                              TOON             21408        0        0        1        6
@@ -121,7 +121,7 @@ medium-observability-run     SDIF AI          18170        0        0        1  
                              JSON Pretty      52300        0        0        0        2
                              XML              63274        0        0        0        2
 ----------------------------------------------------------------------------------------------------
-medium-policy-catalog        SDIF AI          18106        0        0        1        7
+medium-policy-catalog        SDIF AI          18115        0        0        1        7
                              SDIF             19054        0        0        1        6
                              CSV Bundle       19159        0        0        1        6
                              TOON             20095        0        0        1        6
@@ -130,7 +130,7 @@ medium-policy-catalog        SDIF AI          18106        0        0        1  
                              JSON Pretty      43999        0        0        0        2
                              XML              52678        0        0        0        2
 ----------------------------------------------------------------------------------------------------
-medium-product-catalog       SDIF AI          21319        0        0        1        6
+medium-product-catalog       SDIF AI          21328        0        0        1        6
                              CSV Bundle       21445        0        0        1        6
                              SDIF             22938        0        0        1        5
                              TOON             23051        0        0        1        5
@@ -139,8 +139,8 @@ medium-product-catalog       SDIF AI          21319        0        0        1  
                              JSON Pretty      55984        0        0        0        2
                              XML              69082        0        0        0        1
 ----------------------------------------------------------------------------------------------------
-plan                         SDIF AI            251       16       32      130      522
-                             SDIF               252       16       32      130      520
+plan                         SDIF               252       16       32      130      520
+                             SDIF AI            260       15       31      126      504
                              TOON               276       14       29      118      474
                              CSV Bundle         288       14       28      113      455
                              JSON Compact       302       13       27      108      434
@@ -148,8 +148,8 @@ plan                         SDIF AI            251       16       32      130  
                              JSON Pretty        479        8       17       68      273
                              XML                602        6       13       54      217
 ----------------------------------------------------------------------------------------------------
-registry                     SDIF AI            149       27       54      219      879
-                             SDIF               154       26       53      212      851
+registry                     SDIF               154       26       53      212      851
+                             SDIF AI            158       25       51      207      829
                              TOON               169       24       48      193      775
                              CSV Bundle         175       23       46      187      748
                              JSON Compact       205       19       39      159      639
@@ -157,7 +157,7 @@ registry                     SDIF AI            149       27       54      219  
                              JSON Pretty        341       12       24       96      384
                              XML                438        9       18       74      299
 ----------------------------------------------------------------------------------------------------
-schema                       SDIF AI            298       13       27      109      439
+schema                       SDIF AI            307       13       26      106      426
                              SDIF               323       12       25      101      405
                              CSV Bundle         331       12       24       98      395
                              TOON               342       11       23       95      383
@@ -166,8 +166,8 @@ schema                       SDIF AI            298       13       27      109  
                              JSON Pretty        953        4        8       34      137
                              XML               1213        3        6       27      108
 ----------------------------------------------------------------------------------------------------
-semantic-narrative           SDIF AI            253       16       32      129      518
-                             SDIF               259       15       31      126      506
+semantic-narrative           SDIF               259       15       31      126      506
+                             SDIF AI            262       15       31      125      500
                              CSV Bundle         273       15       30      120      480
                              TOON               277       14       29      118      473
                              JSON Compact       350       11       23       93      374
@@ -175,7 +175,7 @@ semantic-narrative           SDIF AI            253       16       32      129  
                              JSON Pretty        580        7       14       56      225
                              XML                702        5       11       46      186
 ----------------------------------------------------------------------------------------------------
-small-api-catalog            SDIF AI            544        7       15       60      240
+small-api-catalog            SDIF AI            553        7       14       59      237
                              CSV Bundle         585        7       14       56      224
                              SDIF               585        7       14       56      224
                              TOON               615        6       13       53      213
@@ -184,7 +184,7 @@ small-api-catalog            SDIF AI            544        7       15       60  
                              JSON Pretty       1564        2        5       20       83
                              XML               1894        2        4       17       69
 ----------------------------------------------------------------------------------------------------
-small-incident               SDIF AI            706        5       11       46      185
+small-incident               SDIF AI            715        5       11       45      183
                              SDIF               723        5       11       45      181
                              CSV Bundle         740        5       11       44      177
                              TOON               742        5       11       44      176
@@ -193,8 +193,8 @@ small-incident               SDIF AI            706        5       11       46  
                              JSON Pretty       1657        2        4       19       79
                              XML               1941        2        4       16       67
 ----------------------------------------------------------------------------------------------------
-small-invoice                SDIF AI            476        8       17       68      275
-                             CSV Bundle         485        8       16       67      270
+small-invoice                CSV Bundle         485        8       16       67      270
+                             SDIF AI            485        8       16       67      270
                              TOON               501        8       16       65      261
                              SDIF               503        8       16       65      260
                              JSON Compact       718        5       11       45      182
@@ -202,7 +202,7 @@ small-invoice                SDIF AI            476        8       17       68  
                              JSON Pretty       1159        3        7       28      113
                              XML               1414        2        5       23       92
 ----------------------------------------------------------------------------------------------------
-validation-report            SDIF AI            149       27       54      219      879
+validation-report            SDIF AI            158       25       51      207      829
                              SDIF               166       24       49      197      789
                              CSV Bundle         195       21       42      168      672
                              TOON               197       20       41      166      665
@@ -211,7 +211,7 @@ validation-report            SDIF AI            149       27       54      219  
                              JSON Pretty        382       10       21       85      343
                              XML                480        8       17       68      273
 ----------------------------------------------------------------------------------------------------
-wide-table-survey            SDIF AI          15224        0        0        2        8
+wide-table-survey            SDIF AI          15233        0        0        2        8
                              CSV Bundle       15365        0        0        2        8
                              SDIF             15451        0        0        2        8
                              TOON             15579        0        0        2        8
@@ -225,7 +225,7 @@ wide-table-survey            SDIF AI          15224        0        0        2  
 ==========================================================================================
 Format           Avg tokens   vs JSON       4K       8K      32K     128K
 ------------------------------------------------------------------------------------------
-SDIF AI             37326.5     64.6%      46%      46%      67%      92%
+SDIF AI             37335.5     64.6%      46%      46%      67%      92%
 CSV Bundle          37720.0     65.3%      46%      46%      67%      92%
 SDIF                39416.7     68.2%      46%      46%      67%      92%
 TOON                39855.7     69.0%      46%      46%      67%      92%

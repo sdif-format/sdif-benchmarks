@@ -44,6 +44,7 @@ from pathlib import Path
 from typing import Any
 
 from sdif_benchmarks.infra import BENCHMARK_DIR as _BENCHMARK_DIR
+
 if str(_BENCHMARK_DIR) not in sys.path:
     sys.path.insert(0, str(_BENCHMARK_DIR))
 if str(_BENCHMARK_DIR / "src") not in sys.path:
@@ -145,9 +146,7 @@ def _extract_axes(
     rel_val = json_repr.get("rel")
     rel_list = rel_val if isinstance(rel_val, list) else []
     relations = [
-        (r["subject"], r["predicate"], r["object"])
-        for r in rel_list
-        if isinstance(r, dict)
+        (r["subject"], r["predicate"], r["object"]) for r in rel_list if isinstance(r, dict)
     ]
     rules_val = json_repr.get("rules")
     rules_list = rules_val if isinstance(rules_val, list) else []

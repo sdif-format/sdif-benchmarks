@@ -2,7 +2,7 @@
   "kind": "MutationSensitivityReport",
   "version": "1.0",
   "note": "Full-resend overhead benchmark. Not a true SDIF delta encoding benchmark.",
-  "generatedAt": "2026-05-24T12:18:23Z",
+  "generatedAt": "2026-05-24T14:38:40Z",
   "runDirectory": "results/delta_compactness",
   "semanticSource": "examples/golden/<document>/equivalent.json",
   "tokenizer": "tiktoken/cl100k_base",
@@ -81,10 +81,10 @@
         },
         {
           "format": "SDIF AI",
-          "originalTokens": 206,
-          "mutatedTokens": 218,
+          "originalTokens": 215,
+          "mutatedTokens": 227,
           "tokenDelta": 12,
-          "tokenDeltaPct": 5.825242718446602,
+          "tokenDeltaPct": 5.5813953488372094,
           "diffLinesAdded": 5,
           "diffLinesRemoved": 5,
           "diffLinesChanged": 10
@@ -168,10 +168,10 @@
         },
         {
           "format": "SDIF AI",
-          "originalTokens": 258,
-          "mutatedTokens": 268,
+          "originalTokens": 267,
+          "mutatedTokens": 277,
           "tokenDelta": 10,
-          "tokenDeltaPct": 3.875968992248062,
+          "tokenDeltaPct": 3.7453183520599254,
           "diffLinesAdded": 2,
           "diffLinesRemoved": 2,
           "diffLinesChanged": 4
@@ -205,10 +205,10 @@
         },
         {
           "format": "SDIF AI",
-          "originalTokens": 103205,
-          "mutatedTokens": 106362,
+          "originalTokens": 103214,
+          "mutatedTokens": 106371,
           "tokenDelta": 3157,
-          "tokenDeltaPct": 3.0589603216898404,
+          "tokenDeltaPct": 3.0586935880791364,
           "diffLinesAdded": 398,
           "diffLinesRemoved": 398,
           "diffLinesChanged": 796
@@ -292,10 +292,10 @@
         },
         {
           "format": "SDIF AI",
-          "originalTokens": 37829,
-          "mutatedTokens": 39345,
+          "originalTokens": 37838,
+          "mutatedTokens": 39354,
           "tokenDelta": 1516,
-          "tokenDeltaPct": 4.007507467815697,
+          "tokenDeltaPct": 4.00655425762461,
           "diffLinesAdded": 155,
           "diffLinesRemoved": 155,
           "diffLinesChanged": 310
@@ -429,10 +429,10 @@
         },
         {
           "format": "SDIF AI",
-          "originalTokens": 86155,
-          "mutatedTokens": 90826,
+          "originalTokens": 86164,
+          "mutatedTokens": 90835,
           "tokenDelta": 4671,
-          "tokenDeltaPct": 5.4216238175381575,
+          "tokenDeltaPct": 5.421057518221066,
           "diffLinesAdded": 519,
           "diffLinesRemoved": 519,
           "diffLinesChanged": 1038
@@ -516,10 +516,10 @@
         },
         {
           "format": "SDIF AI",
-          "originalTokens": 141145,
-          "mutatedTokens": 146444,
+          "originalTokens": 141154,
+          "mutatedTokens": 146453,
           "tokenDelta": 5299,
-          "tokenDeltaPct": 3.7542952283113116,
+          "tokenDeltaPct": 3.7540558538900775,
           "diffLinesAdded": 757,
           "diffLinesRemoved": 757,
           "diffLinesChanged": 1514
@@ -603,10 +603,10 @@
         },
         {
           "format": "SDIF AI",
-          "originalTokens": 154451,
-          "mutatedTokens": 160373,
+          "originalTokens": 154460,
+          "mutatedTokens": 160382,
           "tokenDelta": 5922,
-          "tokenDeltaPct": 3.834225741497303,
+          "tokenDeltaPct": 3.8340023307005047,
           "diffLinesAdded": 593,
           "diffLinesRemoved": 593,
           "diffLinesChanged": 1186
@@ -690,10 +690,10 @@
         },
         {
           "format": "SDIF AI",
-          "originalTokens": 75464,
-          "mutatedTokens": 78150,
+          "originalTokens": 75473,
+          "mutatedTokens": 78159,
           "tokenDelta": 2686,
-          "tokenDeltaPct": 3.5593130499310925,
+          "tokenDeltaPct": 3.558888609171492,
           "diffLinesAdded": 431,
           "diffLinesRemoved": 431,
           "diffLinesChanged": 862
@@ -777,10 +777,10 @@
         },
         {
           "format": "SDIF AI",
-          "originalTokens": 94839,
-          "mutatedTokens": 98991,
+          "originalTokens": 94848,
+          "mutatedTokens": 99000,
           "tokenDelta": 4152,
-          "tokenDeltaPct": 4.377945781798627,
+          "tokenDeltaPct": 4.377530364372469,
           "diffLinesAdded": 1041,
           "diffLinesRemoved": 1041,
           "diffLinesChanged": 2082
@@ -874,10 +874,10 @@
         },
         {
           "format": "SDIF AI",
-          "originalTokens": 99633,
-          "mutatedTokens": 102567,
+          "originalTokens": 99642,
+          "mutatedTokens": 102576,
           "tokenDelta": 2934,
-          "tokenDeltaPct": 2.9448074433169733,
+          "tokenDeltaPct": 2.944541458421148,
           "diffLinesAdded": 245,
           "diffLinesRemoved": 245,
           "diffLinesChanged": 490
@@ -961,10 +961,10 @@
         },
         {
           "format": "SDIF AI",
-          "originalTokens": 299,
-          "mutatedTokens": 311,
+          "originalTokens": 308,
+          "mutatedTokens": 320,
           "tokenDelta": 12,
-          "tokenDeltaPct": 4.013377926421405,
+          "tokenDeltaPct": 3.896103896103896,
           "diffLinesAdded": 2,
           "diffLinesRemoved": 2,
           "diffLinesChanged": 4
@@ -1048,10 +1048,10 @@
         },
         {
           "format": "SDIF AI",
-          "originalTokens": 26707,
-          "mutatedTokens": 27763,
+          "originalTokens": 26716,
+          "mutatedTokens": 27772,
           "tokenDelta": 1056,
-          "tokenDeltaPct": 3.954019545437526,
+          "tokenDeltaPct": 3.952687528073065,
           "diffLinesAdded": 165,
           "diffLinesRemoved": 165,
           "diffLinesChanged": 330
@@ -1125,10 +1125,10 @@
         },
         {
           "format": "SDIF AI",
-          "originalTokens": 18170,
-          "mutatedTokens": 19364,
+          "originalTokens": 18179,
+          "mutatedTokens": 19373,
           "tokenDelta": 1194,
-          "tokenDeltaPct": 6.571271326362135,
+          "tokenDeltaPct": 6.568018042796633,
           "diffLinesAdded": 174,
           "diffLinesRemoved": 174,
           "diffLinesChanged": 348
@@ -1212,10 +1212,10 @@
         },
         {
           "format": "SDIF AI",
-          "originalTokens": 18106,
-          "mutatedTokens": 18916,
+          "originalTokens": 18115,
+          "mutatedTokens": 18925,
           "tokenDelta": 810,
-          "tokenDeltaPct": 4.473655141941898,
+          "tokenDeltaPct": 4.471432514490754,
           "diffLinesAdded": 137,
           "diffLinesRemoved": 137,
           "diffLinesChanged": 274
@@ -1299,10 +1299,10 @@
         },
         {
           "format": "SDIF AI",
-          "originalTokens": 21319,
-          "mutatedTokens": 22359,
+          "originalTokens": 21328,
+          "mutatedTokens": 22368,
           "tokenDelta": 1040,
-          "tokenDeltaPct": 4.878277592757634,
+          "tokenDeltaPct": 4.876219054763691,
           "diffLinesAdded": 174,
           "diffLinesRemoved": 174,
           "diffLinesChanged": 348
@@ -1386,10 +1386,10 @@
         },
         {
           "format": "SDIF AI",
-          "originalTokens": 251,
-          "mutatedTokens": 262,
+          "originalTokens": 260,
+          "mutatedTokens": 271,
           "tokenDelta": 11,
-          "tokenDeltaPct": 4.382470119521913,
+          "tokenDeltaPct": 4.230769230769231,
           "diffLinesAdded": 5,
           "diffLinesRemoved": 5,
           "diffLinesChanged": 10
@@ -1473,10 +1473,10 @@
         },
         {
           "format": "SDIF AI",
-          "originalTokens": 149,
-          "mutatedTokens": 157,
+          "originalTokens": 158,
+          "mutatedTokens": 166,
           "tokenDelta": 8,
-          "tokenDeltaPct": 5.369127516778524,
+          "tokenDeltaPct": 5.063291139240507,
           "diffLinesAdded": 2,
           "diffLinesRemoved": 2,
           "diffLinesChanged": 4
@@ -1510,10 +1510,10 @@
         },
         {
           "format": "SDIF AI",
-          "originalTokens": 298,
-          "mutatedTokens": 314,
+          "originalTokens": 307,
+          "mutatedTokens": 323,
           "tokenDelta": 16,
-          "tokenDeltaPct": 5.369127516778524,
+          "tokenDeltaPct": 5.211726384364821,
           "diffLinesAdded": 4,
           "diffLinesRemoved": 4,
           "diffLinesChanged": 8
@@ -1647,10 +1647,10 @@
         },
         {
           "format": "SDIF AI",
-          "originalTokens": 253,
-          "mutatedTokens": 265,
+          "originalTokens": 262,
+          "mutatedTokens": 274,
           "tokenDelta": 12,
-          "tokenDeltaPct": 4.743083003952568,
+          "tokenDeltaPct": 4.580152671755725,
           "diffLinesAdded": 2,
           "diffLinesRemoved": 2,
           "diffLinesChanged": 4
@@ -1734,10 +1734,10 @@
         },
         {
           "format": "SDIF AI",
-          "originalTokens": 544,
-          "mutatedTokens": 580,
+          "originalTokens": 553,
+          "mutatedTokens": 589,
           "tokenDelta": 36,
-          "tokenDeltaPct": 6.61764705882353,
+          "tokenDeltaPct": 6.50994575045208,
           "diffLinesAdded": 8,
           "diffLinesRemoved": 8,
           "diffLinesChanged": 16
@@ -1821,10 +1821,10 @@
         },
         {
           "format": "SDIF AI",
-          "originalTokens": 706,
-          "mutatedTokens": 738,
+          "originalTokens": 715,
+          "mutatedTokens": 747,
           "tokenDelta": 32,
-          "tokenDeltaPct": 4.53257790368272,
+          "tokenDeltaPct": 4.475524475524476,
           "diffLinesAdded": 4,
           "diffLinesRemoved": 4,
           "diffLinesChanged": 8
@@ -1908,10 +1908,10 @@
         },
         {
           "format": "SDIF AI",
-          "originalTokens": 476,
-          "mutatedTokens": 498,
+          "originalTokens": 485,
+          "mutatedTokens": 507,
           "tokenDelta": 22,
-          "tokenDeltaPct": 4.621848739495799,
+          "tokenDeltaPct": 4.536082474226804,
           "diffLinesAdded": 9,
           "diffLinesRemoved": 9,
           "diffLinesChanged": 18
@@ -1995,10 +1995,10 @@
         },
         {
           "format": "SDIF AI",
-          "originalTokens": 149,
-          "mutatedTokens": 157,
+          "originalTokens": 158,
+          "mutatedTokens": 166,
           "tokenDelta": 8,
-          "tokenDeltaPct": 5.369127516778524,
+          "tokenDeltaPct": 5.063291139240507,
           "diffLinesAdded": 2,
           "diffLinesRemoved": 2,
           "diffLinesChanged": 4
@@ -2092,10 +2092,10 @@
         },
         {
           "format": "SDIF AI",
-          "originalTokens": 15224,
-          "mutatedTokens": 16670,
+          "originalTokens": 15233,
+          "mutatedTokens": 16679,
           "tokenDelta": 1446,
-          "tokenDeltaPct": 9.498160798738834,
+          "tokenDeltaPct": 9.492549071095647,
           "diffLinesAdded": 26,
           "diffLinesRemoved": 26,
           "diffLinesChanged": 52

@@ -1,7 +1,7 @@
 {
   "kind": "ContextPackingReport",
   "version": "1.1",
-  "generatedAt": "2026-05-24T12:15:58Z",
+  "generatedAt": "2026-05-24T14:36:25Z",
   "tokenizer": "tiktoken/cl100k_base",
   "documentCount": 24,
   "budgets": [
@@ -18,7 +18,7 @@
   },
   "perFormatSummary": {
     "SDIF_AI": {
-      "avgTokens": 37326.5,
+      "avgTokens": 37335.5,
       "vsJsonCompactPct": 64.6,
       "fitRate": {
         "b4096": 45.8,
@@ -27,10 +27,10 @@
         "b131072": 91.7
       },
       "avgDocs": {
-        "b4096": 6.9,
-        "b8192": 14.1,
-        "b32768": 57.5,
-        "b131072": 231.6
+        "b4096": 6.7,
+        "b8192": 13.5,
+        "b32768": 55.3,
+        "b131072": 222.6
       },
       "medianDocs": {
         "b4096": 0.0,
@@ -208,13 +208,13 @@
       "formats": [
         {
           "format": "SDIF AI",
-          "bytes": 626,
-          "tokens": 206,
+          "bytes": 639,
+          "tokens": 215,
           "recordsByBudget": {
             "b4096": 19,
-            "b8192": 39,
-            "b32768": 159,
-            "b131072": 636
+            "b8192": 38,
+            "b32768": 152,
+            "b131072": 609
           }
         },
         {
@@ -300,17 +300,6 @@
       "name": "audit-provenance",
       "formats": [
         {
-          "format": "SDIF AI",
-          "bytes": 696,
-          "tokens": 258,
-          "recordsByBudget": {
-            "b4096": 15,
-            "b8192": 31,
-            "b32768": 127,
-            "b131072": 508
-          }
-        },
-        {
           "format": "SDIF",
           "bytes": 702,
           "tokens": 259,
@@ -319,6 +308,17 @@
             "b8192": 31,
             "b32768": 126,
             "b131072": 506
+          }
+        },
+        {
+          "format": "SDIF AI",
+          "bytes": 709,
+          "tokens": 267,
+          "recordsByBudget": {
+            "b4096": 15,
+            "b8192": 30,
+            "b32768": 122,
+            "b131072": 490
           }
         },
         {
@@ -405,8 +405,8 @@
         },
         {
           "format": "SDIF AI",
-          "bytes": 292716,
-          "tokens": 103205,
+          "bytes": 292729,
+          "tokens": 103214,
           "recordsByBudget": {
             "b4096": 0,
             "b8192": 0,
@@ -487,8 +487,8 @@
       "formats": [
         {
           "format": "SDIF AI",
-          "bytes": 167369,
-          "tokens": 37829,
+          "bytes": 167382,
+          "tokens": 37838,
           "recordsByBudget": {
             "b4096": 0,
             "b8192": 0,
@@ -580,8 +580,8 @@
       "formats": [
         {
           "format": "SDIF AI",
-          "bytes": 279580,
-          "tokens": 86155,
+          "bytes": 279593,
+          "tokens": 86164,
           "recordsByBudget": {
             "b4096": 0,
             "b8192": 0,
@@ -673,8 +673,8 @@
       "formats": [
         {
           "format": "SDIF AI",
-          "bytes": 492354,
-          "tokens": 141145,
+          "bytes": 492367,
+          "tokens": 141154,
           "recordsByBudget": {
             "b4096": 0,
             "b8192": 0,
@@ -766,8 +766,8 @@
       "formats": [
         {
           "format": "SDIF AI",
-          "bytes": 402720,
-          "tokens": 154451,
+          "bytes": 402733,
+          "tokens": 154460,
           "recordsByBudget": {
             "b4096": 0,
             "b8192": 0,
@@ -870,8 +870,8 @@
         },
         {
           "format": "SDIF AI",
-          "bytes": 221599,
-          "tokens": 75464,
+          "bytes": 221612,
+          "tokens": 75473,
           "recordsByBudget": {
             "b4096": 0,
             "b8192": 0,
@@ -952,8 +952,8 @@
       "formats": [
         {
           "format": "SDIF AI",
-          "bytes": 342047,
-          "tokens": 94839,
+          "bytes": 342060,
+          "tokens": 94848,
           "recordsByBudget": {
             "b4096": 0,
             "b8192": 0,
@@ -1045,8 +1045,8 @@
       "formats": [
         {
           "format": "SDIF AI",
-          "bytes": 383776,
-          "tokens": 99633,
+          "bytes": 383789,
+          "tokens": 99642,
           "recordsByBudget": {
             "b4096": 0,
             "b8192": 0,
@@ -1137,17 +1137,6 @@
       "name": "llm-api-response",
       "formats": [
         {
-          "format": "SDIF AI",
-          "bytes": 823,
-          "tokens": 299,
-          "recordsByBudget": {
-            "b4096": 13,
-            "b8192": 27,
-            "b32768": 109,
-            "b131072": 438
-          }
-        },
-        {
           "format": "SDIF",
           "bytes": 832,
           "tokens": 307,
@@ -1156,6 +1145,17 @@
             "b8192": 26,
             "b32768": 106,
             "b131072": 426
+          }
+        },
+        {
+          "format": "SDIF AI",
+          "bytes": 836,
+          "tokens": 308,
+          "recordsByBudget": {
+            "b4096": 13,
+            "b8192": 26,
+            "b32768": 106,
+            "b131072": 425
           }
         },
         {
@@ -1242,8 +1242,8 @@
         },
         {
           "format": "SDIF AI",
-          "bytes": 73903,
-          "tokens": 26707,
+          "bytes": 73916,
+          "tokens": 26716,
           "recordsByBudget": {
             "b4096": 0,
             "b8192": 0,
@@ -1324,8 +1324,8 @@
       "formats": [
         {
           "format": "SDIF AI",
-          "bytes": 55931,
-          "tokens": 18170,
+          "bytes": 55944,
+          "tokens": 18179,
           "recordsByBudget": {
             "b4096": 0,
             "b8192": 0,
@@ -1417,8 +1417,8 @@
       "formats": [
         {
           "format": "SDIF AI",
-          "bytes": 49782,
-          "tokens": 18106,
+          "bytes": 49795,
+          "tokens": 18115,
           "recordsByBudget": {
             "b4096": 0,
             "b8192": 0,
@@ -1510,8 +1510,8 @@
       "formats": [
         {
           "format": "SDIF AI",
-          "bytes": 47552,
-          "tokens": 21319,
+          "bytes": 47565,
+          "tokens": 21328,
           "recordsByBudget": {
             "b4096": 0,
             "b8192": 0,
@@ -1602,17 +1602,6 @@
       "name": "plan",
       "formats": [
         {
-          "format": "SDIF AI",
-          "bytes": 1000,
-          "tokens": 251,
-          "recordsByBudget": {
-            "b4096": 16,
-            "b8192": 32,
-            "b32768": 130,
-            "b131072": 522
-          }
-        },
-        {
           "format": "SDIF",
           "bytes": 984,
           "tokens": 252,
@@ -1621,6 +1610,17 @@
             "b8192": 32,
             "b32768": 130,
             "b131072": 520
+          }
+        },
+        {
+          "format": "SDIF AI",
+          "bytes": 1013,
+          "tokens": 260,
+          "recordsByBudget": {
+            "b4096": 15,
+            "b8192": 31,
+            "b32768": 126,
+            "b131072": 504
           }
         },
         {
@@ -1695,17 +1695,6 @@
       "name": "registry",
       "formats": [
         {
-          "format": "SDIF AI",
-          "bytes": 662,
-          "tokens": 149,
-          "recordsByBudget": {
-            "b4096": 27,
-            "b8192": 54,
-            "b32768": 219,
-            "b131072": 879
-          }
-        },
-        {
           "format": "SDIF",
           "bytes": 674,
           "tokens": 154,
@@ -1714,6 +1703,17 @@
             "b8192": 53,
             "b32768": 212,
             "b131072": 851
+          }
+        },
+        {
+          "format": "SDIF AI",
+          "bytes": 675,
+          "tokens": 158,
+          "recordsByBudget": {
+            "b4096": 25,
+            "b8192": 51,
+            "b32768": 207,
+            "b131072": 829
           }
         },
         {
@@ -1789,13 +1789,13 @@
       "formats": [
         {
           "format": "SDIF AI",
-          "bytes": 1097,
-          "tokens": 298,
+          "bytes": 1110,
+          "tokens": 307,
           "recordsByBudget": {
             "b4096": 13,
-            "b8192": 27,
-            "b32768": 109,
-            "b131072": 439
+            "b8192": 26,
+            "b32768": 106,
+            "b131072": 426
           }
         },
         {
@@ -1881,17 +1881,6 @@
       "name": "semantic-narrative",
       "formats": [
         {
-          "format": "SDIF AI",
-          "bytes": 908,
-          "tokens": 253,
-          "recordsByBudget": {
-            "b4096": 16,
-            "b8192": 32,
-            "b32768": 129,
-            "b131072": 518
-          }
-        },
-        {
           "format": "SDIF",
           "bytes": 902,
           "tokens": 259,
@@ -1900,6 +1889,17 @@
             "b8192": 31,
             "b32768": 126,
             "b131072": 506
+          }
+        },
+        {
+          "format": "SDIF AI",
+          "bytes": 921,
+          "tokens": 262,
+          "recordsByBudget": {
+            "b4096": 15,
+            "b8192": 31,
+            "b32768": 125,
+            "b131072": 500
           }
         },
         {
@@ -1975,13 +1975,13 @@
       "formats": [
         {
           "format": "SDIF AI",
-          "bytes": 1640,
-          "tokens": 544,
+          "bytes": 1653,
+          "tokens": 553,
           "recordsByBudget": {
             "b4096": 7,
-            "b8192": 15,
-            "b32768": 60,
-            "b131072": 240
+            "b8192": 14,
+            "b32768": 59,
+            "b131072": 237
           }
         },
         {
@@ -2068,13 +2068,13 @@
       "formats": [
         {
           "format": "SDIF AI",
-          "bytes": 2563,
-          "tokens": 706,
+          "bytes": 2576,
+          "tokens": 715,
           "recordsByBudget": {
             "b4096": 5,
             "b8192": 11,
-            "b32768": 46,
-            "b131072": 185
+            "b32768": 45,
+            "b131072": 183
           }
         },
         {
@@ -2160,19 +2160,19 @@
       "name": "small-invoice",
       "formats": [
         {
-          "format": "SDIF AI",
-          "bytes": 1406,
-          "tokens": 476,
+          "format": "CSV Bundle",
+          "bytes": 1439,
+          "tokens": 485,
           "recordsByBudget": {
             "b4096": 8,
-            "b8192": 17,
-            "b32768": 68,
-            "b131072": 275
+            "b8192": 16,
+            "b32768": 67,
+            "b131072": 270
           }
         },
         {
-          "format": "CSV Bundle",
-          "bytes": 1439,
+          "format": "SDIF AI",
+          "bytes": 1419,
           "tokens": 485,
           "recordsByBudget": {
             "b4096": 8,
@@ -2254,13 +2254,13 @@
       "formats": [
         {
           "format": "SDIF AI",
-          "bytes": 691,
-          "tokens": 149,
+          "bytes": 704,
+          "tokens": 158,
           "recordsByBudget": {
-            "b4096": 27,
-            "b8192": 54,
-            "b32768": 219,
-            "b131072": 879
+            "b4096": 25,
+            "b8192": 51,
+            "b32768": 207,
+            "b131072": 829
           }
         },
         {
@@ -2347,8 +2347,8 @@
       "formats": [
         {
           "format": "SDIF AI",
-          "bytes": 18606,
-          "tokens": 15224,
+          "bytes": 18619,
+          "tokens": 15233,
           "recordsByBudget": {
             "b4096": 0,
             "b8192": 0,

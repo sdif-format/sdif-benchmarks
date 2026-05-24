@@ -10,6 +10,7 @@ from __future__ import annotations
 
 import json
 from sdif_benchmarks.tracks import operability
+
 build_operability_matrix = operability.build_operability_matrix
 
 
@@ -62,3 +63,14 @@ def test_main_writes_suite_compatible_summary_artifacts(tmp_path) -> None:
     payload = json.loads((tmp_path / "summary.json").read_text(encoding="utf-8"))
     assert payload["kind"] == "OperabilityMatrixReport"
     assert any(row["format"] == "SDIF" for row in payload["formats"])
+
+
+def test_operability_summary_markdown_uses_defensive_framing() -> None:
+    matrix = build_operability_matrix()
+    table = operability._render_markdown_table(matrix)
+    summary = operability._summary_markdown(matrix, table)
+
+    assert "does not claim JSON, XML or YAML cannot support canonicalization" in summary
+    assert "external ecosystems" in summary
+    assert "single document-level contract measured by this suite" in summary
+    assert "rule evaluation support is False" not in summary

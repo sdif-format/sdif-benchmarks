@@ -1,3 +1,4 @@
+@sdif.ai 1.0
 kind Schema
 id example.plan.v1
 schema sdif.schema.v1

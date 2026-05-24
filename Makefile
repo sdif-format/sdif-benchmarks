@@ -44,6 +44,7 @@ BENCHMARK_OPERABILITY_MOD := -m sdif_benchmarks.tracks.operability
 
 .PHONY: \
 	test \
+	benchmark \
 	benchmark-suite \
 	benchmark-token \
 	benchmark-quality \
@@ -106,7 +107,7 @@ benchmark-operability:
 	$(PYTHON) $(BENCHMARK_OPERABILITY_MOD)
 
 
-benchmark: benchmark-suite
+benchmark: clean benchmark-suite
 	mkdir -p dist
 	tar -czf dist/benchmark_results.tar.gz results/
 

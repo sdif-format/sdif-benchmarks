@@ -1,6 +1,8 @@
+@sdif.ai 1.0
+alias[desc=description,ev=evidence,v=version]
 kind BenchmarkSuiteReport
-version "1.0"
-generatedAt 2026-05-24T12:14:41Z
+v "1.0"
+generatedAt 2026-05-24T14:35:11Z
 corpus:
   source examples/golden
   documents 24
@@ -11,12 +13,12 @@ scorecard:
     label "Token Efficiency"
     claim "SDIF AI reduces token usage vs JSON Compact"
     metric medianRatioVsJsonCompact
-    value 57.2
+    value 57.9
     unit %
-    description "SDIF AI median token ratio vs JSON Compact: 57.2%"
+    desc "SDIF AI median token ratio vs JSON Compact: 57.9%"
     bestRatio 26.3
-    worstRatio 83.1
-    evidence token_efficiency/summary.md
+    worstRatio 86.1
+    ev token_efficiency/summary.md
   __item:
     track context_packing
     label "Context Packing"
@@ -24,10 +26,10 @@ scorecard:
     metric fitRateAt32K
     value 66.7
     unit %
-    description "SDIF AI 32K fit rate: 67% vs JSON Compact 54%"
+    desc "SDIF AI 32K fit rate: 67% vs JSON Compact 54%"
     fitRateAt32K_jsonCompact 54.2
     fitRateAt128K_sdifAI 91.7
-    evidence context_packing/summary.md
+    ev context_packing/summary.md
   __item:
     track roundtrip_fidelity
     label "Round-trip Fidelity"
@@ -35,29 +37,9 @@ scorecard:
     metric sdifOverallFidelity
     value 100.0
     unit %
-    description "SDIF round-trip: 24/24 documents, avg fidelity 100.0%"
+    desc "SDIF round-trip: 24/24 documents, avg fidelity 100.0%"
     successfulRoundTrips 24/24
-    evidence roundtrip_fidelity/summary.md
-  __item:
-    track delta_compactness
-    label "Mutation Sensitivity"
-    claim "SDIF produces less noise on full-document re-send after mutation"
-    metric avgTokenDeltaPct
-    value 4.55
-    unit %
-    description "SDIF avg token delta on full-resend: 4.6% vs JSON Compact 3.0%"
-    jsonCompactAvgDelta 3.02
-    note "full-resend model â not true SDIF delta encoding"
-    evidence delta_compactness/summary.md
-  __item:
-    track semantic_fidelity
-    label "Semantic Fidelity"
-    claim "Measures structural recovery fidelity across JSON, YAML, XML, CSV Bundle, SDIF, and SDIF AI after format conversion."
-    metric sdifSemanticAxisFidelity
-    value 100.0
-    unit %
-    description "SDIF structural semantic-axis recovery: 100.0%"
-    evidence semantic_fidelity/summary.md
+    ev roundtrip_fidelity/summary.md
   __item:
     track operability
     label Operability
@@ -65,12 +47,14 @@ scorecard:
     metric sdifDeclaredCapabilities
     value 8
     unit /8
-    description "SDIF declares 8/8 deterministic-workflow capabilities; rule evaluation support is False"
-    evidence operability/summary.md
+    desc "SDIF declares 8/8 deterministic-workflow capabilities; rule evaluation support is False"
+    ev operability/summary.md
+experimental_tracks[track,label,claim]:
+delta_compactness	Mutation Sensitivity — Full-resend baseline	This track measures full-document resend sensitivity after mutation. It is not yet a semantic patch/delta benchmark.
 artifacts[track,label,summaryMd,summaryJson,summarySdif,summarySdifAi,dashboard]:
 token_efficiency	Token Efficiency	token_efficiency/summary.md	token_efficiency/summary.json	token_efficiency/summary.sdif	token_efficiency/summary.sdif.ai	token_efficiency/dashboard.html
 context_packing	Context Packing	context_packing/summary.md	context_packing/summary.json	context_packing/summary.sdif	context_packing/summary.sdif.ai	context_packing/dashboard.html
 roundtrip_fidelity	Round-trip Fidelity	roundtrip_fidelity/summary.md	roundtrip_fidelity/summary.json	roundtrip_fidelity/summary.sdif	roundtrip_fidelity/summary.sdif.ai	roundtrip_fidelity/dashboard.html
-delta_compactness	Mutation Sensitivity	delta_compactness/summary.md	delta_compactness/summary.json	delta_compactness/summary.sdif	delta_compactness/summary.sdif.ai	delta_compactness/dashboard.html
+delta_compactness	Mutation Sensitivity — Full-resend baseline	delta_compactness/summary.md	delta_compactness/summary.json	delta_compactness/summary.sdif	delta_compactness/summary.sdif.ai	delta_compactness/dashboard.html
 semantic_fidelity	Semantic Fidelity	semantic_fidelity/summary.md	semantic_fidelity/summary.json	semantic_fidelity/summary.sdif	semantic_fidelity/summary.sdif.ai	semantic_fidelity/dashboard.html
 operability	Operability	operability/summary.md	operability/summary.json	operability/summary.sdif	operability/summary.sdif.ai	operability/dashboard.html

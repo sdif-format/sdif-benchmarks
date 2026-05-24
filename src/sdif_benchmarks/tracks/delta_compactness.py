@@ -55,6 +55,7 @@ from pathlib import Path
 from typing import Any
 
 from sdif_benchmarks.infra import BENCHMARK_DIR as _BENCHMARK_DIR
+
 if str(_BENCHMARK_DIR) not in sys.path:
     sys.path.insert(0, str(_BENCHMARK_DIR))
 if str(_BENCHMARK_DIR / "src") not in sys.path:
@@ -429,7 +430,7 @@ def _summary_md(evidence: DeltaEvidence) -> str:
         "# SDIF Mutation Sensitivity Benchmark — Summary",
         "",
         "> **Framing**: this benchmark measures full-document resend overhead after a 10% leaf mutation.",
-        "> It is NOT a true SDIF delta benchmark. A semantic delta (base + patch) would be even smaller.",
+        "> It is not a semantic patch/delta benchmark; patch-only payloads should be measured separately.",
         "",
         f"- Generated at: `{evidence.generated_at}`",
         f"- Tokenizer: `{markdown_escape(evidence.tokenizer)}`",
@@ -438,8 +439,9 @@ def _summary_md(evidence: DeltaEvidence) -> str:
         "",
         "## Key Findings",
         "",
-        "A 10% leaf mutation simulates a typical incremental document update.",
-        "Formats with smaller token delta and fewer diff lines produce less noise on full-resend.",
+        "A 10% leaf mutation provides a repeatable full-resend sensitivity baseline.",
+        "Token delta measures the cost of resending the whole mutated document, not the size of a semantic patch.",
+        "Diff-line counts are a coarse text-level signal and should not be interpreted as semantic delta size.",
         "",
         "| Format | Avg Δ tokens % | Avg diff lines |",
         "| --- | ---: | ---: |",
@@ -461,9 +463,9 @@ def _summary_md(evidence: DeltaEvidence) -> str:
             "  - Numbers: multiply by `1.1`.",
             "  - Booleans: flip.",
             "- **Token delta**: `tokens(mutated) - tokens(original)` — full-document resend model.",
-            "- **Diff lines**: unified diff added + removed lines — format-level verbosity in patches.",
-            "- This benchmark does **not** measure SDIF semantic delta encoding (`kind Delta`), which",
-            "  would transmit only changed fields as a patch. That is a separate benchmark.",
+            "- **Diff lines**: unified diff added + removed lines — coarse text-level churn, not semantic patch size.",
+            "- This benchmark does **not** measure SDIF semantic delta encoding (`kind Delta`).",
+            "- A dedicated delta benchmark should compare patch-only payloads separately from full-document resend.",
             "",
         ]
     )
