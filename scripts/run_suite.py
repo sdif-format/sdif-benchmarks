@@ -16,11 +16,11 @@ Runs all benchmark tracks and produces a unified evidence index:
       retrieval_accuracy/  (opt-in)
 
 Usage:
-    python benchmarks/scripts/run_suite.py [--skip TOKEN] [--skip CONTEXT] ...
+    python benchmarks/scripts/run_suite.py [--skip TRACK] [--only TRACK]
     SDIF_BENCHMARK_RETRIEVAL=1 ANTHROPIC_API_KEY=<key> python benchmarks/scripts/run_suite.py
 
 Environment:
-    SDIF_BENCHMARK_SKIP=token,context,roundtrip,delta,retrieval
+    SDIF_BENCHMARK_SKIP=token,context,roundtrip,delta,semantic,ops,retrieval
         Comma-separated list of track short names to skip.
     SDIF_BENCHMARK_RETRIEVAL=1
         Opt-in to the retrieval accuracy track (requires ANTHROPIC_API_KEY).
@@ -117,6 +117,8 @@ TRACKS = [
         "claim": "LLMs answer structured questions more accurately from SDIF",
     },
 ]
+
+TRACK_SHORT_NAMES = ", ".join(str(track["short"]) for track in TRACKS)
 
 SCRIPTS_DIR = BENCHMARK_DIR / "scripts"
 
@@ -489,14 +491,14 @@ def main() -> None:
         action="append",
         default=[],
         metavar="TRACK",
-        help="Skip a track by short name (token, context, roundtrip, delta, retrieval). Repeatable.",
+        help=f"Skip a track by short name ({TRACK_SHORT_NAMES}). Repeatable.",
     )
     parser.add_argument(
         "--only",
         action="append",
         default=[],
         metavar="TRACK",
-        help="Run only these tracks. Repeatable.",
+        help=f"Run only these tracks ({TRACK_SHORT_NAMES}). Repeatable.",
     )
     args = parser.parse_args()
 
@@ -559,15 +561,14 @@ def main() -> None:
     except Exception:
         index_sdif_ai = index_sdif
     (results_dir / "index.sdif.ai").write_text(index_sdif_ai, encoding="utf-8")
-    import report as _report
     (results_dir / "index-sdif-ai-viewer.html").write_text(
-        _report.render_sdif_ai_viewer(index_sdif_ai, "SDIF Benchmark Suite — Index SDIF AI", back_href="dashboard.html"),
+        report.render_sdif_ai_viewer(index_sdif_ai, "SDIF Benchmark Suite — Index SDIF AI", back_href="dashboard.html"),
         encoding="utf-8",
     )
 
     (results_dir / "README.md").write_text(readme_md, encoding="utf-8")
     (results_dir / "README-viewer.html").write_text(
-        _report.render_md_viewer(readme_md, "SDIF Benchmark Suite — README", back_href="dashboard.html"),
+        report.render_md_viewer(readme_md, "SDIF Benchmark Suite — README", back_href="dashboard.html"),
         encoding="utf-8",
     )
 
