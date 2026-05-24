@@ -1,0 +1,12 @@
+{
+  "include": [
+    "scripts",
+    "src",
+    "tests"
+  ],
+  "extraPaths": [
+    "src",
+    "../sdif/src"
+  ],
+  "pythonVersion": "3.10"
+}
