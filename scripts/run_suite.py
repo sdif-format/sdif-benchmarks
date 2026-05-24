@@ -94,6 +94,22 @@ TRACKS = [
         "claim": "SDIF produces less noise on full-document re-send after mutation",
     },
     {
+        "id": "semantic_fidelity",
+        "short": "semantic",
+        "label": "Semantic Fidelity",
+        "script": "semantic_fidelity.py",
+        "optional": False,
+        "claim": "Measures structural recovery fidelity across JSON, YAML, XML, CSV Bundle, SDIF, and SDIF AI after format conversion.",
+    },
+    {
+        "id": "operability",
+        "short": "ops",
+        "label": "Operability",
+        "script": "operability.py",
+        "optional": False,
+        "claim": "Documents format capability matrix: canonical forms, stable hashing, native relation support, and rule handling.",
+    },
+    {
         "id": "retrieval_accuracy",
         "short": "retrieval",
         "label": "Retrieval Accuracy",

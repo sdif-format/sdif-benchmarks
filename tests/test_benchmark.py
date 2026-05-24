@@ -1,3 +1,7 @@
+"""Benchmark suite tests covering token efficiency, roundtrip fidelity, and suite wiring."""
+
+from __future__ import annotations
+
 import importlib.util
 import json
 import os
@@ -505,3 +509,29 @@ def test_roundtrip_sdif_ai_numeric_string_table_cells_preserved():
             assert isinstance(cell, str), (
                 f"SDIF AI expand coerced {original!r} to {type(cell).__name__}"
             )
+
+
+def load_run_suite_module() -> object:
+    """Load the run_suite module from scripts/run_suite.py."""
+    module_path = Path("scripts/run_suite.py")
+    spec = importlib.util.spec_from_file_location("run_suite", module_path)
+    assert spec is not None
+    assert spec.loader is not None
+    module = importlib.util.module_from_spec(spec)
+    sys.modules["run_suite"] = module
+    spec.loader.exec_module(module)
+    return module
+
+
+mod = load_run_suite_module()
+
+
+def test_run_suite_includes_semantic_and_operability_tracks() -> None:
+    track_ids = {t["id"] for t in mod.TRACKS}
+    assert "semantic_fidelity" in track_ids
+    assert "operability" in track_ids
+
+
+def test_retrieval_accuracy_is_optional() -> None:
+    retrieval = next(t for t in mod.TRACKS if t["id"] == "retrieval_accuracy")
+    assert retrieval["optional"] is True
