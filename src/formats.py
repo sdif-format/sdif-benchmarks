@@ -17,7 +17,7 @@ from pathlib import Path
 from typing import Any, TypeGuard
 from xml.sax.saxutils import escape as xml_escape
 
-import yaml  # type: ignore[import-untyped]
+import yaml
 
 import infra  # noqa: F401 — ensures REPO_ROOT/src is on sys.path before sdif imports
 

@@ -103,7 +103,7 @@ from pathlib import Path
 from typing import Any, Callable, TextIO, TypeGuard
 from xml.sax.saxutils import escape as xml_escape
 
-import yaml  # type: ignore[import-untyped]
+import yaml
 
 BENCHMARK_DIR = Path(__file__).resolve().parents[1]
 BENCHMARK_REPO_ROOT = BENCHMARK_DIR

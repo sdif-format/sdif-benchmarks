@@ -38,7 +38,7 @@ import json
 import sys
 import xml.etree.ElementTree as ET
 
-import yaml  # type: ignore[import-untyped]
+import yaml
 from dataclasses import dataclass
 from pathlib import Path
 from typing import Any

@@ -70,7 +70,7 @@ from infra import (  # noqa: E402
     verbose_warning,
 )
 
-import yaml  # type: ignore[import-untyped]
+import yaml
 
 from sdif.ai import expand_ai_doc  # noqa: E402
 from sdif.json.converter import document_to_json_data  # noqa: E402
