@@ -106,6 +106,11 @@ benchmark-operability:
 	$(PYTHON) $(BENCHMARK_OPERABILITY_MOD)
 
 
+benchmark: benchmark-suite
+	mkdir -p dist
+	tar -czf dist/benchmark_results.tar.gz results/
+
+
 clean:
 	rm -rf \
 		tmp/ \
