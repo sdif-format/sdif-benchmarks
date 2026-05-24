@@ -16,16 +16,6 @@ dependencies = [
 [project.scripts]
 sdif-benchmarks = "sdif_benchmarks.run_suite:main"
 
-[project.optional-dependencies]
-dev = [
-  "anthropic>=0.103.1",
-  "mypy>=1.10",
-  "pytest>=8.0",
-  "tiktoken>=0.13.0",
-  "transformers>=4",
-  "types-Markdown>=3.10.2.20260518",
-  "types-PyYAML>=6.0.12.20260518",
-]
 
 [dependency-groups]
 dev = [

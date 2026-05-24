@@ -316,7 +316,7 @@ def test_roundtrip_parse_sdif_large_document():
 
 def test_roundtrip_no_na_formats():
     rt = load_roundtrip_fidelity_module()
-    assert not hasattr(rt, "NA_FORMATS") or rt.NA_FORMATS == set()
+    assert getattr(rt, "NA_FORMATS", set()) == set()
 
 
 def test_roundtrip_format_parsers_include_sdif_ai_and_toon():
