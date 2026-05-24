@@ -4,7 +4,7 @@ import sys
 
 def test_semantic_quality_checker_passes_for_plan_example():
     run = subprocess.run(
-        [sys.executable, "scripts/check_semantic_quality.py"],
+        [sys.executable, "-m", "sdif_benchmarks.checks.check_semantic_quality"],
         text=True,
         stdout=subprocess.PIPE,
         stderr=subprocess.PIPE,

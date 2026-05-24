@@ -1,16 +1,31 @@
-# Benchmark Library
+# Packaged Benchmark Library & Tracks
 
-Reusable helpers shared across all benchmark tracks.
+This directory contains the `sdif_benchmarks` package which implements the benchmark suite tracks, corpus generators, checks, and reusable core helpers.
 
-| Module | Purpose |
-| --- | --- |
-| `infra.py` | Path setup, directory lifecycle (`create_benchmark_run_dir`, `publish_benchmark_result`), env loading, `Tee`, `discover_documents` |
-| `formats.py` | Format generators: builds JSON Compact, JSON Pretty, YAML, XML, CSV Bundle, SDIF, SDIF AI, and optionally TOON from a Python dict; `write_document_corpus` |
-| `report.py` | Rendering helpers: `render_json_report`, `render_sdif_report`, `render_sdif_ai_report`, `render_dashboard_report` |
-| `generic_dashboard.html` | Self-contained HTML template for per-track evidence dashboards (Summary + Detail panels) |
-| `suite_dashboard.html` | Landing-page HTML template for the suite runner (`run_suite.py`) — hero claim, scorecard cards, track links |
-| `dashboard_template.html` | Full token-efficiency dashboard template |
+## Package Layout (`src/sdif_benchmarks/`)
 
-`infra.py` adds `REPO_ROOT/src` to `sys.path` at import time so all scripts can `import sdif` without extra setup. Scripts that import `formats.py` get this automatically.
+### Core Library Modules
+- [infra.py](file:///home/alessbarb/workspace/repos/incubating/sdif/sdif-benchmarks/src/sdif_benchmarks/infra.py): Path calculations, environment variables loading, directory lifecycle (`create_benchmark_run_dir`, `publish_benchmark_result`), and common utilities.
+- [formats.py](file:///home/alessbarb/workspace/repos/incubating/sdif/sdif-benchmarks/src/sdif_benchmarks/formats.py): Format generators (JSON Compact, JSON Pretty, YAML, XML, CSV Bundle, SDIF, and SDIF AI).
+- [report.py](file:///home/alessbarb/workspace/repos/incubating/sdif/sdif-benchmarks/src/sdif_benchmarks/report.py): Common rendering helpers for JSON, SDIF, and HTML evidence reports.
+- [optional_deps.py](file:///home/alessbarb/workspace/repos/incubating/sdif/sdif-benchmarks/src/sdif_benchmarks/optional_deps.py): Graceful import checker for optional benchmark dependencies (Anthropic API, Tiktoken, etc.).
+- [run_suite.py](file:///home/alessbarb/workspace/repos/incubating/sdif/sdif-benchmarks/src/sdif_benchmarks/run_suite.py): The main suite coordinator and entrypoint.
 
-Keep executable entrypoints in `scripts/`. Add shared code here only when two or more tracks need it.
+### Sub-packages
+- [tracks/](file:///home/alessbarb/workspace/repos/incubating/sdif/sdif-benchmarks/src/sdif_benchmarks/tracks): Individual benchmark track implementations (e.g., token efficiency, context packing, operability).
+- [generators/](file:///home/alessbarb/workspace/repos/incubating/sdif/sdif-benchmarks/src/sdif_benchmarks/generators): Fixture corpus golden generators.
+- [checks/](file:///home/alessbarb/workspace/repos/incubating/sdif/sdif-benchmarks/src/sdif_benchmarks/checks): Code and semantic quality checks.
+
+---
+
+## Invocation
+
+All track, generator, and checks modules can be executed directly via Python module flags:
+```bash
+python -m sdif_benchmarks.tracks.token_efficiency
+```
+
+The main runner is registered as a CLI entry point:
+```bash
+sdif-benchmarks --help
+```

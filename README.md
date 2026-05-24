@@ -130,6 +130,22 @@ make benchmark-semantic
 make benchmark-operability
 ```
 
+Alternatively, you can run them directly as Python modules or using the CLI command:
+
+```bash
+# Run the full suite using the CLI entry point
+uv run sdif-benchmarks
+
+# Run individual tracks as python modules
+uv run python -m sdif_benchmarks.tracks.token_efficiency
+uv run python -m sdif_benchmarks.tracks.context_packing
+uv run python -m sdif_benchmarks.tracks.roundtrip_fidelity
+uv run python -m sdif_benchmarks.tracks.delta_compactness
+uv run python -m sdif_benchmarks.tracks.semantic_fidelity
+uv run python -m sdif_benchmarks.tracks.operability
+uv run python -m sdif_benchmarks.checks.check_semantic_quality
+```
+
 <br>
 
 ---
@@ -263,8 +279,7 @@ All scripts load `.env` from the repository root when present, unless `SDIF_ENV_
 
 ```text
 sdif-benchmarks/
-├── scripts/       # executable benchmark runners (one per track)
-├── src/           # reusable helpers shared across tracks
+├── src/           # packaged source code, helpers, tracks, generators, checks
 ├── results/       # completed benchmark output (committed evidence)
 └── tmp/           # in-progress output (gitignored)
 ```
@@ -275,8 +290,8 @@ sdif-benchmarks/
 
 ## Organization contract
 
-- Executable benchmark runners belong in `scripts/`.
-- Reusable helpers belong in `src/` — code shared by two or more tracks.
+- Packaged modules (tracks, generators, checks) belong under `src/sdif_benchmarks/`.
+- Reusable helpers belong under `src/sdif_benchmarks/` — e.g. `formats.py`, `infra.py`, `report.py`.
 - Each track writes scratch output to `tmp/<track>/`; completed evidence goes to `results/<track>/`.
 - Canonical semantic sources belong in the core repo's `examples/golden/`, unless `SDIF_BENCHMARK_GOLDEN_DIR` overrides.
 - Optional external tools (TOON, tiktoken) must degrade gracefully.

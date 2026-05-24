@@ -177,7 +177,7 @@ def test_benchmark_script_runs_directly_from_checkout(tmp_path):
     before = path_snapshot(repo_result)
 
     run = subprocess.run(
-        [sys.executable, "scripts/token_efficiency.py"],
+        [sys.executable, "-m", "sdif_benchmarks.tracks.token_efficiency"],
         env=env,
         text=True,
         stdout=subprocess.PIPE,

@@ -24,8 +24,8 @@ formats[id,status,role,notes]:
 
 corpus_profiles[id,status,source,description]:
   canonical-golden	active	examples/golden/	"Shared semantic corpus derived from equivalent.json fixtures."
-  generated-benchmark	active	scripts/generate_benchmark_golden.py	"Deterministic small and medium benchmark corpus generator."
-  generated-large	active	scripts/generate_large_golden.py	"Deterministic large fixture generator for scale and repetition analysis."
+  generated-benchmark	active	src/sdif_benchmarks/generators/generate_benchmark_golden.py	"Deterministic small and medium benchmark corpus generator."
+  generated-large	active	src/sdif_benchmarks/generators/generate_large_golden.py	"Deterministic large fixture generator for scale and repetition analysis."
 
 outputs[id,status,path,description]:
   token-efficiency-summary	active	results/token_efficiency/summary.md	"Human-readable token-efficiency result summary."

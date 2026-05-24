@@ -22,22 +22,20 @@ TEST_ENV := \
 
 
 # -----------------------------------------------------------------------------
-# Benchmark scripts
+# Benchmark modules
 # -----------------------------------------------------------------------------
 
-SCRIPT_DIR := scripts
-
-BENCHMARK_SUITE_SCRIPT := $(SCRIPT_DIR)/run_suite.py
-BENCHMARK_TOKEN_SCRIPT := $(SCRIPT_DIR)/token_efficiency.py
-BENCHMARK_QUALITY_SCRIPT := $(SCRIPT_DIR)/check_semantic_quality.py
-BENCHMARK_CORPUS_SCRIPT := $(SCRIPT_DIR)/generate_benchmark_golden.py
-BENCHMARK_LARGE_CORPUS_SCRIPT := $(SCRIPT_DIR)/generate_large_golden.py
-BENCHMARK_PACKING_SCRIPT := $(SCRIPT_DIR)/context_packing.py
-BENCHMARK_ROUNDTRIP_SCRIPT := $(SCRIPT_DIR)/roundtrip_fidelity.py
-BENCHMARK_DELTA_SCRIPT := $(SCRIPT_DIR)/delta_compactness.py
-BENCHMARK_RETRIEVAL_SCRIPT := $(SCRIPT_DIR)/retrieval_accuracy.py
-BENCHMARK_SEMANTIC_SCRIPT := $(SCRIPT_DIR)/semantic_fidelity.py
-BENCHMARK_OPERABILITY_SCRIPT := $(SCRIPT_DIR)/operability.py
+BENCHMARK_SUITE_MOD := -m sdif_benchmarks.run_suite
+BENCHMARK_TOKEN_MOD := -m sdif_benchmarks.tracks.token_efficiency
+BENCHMARK_QUALITY_MOD := -m sdif_benchmarks.checks.check_semantic_quality
+BENCHMARK_CORPUS_MOD := -m sdif_benchmarks.generators.generate_benchmark_golden
+BENCHMARK_LARGE_CORPUS_MOD := -m sdif_benchmarks.generators.generate_large_golden
+BENCHMARK_PACKING_MOD := -m sdif_benchmarks.tracks.context_packing
+BENCHMARK_ROUNDTRIP_MOD := -m sdif_benchmarks.tracks.roundtrip_fidelity
+BENCHMARK_DELTA_MOD := -m sdif_benchmarks.tracks.delta_compactness
+BENCHMARK_RETRIEVAL_MOD := -m sdif_benchmarks.tracks.retrieval_accuracy
+BENCHMARK_SEMANTIC_MOD := -m sdif_benchmarks.tracks.semantic_fidelity
+BENCHMARK_OPERABILITY_MOD := -m sdif_benchmarks.tracks.operability
 
 
 # -----------------------------------------------------------------------------
@@ -65,47 +63,47 @@ test:
 
 
 benchmark-suite:
-	$(PYTHON) $(BENCHMARK_SUITE_SCRIPT)
+	$(PYTHON) $(BENCHMARK_SUITE_MOD)
 
 
 benchmark-token:
-	$(PYTHON) $(BENCHMARK_TOKEN_SCRIPT)
+	$(PYTHON) $(BENCHMARK_TOKEN_MOD)
 
 
 benchmark-quality:
-	$(PYTHON) $(BENCHMARK_QUALITY_SCRIPT)
+	$(PYTHON) $(BENCHMARK_QUALITY_MOD)
 
 
 benchmark-corpus:
-	$(PYTHON) $(BENCHMARK_CORPUS_SCRIPT)
+	$(PYTHON) $(BENCHMARK_CORPUS_MOD)
 
 
 benchmark-large-corpus:
-	$(PYTHON) $(BENCHMARK_LARGE_CORPUS_SCRIPT)
+	$(PYTHON) $(BENCHMARK_LARGE_CORPUS_MOD)
 
 
 benchmark-packing:
-	$(PYTHON) $(BENCHMARK_PACKING_SCRIPT)
+	$(PYTHON) $(BENCHMARK_PACKING_MOD)
 
 
 benchmark-roundtrip:
-	$(PYTHON) $(BENCHMARK_ROUNDTRIP_SCRIPT)
+	$(PYTHON) $(BENCHMARK_ROUNDTRIP_MOD)
 
 
 benchmark-delta:
-	$(PYTHON) $(BENCHMARK_DELTA_SCRIPT)
+	$(PYTHON) $(BENCHMARK_DELTA_MOD)
 
 
 benchmark-retrieval:
-	SDIF_BENCHMARK_RETRIEVAL=1 $(PYTHON) $(BENCHMARK_RETRIEVAL_SCRIPT)
+	SDIF_BENCHMARK_RETRIEVAL=1 $(PYTHON) $(BENCHMARK_RETRIEVAL_MOD)
 
 
 benchmark-semantic:
-	$(PYTHON) $(BENCHMARK_SEMANTIC_SCRIPT)
+	$(PYTHON) $(BENCHMARK_SEMANTIC_MOD)
 
 
 benchmark-operability:
-	$(PYTHON) $(BENCHMARK_OPERABILITY_SCRIPT)
+	$(PYTHON) $(BENCHMARK_OPERABILITY_MOD)
 
 
 clean:
@@ -115,5 +113,4 @@ clean:
 		.ruff_cache/ \
 		.mypy_cache/ \
 		tests/__pycache__/ \
-		scripts/__pycache__/ \
 		src/__pycache__/

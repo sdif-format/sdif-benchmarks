@@ -1,11 +1,4 @@
-import importlib.util
-import sys
 from pathlib import Path
-
-
-MODULE_PATH = Path("scripts/token_efficiency.py")
-
-
 from sdif_benchmarks.tracks import token_efficiency
 
 def load_token_efficiency_module():

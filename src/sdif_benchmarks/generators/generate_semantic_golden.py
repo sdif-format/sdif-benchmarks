@@ -4,7 +4,7 @@ Each fixture produces an ``equivalent.json`` (semantic source) and a
 ``source.sdif`` (derived SDIF representation with rel/rules blocks).
 
 Usage:
-    python scripts/generate_semantic_golden.py [--output-dir PATH]
+    python -m sdif_benchmarks.generators.generate_semantic_golden [--output-dir PATH]
 """
 
 from __future__ import annotations

@@ -2,22 +2,39 @@
 
 ## [Unreleased]
 
-### Added — v1.1 Semantic Benchmark Suite
+### Changed
 
-- **Semantic golden fixture generator** (`scripts/generate_semantic_golden.py`): generates four
+- **Package Refactoring**: Relocated all flat benchmark runner scripts and helper files from `scripts/` and `src/` to a structured Python package named `sdif_benchmarks` under `src/sdif_benchmarks/`. Removed the legacy `scripts/` folder entirely.
+- **Entry Points & CLI**: Registered the main runner CLI command `sdif-benchmarks` (points to `sdif_benchmarks.run_suite:main`).
+- **Tests**: Replaced all dynamic file-loading routines (`importlib.util.spec_from_file_location`) in the test suites with standard imports from `sdif_benchmarks`.
+- **Infrastructure Path Centralization**: Centralized `BENCHMARK_DIR` path resolution in `infra.py` to allow tracks and tools to reference the repository root cleanly.
+- **Makefile**: Refactored targets to run Python modules (e.g. `python -m sdif_benchmarks.tracks.token_efficiency`) instead of physical scripts paths.
+
+### Added
+
+- Leaf-level diagnostic evidence for every format/document pair that scores below 100%:
+  `results/roundtrip_fidelity/diagnostics/<document>/<format>.json` containing
+  `missing_paths`, `extra_paths`, `value_mismatches`, and `type_mismatches`.
+- `FidelityResult.note` is set to `"see diagnostics"` when a diagnostic file is written.
+- TOON external decoder float→int coercion is detected and annotated with
+  `cause: "external_decoder_int_float_coercion"` in the diagnostic file.
+
+#### Semantic Benchmark Suite
+
+- **Semantic golden fixture generator** (`src/sdif_benchmarks/generators/generate_semantic_golden.py`): generates four
   semantic fixture types (`semantic-narrative`, `audit-provenance`, `agent-workflow`,
   `llm-api-response`) under `../sdif/examples/golden/`. Each fixture produces
   `equivalent.json` and `source.sdif` with `rel:` triples, `rules:` declarations, and
   named-column tables.
 
-- **Semantic fidelity track** (`scripts/semantic_fidelity.py`): measures structural recovery
+- **Semantic fidelity track** (`src/sdif_benchmarks/tracks/semantic_fidelity.py`): measures structural recovery
   after format conversion (relation, rule, table, and field axes). Uses nullable metrics
   (`float | None`) — empty source axes and unimplemented parse-backs return `None`, never
   a fake `0.0`. CSV Bundle parse-back implemented (recovers `# table:rel` sections
   honestly). XML marked `best_effort`. TOON marked `not_measured`. Writes
   `results/semantic_fidelity/summary.md`.
 
-- **Operability matrix track** (`scripts/operability.py`): documents format capabilities
+- **Operability matrix track** (`src/sdif_benchmarks/tracks/operability.py`): documents format capabilities
   across 8 formats (SDIF, SDIF AI, JSON, YAML, XML, CSV Bundle, TOON). Covers canonical
   forms, stable hashing, schema validation, native relation support, rule declaration vs.
   rule evaluation (split), semantic type vocabulary, and deterministic output. Writes
@@ -58,15 +75,6 @@
   SDIF AI now reaches 100% round-trip fidelity across all 20 benchmark documents.
 - Fixed a mypy `arg-type` error in `parse_toon()` where the `subprocess.run()` call
   received `list[str | None]` instead of `list[str]`.
-
-### Added
-
-- Leaf-level diagnostic evidence for every format/document pair that scores below 100%:
-  `results/roundtrip_fidelity/diagnostics/<document>/<format>.json` containing
-  `missing_paths`, `extra_paths`, `value_mismatches`, and `type_mismatches`.
-- `FidelityResult.note` is set to `"see diagnostics"` when a diagnostic file is written.
-- TOON external decoder float→int coercion is detected and annotated with
-  `cause: "external_decoder_int_float_coercion"` in the diagnostic file.
 
 ### Tests
 
