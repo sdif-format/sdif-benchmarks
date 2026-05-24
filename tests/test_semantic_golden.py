@@ -38,6 +38,7 @@ def load_sdif_parse() -> tuple[Any, Any]:
         sys.path.insert(0, str(SDIF_SRC))
     from sdif import parse_text  # type: ignore[import]
     from sdif.json import document_to_json_data  # type: ignore[import]
+
     return parse_text, document_to_json_data
 
 
@@ -46,6 +47,7 @@ def load_sdif_canonical() -> tuple[Any, Any]:
     if str(SDIF_SRC) not in sys.path:
         sys.path.insert(0, str(SDIF_SRC))
     from sdif import canonicalize, sdif_hash  # type: ignore[import]
+
     return canonicalize, sdif_hash
 
 

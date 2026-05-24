@@ -23,11 +23,13 @@ from pathlib import Path
 from typing import Any
 
 _BENCHMARK_DIR = Path(__file__).resolve().parent.parent
+if str(_BENCHMARK_DIR) not in sys.path:
+    sys.path.insert(0, str(_BENCHMARK_DIR))
 if str(_BENCHMARK_DIR / "src") not in sys.path:
     sys.path.insert(0, str(_BENCHMARK_DIR / "src"))
 
-import infra  # noqa: E402
-import report  # noqa: E402
+import src.infra as infra  # noqa: E402
+import src.report as report  # noqa: E402
 
 RESULTS_FILENAME = "operability_matrix.md"
 
@@ -262,7 +264,9 @@ def _write_suite_artifacts(output_dir: Path, matrix: list[FormatOperability], ta
     summary = _summary_markdown(matrix, table)
 
     (output_dir / "summary.md").write_text(summary, encoding="utf-8")
-    (output_dir / "summary.json").write_text(report.render_json_report(structured), encoding="utf-8")
+    (output_dir / "summary.json").write_text(
+        report.render_json_report(structured), encoding="utf-8"
+    )
     (output_dir / RESULTS_FILENAME).write_text(table, encoding="utf-8")
 
     try:

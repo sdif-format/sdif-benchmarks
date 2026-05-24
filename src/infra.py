@@ -11,7 +11,9 @@ from typing import TextIO
 
 BENCHMARK_DIR = Path(__file__).resolve().parents[1]
 BENCHMARK_REPO_ROOT = BENCHMARK_DIR
-SDIF_CORE_REPO = Path(os.environ.get("SDIF_CORE_REPO", BENCHMARK_REPO_ROOT.parent)).expanduser().resolve()
+SDIF_CORE_REPO = (
+    Path(os.environ.get("SDIF_CORE_REPO", BENCHMARK_REPO_ROOT.parent)).expanduser().resolve()
+)
 REPO_ROOT = SDIF_CORE_REPO
 
 # Make the SDIF library importable for all benchmark scripts that import this module.
@@ -88,9 +90,7 @@ def create_benchmark_run_dir(track_name: str, base_dir: Path | None = None) -> P
     return run_dir
 
 
-def publish_benchmark_result(
-    run_dir: Path, track_name: str, base_dir: Path | None = None
-) -> Path:
+def publish_benchmark_result(run_dir: Path, track_name: str, base_dir: Path | None = None) -> Path:
     final_dir = benchmark_result_dir(track_name, base_dir)
     replace_directory(run_dir, final_dir)
     return final_dir
@@ -137,7 +137,7 @@ def load_env_file(path: Path) -> bool:
         if not line or line.startswith("#"):
             continue
         if line.startswith("export "):
-            line = line[len("export "):].strip()
+            line = line[len("export ") :].strip()
         if "=" not in line:
             verbose_warning(f"Ignoring invalid .env line {line_number}: missing '='")
             continue

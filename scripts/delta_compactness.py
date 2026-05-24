@@ -55,14 +55,15 @@ from pathlib import Path
 from typing import Any
 
 _BENCHMARK_DIR = Path(__file__).resolve().parent.parent
+if str(_BENCHMARK_DIR) not in sys.path:
+    sys.path.insert(0, str(_BENCHMARK_DIR))
 if str(_BENCHMARK_DIR / "src") not in sys.path:
     sys.path.insert(0, str(_BENCHMARK_DIR / "src"))
 
-import infra  # noqa: E402
-import formats as fmt  # noqa: E402
-import report  # noqa: E402
-from optional_deps import optional_module  # noqa: E402
-from infra import (  # noqa: E402
+import src.formats as fmt  # noqa: E402
+import src.report as report  # noqa: E402
+from src.optional_deps import optional_module  # noqa: E402
+from src.infra import (  # noqa: E402
     CORPUS_DIR_NAME,
     DASHBOARD_FILE_NAME,
     REPO_ROOT,
@@ -92,7 +93,9 @@ tiktoken_module = optional_module("tiktoken")
 def count_tokens(text: str) -> int:
     if tiktoken_module is not None:
         try:
-            enc = tiktoken_module.get_encoding(os.environ.get("SDIF_TIKTOKEN_ENCODING", "cl100k_base"))
+            enc = tiktoken_module.get_encoding(
+                os.environ.get("SDIF_TIKTOKEN_ENCODING", "cl100k_base")
+            )
             return len(enc.encode(text))
         except Exception as exc:
             verbose_warning(f"tiktoken failed, using estimate: {exc}")
@@ -227,7 +230,7 @@ def run_benchmark(run_dir: Path, *, env_file_loaded: bool) -> DeltaEvidence:
 
     print("📊 SDIF DELTA COMPACTNESS BENCHMARK")
     print(f"Tokenizer: {tok}")
-    print(f"Mutation: {fraction*100:.0f}% of leaf values changed\n")
+    print(f"Mutation: {fraction * 100:.0f}% of leaf values changed\n")
     print(
         f"{'Document':<28} {'Format':<14} {'Orig tokens':>12} {'Δ tokens':>10} "
         f"{'Δ%':>7} {'Diff+':>7} {'Diff-':>7}"
@@ -262,8 +265,8 @@ def run_benchmark(run_dir: Path, *, env_file_loaded: bool) -> DeltaEvidence:
             orig_lines = orig_text.splitlines(keepends=True)
             mut_lines = mut_text.splitlines(keepends=True)
             diff = list(difflib.unified_diff(orig_lines, mut_lines, lineterm=""))
-            added = sum(1 for l in diff if l.startswith("+") and not l.startswith("+++"))
-            removed = sum(1 for l in diff if l.startswith("-") and not l.startswith("---"))
+            added = sum(1 for line in diff if line.startswith("+") and not line.startswith("+++"))
+            removed = sum(1 for line in diff if line.startswith("-") and not line.startswith("---"))
             changed = added + removed
 
             rows.append(
@@ -430,7 +433,7 @@ def _summary_md(evidence: DeltaEvidence) -> str:
         "",
         f"- Generated at: `{evidence.generated_at}`",
         f"- Tokenizer: `{markdown_escape(evidence.tokenizer)}`",
-        f"- Mutation: `{evidence.mutation_fraction*100:.0f}%` of leaf values changed",
+        f"- Mutation: `{evidence.mutation_fraction * 100:.0f}%` of leaf values changed",
         f"- Documents: `{len(evidence.documents)}`",
         "",
         "## Key Findings",
@@ -448,20 +451,22 @@ def _summary_md(evidence: DeltaEvidence) -> str:
             f"| {markdown_escape(format_name)} | {sign}{avg_delta:.1f}% | {avg_diff:.1f} |"
         )
 
-    lines.extend([
-        "",
-        "## Methodology",
-        "",
-        f"- Mutation: first `{evidence.mutation_fraction*100:.0f}%` of leaves (sorted by key path) are changed.",
-        "  - Strings: append `-v2`.",
-        "  - Numbers: multiply by `1.1`.",
-        "  - Booleans: flip.",
-        "- **Token delta**: `tokens(mutated) - tokens(original)` — full-document resend model.",
-        "- **Diff lines**: unified diff added + removed lines — format-level verbosity in patches.",
-        "- This benchmark does **not** measure SDIF semantic delta encoding (`kind Delta`), which",
-        "  would transmit only changed fields as a patch. That is a separate benchmark.",
-        "",
-    ])
+    lines.extend(
+        [
+            "",
+            "## Methodology",
+            "",
+            f"- Mutation: first `{evidence.mutation_fraction * 100:.0f}%` of leaves (sorted by key path) are changed.",
+            "  - Strings: append `-v2`.",
+            "  - Numbers: multiply by `1.1`.",
+            "  - Booleans: flip.",
+            "- **Token delta**: `tokens(mutated) - tokens(original)` — full-document resend model.",
+            "- **Diff lines**: unified diff added + removed lines — format-level verbosity in patches.",
+            "- This benchmark does **not** measure SDIF semantic delta encoding (`kind Delta`), which",
+            "  would transmit only changed fields as a patch. That is a separate benchmark.",
+            "",
+        ]
+    )
 
     return "\n".join(lines)
 
@@ -471,19 +476,21 @@ def _detail_md(evidence: DeltaEvidence) -> str:
         "# SDIF Mutation Sensitivity Benchmark — Document Detail",
         "",
         f"- Generated at: `{evidence.generated_at}`",
-        f"- Mutation: `{evidence.mutation_fraction*100:.0f}%` of leaf values changed",
+        f"- Mutation: `{evidence.mutation_fraction * 100:.0f}%` of leaf values changed",
         "",
     ]
 
     for doc in evidence.documents:
-        lines.extend([
-            f"## {markdown_escape(doc.document_name)}",
-            "",
-            f"Leaves total: `{doc.leaves_total}`, mutated: `{doc.leaves_mutated}`",
-            "",
-            "| Format | Orig tokens | Mutated tokens | Δ tokens | Δ% | Diff lines |",
-            "| --- | ---: | ---: | ---: | ---: | ---: |",
-        ])
+        lines.extend(
+            [
+                f"## {markdown_escape(doc.document_name)}",
+                "",
+                f"Leaves total: `{doc.leaves_total}`, mutated: `{doc.leaves_mutated}`",
+                "",
+                "| Format | Orig tokens | Mutated tokens | Δ tokens | Δ% | Diff lines |",
+                "| --- | ---: | ---: | ---: | ---: | ---: |",
+            ]
+        )
         for row in sorted(doc.rows, key=lambda r: abs(r.token_delta)):
             sign = "+" if row.token_delta >= 0 else ""
             lines.append(
@@ -507,7 +514,6 @@ def _detail_md(evidence: DeltaEvidence) -> str:
 def main() -> None:
     env_file_loaded = load_env_file(REPO_ROOT / ".env")
     run_dir = create_benchmark_run_dir(BENCHMARK_TRACK_NAME)
-    final_dir = benchmark_result_dir(BENCHMARK_TRACK_NAME)
     log_path = run_dir / "comparison.log"
 
     with log_path.open("w", encoding="utf-8") as log_file:
@@ -522,12 +528,15 @@ def main() -> None:
             (run_dir / "summary-viewer.html").write_text(
                 report.render_md_viewer(summary, "Delta Compactness — Summary"), encoding="utf-8"
             )
-            (run_dir / "summary.json").write_text(report.render_json_report(structured), encoding="utf-8")
+            (run_dir / "summary.json").write_text(
+                report.render_json_report(structured), encoding="utf-8"
+            )
             (run_dir / "summary.sdif").write_text(sdif_text, encoding="utf-8")
             _sdif_ai = report.render_sdif_ai_report(sdif_text)
             (run_dir / "summary.sdif.ai").write_text(_sdif_ai, encoding="utf-8")
             (run_dir / "summary-sdif-ai-viewer.html").write_text(
-                report.render_sdif_ai_viewer(_sdif_ai, "Delta Compactness — SDIF AI"), encoding="utf-8"
+                report.render_sdif_ai_viewer(_sdif_ai, "Delta Compactness — SDIF AI"),
+                encoding="utf-8",
             )
             (run_dir / "comparison.md").write_text(detail, encoding="utf-8")
             (run_dir / "comparison-viewer.html").write_text(

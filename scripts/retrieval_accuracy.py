@@ -60,19 +60,20 @@ import contextlib
 import json
 import os
 import sys
-from dataclasses import dataclass, field
+from dataclasses import dataclass
 from pathlib import Path
 from typing import Any
 
 _BENCHMARK_DIR = Path(__file__).resolve().parent.parent
+if str(_BENCHMARK_DIR) not in sys.path:
+    sys.path.insert(0, str(_BENCHMARK_DIR))
 if str(_BENCHMARK_DIR / "src") not in sys.path:
     sys.path.insert(0, str(_BENCHMARK_DIR / "src"))
 
-import infra  # noqa: E402
-import formats as fmt  # noqa: E402
-import report  # noqa: E402
-from optional_deps import optional_module  # noqa: E402
-from infra import (  # noqa: E402
+import src.formats as fmt  # noqa: E402
+import src.report as report  # noqa: E402
+from src.optional_deps import optional_module  # noqa: E402
+from src.infra import (  # noqa: E402
     CORPUS_DIR_NAME,
     DASHBOARD_FILE_NAME,
     REPO_ROOT,
@@ -111,7 +112,9 @@ class Question:
     hint: str
 
 
-def generate_questions(data: dict[str, Any], max_questions: int = DEFAULT_MAX_QUESTIONS) -> list[Question]:
+def generate_questions(
+    data: dict[str, Any], max_questions: int = DEFAULT_MAX_QUESTIONS
+) -> list[Question]:
     questions: list[Question] = []
 
     # Scalar lookups
@@ -305,7 +308,7 @@ def run_benchmark(
 
     max_q = int(os.environ.get("SDIF_RETRIEVAL_MAX_QUESTIONS", DEFAULT_MAX_QUESTIONS))
 
-    print(f"🔍 SDIF RETRIEVAL ACCURACY BENCHMARK")
+    print("🔍 SDIF RETRIEVAL ACCURACY BENCHMARK")
     print(f"Model: {model}")
     print(f"Max questions per document: {max_q}\n")
 
@@ -468,12 +471,14 @@ def _summary_md(evidence: RetrievalEvidence) -> str:
 
     sorted_formats = sorted(format_accuracies.items(), key=lambda x: -_avg(x[1]))
 
-    q_types = sorted({
-        r.question_type
-        for doc in evidence.documents
-        for fr in doc.format_results
-        for r in fr.question_results
-    })
+    q_types = sorted(
+        {
+            r.question_type
+            for doc in evidence.documents
+            for fr in doc.format_results
+            for r in fr.question_results
+        }
+    )
 
     lines: list[str] = [
         "# SDIF Retrieval Accuracy Benchmark — Summary",
@@ -500,19 +505,23 @@ def _summary_md(evidence: RetrievalEvidence) -> str:
             else:
                 type_cols.append("-")
         lines.append(
-            f"| {markdown_escape(format_name)} | {_avg(accs):.1f}% | " + " | ".join(type_cols) + " |"
+            f"| {markdown_escape(format_name)} | {_avg(accs):.1f}% | "
+            + " | ".join(type_cols)
+            + " |"
         )
 
-    lines.extend([
-        "",
-        "## Methodology",
-        "",
-        "- Questions are generated deterministically from the document structure (no hand-crafting).",
-        "- Ground truth is computed from the original JSON — no LLM judge.",
-        f"- Model: `{markdown_escape(evidence.model)}`.",
-        "- Question types: scalar_lookup, count, aggregation, filtered_count.",
-        "",
-    ])
+    lines.extend(
+        [
+            "",
+            "## Methodology",
+            "",
+            "- Questions are generated deterministically from the document structure (no hand-crafting).",
+            "- Ground truth is computed from the original JSON — no LLM judge.",
+            f"- Model: `{markdown_escape(evidence.model)}`.",
+            "- Question types: scalar_lookup, count, aggregation, filtered_count.",
+            "",
+        ]
+    )
 
     return "\n".join(lines)
 
@@ -527,14 +536,16 @@ def _detail_md(evidence: RetrievalEvidence) -> str:
     ]
 
     for doc in evidence.documents:
-        lines.extend([
-            f"## {markdown_escape(doc.document_name)}",
-            "",
-            "### Questions",
-            "",
-            "| # | Type | Question | Ground Truth |",
-            "| --- | --- | --- | --- |",
-        ])
+        lines.extend(
+            [
+                f"## {markdown_escape(doc.document_name)}",
+                "",
+                "### Questions",
+                "",
+                "| # | Type | Question | Ground Truth |",
+                "| --- | --- | --- | --- |",
+            ]
+        )
         for i, q in enumerate(doc.questions, 1):
             lines.append(
                 f"| {i} | {markdown_escape(q.question_type)} "
@@ -542,18 +553,20 @@ def _detail_md(evidence: RetrievalEvidence) -> str:
                 f"| `{markdown_escape(q.ground_truth)}` |"
             )
 
-        lines.extend([
-            "",
-            "### Results by Format",
-            "",
-            "| Format | Accuracy | " + " | ".join(f"Q{i}" for i in range(1, len(doc.questions) + 1)) + " |",
-            "| --- | ---: |" + " :---: |" * len(doc.questions),
-        ])
+        lines.extend(
+            [
+                "",
+                "### Results by Format",
+                "",
+                "| Format | Accuracy | "
+                + " | ".join(f"Q{i}" for i in range(1, len(doc.questions) + 1))
+                + " |",
+                "| --- | ---: |" + " :---: |" * len(doc.questions),
+            ]
+        )
         for fr in doc.format_results:
             q_cells = " | ".join("✓" if r.correct else "✗" for r in fr.question_results)
-            lines.append(
-                f"| {markdown_escape(fr.format_name)} | {fr.accuracy:.1f}% | {q_cells} |"
-            )
+            lines.append(f"| {markdown_escape(fr.format_name)} | {fr.accuracy:.1f}% | {q_cells} |")
         lines.append("")
 
     return "\n".join(lines)
@@ -573,7 +586,9 @@ def _print_usage_and_exit() -> None:
     print()
     print("Optional:")
     print(f"  SDIF_CLAUDE_MODEL=<model>    — model to use (default: {DEFAULT_MODEL})")
-    print(f"  SDIF_RETRIEVAL_MAX_QUESTIONS=<n> — questions per document (default: {DEFAULT_MAX_QUESTIONS})")
+    print(
+        f"  SDIF_RETRIEVAL_MAX_QUESTIONS=<n> — questions per document (default: {DEFAULT_MAX_QUESTIONS})"
+    )
     sys.exit(1)
 
 
@@ -596,7 +611,6 @@ def main() -> None:
     client = anthropic_client_cls()
 
     run_dir = create_benchmark_run_dir(BENCHMARK_TRACK_NAME)
-    final_dir = benchmark_result_dir(BENCHMARK_TRACK_NAME)
     log_path = run_dir / "comparison.log"
 
     with log_path.open("w", encoding="utf-8") as log_file:
@@ -610,9 +624,13 @@ def main() -> None:
             sdif_text = report.render_sdif_report(structured)
 
             (run_dir / "summary.md").write_text(summary, encoding="utf-8")
-            (run_dir / "summary.json").write_text(report.render_json_report(structured), encoding="utf-8")
+            (run_dir / "summary.json").write_text(
+                report.render_json_report(structured), encoding="utf-8"
+            )
             (run_dir / "summary.sdif").write_text(sdif_text, encoding="utf-8")
-            (run_dir / "summary.sdif.ai").write_text(report.render_sdif_ai_report(sdif_text), encoding="utf-8")
+            (run_dir / "summary.sdif.ai").write_text(
+                report.render_sdif_ai_report(sdif_text), encoding="utf-8"
+            )
             (run_dir / "comparison.md").write_text(detail, encoding="utf-8")
             (run_dir / DASHBOARD_FILE_NAME).write_text(
                 report.render_dashboard_report(structured, summary, detail), encoding="utf-8"

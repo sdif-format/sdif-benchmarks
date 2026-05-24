@@ -15,7 +15,6 @@ import json
 import sys
 from pathlib import Path
 
-import pytest
 
 BENCHMARKS_ROOT = Path(__file__).resolve().parents[1]
 SDIF_SRC = BENCHMARKS_ROOT.parent / "src"
@@ -212,12 +211,10 @@ def test_semantic_fidelity_result_fields() -> None:
 def test_parse_back_status_valid_values() -> None:
     """parse_back_status must be one of the four defined values."""
     valid = {"ok", "best_effort", "not_measured", "parse_error"}
-    from sdif.canonical import canonicalize
     from formats import build_formats_dict
     from sdif import parse_text
     from sdif.json import document_to_json_data
 
-    canonical = canonicalize(FULL_SOURCE)
     data = document_to_json_data(parse_text(FULL_SOURCE))
     formats = build_formats_dict(data)
 
@@ -233,14 +230,7 @@ def test_parse_back_status_valid_values() -> None:
 # ---------------------------------------------------------------------------
 
 
-SOURCE_NO_REL = (
-    "@sdif 1.0\n"
-    "kind Test\n"
-    "id t.1\n"
-    "\n"
-    "items[id,value]:\n"
-    "  A\t1\n"
-)
+SOURCE_NO_REL = "@sdif 1.0\nkind Test\nid t.1\n\nitems[id,value]:\n  A\t1\n"
 
 
 def test_empty_rel_axis_returns_none() -> None:

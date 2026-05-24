@@ -107,16 +107,19 @@ import yaml
 
 BENCHMARK_DIR = Path(__file__).resolve().parents[1]
 BENCHMARK_REPO_ROOT = BENCHMARK_DIR
-SDIF_CORE_REPO = Path(os.environ.get("SDIF_CORE_REPO") or str(BENCHMARK_REPO_ROOT.parent)).expanduser().resolve()
+SDIF_CORE_REPO = (
+    Path(os.environ.get("SDIF_CORE_REPO") or str(BENCHMARK_REPO_ROOT.parent)).expanduser().resolve()
+)
 REPO_ROOT = SDIF_CORE_REPO
 sys.path.insert(0, str(SDIF_CORE_REPO / "src"))
+sys.path.insert(0, str(BENCHMARK_DIR))
 sys.path.insert(0, str(BENCHMARK_DIR / "src"))
 DASHBOARD_TEMPLATE_PATH = BENCHMARK_DIR / "src" / "dashboard_template.html"
 
 from sdif.ai import ai_view  # noqa: E402
 from sdif.json import json_data_to_sdif  # noqa: E402
-from report import render_md_viewer, render_sdif_ai_viewer  # noqa: E402
-from optional_deps import optional_module  # noqa: E402
+from src.report import render_md_viewer, render_sdif_ai_viewer  # noqa: E402
+from src.optional_deps import optional_module  # noqa: E402
 
 
 # ====================
@@ -237,7 +240,6 @@ class Tee:
 
 def utc_now_iso() -> str:
     return datetime.now(timezone.utc).replace(microsecond=0).isoformat().replace("+00:00", "Z")
-
 
 
 def replace_directory(source: Path, destination: Path) -> None:

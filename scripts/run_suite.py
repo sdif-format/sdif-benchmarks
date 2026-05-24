@@ -42,11 +42,13 @@ from pathlib import Path
 from typing import Any
 
 _BENCHMARK_DIR = Path(__file__).resolve().parent.parent
+if str(_BENCHMARK_DIR) not in sys.path:
+    sys.path.insert(0, str(_BENCHMARK_DIR))
 if str(_BENCHMARK_DIR / "src") not in sys.path:
     sys.path.insert(0, str(_BENCHMARK_DIR / "src"))
 
-import report  # noqa: E402
-from infra import (  # noqa: E402
+import src.report as report  # noqa: E402
+from src.infra import (  # noqa: E402
     BENCHMARK_DIR,
     REPO_ROOT,
     benchmark_output_dir,
@@ -184,7 +186,9 @@ def _extract_roundtrip_scorecard(result_dir: Path) -> dict[str, Any]:
         "metric": "sdifOverallFidelity",
         "value": round(avg_fidelity, 2) if avg_fidelity is not None else None,
         "unit": "%",
-        "description": f"SDIF round-trip: {sdif_successes}/{sdif_total} documents, avg fidelity {avg_fidelity:.1f}%" if avg_fidelity else "n/a",
+        "description": f"SDIF round-trip: {sdif_successes}/{sdif_total} documents, avg fidelity {avg_fidelity:.1f}%"
+        if avg_fidelity
+        else "n/a",
         "successfulRoundTrips": f"{sdif_successes}/{sdif_total}",
     }
 
@@ -206,7 +210,9 @@ def _extract_delta_scorecard(result_dir: Path) -> dict[str, Any]:
         "metric": "avgTokenDeltaPct",
         "value": round(avg_sdif, 2) if avg_sdif is not None else None,
         "unit": "%",
-        "description": f"SDIF avg token delta on full-resend: {avg_sdif:.1f}% vs JSON Compact {avg_json:.1f}%" if avg_sdif and avg_json else "n/a",
+        "description": f"SDIF avg token delta on full-resend: {avg_sdif:.1f}% vs JSON Compact {avg_json:.1f}%"
+        if avg_sdif and avg_json
+        else "n/a",
         "jsonCompactAvgDelta": round(avg_json, 2) if avg_json is not None else None,
         "note": "full-resend model — not true SDIF delta encoding",
     }
@@ -315,9 +321,9 @@ def _run_track(track: dict[str, Any], *, retrieval_enabled: bool, env: dict[str,
             return False
         track_env["SDIF_BENCHMARK_RETRIEVAL"] = "1"
 
-    print(f"\n{'='*60}")
+    print(f"\n{'=' * 60}")
     print(f"  Running: {track['label']} ({track['script']})")
-    print(f"{'='*60}")
+    print(f"{'=' * 60}")
     t0 = time.monotonic()
     result = subprocess.run(cmd, env=track_env)
     elapsed = time.monotonic() - t0
@@ -343,22 +349,26 @@ def _build_index(
             continue
         result_dir = benchmark_result_dir(track["id"])
         scorecard_data = _SCORECARD_EXTRACTORS[track["id"]](result_dir)
-        scorecard.append({
-            "track": track["id"],
-            "label": track["label"],
-            "claim": track["claim"],
-            **scorecard_data,
-            "evidence": f"{track['id']}/summary.md",
-        })
-        artifacts.append({
-            "track": track["id"],
-            "label": track["label"],
-            "summaryMd": f"{track['id']}/summary.md",
-            "summaryJson": f"{track['id']}/summary.json",
-            "summarySdif": f"{track['id']}/summary.sdif",
-            "summarySdifAi": f"{track['id']}/summary.sdif.ai",
-            "dashboard": f"{track['id']}/dashboard.html",
-        })
+        scorecard.append(
+            {
+                "track": track["id"],
+                "label": track["label"],
+                "claim": track["claim"],
+                **scorecard_data,
+                "evidence": f"{track['id']}/summary.md",
+            }
+        )
+        artifacts.append(
+            {
+                "track": track["id"],
+                "label": track["label"],
+                "summaryMd": f"{track['id']}/summary.md",
+                "summaryJson": f"{track['id']}/summary.json",
+                "summarySdif": f"{track['id']}/summary.sdif",
+                "summarySdifAi": f"{track['id']}/summary.sdif.ai",
+                "dashboard": f"{track['id']}/dashboard.html",
+            }
+        )
 
     return {
         "kind": "BenchmarkSuiteReport",
@@ -397,48 +407,54 @@ def _index_readme(index: dict[str, Any], generated_at: str) -> str:
             f"| {result_str} |"
         )
 
-    lines.extend([
-        "",
-        "## Explore",
-        "",
-        "- [Open suite dashboard](dashboard.html)",
-        "- [Raw index](index.json) / [SDIF](index.sdif) / [SDIF AI](index.sdif.ai)",
-        "",
-        "## Tracks",
-        "",
-    ])
+    lines.extend(
+        [
+            "",
+            "## Explore",
+            "",
+            "- [Open suite dashboard](dashboard.html)",
+            "- [Raw index](index.json) / [SDIF](index.sdif) / [SDIF AI](index.sdif.ai)",
+            "",
+            "## Tracks",
+            "",
+        ]
+    )
     for entry in index.get("artifacts", []):
-        lines.extend([
-            f"### {markdown_escape(entry['label'])}",
-            "",
-            f"- [Summary]({entry['summaryMd']})",
-            f"- [Dashboard]({entry['dashboard']})",
-            f"- SDIF AI: [{entry['summarySdifAi']}]({entry['summarySdifAi']})",
-            "",
-        ])
+        lines.extend(
+            [
+                f"### {markdown_escape(entry['label'])}",
+                "",
+                f"- [Summary]({entry['summaryMd']})",
+                f"- [Dashboard]({entry['dashboard']})",
+                f"- SDIF AI: [{entry['summarySdifAi']}]({entry['summarySdifAi']})",
+                "",
+            ]
+        )
 
-    lines.extend([
-        "## Reproduce",
-        "",
-        "```bash",
-        "make benchmark-token",
-        "make benchmark-packing",
-        "make benchmark-roundtrip",
-        "make benchmark-delta",
-        "make benchmark-semantic",
-        "make benchmark-operability",
-        "# opt-in:",
-        "SDIF_BENCHMARK_RETRIEVAL=1 ANTHROPIC_API_KEY=<key> make benchmark-retrieval",
-        "# or run the full suite:",
-        "python benchmarks/scripts/run_suite.py",
-        "```",
-        "",
-        "## Meta",
-        "",
-        "> The benchmark evidence for SDIF is itself published in SDIF format.",
-        "> `index.sdif.ai` is a compact AI-optimized overview of this entire suite.",
-        "",
-    ])
+    lines.extend(
+        [
+            "## Reproduce",
+            "",
+            "```bash",
+            "make benchmark-token",
+            "make benchmark-packing",
+            "make benchmark-roundtrip",
+            "make benchmark-delta",
+            "make benchmark-semantic",
+            "make benchmark-operability",
+            "# opt-in:",
+            "SDIF_BENCHMARK_RETRIEVAL=1 ANTHROPIC_API_KEY=<key> make benchmark-retrieval",
+            "# or run the full suite:",
+            "python benchmarks/scripts/run_suite.py",
+            "```",
+            "",
+            "## Meta",
+            "",
+            "> The benchmark evidence for SDIF is itself published in SDIF format.",
+            "> `index.sdif.ai` is a compact AI-optimized overview of this entire suite.",
+            "",
+        ]
+    )
     return "\n".join(lines)
 
 
@@ -459,21 +475,25 @@ def _suite_dashboard_html(index: dict[str, Any], readme_md: str) -> str:
 </head>
 <body>
 <h1>SDIF Benchmark Suite</h1>
-<p>Generated: {index['generatedAt']}</p>
+<p>Generated: {index["generatedAt"]}</p>
 <h2>Scorecard</h2>
 <table border="1" cellpadding="6">
 <tr><th>Dimension</th><th>Claim</th><th>Result</th></tr>
-{''.join(
-    f"<tr><td>{e['label']}</td><td>{e['claim']}</td><td>{e.get('value','—')}{e.get('unit','')}</td></tr>"
-    for e in index.get('scorecard', [])
-)}
+{
+        "".join(
+            f"<tr><td>{e['label']}</td><td>{e['claim']}</td><td>{e.get('value', '—')}{e.get('unit', '')}</td></tr>"
+            for e in index.get("scorecard", [])
+        )
+    }
 </table>
 <h2>Artifacts</h2>
 <ul>
-{''.join(
-    f'<li><a href="{e["dashboard"]}">{e["label"]} Dashboard</a></li>'
-    for e in index.get('artifacts', [])
-)}
+{
+        "".join(
+            f'<li><a href="{e["dashboard"]}">{e["label"]} Dashboard</a></li>'
+            for e in index.get("artifacts", [])
+        )
+    }
 </ul>
 </body>
 </html>"""
@@ -520,14 +540,20 @@ def main() -> None:
     for track in TRACKS:
         short = track["short"]
         if only_set and short not in only_set:
-            run_results.append({"track": track, "ran": False, "success": False, "reason": "not in --only"})
+            run_results.append(
+                {"track": track, "ran": False, "success": False, "reason": "not in --only"}
+            )
             continue
         if short in skip_set:
             print(f"\n  ⏭  Skipping {track['label']} (--skip {short})")
-            run_results.append({"track": track, "ran": False, "success": False, "reason": "skipped"})
+            run_results.append(
+                {"track": track, "ran": False, "success": False, "reason": "skipped"}
+            )
             continue
         if track["optional"] and not retrieval_enabled:
-            run_results.append({"track": track, "ran": False, "success": False, "reason": "opt-in required"})
+            run_results.append(
+                {"track": track, "ran": False, "success": False, "reason": "opt-in required"}
+            )
             _run_track(track, retrieval_enabled=False, env={})
             continue
 
@@ -535,7 +561,8 @@ def main() -> None:
         run_results.append({"track": track, "ran": True, "success": success})
 
     # Count corpus documents from golden dir
-    from infra import benchmark_golden_dir, discover_documents
+    from src.infra import benchmark_golden_dir, discover_documents
+
     corpus_docs = len(discover_documents(benchmark_golden_dir()))
 
     index = _build_index(run_results, generated_at, corpus_documents=corpus_docs)
@@ -562,22 +589,28 @@ def main() -> None:
         index_sdif_ai = index_sdif
     (results_dir / "index.sdif.ai").write_text(index_sdif_ai, encoding="utf-8")
     (results_dir / "index-sdif-ai-viewer.html").write_text(
-        report.render_sdif_ai_viewer(index_sdif_ai, "SDIF Benchmark Suite — Index SDIF AI", back_href="dashboard.html"),
+        report.render_sdif_ai_viewer(
+            index_sdif_ai, "SDIF Benchmark Suite — Index SDIF AI", back_href="dashboard.html"
+        ),
         encoding="utf-8",
     )
 
     (results_dir / "README.md").write_text(readme_md, encoding="utf-8")
     (results_dir / "README-viewer.html").write_text(
-        report.render_md_viewer(readme_md, "SDIF Benchmark Suite — README", back_href="dashboard.html"),
+        report.render_md_viewer(
+            readme_md, "SDIF Benchmark Suite — README", back_href="dashboard.html"
+        ),
         encoding="utf-8",
     )
 
     dashboard_html = _suite_dashboard_html(index, readme_md)
     (results_dir / "dashboard.html").write_text(dashboard_html, encoding="utf-8")
 
-    print(f"\n{'='*60}")
-    print(f"  📋 Suite complete: {len([r for r in run_results if r['ran'] and r['success']])} tracks ran")
-    print(f"{'='*60}")
+    print(f"\n{'=' * 60}")
+    print(
+        f"  📋 Suite complete: {len([r for r in run_results if r['ran'] and r['success']])} tracks ran"
+    )
+    print(f"{'=' * 60}")
     for entry in run_results:
         t = entry["track"]
         if entry["ran"] and entry["success"]:

@@ -149,9 +149,7 @@ def corpus_file_name(format_name: str) -> str:
         raise ValueError(f"Unsupported benchmark format for corpus output: {format_name}") from exc
 
 
-def write_document_corpus(
-    run_dir: Path, document_name: str, format_texts: dict[str, str]
-) -> None:
+def write_document_corpus(run_dir: Path, document_name: str, format_texts: dict[str, str]) -> None:
     document_dir = run_dir / infra.CORPUS_DIR_NAME / document_name
     document_dir.mkdir(parents=True, exist_ok=True)
     for format_name, text in format_texts.items():
@@ -160,9 +158,7 @@ def write_document_corpus(
             (document_dir / file_name).write_text(text, encoding="utf-8")
 
 
-def _run_command(
-    command: list[str], output: Path, timeout_seconds: int = 30
-) -> str | None:
+def _run_command(command: list[str], output: Path, timeout_seconds: int = 30) -> str | None:
     try:
         completed = subprocess.run(
             command,

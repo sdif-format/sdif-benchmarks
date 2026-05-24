@@ -18,9 +18,9 @@ from pathlib import Path
 from typing import Any
 
 BENCHMARKS_ROOT = Path(__file__).resolve().parents[1]
-SDIF_CORE_REPO = Path(
-    os.environ.get("SDIF_CORE_REPO") or str(BENCHMARKS_ROOT.parent)
-).expanduser().resolve()
+SDIF_CORE_REPO = (
+    Path(os.environ.get("SDIF_CORE_REPO") or str(BENCHMARKS_ROOT.parent)).expanduser().resolve()
+)
 SDIF_SRC = SDIF_CORE_REPO / "src"
 DEFAULT_OUTPUT_DIR = SDIF_CORE_REPO / "examples" / "golden"
 

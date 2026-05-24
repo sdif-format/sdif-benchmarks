@@ -46,14 +46,15 @@ from pathlib import Path
 from typing import Any, Sequence
 
 _BENCHMARK_DIR = Path(__file__).resolve().parent.parent
+if str(_BENCHMARK_DIR) not in sys.path:
+    sys.path.insert(0, str(_BENCHMARK_DIR))
 if str(_BENCHMARK_DIR / "src") not in sys.path:
     sys.path.insert(0, str(_BENCHMARK_DIR / "src"))
 
-import infra  # noqa: E402 — sets up REPO_ROOT/src on sys.path
-import formats as fmt  # noqa: E402
-import report  # noqa: E402
-from optional_deps import optional_module  # noqa: E402
-from infra import (  # noqa: E402
+import src.formats as fmt  # noqa: E402
+import src.report as report  # noqa: E402
+from src.optional_deps import optional_module  # noqa: E402
+from src.infra import (  # noqa: E402
     CORPUS_DIR_NAME,
     DASHBOARD_FILE_NAME,
     REPO_ROOT,
@@ -142,7 +143,7 @@ def run_benchmark(run_dir: Path, *, env_file_loaded: bool) -> PackingEvidence:
         raise SystemExit("No golden files found under examples/golden/*/equivalent.json")
 
     tok = tokenizer_name()
-    print(f"📦 SDIF CONTEXT PACKING BENCHMARK")
+    print("📦 SDIF CONTEXT PACKING BENCHMARK")
     print(f"Tokenizer: {tok}")
     print(f"Budgets: {', '.join(BUDGET_LABELS[b] for b in CONTEXT_BUDGETS)} tokens\n")
 
@@ -366,44 +367,48 @@ def _summary_md(evidence: PackingEvidence) -> str:
                 )
 
     budget_hdrs = " | ".join(f"`{BUDGET_LABELS[b]}`" for b in CONTEXT_BUDGETS)
-    lines.extend([
-        "",
-        f"## Fit Rate: % of {n_docs} documents that fit at least once",
-        "",
-        f"| Format | Avg tokens | vs JSON | {budget_hdrs} |",
-        "| --- | ---: | ---: |" + " ---: |" * len(CONTEXT_BUDGETS),
-    ])
+    lines.extend(
+        [
+            "",
+            f"## Fit Rate: % of {n_docs} documents that fit at least once",
+            "",
+            f"| Format | Avg tokens | vs JSON | {budget_hdrs} |",
+            "| --- | ---: | ---: |" + " ---: |" * len(CONTEXT_BUDGETS),
+        ]
+    )
 
     for fmt_name, avg, ratio, fit_rate, _avg_d, _med_d in agg_rows:
         ratio_str = f"{ratio:.1f}%" if ratio is not None else "-"
         rate_cols = " | ".join(f"{fit_rate[b]:.0f}%" for b in CONTEXT_BUDGETS)
-        lines.append(
-            f"| {markdown_escape(fmt_name)} | {avg:.0f} | {ratio_str} | {rate_cols} |"
-        )
+        lines.append(f"| {markdown_escape(fmt_name)} | {avg:.0f} | {ratio_str} | {rate_cols} |")
 
-    lines.extend([
-        "",
-        "## Avg documents per context budget",
-        "",
-        f"| Format | {budget_hdrs} |",
-        "| --- |" + " ---: |" * len(CONTEXT_BUDGETS),
-    ])
+    lines.extend(
+        [
+            "",
+            "## Avg documents per context budget",
+            "",
+            f"| Format | {budget_hdrs} |",
+            "| --- |" + " ---: |" * len(CONTEXT_BUDGETS),
+        ]
+    )
 
     for fmt_name, _avg_t, _ratio, _fit, avg_docs, _med_d in agg_rows:
         avg_cols = " | ".join(f"{avg_docs[b]:.1f}" for b in CONTEXT_BUDGETS)
         lines.append(f"| {markdown_escape(fmt_name)} | {avg_cols} |")
 
-    lines.extend([
-        "",
-        "## Methodology",
-        "",
-        "- All formats are derived from the same canonical `equivalent.json` source.",
-        f"- **Fit rate**: % of corpus documents where `floor(budget / tokens) >= 1`.",
-        "- **Avg docs**: mean number of copies that fit per document across the corpus.",
-        f"- Tokenizer: `{markdown_escape(evidence.tokenizer)}`.",
-        "- Ratios computed against JSON Compact as the stable baseline.",
-        "",
-    ])
+    lines.extend(
+        [
+            "",
+            "## Methodology",
+            "",
+            "- All formats are derived from the same canonical `equivalent.json` source.",
+            "- **Fit rate**: % of corpus documents where `floor(budget / tokens) >= 1`.",
+            "- **Avg docs**: mean number of copies that fit per document across the corpus.",
+            f"- Tokenizer: `{markdown_escape(evidence.tokenizer)}`.",
+            "- Ratios computed against JSON Compact as the stable baseline.",
+            "",
+        ]
+    )
 
     return "\n".join(lines)
 
@@ -420,12 +425,14 @@ def _detail_md(evidence: PackingEvidence) -> str:
     budget_hdrs = " | ".join(f"`{BUDGET_LABELS[b]}`" for b in CONTEXT_BUDGETS)
 
     for doc in evidence.documents:
-        lines.extend([
-            f"## {markdown_escape(doc.document_name)}",
-            "",
-            f"| Format | Tokens | Bytes | {budget_hdrs} |",
-            "| --- | ---: | ---: |" + " ---: |" * len(CONTEXT_BUDGETS),
-        ])
+        lines.extend(
+            [
+                f"## {markdown_escape(doc.document_name)}",
+                "",
+                f"| Format | Tokens | Bytes | {budget_hdrs} |",
+                "| --- | ---: | ---: |" + " ---: |" * len(CONTEXT_BUDGETS),
+            ]
+        )
         for row in sorted(doc.rows, key=lambda r: r.tokens):
             rec_cols = " | ".join(str(row.records_by_budget[b]) for b in CONTEXT_BUDGETS)
             lines.append(
@@ -461,7 +468,9 @@ def main() -> None:
             (run_dir / "summary-viewer.html").write_text(
                 report.render_md_viewer(summary_md, "Context Packing — Summary"), encoding="utf-8"
             )
-            (run_dir / "summary.json").write_text(report.render_json_report(summary_data), encoding="utf-8")
+            (run_dir / "summary.json").write_text(
+                report.render_json_report(summary_data), encoding="utf-8"
+            )
             (run_dir / "summary.sdif").write_text(summary_sdif, encoding="utf-8")
             _sum_ai = report.render_sdif_ai_report(summary_sdif)
             (run_dir / "summary.sdif.ai").write_text(_sum_ai, encoding="utf-8")
@@ -472,12 +481,15 @@ def main() -> None:
             (run_dir / "comparison-viewer.html").write_text(
                 report.render_md_viewer(detail_md, "Context Packing — Detail"), encoding="utf-8"
             )
-            (run_dir / "comparison.json").write_text(report.render_json_report(detail_data), encoding="utf-8")
+            (run_dir / "comparison.json").write_text(
+                report.render_json_report(detail_data), encoding="utf-8"
+            )
             (run_dir / "comparison.sdif").write_text(detail_sdif, encoding="utf-8")
             _det_ai = report.render_sdif_ai_report(detail_sdif)
             (run_dir / "comparison.sdif.ai").write_text(_det_ai, encoding="utf-8")
             (run_dir / "comparison-sdif-ai-viewer.html").write_text(
-                report.render_sdif_ai_viewer(_det_ai, "Context Packing — Comparison SDIF AI"), encoding="utf-8"
+                report.render_sdif_ai_viewer(_det_ai, "Context Packing — Comparison SDIF AI"),
+                encoding="utf-8",
             )
             (run_dir / DASHBOARD_FILE_NAME).write_text(
                 report.render_dashboard_report(detail_data, summary_md, detail_md), encoding="utf-8"

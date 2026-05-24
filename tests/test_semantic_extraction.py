@@ -14,7 +14,6 @@ from __future__ import annotations
 import sys
 from pathlib import Path
 
-import pytest
 
 BENCHMARKS_ROOT = Path(__file__).resolve().parents[1]
 SDIF_SRC = BENCHMARKS_ROOT.parent / "src"
@@ -148,15 +147,7 @@ def test_scalar_fields_extracted_correctly() -> None:
 # ---------------------------------------------------------------------------
 
 
-AI_SOURCE_WITH_REL = (
-    "@sdif.ai 1.0\n"
-    "alias[d=depends_on]\n"
-    "kind Test\n"
-    "id t.1\n"
-    "\n"
-    "rel:\n"
-    "  A\td\tB\n"
-)
+AI_SOURCE_WITH_REL = "@sdif.ai 1.0\nalias[d=depends_on]\nkind Test\nid t.1\n\nrel:\n  A\td\tB\n"
 
 
 def test_expand_ai_doc_result_passes_to_document_to_json_data() -> None:

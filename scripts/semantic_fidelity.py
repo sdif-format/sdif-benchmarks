@@ -44,11 +44,13 @@ from pathlib import Path
 from typing import Any
 
 _BENCHMARK_DIR = Path(__file__).resolve().parent.parent
+if str(_BENCHMARK_DIR) not in sys.path:
+    sys.path.insert(0, str(_BENCHMARK_DIR))
 if str(_BENCHMARK_DIR / "src") not in sys.path:
     sys.path.insert(0, str(_BENCHMARK_DIR / "src"))
 
-import formats as fmt  # noqa: E402
-from infra import (  # noqa: E402
+import src.formats as fmt  # noqa: E402
+from src.infra import (  # noqa: E402
     REPO_ROOT,
     Tee,
     benchmark_golden_dir,
@@ -132,9 +134,9 @@ def _extract_axes(
     source_sdif: str,
 ) -> tuple[
     list[tuple[str, str, str]],  # relations
-    list[str],                   # rules
+    list[str],  # rules
     dict[str, list[dict[str, Any]]],  # tables (name -> rows)
-    dict[str, Any],              # scalar fields
+    dict[str, Any],  # scalar fields
 ]:
     """Extract semantic axes from SDIF source using the public API."""
     doc = parse_text(source_sdif, policy=_BENCHMARK_POLICY)
@@ -321,9 +323,7 @@ def _xml_to_dict(elem: ET.Element) -> dict[str, Any]:
         if not child_children:
             result[child.tag] = child.text or ""
         elif all(c.tag == "item" for c in child_children):
-            result[child.tag] = [
-                _xml_to_dict(c).get("item", c.text or "") for c in child_children
-            ]
+            result[child.tag] = [_xml_to_dict(c).get("item", c.text or "") for c in child_children]
         else:
             result[child.tag] = _xml_to_dict(child).get(child.tag, {})
     return {elem.tag: result}
@@ -353,7 +353,10 @@ def _parse_csv_bundle(text: str) -> dict[str, Any] | None:
                 rows_list: list[dict[str, Any]] = []
                 for row in reader:
                     rows_list.append(
-                        {headers[i]: _recover_csv_scalar(row[i]) for i in range(min(len(headers), len(row)))}
+                        {
+                            headers[i]: _recover_csv_scalar(row[i])
+                            for i in range(min(len(headers), len(row)))
+                        }
                     )
                 if current_section:
                     result[current_section] = rows_list
@@ -366,7 +369,7 @@ def _parse_csv_bundle(text: str) -> dict[str, Any] | None:
                 is_fields = True
             elif line.startswith("# table:"):
                 flush()
-                current_section = line[len("# table:"):].strip()
+                current_section = line[len("# table:") :].strip()
                 is_fields = False
             else:
                 current_rows.append(line)
@@ -528,9 +531,7 @@ def _build_format_texts(source_sdif: str) -> dict[str, str]:
     return format_texts
 
 
-def run_benchmark(
-    run_dir: Path, *, env_file_loaded: bool
-) -> SemanticFidelityEvidence:
+def run_benchmark(run_dir: Path, *, env_file_loaded: bool) -> SemanticFidelityEvidence:
     """Run the full semantic fidelity benchmark."""
     golden_dir = benchmark_golden_dir()
     doc_names = discover_documents(golden_dir)
@@ -554,6 +555,7 @@ def run_benchmark(
             source_sdif = source_path.read_text(encoding="utf-8")
         else:
             from sdif.json import json_data_to_sdif
+
             json_data = json.loads(json_path.read_text(encoding="utf-8"))
             source_sdif = json_data_to_sdif(json_data, include_header=True)
 
@@ -645,21 +647,23 @@ def _summary_md(evidence: SemanticFidelityEvidence) -> str:
         "",
     ]
     lines.extend(_DISCLAIMER.splitlines())
-    lines.extend([
-        "",
-        "## Results by Format",
-        "",
-        "| Format | Rel Fidelity | Rule Fidelity | Table Fidelity | Field Fidelity | Status |",
-        "| --- | ---: | ---: | ---: | ---: | --- |",
-    ])
+    lines.extend(
+        [
+            "",
+            "## Results by Format",
+            "",
+            "| Format | Rel Fidelity | Rule Fidelity | Table Fidelity | Field Fidelity | Status |",
+            "| --- | ---: | ---: | ---: | ---: | --- |",
+        ]
+    )
 
     # Aggregate by format
     format_scores: dict[str, dict[str, list[float]]] = {}
     for doc in evidence.documents:
         for r in doc.results:
-            bucket = format_scores.setdefault(r.format_name, {
-                "rel": [], "rule": [], "table": [], "field": []
-            })
+            bucket = format_scores.setdefault(
+                r.format_name, {"rel": [], "rule": [], "table": [], "field": []}
+            )
             if r.relation_structural_fidelity is not None:
                 bucket["rel"].append(r.relation_structural_fidelity)
             if r.rule_structural_fidelity is not None:
@@ -691,16 +695,18 @@ def _comparison_json_data(evidence: SemanticFidelityEvidence) -> dict[str, Any]:
     rows: list[dict[str, Any]] = []
     for doc in evidence.documents:
         for r in doc.results:
-            rows.append({
-                "document": doc.document_name,
-                "format": r.format_name,
-                "relationStructuralFidelity": r.relation_structural_fidelity,
-                "ruleStructuralFidelity": r.rule_structural_fidelity,
-                "tableStructuralFidelity": r.table_structural_fidelity,
-                "fieldStructuralFidelity": r.field_structural_fidelity,
-                "parseBackStatus": r.parse_back_status,
-                "note": r.note,
-            })
+            rows.append(
+                {
+                    "document": doc.document_name,
+                    "format": r.format_name,
+                    "relationStructuralFidelity": r.relation_structural_fidelity,
+                    "ruleStructuralFidelity": r.rule_structural_fidelity,
+                    "tableStructuralFidelity": r.table_structural_fidelity,
+                    "fieldStructuralFidelity": r.field_structural_fidelity,
+                    "parseBackStatus": r.parse_back_status,
+                    "note": r.note,
+                }
+            )
     return {
         "kind": "SemanticFidelityComparison",
         "version": "1.0",

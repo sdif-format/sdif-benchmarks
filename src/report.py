@@ -153,7 +153,9 @@ def _highlight_sdif_ai(text: str) -> str:
     return "\n".join(lines)
 
 
-def render_sdif_ai_viewer(sdif_ai_text: str, title: str, *, back_href: str = "dashboard.html") -> str:
+def render_sdif_ai_viewer(
+    sdif_ai_text: str, title: str, *, back_href: str = "dashboard.html"
+) -> str:
     """Render a .sdif.ai file as a self-contained syntax-highlighted HTML viewer."""
     body = _highlight_sdif_ai(sdif_ai_text)
     size_kb = len(sdif_ai_text.encode()) / 1024

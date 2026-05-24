@@ -14,7 +14,6 @@ import sys
 from pathlib import Path
 
 
-
 def _load_operability_module():
     module_path = Path("scripts/operability.py")
     spec = importlib.util.spec_from_file_location("operability", module_path)

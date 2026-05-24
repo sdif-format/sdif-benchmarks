@@ -153,10 +153,12 @@ def test_benchmark_ratios_rankings_and_savings_use_json_compact_as_baseline():
     assert token_efficiency.wins_by_tokenizer(evidence, "Estimate") == {"Compact Format": 1}
 
 
-
 def test_benchmark_golden_dir_can_be_overridden(monkeypatch, tmp_path):
     monkeypatch.delenv("SDIF_BENCHMARK_GOLDEN_DIR", raising=False)
-    assert token_efficiency.benchmark_golden_dir() == token_efficiency.REPO_ROOT / "examples" / "golden"
+    assert (
+        token_efficiency.benchmark_golden_dir()
+        == token_efficiency.REPO_ROOT / "examples" / "golden"
+    )
 
     custom = tmp_path / "golden"
     monkeypatch.setenv("SDIF_BENCHMARK_GOLDEN_DIR", str(custom))
@@ -287,8 +289,8 @@ def test_benchmark_main_publishes_compared_corpus_files(monkeypatch, tmp_path):
     corpus_dir = run_dir / "corpus" / "plan"
     report = json.loads((run_dir / "summary.json").read_text(encoding="utf-8"))
 
-    assert (corpus_dir / "json_compact.json").read_text(encoding="utf-8").startswith(
-        '{"kind":"Plan"'
+    assert (
+        (corpus_dir / "json_compact.json").read_text(encoding="utf-8").startswith('{"kind":"Plan"')
     )
     assert (corpus_dir / "json_pretty.json").read_text(encoding="utf-8").startswith("{\n")
     assert (corpus_dir / "yaml.yaml").is_file()
@@ -313,7 +315,9 @@ def load_roundtrip_fidelity_module():
 
 def test_roundtrip_parse_sdif_large_document():
     """Regression: large-audit-trail (>1MB) must parse without PolicyError."""
-    golden = token_efficiency.REPO_ROOT / "examples" / "golden" / "large-audit-trail" / "source.sdif"
+    golden = (
+        token_efficiency.REPO_ROOT / "examples" / "golden" / "large-audit-trail" / "source.sdif"
+    )
     if not golden.exists():
         pytest.skip("large-audit-trail golden fixture not found")
 
@@ -340,8 +344,11 @@ def test_roundtrip_format_parsers_include_sdif_ai_and_toon():
 def test_roundtrip_parse_sdif_ai_basic():
     rt = load_roundtrip_fidelity_module()
     import formats as fmt_mod
+
     data = {"kind": "Plan", "id": "demo", "items": [{"id": "I1", "status": "open"}]}
-    sdif_text = __import__("sdif.json", fromlist=["json_data_to_sdif"]).json_data_to_sdif(data, include_header=True)
+    sdif_text = __import__("sdif.json", fromlist=["json_data_to_sdif"]).json_data_to_sdif(
+        data, include_header=True
+    )
     ai_text = fmt_mod.compact_ai_projection(sdif_text)
     result = rt.parse_sdif_ai(ai_text)
     assert result == data
@@ -352,6 +359,7 @@ def test_roundtrip_parse_sdif_ai_with_explicit_header():
     # Force the header-present branch by using ai_view directly
     from sdif.ai import ai_view
     from sdif.json import json_data_to_sdif
+
     data = {"name": "test", "count": 3}
     sdif_text = json_data_to_sdif(data, include_header=True)
     ai_text = ai_view(sdif_text, {}, include_header=True)
@@ -364,6 +372,7 @@ def test_roundtrip_parse_sdif_ai_scalar_ambiguity():
     rt = load_roundtrip_fidelity_module()
     import formats as fmt_mod
     from sdif.json import json_data_to_sdif
+
     data = {
         "a": None,
         "b": "null",
@@ -383,6 +392,7 @@ def test_roundtrip_parse_sdif_ai_scalar_ambiguity():
 def test_roundtrip_parse_toon_basic(monkeypatch):
     rt = load_roundtrip_fidelity_module()
     import formats as fmt_mod
+
     data = {"kind": "Plan", "id": "demo", "items": [{"id": "I1", "status": "open"}]}
     toon_text = fmt_mod.toon_from_cli(data)
     if toon_text is None:
@@ -394,6 +404,7 @@ def test_roundtrip_parse_toon_basic(monkeypatch):
 def test_roundtrip_parse_toon_scalar_ambiguity(monkeypatch):
     rt = load_roundtrip_fidelity_module()
     import formats as fmt_mod
+
     data = {"a": None, "b": True, "c": 42, "d": "42", "e": "null", "f": "true"}
     toon_text = fmt_mod.toon_from_cli(data)
     if toon_text is None:

@@ -42,18 +42,20 @@ import subprocess
 import sys
 import tempfile
 import xml.etree.ElementTree as ET
+import yaml
 from dataclasses import dataclass
 from pathlib import Path
 from typing import Any
 
 _BENCHMARK_DIR = Path(__file__).resolve().parent.parent
+if str(_BENCHMARK_DIR) not in sys.path:
+    sys.path.insert(0, str(_BENCHMARK_DIR))
 if str(_BENCHMARK_DIR / "src") not in sys.path:
     sys.path.insert(0, str(_BENCHMARK_DIR / "src"))
 
-import infra  # noqa: E402 — sets up REPO_ROOT/src on sys.path
-import formats as fmt  # noqa: E402
-import report  # noqa: E402
-from infra import (  # noqa: E402
+import src.formats as fmt  # noqa: E402
+import src.report as report  # noqa: E402
+from src.infra import (  # noqa: E402
     CORPUS_DIR_NAME,
     DASHBOARD_FILE_NAME,
     REPO_ROOT,
@@ -69,8 +71,6 @@ from infra import (  # noqa: E402
     utc_now_iso,
     verbose_warning,
 )
-
-import yaml
 
 from sdif.ai import expand_ai_doc  # noqa: E402
 from sdif.json.converter import document_to_json_data  # noqa: E402
@@ -146,7 +146,6 @@ def _xml_element_to_dict(elem: ET.Element) -> dict[str, Any]:
 
 def parse_csv_bundle(text: str) -> dict[str, Any] | None:
     import csv
-    import io
 
     try:
         result: dict[str, Any] = {}
@@ -171,7 +170,10 @@ def parse_csv_bundle(text: str) -> dict[str, Any] | None:
                 for row in reader:
                     if headers:
                         rows_list.append(
-                            {headers[i]: _infer_scalar(row[i]) for i in range(min(len(headers), len(row)))}
+                            {
+                                headers[i]: _infer_scalar(row[i])
+                                for i in range(min(len(headers), len(row)))
+                            }
                         )
                 if current_section:
                     result[current_section] = rows_list
@@ -184,7 +186,7 @@ def parse_csv_bundle(text: str) -> dict[str, Any] | None:
                 is_fields = True
             elif line.startswith("# table:"):
                 flush_section()
-                current_section = line[len("# table:"):].strip()
+                current_section = line[len("# table:") :].strip()
                 is_fields = False
             else:
                 current_rows.append(line)
@@ -305,7 +307,12 @@ def score_fidelity(original: dict[str, Any], roundtripped: dict[str, Any]) -> di
 
     all_paths = set(orig_leaves.keys()) | set(rt_leaves.keys())
     if not all_paths:
-        return {"value_fidelity": 100.0, "type_fidelity": 100.0, "structure_fidelity": 100.0, "overall_fidelity": 100.0}
+        return {
+            "value_fidelity": 100.0,
+            "type_fidelity": 100.0,
+            "structure_fidelity": 100.0,
+            "overall_fidelity": 100.0,
+        }
 
     # Structure fidelity: paths in original that exist in round-trip
     orig_paths = set(orig_leaves.keys())
@@ -313,7 +320,12 @@ def score_fidelity(original: dict[str, Any], roundtripped: dict[str, Any]) -> di
     structure_fidelity = len(common_paths) / len(orig_paths) * 100 if orig_paths else 100.0
 
     if not common_paths:
-        return {"value_fidelity": 0.0, "type_fidelity": 0.0, "structure_fidelity": structure_fidelity, "overall_fidelity": 0.0}
+        return {
+            "value_fidelity": 0.0,
+            "type_fidelity": 0.0,
+            "structure_fidelity": structure_fidelity,
+            "overall_fidelity": 0.0,
+        }
 
     value_matches = 0
     type_matches = 0
@@ -390,11 +402,13 @@ def collect_diagnostics(
         if not value_ok:
             value_mismatches.append({"path": path, "expected": orig_val, "actual": rt_val})
         if type(orig_val) is not type(rt_val):
-            type_mismatches.append({
-                "path": path,
-                "expected_type": type(orig_val).__name__,
-                "actual_type": type(rt_val).__name__,
-            })
+            type_mismatches.append(
+                {
+                    "path": path,
+                    "expected_type": type(orig_val).__name__,
+                    "actual_type": type(rt_val).__name__,
+                }
+            )
     result: dict[str, Any] = {
         "missing_paths": missing_paths,
         "extra_paths": extra_paths,
@@ -404,8 +418,7 @@ def collect_diagnostics(
     # TOON external decoder coerces whole-number floats (5.0) to ints (5).
     if format_name == "TOON" and not missing_paths and not extra_paths and not value_mismatches:
         if type_mismatches and all(
-            m["expected_type"] == "float" and m["actual_type"] == "int"
-            for m in type_mismatches
+            m["expected_type"] == "float" and m["actual_type"] == "int" for m in type_mismatches
         ):
             result["cause"] = "external_decoder_int_float_coercion"
     return result
@@ -473,7 +486,9 @@ def run_benchmark(run_dir: Path, *, env_file_loaded: bool) -> FidelityEvidence:
 
     print("🔄 SDIF ROUND-TRIP FIDELITY BENCHMARK")
     print("Measures: JSON → format → JSON semantic preservation\n")
-    print(f"{'Document':<28} {'Format':<14} {'Overall':>9} {'Value':>7} {'Type':>7} {'Struct':>8}  Note")
+    print(
+        f"{'Document':<28} {'Format':<14} {'Overall':>9} {'Value':>7} {'Type':>7} {'Struct':>8}  Note"
+    )
     print("=" * 100)
 
     all_results: list[DocumentResult] = []
@@ -511,7 +526,9 @@ def run_benchmark(run_dir: Path, *, env_file_loaded: bool) -> FidelityEvidence:
                         type_fidelity=None,
                         structure_fidelity=None,
                         overall_fidelity=None,
-                        note="decoder unavailable" if format_name in ("SDIF AI", "TOON") else "parse error",
+                        note="decoder unavailable"
+                        if format_name in ("SDIF AI", "TOON")
+                        else "parse error",
                     )
                 else:
                     # Unwrap XML top-level wrapper
@@ -523,7 +540,9 @@ def run_benchmark(run_dir: Path, *, env_file_loaded: bool) -> FidelityEvidence:
                     scores = score_fidelity(original, roundtripped)
                     note = ""
                     if scores["overall_fidelity"] < 100.0:
-                        write_format_diagnostics(run_dir, doc_name, format_name, original, roundtripped)
+                        write_format_diagnostics(
+                            run_dir, doc_name, format_name, original, roundtripped
+                        )
                         note = "see diagnostics"
                     result = FidelityResult(
                         format_name=format_name,
@@ -539,15 +558,19 @@ def run_benchmark(run_dir: Path, *, env_file_loaded: bool) -> FidelityEvidence:
 
             rows.append(result)
 
-        rows.sort(key=lambda r: (-(r.overall_fidelity or -1)))
+        rows.sort(key=lambda r: -(r.overall_fidelity or -1))
         fmt.write_document_corpus(run_dir, doc_name, {r.format_name: r.text for r in rows})
 
         for row in rows:
             prefix = doc_name if first else ""
-            overall = f"{row.overall_fidelity:.1f}%" if row.overall_fidelity is not None else "  N/A"
+            overall = (
+                f"{row.overall_fidelity:.1f}%" if row.overall_fidelity is not None else "  N/A"
+            )
             value = f"{row.value_fidelity:.1f}%" if row.value_fidelity is not None else "  N/A"
             type_ = f"{row.type_fidelity:.1f}%" if row.type_fidelity is not None else "  N/A"
-            struct = f"{row.structure_fidelity:.1f}%" if row.structure_fidelity is not None else "  N/A"
+            struct = (
+                f"{row.structure_fidelity:.1f}%" if row.structure_fidelity is not None else "  N/A"
+            )
             print(
                 f"{prefix:<28} {row.format_name:<14} "
                 f"{overall:>9} {value:>7} {type_:>7} {struct:>8}  {row.note}"
@@ -657,18 +680,20 @@ def _summary_md(evidence: FidelityEvidence) -> str:
             f"| {markdown_escape(format_name)} | {_avg(scores):.1f}% | {len(scores)}/{len(evidence.documents)} |"
         )
 
-    lines.extend([
-        "",
-        "## Score Definitions",
-        "",
-        "| Score | Definition |",
-        "| --- | --- |",
-        "| **Value fidelity** | % of leaf values that round-trip to the same value (string comparison). |",
-        "| **Type fidelity** | % of leaf values whose Python type is preserved exactly. |",
-        "| **Structure fidelity** | % of key paths from the original that exist in the round-tripped document. |",
-        "| **Overall fidelity** | Harmonic mean of the three scores above. |",
-        "",
-    ])
+    lines.extend(
+        [
+            "",
+            "## Score Definitions",
+            "",
+            "| Score | Definition |",
+            "| --- | --- |",
+            "| **Value fidelity** | % of leaf values that round-trip to the same value (string comparison). |",
+            "| **Type fidelity** | % of leaf values whose Python type is preserved exactly. |",
+            "| **Structure fidelity** | % of key paths from the original that exist in the round-tripped document. |",
+            "| **Overall fidelity** | Harmonic mean of the three scores above. |",
+            "",
+        ]
+    )
 
     return "\n".join(lines)
 
@@ -682,12 +707,14 @@ def _detail_md(evidence: FidelityEvidence) -> str:
     ]
 
     for doc in evidence.documents:
-        lines.extend([
-            f"## {markdown_escape(doc.document_name)}",
-            "",
-            "| Format | Overall | Value | Type | Structure | Note |",
-            "| --- | ---: | ---: | ---: | ---: | --- |",
-        ])
+        lines.extend(
+            [
+                f"## {markdown_escape(doc.document_name)}",
+                "",
+                "| Format | Overall | Value | Type | Structure | Note |",
+                "| --- | ---: | ---: | ---: | ---: | --- |",
+            ]
+        )
         for row in sorted(doc.rows, key=lambda r: -(r.overall_fidelity or -1)):
             lines.append(
                 f"| {markdown_escape(row.format_name)} "
@@ -710,7 +737,6 @@ def _detail_md(evidence: FidelityEvidence) -> str:
 def main() -> None:
     env_file_loaded = load_env_file(REPO_ROOT / ".env")
     run_dir = create_benchmark_run_dir(BENCHMARK_TRACK_NAME)
-    final_dir = benchmark_result_dir(BENCHMARK_TRACK_NAME)
     log_path = run_dir / "comparison.log"
 
     with log_path.open("w", encoding="utf-8") as log_file:
@@ -725,12 +751,15 @@ def main() -> None:
             (run_dir / "summary-viewer.html").write_text(
                 report.render_md_viewer(summary, "Round-Trip Fidelity — Summary"), encoding="utf-8"
             )
-            (run_dir / "summary.json").write_text(report.render_json_report(structured), encoding="utf-8")
+            (run_dir / "summary.json").write_text(
+                report.render_json_report(structured), encoding="utf-8"
+            )
             (run_dir / "summary.sdif").write_text(sdif_text, encoding="utf-8")
             _sdif_ai = report.render_sdif_ai_report(sdif_text)
             (run_dir / "summary.sdif.ai").write_text(_sdif_ai, encoding="utf-8")
             (run_dir / "summary-sdif-ai-viewer.html").write_text(
-                report.render_sdif_ai_viewer(_sdif_ai, "Round-Trip Fidelity — SDIF AI"), encoding="utf-8"
+                report.render_sdif_ai_viewer(_sdif_ai, "Round-Trip Fidelity — SDIF AI"),
+                encoding="utf-8",
             )
             (run_dir / "comparison.md").write_text(detail, encoding="utf-8")
             (run_dir / "comparison-viewer.html").write_text(

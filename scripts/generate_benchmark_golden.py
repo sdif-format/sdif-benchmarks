@@ -18,7 +18,9 @@ from typing import Any
 JsonObject = dict[str, Any]
 
 BENCHMARK_ROOT = Path(__file__).resolve().parents[1]
-SDIF_CORE_REPO = Path(os.environ.get("SDIF_CORE_REPO") or str(BENCHMARK_ROOT.parent)).expanduser().resolve()
+SDIF_CORE_REPO = (
+    Path(os.environ.get("SDIF_CORE_REPO") or str(BENCHMARK_ROOT.parent)).expanduser().resolve()
+)
 DEFAULT_GOLDEN_DIR = SDIF_CORE_REPO / "examples" / "golden"
 DEFAULT_GITHUB_OPENAPI = DEFAULT_GOLDEN_DIR / "github.openapi" / "github.openapi.json"
 
