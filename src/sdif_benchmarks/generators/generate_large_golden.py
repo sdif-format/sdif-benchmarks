@@ -19,8 +19,10 @@ from pathlib import Path
 from typing import Any
 
 
-JsonObject = dict[str, Any]
 from sdif_benchmarks.infra import BENCHMARK_DIR as BENCHMARK_ROOT
+
+JsonObject = dict[str, Any]
+
 SDIF_CORE_REPO = (
     Path(os.environ.get("SDIF_CORE_REPO") or str(BENCHMARK_ROOT.parent)).expanduser().resolve()
 )

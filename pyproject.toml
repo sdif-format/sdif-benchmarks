@@ -34,8 +34,8 @@ dev = [
   "pytest>=8.0",
   "tiktoken>=0.13.0",
   "transformers>=4",
-  "types-Markdown>=3.10.2.20260518",
-  "types-PyYAML>=6.0.12.20260518",
+  "types-markdown>=3.10.2.20260518",
+  "types-pyyaml>=6.0.12.20260518",
 ]
 
 [tool.pytest.ini_options]

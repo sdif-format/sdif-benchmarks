@@ -10,7 +10,6 @@ Covers:
 
 from __future__ import annotations
 
-import importlib.util
 import json
 import sys
 from pathlib import Path
@@ -26,7 +25,7 @@ if str(BENCHMARKS_ROOT / "src") not in sys.path:
     sys.path.insert(0, str(BENCHMARKS_ROOT / "src"))
 
 
-from sdif_benchmarks.tracks import semantic_fidelity as sf
+from sdif_benchmarks.tracks import semantic_fidelity as sf  # noqa: E402
 
 measure_semantic_fidelity = sf.measure_semantic_fidelity
 SemanticFidelityResult = sf.SemanticFidelityResult
@@ -232,4 +231,30 @@ def test_empty_rel_axis_returns_none() -> None:
     result = measure_semantic_fidelity("SDIF", SOURCE_NO_REL, canonical)
     assert result.relation_structural_fidelity is None, (
         f"No rels in source → should be None, got {result.relation_structural_fidelity}"
+    )
+
+
+def test_small_api_catalog_preserves_auth_in_sdif_ai() -> None:
+    """small-api-catalog SDIF AI preserves endpoint table columns, including auth as auth."""
+    import pytest
+    from sdif_benchmarks.infra import benchmark_golden_dir
+    from sdif_benchmarks.tracks import semantic_fidelity as sf
+    from sdif.ai import ai_view
+    from sdif_benchmarks import formats as fmt
+
+    golden_dir = benchmark_golden_dir()
+    source_path = golden_dir / "small-api-catalog" / "source.sdif"
+    if not source_path.exists():
+        pytest.skip("small-api-catalog source.sdif not found")
+
+    source_sdif = source_path.read_text(encoding="utf-8")
+
+    ai_text = ai_view(source_sdif, fmt.AI_ALIASES, policy=sf._BENCHMARK_POLICY)
+
+    assert "authority" not in ai_text, "authority should not be introduced if not in source"
+    assert "endpoints[id,method,path,tag,auth]:" in ai_text, "endpoints columns must remain auth"
+
+    result = sf.measure_semantic_fidelity("SDIF AI", source_sdif, ai_text)
+    assert result.table_structural_fidelity == 1.0, (
+        f"Expected table fidelity = 1.0, got {result.table_structural_fidelity}"
     )

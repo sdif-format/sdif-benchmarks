@@ -6,7 +6,6 @@ with both equivalent.json and source.sdif for each of the four semantic types.
 
 from __future__ import annotations
 
-import importlib.util
 import hashlib
 import json
 import sys
@@ -20,7 +19,8 @@ BENCHMARKS_ROOT = Path(__file__).resolve().parents[1]
 SDIF_SRC = BENCHMARKS_ROOT.parent / "src"
 
 
-from sdif_benchmarks.generators import generate_semantic_golden
+from sdif_benchmarks.generators import generate_semantic_golden  # noqa: E402
+
 
 def load_generator() -> types.ModuleType:
     return generate_semantic_golden  # type: ignore[return-value]

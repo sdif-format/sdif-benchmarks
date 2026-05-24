@@ -9,7 +9,7 @@ import sys
 
 def test_retrieval_accuracy_module_exists() -> None:
     try:
-        import sdif_benchmarks.tracks.retrieval_accuracy
+        import sdif_benchmarks.tracks.retrieval_accuracy  # noqa: F401
     except ImportError:
         assert False, "Expected sdif_benchmarks.tracks.retrieval_accuracy to be importable"
 
