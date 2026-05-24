@@ -37,10 +37,10 @@ body{margin:0;padding:32px;background:#f6f7f9;color:#1f2937;font-family:system-u
 It is NOT a true SDIF delta benchmark. A semantic delta (base + patch) would be even smaller.</p>
 </blockquote>
 <ul>
-<li>Generated at: <code>2026-05-23T21:28:15Z</code></li>
+<li>Generated at: <code>2026-05-24T12:18:23Z</code></li>
 <li>Tokenizer: <code>tiktoken/cl100k_base</code></li>
 <li>Mutation: <code>10%</code> of leaf values changed</li>
-<li>Documents: <code>20</code></li>
+<li>Documents: <code>24</code></li>
 </ul>
 <h2>Key Findings</h2>
 <p>A 10% leaf mutation simulates a typical incremental document update.
@@ -57,17 +57,17 @@ Formats with smaller token delta and fewer diff lines produce less noise on full
 <tr>
 <td>XML</td>
 <td style="text-align: right;">+1.6%</td>
-<td style="text-align: right;">2835.7</td>
+<td style="text-align: right;">2365.0</td>
 </tr>
 <tr>
 <td>JSON Pretty</td>
 <td style="text-align: right;">+1.9%</td>
-<td style="text-align: right;">2835.7</td>
+<td style="text-align: right;">2365.0</td>
 </tr>
 <tr>
 <td>YAML</td>
-<td style="text-align: right;">+2.6%</td>
-<td style="text-align: right;">1880.6</td>
+<td style="text-align: right;">+2.7%</td>
+<td style="text-align: right;">1569.1</td>
 </tr>
 <tr>
 <td>JSON Compact</td>
@@ -76,23 +76,23 @@ Formats with smaller token delta and fewer diff lines produce less noise on full
 </tr>
 <tr>
 <td>TOON</td>
-<td style="text-align: right;">+4.4%</td>
-<td style="text-align: right;">484.9</td>
+<td style="text-align: right;">+4.3%</td>
+<td style="text-align: right;">404.9</td>
+</tr>
+<tr>
+<td>CSV Bundle</td>
+<td style="text-align: right;">+4.5%</td>
+<td style="text-align: right;">404.9</td>
 </tr>
 <tr>
 <td>SDIF</td>
 <td style="text-align: right;">+4.6%</td>
-<td style="text-align: right;">484.9</td>
-</tr>
-<tr>
-<td>CSV Bundle</td>
-<td style="text-align: right;">+4.6%</td>
-<td style="text-align: right;">484.9</td>
+<td style="text-align: right;">404.9</td>
 </tr>
 <tr>
 <td>SDIF AI</td>
 <td style="text-align: right;">+4.8%</td>
-<td style="text-align: right;">484.9</td>
+<td style="text-align: right;">405.0</td>
 </tr>
 </tbody>
 </table>

@@ -1,16 +1,18 @@
 {
   "kind": "BenchmarkSuiteReport",
   "version": "1.0",
-  "generatedAt": "2026-05-23T21:25:14Z",
+  "generatedAt": "2026-05-24T12:14:41Z",
   "corpus": {
     "source": "examples/golden",
-    "documents": 20
+    "documents": 24
   },
   "tracks": [
     "token_efficiency",
     "context_packing",
     "roundtrip_fidelity",
-    "delta_compactness"
+    "delta_compactness",
+    "semantic_fidelity",
+    "operability"
   ],
   "scorecard": [
     {
@@ -18,9 +20,9 @@
       "label": "Token Efficiency",
       "claim": "SDIF AI reduces token usage vs JSON Compact",
       "metric": "medianRatioVsJsonCompact",
-      "value": 56.6,
+      "value": 57.2,
       "unit": "%",
-      "description": "SDIF AI median token ratio vs JSON Compact: 56.6%",
+      "description": "SDIF AI median token ratio vs JSON Compact: 57.2%",
       "bestRatio": 26.3,
       "worstRatio": 83.1,
       "evidence": "token_efficiency/summary.md"
@@ -30,11 +32,11 @@
       "label": "Context Packing",
       "claim": "SDIF AI fits more documents into fixed context windows",
       "metric": "fitRateAt32K",
-      "value": 60.0,
+      "value": 66.7,
       "unit": "%",
-      "description": "SDIF AI 32K fit rate: 60% vs JSON Compact 45%",
-      "fitRateAt32K_jsonCompact": 45.0,
-      "fitRateAt128K_sdifAI": 90.0,
+      "description": "SDIF AI 32K fit rate: 67% vs JSON Compact 54%",
+      "fitRateAt32K_jsonCompact": 54.2,
+      "fitRateAt128K_sdifAI": 91.7,
       "evidence": "context_packing/summary.md"
     },
     {
@@ -44,8 +46,8 @@
       "metric": "sdifOverallFidelity",
       "value": 100.0,
       "unit": "%",
-      "description": "SDIF round-trip: 20/20 documents, avg fidelity 100.0%",
-      "successfulRoundTrips": "20/20",
+      "description": "SDIF round-trip: 24/24 documents, avg fidelity 100.0%",
+      "successfulRoundTrips": "24/24",
       "evidence": "roundtrip_fidelity/summary.md"
     },
     {
@@ -53,12 +55,32 @@
       "label": "Mutation Sensitivity",
       "claim": "SDIF produces less noise on full-document re-send after mutation",
       "metric": "avgTokenDeltaPct",
-      "value": 4.56,
+      "value": 4.55,
       "unit": "%",
       "description": "SDIF avg token delta on full-resend: 4.6% vs JSON Compact 3.0%",
-      "jsonCompactAvgDelta": 2.97,
+      "jsonCompactAvgDelta": 3.02,
       "note": "full-resend model — not true SDIF delta encoding",
       "evidence": "delta_compactness/summary.md"
+    },
+    {
+      "track": "semantic_fidelity",
+      "label": "Semantic Fidelity",
+      "claim": "Measures structural recovery fidelity across JSON, YAML, XML, CSV Bundle, SDIF, and SDIF AI after format conversion.",
+      "metric": "sdifSemanticAxisFidelity",
+      "value": 100.0,
+      "unit": "%",
+      "description": "SDIF structural semantic-axis recovery: 100.0%",
+      "evidence": "semantic_fidelity/summary.md"
+    },
+    {
+      "track": "operability",
+      "label": "Operability",
+      "claim": "Documents format capability matrix: canonical forms, stable hashing, native relation support, and rule handling.",
+      "metric": "sdifDeclaredCapabilities",
+      "value": 8,
+      "unit": "/8",
+      "description": "SDIF declares 8/8 deterministic-workflow capabilities; rule evaluation support is False",
+      "evidence": "operability/summary.md"
     }
   ],
   "artifacts": [
@@ -97,6 +119,24 @@
       "summarySdif": "delta_compactness/summary.sdif",
       "summarySdifAi": "delta_compactness/summary.sdif.ai",
       "dashboard": "delta_compactness/dashboard.html"
+    },
+    {
+      "track": "semantic_fidelity",
+      "label": "Semantic Fidelity",
+      "summaryMd": "semantic_fidelity/summary.md",
+      "summaryJson": "semantic_fidelity/summary.json",
+      "summarySdif": "semantic_fidelity/summary.sdif",
+      "summarySdifAi": "semantic_fidelity/summary.sdif.ai",
+      "dashboard": "semantic_fidelity/dashboard.html"
+    },
+    {
+      "track": "operability",
+      "label": "Operability",
+      "summaryMd": "operability/summary.md",
+      "summaryJson": "operability/summary.json",
+      "summarySdif": "operability/summary.sdif",
+      "summarySdifAi": "operability/summary.sdif.ai",
+      "dashboard": "operability/dashboard.html"
     }
   ]
 }

@@ -1,12 +1,34 @@
 kind RoundTripFidelityReport
 version "1.0"
-generatedAt 2026-05-23T21:27:14Z
+generatedAt 2026-05-24T12:17:12Z
 runDirectory results/roundtrip_fidelity
 semanticSource examples/golden/<document>/equivalent.json
 envFileLoaded false
 environment:
   SDIF_BENCHMARK_GOLDEN_DIR null
 documents:
+  __item:
+    name agent-workflow
+    formats[format,bytes,parseSuccess,valueFidelity,typeFidelity,structureFidelity,overallFidelity,note]:
+    JSON Compact	1142	true	100.0	100.0	100.0	100.0	""
+    JSON Pretty	1753	true	100.0	100.0	100.0	100.0	""
+    YAML	1055	true	100.0	100.0	100.0	100.0	""
+    SDIF	633	true	100.0	100.0	100.0	100.0	""
+    TOON	660	true	100.0	100.0	100.0	100.0	""
+    CSV Bundle	668	true	100.0	100.0	96.6	98.8	see diagnostics
+    SDIF AI	626	true	89.7	100.0	100.0	96.3	see diagnostics
+    XML	2232	true	100.0	84.5	100.0	94.2	see diagnostics
+  __item:
+    name audit-provenance
+    formats[format,bytes,parseSuccess,valueFidelity,typeFidelity,structureFidelity,overallFidelity,note]:
+    JSON Compact	1134	true	100.0	100.0	100.0	100.0	""
+    JSON Pretty	1633	true	100.0	100.0	100.0	100.0	""
+    YAML	1047	true	100.0	100.0	100.0	100.0	""
+    XML	2057	true	100.0	100.0	100.0	100.0	""
+    SDIF	702	true	100.0	100.0	100.0	100.0	""
+    TOON	738	true	100.0	100.0	100.0	100.0	""
+    CSV Bundle	741	true	100.0	100.0	95.7	98.5	see diagnostics
+    SDIF AI	696	true	87.0	100.0	100.0	95.2	see diagnostics
   __item:
     name deep-hierarchy-project
     formats[format,bytes,parseSuccess,valueFidelity,typeFidelity,structureFidelity,overallFidelity,note]:
@@ -96,6 +118,17 @@ documents:
     CSV Bundle	383821	true	100.0	96.2	100.0	98.7	see diagnostics
     XML	818657	true	100.0	92.0	100.0	97.2	see diagnostics
   __item:
+    name llm-api-response
+    formats[format,bytes,parseSuccess,valueFidelity,typeFidelity,structureFidelity,overallFidelity,note]:
+    JSON Compact	1325	true	100.0	100.0	100.0	100.0	""
+    JSON Pretty	1898	true	100.0	100.0	100.0	100.0	""
+    YAML	1248	true	100.0	100.0	100.0	100.0	""
+    SDIF	832	true	100.0	100.0	100.0	100.0	""
+    TOON	864	true	100.0	100.0	100.0	100.0	""
+    CSV Bundle	869	true	100.0	100.0	96.4	98.8	see diagnostics
+    SDIF AI	823	true	85.7	100.0	100.0	94.7	see diagnostics
+    XML	2446	true	100.0	82.1	100.0	93.2	see diagnostics
+  __item:
     name medium-invoice-batch
     formats[format,bytes,parseSuccess,valueFidelity,typeFidelity,structureFidelity,overallFidelity,note]:
     JSON Compact	139558	true	100.0	100.0	100.0	100.0	""
@@ -172,6 +205,17 @@ documents:
     SDIF AI	1097	true	100.0	100.0	100.0	100.0	""
     TOON	1181	true	100.0	100.0	100.0	100.0	""
     XML	4189	true	76.2	62.9	100.0	76.9	see diagnostics
+  __item:
+    name semantic-narrative
+    formats[format,bytes,parseSuccess,valueFidelity,typeFidelity,structureFidelity,overallFidelity,note]:
+    JSON Compact	1408	true	100.0	100.0	100.0	100.0	""
+    JSON Pretty	1977	true	100.0	100.0	100.0	100.0	""
+    YAML	1306	true	100.0	100.0	100.0	100.0	""
+    XML	2489	true	100.0	100.0	100.0	100.0	""
+    SDIF	902	true	100.0	100.0	100.0	100.0	""
+    SDIF AI	908	true	100.0	100.0	100.0	100.0	""
+    TOON	925	true	100.0	100.0	100.0	100.0	""
+    CSV Bundle	933	true	100.0	100.0	96.4	98.8	see diagnostics
   __item:
     name small-api-catalog
     formats[format,bytes,parseSuccess,valueFidelity,typeFidelity,structureFidelity,overallFidelity,note]:

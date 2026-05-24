@@ -1,39 +1,39 @@
 # SDIF Context Packing Benchmark — Summary
 
-- Generated at: `2026-05-23T21:26:18Z`
+- Generated at: `2026-05-24T12:15:58Z`
 - Tokenizer: `tiktoken/cl100k_base`
-- Documents: `20`
+- Documents: `24`
 - Budgets: `4K`, `8K`, `32K`, `128K` tokens
 
 ## Key Finding
 
-- **SDIF AI** is the most compact format: avg 44741 tokens (64.6% of JSON Compact).
+- **SDIF AI** is the most compact format: avg 37326 tokens (64.6% of JSON Compact).
 
-## Fit Rate: % of 20 documents that fit at least once
+## Fit Rate: % of 24 documents that fit at least once
 
 | Format | Avg tokens | vs JSON | `4K` | `8K` | `32K` | `128K` |
 | --- | ---: | ---: | ---: | ---: | ---: | ---: |
-| SDIF AI | 44741 | 64.6% | 35% | 35% | 60% | 90% |
-| CSV Bundle | 45207 | 65.3% | 35% | 35% | 60% | 90% |
-| SDIF | 47248 | 68.2% | 35% | 35% | 60% | 90% |
-| TOON | 47769 | 69.0% | 35% | 35% | 60% | 90% |
-| JSON Compact | 69248 | 100.0% | 35% | 35% | 45% | 70% |
-| YAML | 78747 | 113.7% | 35% | 35% | 40% | 65% |
-| JSON Pretty | 105691 | 152.6% | 35% | 35% | 35% | 65% |
-| XML | 127520 | 184.1% | 35% | 35% | 35% | 65% |
+| SDIF AI | 37326 | 64.6% | 46% | 46% | 67% | 92% |
+| CSV Bundle | 37720 | 65.3% | 46% | 46% | 67% | 92% |
+| SDIF | 39417 | 68.2% | 46% | 46% | 67% | 92% |
+| TOON | 39856 | 69.0% | 46% | 46% | 67% | 92% |
+| JSON Compact | 57766 | 100.0% | 46% | 46% | 54% | 75% |
+| YAML | 65688 | 113.7% | 46% | 46% | 50% | 71% |
+| JSON Pretty | 88173 | 152.6% | 46% | 46% | 46% | 71% |
+| XML | 106385 | 184.2% | 46% | 46% | 46% | 71% |
 
 ## Avg documents per context budget
 
 | Format | `4K` | `8K` | `32K` | `128K` |
 | --- | ---: | ---: | ---: | ---: |
-| SDIF AI | 5.2 | 10.5 | 42.9 | 172.9 |
-| CSV Bundle | 4.5 | 9.1 | 37.0 | 149.0 |
-| SDIF | 4.9 | 10.0 | 40.6 | 163.3 |
-| TOON | 4.4 | 9.1 | 37.0 | 149.2 |
-| JSON Compact | 3.5 | 7.2 | 29.2 | 118.4 |
-| YAML | 3.1 | 6.5 | 26.4 | 106.3 |
-| JSON Pretty | 2.0 | 4.3 | 17.5 | 71.2 |
-| XML | 1.6 | 3.4 | 13.9 | 56.6 |
+| SDIF AI | 6.9 | 14.1 | 57.5 | 231.6 |
+| CSV Bundle | 6.1 | 12.3 | 50.1 | 201.9 |
+| SDIF | 6.6 | 13.5 | 55.0 | 221.2 |
+| TOON | 6.0 | 12.3 | 50.1 | 201.4 |
+| JSON Compact | 4.7 | 9.8 | 39.8 | 160.5 |
+| YAML | 4.2 | 8.8 | 35.7 | 143.9 |
+| JSON Pretty | 2.8 | 5.9 | 24.0 | 96.9 |
+| XML | 2.2 | 4.6 | 19.2 | 78.0 |
 
 ## Methodology
 

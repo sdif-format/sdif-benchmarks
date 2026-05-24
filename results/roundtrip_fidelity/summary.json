@@ -1,7 +1,7 @@
 {
   "kind": "RoundTripFidelityReport",
   "version": "1.0",
-  "generatedAt": "2026-05-23T21:27:14Z",
+  "generatedAt": "2026-05-24T12:17:12Z",
   "runDirectory": "results/roundtrip_fidelity",
   "semanticSource": "examples/golden/<document>/equivalent.json",
   "envFileLoaded": false,
@@ -9,6 +9,176 @@
     "SDIF_BENCHMARK_GOLDEN_DIR": null
   },
   "documents": [
+    {
+      "name": "agent-workflow",
+      "formats": [
+        {
+          "format": "JSON Compact",
+          "bytes": 1142,
+          "parseSuccess": true,
+          "valueFidelity": 100.0,
+          "typeFidelity": 100.0,
+          "structureFidelity": 100.0,
+          "overallFidelity": 100.0,
+          "note": ""
+        },
+        {
+          "format": "JSON Pretty",
+          "bytes": 1753,
+          "parseSuccess": true,
+          "valueFidelity": 100.0,
+          "typeFidelity": 100.0,
+          "structureFidelity": 100.0,
+          "overallFidelity": 100.0,
+          "note": ""
+        },
+        {
+          "format": "YAML",
+          "bytes": 1055,
+          "parseSuccess": true,
+          "valueFidelity": 100.0,
+          "typeFidelity": 100.0,
+          "structureFidelity": 100.0,
+          "overallFidelity": 100.0,
+          "note": ""
+        },
+        {
+          "format": "SDIF",
+          "bytes": 633,
+          "parseSuccess": true,
+          "valueFidelity": 100.0,
+          "typeFidelity": 100.0,
+          "structureFidelity": 100.0,
+          "overallFidelity": 100.0,
+          "note": ""
+        },
+        {
+          "format": "TOON",
+          "bytes": 660,
+          "parseSuccess": true,
+          "valueFidelity": 100.0,
+          "typeFidelity": 100.0,
+          "structureFidelity": 100.0,
+          "overallFidelity": 100.0,
+          "note": ""
+        },
+        {
+          "format": "CSV Bundle",
+          "bytes": 668,
+          "parseSuccess": true,
+          "valueFidelity": 100.0,
+          "typeFidelity": 100.0,
+          "structureFidelity": 96.6,
+          "overallFidelity": 98.8,
+          "note": "see diagnostics"
+        },
+        {
+          "format": "SDIF AI",
+          "bytes": 626,
+          "parseSuccess": true,
+          "valueFidelity": 89.7,
+          "typeFidelity": 100.0,
+          "structureFidelity": 100.0,
+          "overallFidelity": 96.3,
+          "note": "see diagnostics"
+        },
+        {
+          "format": "XML",
+          "bytes": 2232,
+          "parseSuccess": true,
+          "valueFidelity": 100.0,
+          "typeFidelity": 84.5,
+          "structureFidelity": 100.0,
+          "overallFidelity": 94.2,
+          "note": "see diagnostics"
+        }
+      ]
+    },
+    {
+      "name": "audit-provenance",
+      "formats": [
+        {
+          "format": "JSON Compact",
+          "bytes": 1134,
+          "parseSuccess": true,
+          "valueFidelity": 100.0,
+          "typeFidelity": 100.0,
+          "structureFidelity": 100.0,
+          "overallFidelity": 100.0,
+          "note": ""
+        },
+        {
+          "format": "JSON Pretty",
+          "bytes": 1633,
+          "parseSuccess": true,
+          "valueFidelity": 100.0,
+          "typeFidelity": 100.0,
+          "structureFidelity": 100.0,
+          "overallFidelity": 100.0,
+          "note": ""
+        },
+        {
+          "format": "YAML",
+          "bytes": 1047,
+          "parseSuccess": true,
+          "valueFidelity": 100.0,
+          "typeFidelity": 100.0,
+          "structureFidelity": 100.0,
+          "overallFidelity": 100.0,
+          "note": ""
+        },
+        {
+          "format": "XML",
+          "bytes": 2057,
+          "parseSuccess": true,
+          "valueFidelity": 100.0,
+          "typeFidelity": 100.0,
+          "structureFidelity": 100.0,
+          "overallFidelity": 100.0,
+          "note": ""
+        },
+        {
+          "format": "SDIF",
+          "bytes": 702,
+          "parseSuccess": true,
+          "valueFidelity": 100.0,
+          "typeFidelity": 100.0,
+          "structureFidelity": 100.0,
+          "overallFidelity": 100.0,
+          "note": ""
+        },
+        {
+          "format": "TOON",
+          "bytes": 738,
+          "parseSuccess": true,
+          "valueFidelity": 100.0,
+          "typeFidelity": 100.0,
+          "structureFidelity": 100.0,
+          "overallFidelity": 100.0,
+          "note": ""
+        },
+        {
+          "format": "CSV Bundle",
+          "bytes": 741,
+          "parseSuccess": true,
+          "valueFidelity": 100.0,
+          "typeFidelity": 100.0,
+          "structureFidelity": 95.7,
+          "overallFidelity": 98.5,
+          "note": "see diagnostics"
+        },
+        {
+          "format": "SDIF AI",
+          "bytes": 696,
+          "parseSuccess": true,
+          "valueFidelity": 87.0,
+          "typeFidelity": 100.0,
+          "structureFidelity": 100.0,
+          "overallFidelity": 95.2,
+          "note": "see diagnostics"
+        }
+      ]
+    },
     {
       "name": "deep-hierarchy-project",
       "formats": [
@@ -690,6 +860,91 @@
       ]
     },
     {
+      "name": "llm-api-response",
+      "formats": [
+        {
+          "format": "JSON Compact",
+          "bytes": 1325,
+          "parseSuccess": true,
+          "valueFidelity": 100.0,
+          "typeFidelity": 100.0,
+          "structureFidelity": 100.0,
+          "overallFidelity": 100.0,
+          "note": ""
+        },
+        {
+          "format": "JSON Pretty",
+          "bytes": 1898,
+          "parseSuccess": true,
+          "valueFidelity": 100.0,
+          "typeFidelity": 100.0,
+          "structureFidelity": 100.0,
+          "overallFidelity": 100.0,
+          "note": ""
+        },
+        {
+          "format": "YAML",
+          "bytes": 1248,
+          "parseSuccess": true,
+          "valueFidelity": 100.0,
+          "typeFidelity": 100.0,
+          "structureFidelity": 100.0,
+          "overallFidelity": 100.0,
+          "note": ""
+        },
+        {
+          "format": "SDIF",
+          "bytes": 832,
+          "parseSuccess": true,
+          "valueFidelity": 100.0,
+          "typeFidelity": 100.0,
+          "structureFidelity": 100.0,
+          "overallFidelity": 100.0,
+          "note": ""
+        },
+        {
+          "format": "TOON",
+          "bytes": 864,
+          "parseSuccess": true,
+          "valueFidelity": 100.0,
+          "typeFidelity": 100.0,
+          "structureFidelity": 100.0,
+          "overallFidelity": 100.0,
+          "note": ""
+        },
+        {
+          "format": "CSV Bundle",
+          "bytes": 869,
+          "parseSuccess": true,
+          "valueFidelity": 100.0,
+          "typeFidelity": 100.0,
+          "structureFidelity": 96.4,
+          "overallFidelity": 98.8,
+          "note": "see diagnostics"
+        },
+        {
+          "format": "SDIF AI",
+          "bytes": 823,
+          "parseSuccess": true,
+          "valueFidelity": 85.7,
+          "typeFidelity": 100.0,
+          "structureFidelity": 100.0,
+          "overallFidelity": 94.7,
+          "note": "see diagnostics"
+        },
+        {
+          "format": "XML",
+          "bytes": 2446,
+          "parseSuccess": true,
+          "valueFidelity": 100.0,
+          "typeFidelity": 82.1,
+          "structureFidelity": 100.0,
+          "overallFidelity": 93.2,
+          "note": "see diagnostics"
+        }
+      ]
+    },
+    {
       "name": "medium-invoice-batch",
       "formats": [
         {
@@ -1280,6 +1535,91 @@
           "typeFidelity": 62.9,
           "structureFidelity": 100.0,
           "overallFidelity": 76.9,
+          "note": "see diagnostics"
+        }
+      ]
+    },
+    {
+      "name": "semantic-narrative",
+      "formats": [
+        {
+          "format": "JSON Compact",
+          "bytes": 1408,
+          "parseSuccess": true,
+          "valueFidelity": 100.0,
+          "typeFidelity": 100.0,
+          "structureFidelity": 100.0,
+          "overallFidelity": 100.0,
+          "note": ""
+        },
+        {
+          "format": "JSON Pretty",
+          "bytes": 1977,
+          "parseSuccess": true,
+          "valueFidelity": 100.0,
+          "typeFidelity": 100.0,
+          "structureFidelity": 100.0,
+          "overallFidelity": 100.0,
+          "note": ""
+        },
+        {
+          "format": "YAML",
+          "bytes": 1306,
+          "parseSuccess": true,
+          "valueFidelity": 100.0,
+          "typeFidelity": 100.0,
+          "structureFidelity": 100.0,
+          "overallFidelity": 100.0,
+          "note": ""
+        },
+        {
+          "format": "XML",
+          "bytes": 2489,
+          "parseSuccess": true,
+          "valueFidelity": 100.0,
+          "typeFidelity": 100.0,
+          "structureFidelity": 100.0,
+          "overallFidelity": 100.0,
+          "note": ""
+        },
+        {
+          "format": "SDIF",
+          "bytes": 902,
+          "parseSuccess": true,
+          "valueFidelity": 100.0,
+          "typeFidelity": 100.0,
+          "structureFidelity": 100.0,
+          "overallFidelity": 100.0,
+          "note": ""
+        },
+        {
+          "format": "SDIF AI",
+          "bytes": 908,
+          "parseSuccess": true,
+          "valueFidelity": 100.0,
+          "typeFidelity": 100.0,
+          "structureFidelity": 100.0,
+          "overallFidelity": 100.0,
+          "note": ""
+        },
+        {
+          "format": "TOON",
+          "bytes": 925,
+          "parseSuccess": true,
+          "valueFidelity": 100.0,
+          "typeFidelity": 100.0,
+          "structureFidelity": 100.0,
+          "overallFidelity": 100.0,
+          "note": ""
+        },
+        {
+          "format": "CSV Bundle",
+          "bytes": 933,
+          "parseSuccess": true,
+          "valueFidelity": 100.0,
+          "typeFidelity": 100.0,
+          "structureFidelity": 96.4,
+          "overallFidelity": 98.8,
           "note": "see diagnostics"
         }
       ]

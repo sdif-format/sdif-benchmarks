@@ -4,6 +4,24 @@ Console ordering and ratio: tiktoken vs JSON Compact
 
 Document                 Format        Estimate    TokenX  tiktoken    Llama3    Claude    Bytes      vs JSON
 ================================================================================================================
+agent-workflow           SDIF AI            157       174       206         -         -      626        64.4%
+                         SDIF               159       168       217         -         -      633        67.8%
+                         CSV Bundle         167       230       241         -         -      668        75.3%
+                         TOON               165       220       246         -         -      660        76.9%
+                         JSON Compact       286       372       320         -         -     1142       100.0%
+                         YAML               264       287       373         -         -     1055       116.6%
+                         JSON Pretty        439       394       563         -         -     1753       175.9%
+                         XML                558       649       692         -         -     2232       216.2%
+----------------------------------------------------------------------------------------------------------------
+audit-provenance         SDIF AI            174       214       258         -         -      696        74.6%
+                         SDIF               176       210       259         -         -      702        74.9%
+                         TOON               185       252       287         -         -      738        82.9%
+                         CSV Bundle         186       262       293         -         -      741        84.7%
+                         JSON Compact       284       375       346         -         -     1134       100.0%
+                         YAML               262       308       373         -         -     1047       107.8%
+                         JSON Pretty        409       395       545         -         -     1633       157.5%
+                         XML                515       614       658         -         -     2057       190.2%
+----------------------------------------------------------------------------------------------------------------
 deep-hierarchy-project   CSV Bundle       73189     91221    101645         -         -   292754        73.7%
                          SDIF AI          73179     81733    103205         -         -   292716        74.8%
                          TOON             75554     91221    106382         -         -   302214        77.1%
@@ -76,6 +94,15 @@ large-validation-report  SDIF AI          95944     91318     99633         -   
                          JSON Pretty     177596    164183    192034         -         -   710381       142.7%
                          XML             204665    227604    225834         -         -   818657       167.9%
 ----------------------------------------------------------------------------------------------------------------
+llm-api-response         SDIF AI            206       249       299         -         -      823        74.0%
+                         SDIF               208       245       307         -         -      832        76.0%
+                         CSV Bundle         218       306       331         -         -      869        81.9%
+                         TOON               216       296       337         -         -      864        83.4%
+                         JSON Compact       332       443       404         -         -     1325       100.0%
+                         YAML               312       368       451         -         -     1248       111.6%
+                         JSON Pretty        475       464       637         -         -     1898       157.7%
+                         XML                612       750       792         -         -     2446       196.0%
+----------------------------------------------------------------------------------------------------------------
 medium-invoice-batch     CSV Bundle       18486     24956     25965         -         -    73941        65.1%
                          SDIF AI          18476     20702     26707         -         -    73903        67.0%
                          TOON             18967     24954     26932         -         -    75867        67.6%
@@ -139,6 +166,15 @@ schema                   SDIF AI            275       291       298         -   
                          JSON Pretty        809       703       953         -         -     3235       178.5%
                          XML               1048      1242      1213         -         -     4189       227.2%
 ----------------------------------------------------------------------------------------------------------------
+semantic-narrative       SDIF AI            227       229       253         -         -      908        72.3%
+                         SDIF               226       219       259         -         -      902        74.0%
+                         CSV Bundle         234       277       273         -         -      933        78.0%
+                         TOON               232       267       277         -         -      925        79.1%
+                         JSON Compact       352       407       350         -         -     1408       100.0%
+                         YAML               327       339       392         -         -     1306       112.0%
+                         JSON Pretty        495       428       580         -         -     1977       165.7%
+                         XML                623       704       702         -         -     2489       200.6%
+----------------------------------------------------------------------------------------------------------------
 small-api-catalog        SDIF AI            410       516       544         -         -     1640        59.6%
                          CSV Bundle         417       628       585         -         -     1666        64.1%
                          SDIF               429       521       585         -         -     1716        64.1%
@@ -189,34 +225,34 @@ wide-table-survey        SDIF AI           4652      7878     15224         -   
 ================================================================================================================
 
 Estimate:
-  SDIF AI         average:   55.7% coverage: 20/20
-  CSV Bundle      average:   56.8% coverage: 20/20
-  SDIF            average:   57.6% coverage: 20/20
-  TOON            average:   58.1% coverage: 20/20
-  YAML            average:   96.0% coverage: 20/20
-  JSON Compact    average:  100.0% coverage: 20/20
-  JSON Pretty     average:  142.9% coverage: 20/20
-  XML             average:  174.5% coverage: 20/20
+  SDIF AI         average:   56.6% coverage: 24/24
+  CSV Bundle      average:   58.0% coverage: 24/24
+  SDIF            average:   58.2% coverage: 24/24
+  TOON            average:   59.0% coverage: 24/24
+  YAML            average:   95.5% coverage: 24/24
+  JSON Compact    average:  100.0% coverage: 24/24
+  JSON Pretty     average:  143.3% coverage: 24/24
+  XML             average:  176.2% coverage: 24/24
 
 TokenX:
-  SDIF AI         average:   49.1% coverage: 20/20
-  SDIF            average:   49.3% coverage: 20/20
-  TOON            average:   59.6% coverage: 20/20
-  CSV Bundle      average:   59.8% coverage: 20/20
-  YAML            average:   84.0% coverage: 20/20
-  JSON Compact    average:  100.0% coverage: 20/20
-  JSON Pretty     average:  103.2% coverage: 20/20
-  XML             average:  159.8% coverage: 20/20
+  SDIF            average:   49.8% coverage: 24/24
+  SDIF AI         average:   49.9% coverage: 24/24
+  TOON            average:   60.4% coverage: 24/24
+  CSV Bundle      average:   61.1% coverage: 24/24
+  YAML            average:   83.6% coverage: 24/24
+  JSON Compact    average:  100.0% coverage: 24/24
+  JSON Pretty     average:  103.5% coverage: 24/24
+  XML             average:  161.5% coverage: 24/24
 
 tiktoken:
-  SDIF AI         average:   64.3% coverage: 20/20
-  CSV Bundle      average:   67.8% coverage: 20/20
-  SDIF            average:   68.0% coverage: 20/20
-  TOON            average:   70.3% coverage: 20/20
-  JSON Compact    average:  100.0% coverage: 20/20
-  YAML            average:  115.3% coverage: 20/20
-  JSON Pretty     average:  158.6% coverage: 20/20
-  XML             average:  193.4% coverage: 20/20
+  SDIF AI         average:   65.5% coverage: 24/24
+  SDIF            average:   68.9% coverage: 24/24
+  CSV Bundle      average:   69.9% coverage: 24/24
+  TOON            average:   72.0% coverage: 24/24
+  JSON Compact    average:  100.0% coverage: 24/24
+  YAML            average:  114.8% coverage: 24/24
+  JSON Pretty     average:  159.6% coverage: 24/24
+  XML             average:  194.6% coverage: 24/24
 
 Llama3: unavailable
 
@@ -224,8 +260,8 @@ Claude: unavailable
 
 🏁 Console wins by tiktoken
 ================================================================================================================
-SDIF AI         wins: 17/20 documents
-CSV Bundle      wins: 3/20 documents
+SDIF AI         wins: 21/24 documents
+CSV Bundle      wins: 3/24 documents
 
 ✅ Benchmark completed by deriving all formats from canonical JSON.
 ℹ️  Claude skipped: set SDIF_BENCHMARK_CLAUDE=1 to enable API token counting.

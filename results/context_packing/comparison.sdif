@@ -1,9 +1,9 @@
 @sdif 1.0
 kind ContextPackingReport
 version "1.1"
-generatedAt 2026-05-23T21:26:18Z
+generatedAt 2026-05-24T12:15:58Z
 tokenizer tiktoken/cl100k_base
-documentCount 20
+documentCount 24
 budgets [4096,8192,32768,131072]
 budgetLabels:
   b4096 4K
@@ -12,149 +12,149 @@ budgetLabels:
   b131072 128K
 perFormatSummary:
   SDIF_AI:
-    avgTokens 44741.0
+    avgTokens 37326.5
     vsJsonCompactPct 64.6
     fitRate:
-      b4096 35.0
-      b8192 35.0
-      b32768 60.0
-      b131072 90.0
+      b4096 45.8
+      b8192 45.8
+      b32768 66.7
+      b131072 91.7
     avgDocs:
-      b4096 5.2
-      b8192 10.5
-      b32768 42.9
-      b131072 172.9
+      b4096 6.9
+      b8192 14.1
+      b32768 57.5
+      b131072 231.6
     medianDocs:
       b4096 0.0
       b8192 0.0
-      b32768 1.0
-      b131072 6.5
+      b32768 1.5
+      b131072 7.5
   CSV_Bundle:
-    avgTokens 45207.1
+    avgTokens 37720.0
     vsJsonCompactPct 65.3
     fitRate:
-      b4096 35.0
-      b8192 35.0
-      b32768 60.0
-      b131072 90.0
+      b4096 45.8
+      b8192 45.8
+      b32768 66.7
+      b131072 91.7
     avgDocs:
-      b4096 4.5
-      b8192 9.1
-      b32768 37.0
-      b131072 149.0
+      b4096 6.1
+      b8192 12.3
+      b32768 50.1
+      b131072 201.9
     medianDocs:
       b4096 0.0
       b8192 0.0
-      b32768 1.0
-      b131072 6.0
+      b32768 1.5
+      b131072 7.0
   SDIF:
-    avgTokens 47247.9
+    avgTokens 39416.7
     vsJsonCompactPct 68.2
     fitRate:
-      b4096 35.0
-      b8192 35.0
-      b32768 60.0
-      b131072 90.0
+      b4096 45.8
+      b8192 45.8
+      b32768 66.7
+      b131072 91.7
     avgDocs:
-      b4096 4.9
-      b8192 10.0
-      b32768 40.6
-      b131072 163.3
+      b4096 6.6
+      b8192 13.5
+      b32768 55.0
+      b131072 221.2
     medianDocs:
       b4096 0.0
       b8192 0.0
-      b32768 1.0
-      b131072 5.5
+      b32768 1.5
+      b131072 7.0
   TOON:
-    avgTokens 47769.4
+    avgTokens 39855.7
     vsJsonCompactPct 69.0
     fitRate:
-      b4096 35.0
-      b8192 35.0
-      b32768 60.0
-      b131072 90.0
+      b4096 45.8
+      b8192 45.8
+      b32768 66.7
+      b131072 91.7
     avgDocs:
-      b4096 4.4
-      b8192 9.1
-      b32768 37.0
-      b131072 149.2
+      b4096 6.0
+      b8192 12.3
+      b32768 50.1
+      b131072 201.4
+    medianDocs:
+      b4096 0.0
+      b8192 0.0
+      b32768 1.5
+      b131072 7.0
+  JSON_Compact:
+    avgTokens 57766.0
+    vsJsonCompactPct 100.0
+    fitRate:
+      b4096 45.8
+      b8192 45.8
+      b32768 54.2
+      b131072 75.0
+    avgDocs:
+      b4096 4.7
+      b8192 9.8
+      b32768 39.8
+      b131072 160.5
     medianDocs:
       b4096 0.0
       b8192 0.0
       b32768 1.0
-      b131072 5.5
-  JSON_Compact:
-    avgTokens 69248.1
-    vsJsonCompactPct 100.0
-    fitRate:
-      b4096 35.0
-      b8192 35.0
-      b32768 45.0
-      b131072 70.0
-    avgDocs:
-      b4096 3.5
-      b8192 7.2
-      b32768 29.2
-      b131072 118.4
-    medianDocs:
-      b4096 0.0
-      b8192 0.0
-      b32768 0.0
-      b131072 3.0
+      b131072 4.0
   YAML:
-    avgTokens 78746.6
+    avgTokens 65688.4
     vsJsonCompactPct 113.7
     fitRate:
-      b4096 35.0
-      b8192 35.0
-      b32768 40.0
-      b131072 65.0
+      b4096 45.8
+      b8192 45.8
+      b32768 50.0
+      b131072 70.8
     avgDocs:
-      b4096 3.1
-      b8192 6.5
-      b32768 26.4
-      b131072 106.3
+      b4096 4.2
+      b8192 8.8
+      b32768 35.7
+      b131072 143.9
     medianDocs:
       b4096 0.0
       b8192 0.0
-      b32768 0.0
-      b131072 2.5
+      b32768 0.5
+      b131072 3.5
   JSON_Pretty:
-    avgTokens 105690.9
+    avgTokens 88172.6
     vsJsonCompactPct 152.6
     fitRate:
-      b4096 35.0
-      b8192 35.0
-      b32768 35.0
-      b131072 65.0
+      b4096 45.8
+      b8192 45.8
+      b32768 45.8
+      b131072 70.8
     avgDocs:
-      b4096 2.0
-      b8192 4.3
-      b32768 17.5
-      b131072 71.2
+      b4096 2.8
+      b8192 5.9
+      b32768 24.0
+      b131072 96.9
     medianDocs:
       b4096 0.0
       b8192 0.0
       b32768 0.0
       b131072 2.0
   XML:
-    avgTokens 127519.8
-    vsJsonCompactPct 184.1
+    avgTokens 106385.0
+    vsJsonCompactPct 184.2
     fitRate:
-      b4096 35.0
-      b8192 35.0
-      b32768 35.0
-      b131072 65.0
+      b4096 45.8
+      b8192 45.8
+      b32768 45.8
+      b131072 70.8
     avgDocs:
-      b4096 1.6
-      b8192 3.4
-      b32768 13.9
-      b131072 56.6
+      b4096 2.2
+      b8192 4.6
+      b32768 19.2
+      b131072 78.0
     medianDocs:
       b4096 0.0
       b8192 0.0
       b32768 0.0
-      b131072 1.0
+      b131072 2.0
 runDirectory results/context_packing
 semanticSource examples/golden/<document>/equivalent.json
 envFileLoaded false
@@ -163,6 +163,156 @@ environment:
   SDIF_BENCHMARK_TOON null
   SDIF_TIKTOKEN_ENCODING null
 documents:
+  __item:
+    name agent-workflow
+    formats:
+      __item:
+        format "SDIF AI"
+        bytes 626
+        tokens 206
+        recordsByBudget:
+          b4096 19
+          b8192 39
+          b32768 159
+          b131072 636
+      __item:
+        format SDIF
+        bytes 633
+        tokens 217
+        recordsByBudget:
+          b4096 18
+          b8192 37
+          b32768 151
+          b131072 604
+      __item:
+        format "CSV Bundle"
+        bytes 668
+        tokens 241
+        recordsByBudget:
+          b4096 16
+          b8192 33
+          b32768 135
+          b131072 543
+      __item:
+        format TOON
+        bytes 660
+        tokens 246
+        recordsByBudget:
+          b4096 16
+          b8192 33
+          b32768 133
+          b131072 532
+      __item:
+        format "JSON Compact"
+        bytes 1142
+        tokens 320
+        recordsByBudget:
+          b4096 12
+          b8192 25
+          b32768 102
+          b131072 409
+      __item:
+        format YAML
+        bytes 1055
+        tokens 373
+        recordsByBudget:
+          b4096 10
+          b8192 21
+          b32768 87
+          b131072 351
+      __item:
+        format "JSON Pretty"
+        bytes 1753
+        tokens 563
+        recordsByBudget:
+          b4096 7
+          b8192 14
+          b32768 58
+          b131072 232
+      __item:
+        format XML
+        bytes 2232
+        tokens 692
+        recordsByBudget:
+          b4096 5
+          b8192 11
+          b32768 47
+          b131072 189
+  __item:
+    name audit-provenance
+    formats:
+      __item:
+        format "SDIF AI"
+        bytes 696
+        tokens 258
+        recordsByBudget:
+          b4096 15
+          b8192 31
+          b32768 127
+          b131072 508
+      __item:
+        format SDIF
+        bytes 702
+        tokens 259
+        recordsByBudget:
+          b4096 15
+          b8192 31
+          b32768 126
+          b131072 506
+      __item:
+        format TOON
+        bytes 738
+        tokens 287
+        recordsByBudget:
+          b4096 14
+          b8192 28
+          b32768 114
+          b131072 456
+      __item:
+        format "CSV Bundle"
+        bytes 741
+        tokens 293
+        recordsByBudget:
+          b4096 13
+          b8192 27
+          b32768 111
+          b131072 447
+      __item:
+        format "JSON Compact"
+        bytes 1134
+        tokens 346
+        recordsByBudget:
+          b4096 11
+          b8192 23
+          b32768 94
+          b131072 378
+      __item:
+        format YAML
+        bytes 1047
+        tokens 373
+        recordsByBudget:
+          b4096 10
+          b8192 21
+          b32768 87
+          b131072 351
+      __item:
+        format "JSON Pretty"
+        bytes 1633
+        tokens 545
+        recordsByBudget:
+          b4096 7
+          b8192 15
+          b32768 60
+          b131072 240
+      __item:
+        format XML
+        bytes 2057
+        tokens 658
+        recordsByBudget:
+          b4096 6
+          b8192 12
+          b32768 49
+          b131072 199
   __item:
     name deep-hierarchy-project
     formats:
@@ -764,6 +914,81 @@ documents:
           b32768 0
           b131072 0
   __item:
+    name llm-api-response
+    formats:
+      __item:
+        format "SDIF AI"
+        bytes 823
+        tokens 299
+        recordsByBudget:
+          b4096 13
+          b8192 27
+          b32768 109
+          b131072 438
+      __item:
+        format SDIF
+        bytes 832
+        tokens 307
+        recordsByBudget:
+          b4096 13
+          b8192 26
+          b32768 106
+          b131072 426
+      __item:
+        format "CSV Bundle"
+        bytes 869
+        tokens 331
+        recordsByBudget:
+          b4096 12
+          b8192 24
+          b32768 98
+          b131072 395
+      __item:
+        format TOON
+        bytes 864
+        tokens 337
+        recordsByBudget:
+          b4096 12
+          b8192 24
+          b32768 97
+          b131072 388
+      __item:
+        format "JSON Compact"
+        bytes 1325
+        tokens 404
+        recordsByBudget:
+          b4096 10
+          b8192 20
+          b32768 81
+          b131072 324
+      __item:
+        format YAML
+        bytes 1248
+        tokens 451
+        recordsByBudget:
+          b4096 9
+          b8192 18
+          b32768 72
+          b131072 290
+      __item:
+        format "JSON Pretty"
+        bytes 1898
+        tokens 637
+        recordsByBudget:
+          b4096 6
+          b8192 12
+          b32768 51
+          b131072 205
+      __item:
+        format XML
+        bytes 2446
+        tokens 792
+        recordsByBudget:
+          b4096 5
+          b8192 10
+          b32768 41
+          b131072 165
+  __item:
     name medium-invoice-batch
     formats:
       __item:
@@ -1288,6 +1513,81 @@ documents:
           b8192 6
           b32768 27
           b131072 108
+  __item:
+    name semantic-narrative
+    formats:
+      __item:
+        format "SDIF AI"
+        bytes 908
+        tokens 253
+        recordsByBudget:
+          b4096 16
+          b8192 32
+          b32768 129
+          b131072 518
+      __item:
+        format SDIF
+        bytes 902
+        tokens 259
+        recordsByBudget:
+          b4096 15
+          b8192 31
+          b32768 126
+          b131072 506
+      __item:
+        format "CSV Bundle"
+        bytes 933
+        tokens 273
+        recordsByBudget:
+          b4096 15
+          b8192 30
+          b32768 120
+          b131072 480
+      __item:
+        format TOON
+        bytes 925
+        tokens 277
+        recordsByBudget:
+          b4096 14
+          b8192 29
+          b32768 118
+          b131072 473
+      __item:
+        format "JSON Compact"
+        bytes 1408
+        tokens 350
+        recordsByBudget:
+          b4096 11
+          b8192 23
+          b32768 93
+          b131072 374
+      __item:
+        format YAML
+        bytes 1306
+        tokens 392
+        recordsByBudget:
+          b4096 10
+          b8192 20
+          b32768 83
+          b131072 334
+      __item:
+        format "JSON Pretty"
+        bytes 1977
+        tokens 580
+        recordsByBudget:
+          b4096 7
+          b8192 14
+          b32768 56
+          b131072 225
+      __item:
+        format XML
+        bytes 2489
+        tokens 702
+        recordsByBudget:
+          b4096 5
+          b8192 11
+          b32768 46
+          b131072 186
   __item:
     name small-api-catalog
     formats:

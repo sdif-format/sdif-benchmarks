@@ -28,16 +28,38 @@ pre.sdif{background:#1e293b;border:1px solid #334155;border-radius:12px;padding:
 <a href="dashboard.html">← Back</a>
 <span>Round-Trip Fidelity — SDIF AI</span>
 </div>
-<div class="meta">230 lines · 11.0 KB · SDIF AI projection</div>
+<div class="meta">274 lines · 13.2 KB · SDIF AI projection</div>
 <pre class="sdif"><span class="k">kind</span> <span class="v">RoundTripFidelityReport</span>
 <span class="k">version</span> <span class="v">&quot;1.0&quot;</span>
-<span class="k">generatedAt</span> <span class="v">2026-05-23T21:27:14Z</span>
+<span class="k">generatedAt</span> <span class="v">2026-05-24T12:17:12Z</span>
 <span class="k">runDirectory</span> <span class="v">results/roundtrip_fidelity</span>
 <span class="k">semanticSource</span> <span class="v">examples/golden/&lt;document&gt;/equivalent.json</span>
 <span class="k">envFileLoaded</span> <span class="v">false</span>
 <span class="bh">environment:</span>
 <span class="row">  SDIF_BENCHMARK_GOLDEN_DIR null</span>
 <span class="bh">documents:</span>
+<span class="row">  __item:</span>
+<span class="row">    name agent-workflow</span>
+<span class="h">    formats[format,bytes,parseSuccess,valueFidelity,typeFidelity,structureFidelity,overallFidelity,note]:</span>
+<span class="row">    JSON Compact	1142	true	100.0	100.0	100.0	100.0	&quot;&quot;</span>
+<span class="row">    JSON Pretty	1753	true	100.0	100.0	100.0	100.0	&quot;&quot;</span>
+<span class="row">    YAML	1055	true	100.0	100.0	100.0	100.0	&quot;&quot;</span>
+<span class="row">    SDIF	633	true	100.0	100.0	100.0	100.0	&quot;&quot;</span>
+<span class="row">    TOON	660	true	100.0	100.0	100.0	100.0	&quot;&quot;</span>
+<span class="row">    CSV Bundle	668	true	100.0	100.0	96.6	98.8	see diagnostics</span>
+<span class="row">    SDIF AI	626	true	89.7	100.0	100.0	96.3	see diagnostics</span>
+<span class="row">    XML	2232	true	100.0	84.5	100.0	94.2	see diagnostics</span>
+<span class="row">  __item:</span>
+<span class="row">    name audit-provenance</span>
+<span class="h">    formats[format,bytes,parseSuccess,valueFidelity,typeFidelity,structureFidelity,overallFidelity,note]:</span>
+<span class="row">    JSON Compact	1134	true	100.0	100.0	100.0	100.0	&quot;&quot;</span>
+<span class="row">    JSON Pretty	1633	true	100.0	100.0	100.0	100.0	&quot;&quot;</span>
+<span class="row">    YAML	1047	true	100.0	100.0	100.0	100.0	&quot;&quot;</span>
+<span class="row">    XML	2057	true	100.0	100.0	100.0	100.0	&quot;&quot;</span>
+<span class="row">    SDIF	702	true	100.0	100.0	100.0	100.0	&quot;&quot;</span>
+<span class="row">    TOON	738	true	100.0	100.0	100.0	100.0	&quot;&quot;</span>
+<span class="row">    CSV Bundle	741	true	100.0	100.0	95.7	98.5	see diagnostics</span>
+<span class="row">    SDIF AI	696	true	87.0	100.0	100.0	95.2	see diagnostics</span>
 <span class="row">  __item:</span>
 <span class="row">    name deep-hierarchy-project</span>
 <span class="h">    formats[format,bytes,parseSuccess,valueFidelity,typeFidelity,structureFidelity,overallFidelity,note]:</span>
@@ -127,6 +149,17 @@ pre.sdif{background:#1e293b;border:1px solid #334155;border-radius:12px;padding:
 <span class="row">    CSV Bundle	383821	true	100.0	96.2	100.0	98.7	see diagnostics</span>
 <span class="row">    XML	818657	true	100.0	92.0	100.0	97.2	see diagnostics</span>
 <span class="row">  __item:</span>
+<span class="row">    name llm-api-response</span>
+<span class="h">    formats[format,bytes,parseSuccess,valueFidelity,typeFidelity,structureFidelity,overallFidelity,note]:</span>
+<span class="row">    JSON Compact	1325	true	100.0	100.0	100.0	100.0	&quot;&quot;</span>
+<span class="row">    JSON Pretty	1898	true	100.0	100.0	100.0	100.0	&quot;&quot;</span>
+<span class="row">    YAML	1248	true	100.0	100.0	100.0	100.0	&quot;&quot;</span>
+<span class="row">    SDIF	832	true	100.0	100.0	100.0	100.0	&quot;&quot;</span>
+<span class="row">    TOON	864	true	100.0	100.0	100.0	100.0	&quot;&quot;</span>
+<span class="row">    CSV Bundle	869	true	100.0	100.0	96.4	98.8	see diagnostics</span>
+<span class="row">    SDIF AI	823	true	85.7	100.0	100.0	94.7	see diagnostics</span>
+<span class="row">    XML	2446	true	100.0	82.1	100.0	93.2	see diagnostics</span>
+<span class="row">  __item:</span>
 <span class="row">    name medium-invoice-batch</span>
 <span class="h">    formats[format,bytes,parseSuccess,valueFidelity,typeFidelity,structureFidelity,overallFidelity,note]:</span>
 <span class="row">    JSON Compact	139558	true	100.0	100.0	100.0	100.0	&quot;&quot;</span>
@@ -203,6 +236,17 @@ pre.sdif{background:#1e293b;border:1px solid #334155;border-radius:12px;padding:
 <span class="row">    SDIF AI	1097	true	100.0	100.0	100.0	100.0	&quot;&quot;</span>
 <span class="row">    TOON	1181	true	100.0	100.0	100.0	100.0	&quot;&quot;</span>
 <span class="row">    XML	4189	true	76.2	62.9	100.0	76.9	see diagnostics</span>
+<span class="row">  __item:</span>
+<span class="row">    name semantic-narrative</span>
+<span class="h">    formats[format,bytes,parseSuccess,valueFidelity,typeFidelity,structureFidelity,overallFidelity,note]:</span>
+<span class="row">    JSON Compact	1408	true	100.0	100.0	100.0	100.0	&quot;&quot;</span>
+<span class="row">    JSON Pretty	1977	true	100.0	100.0	100.0	100.0	&quot;&quot;</span>
+<span class="row">    YAML	1306	true	100.0	100.0	100.0	100.0	&quot;&quot;</span>
+<span class="row">    XML	2489	true	100.0	100.0	100.0	100.0	&quot;&quot;</span>
+<span class="row">    SDIF	902	true	100.0	100.0	100.0	100.0	&quot;&quot;</span>
+<span class="row">    SDIF AI	908	true	100.0	100.0	100.0	100.0	&quot;&quot;</span>
+<span class="row">    TOON	925	true	100.0	100.0	100.0	100.0	&quot;&quot;</span>
+<span class="row">    CSV Bundle	933	true	100.0	100.0	96.4	98.8	see diagnostics</span>
 <span class="row">  __item:</span>
 <span class="row">    name small-api-catalog</span>
 <span class="h">    formats[format,bytes,parseSuccess,valueFidelity,typeFidelity,structureFidelity,overallFidelity,note]:</span>

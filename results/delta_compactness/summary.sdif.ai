@@ -1,7 +1,7 @@
 kind MutationSensitivityReport
 version "1.0"
 note "Full-resend overhead benchmark. Not a true SDIF delta encoding benchmark."
-generatedAt 2026-05-23T21:28:15Z
+generatedAt 2026-05-24T12:18:23Z
 runDirectory results/delta_compactness
 semanticSource examples/golden/<document>/equivalent.json
 tokenizer tiktoken/cl100k_base
@@ -12,6 +12,32 @@ environment:
   SDIF_BENCHMARK_TOON null
   SDIF_TIKTOKEN_ENCODING null
 documents:
+  __item:
+    name agent-workflow
+    leavesTotal 58
+    leavesMutated 6
+    formats[format,originalTokens,mutatedTokens,tokenDelta,tokenDeltaPct,diffLinesAdded,diffLinesRemoved,diffLinesChanged]:
+    JSON Compact	320	332	12	3.75	1	1	2
+    JSON Pretty	563	575	12	2.1314387211367674	6	6	12
+    YAML	373	385	12	3.2171581769436997	6	6	12
+    XML	692	704	12	1.7341040462427744	6	6	12
+    CSV Bundle	241	253	12	4.979253112033195	4	4	8
+    SDIF	217	229	12	5.529953917050691	4	4	8
+    SDIF AI	206	218	12	5.825242718446602	5	5	10
+    TOON	246	258	12	4.878048780487805	4	4	8
+  __item:
+    name audit-provenance
+    leavesTotal 46
+    leavesMutated 5
+    formats[format,originalTokens,mutatedTokens,tokenDelta,tokenDeltaPct,diffLinesAdded,diffLinesRemoved,diffLinesChanged]:
+    JSON Compact	346	356	10	2.8901734104046244	1	1	2
+    JSON Pretty	545	555	10	1.834862385321101	5	5	10
+    YAML	373	383	10	2.680965147453083	5	5	10
+    XML	658	668	10	1.5197568389057752	5	5	10
+    CSV Bundle	293	303	10	3.4129692832764507	2	2	4
+    SDIF	259	269	10	3.861003861003861	2	2	4
+    SDIF AI	258	268	10	3.875968992248062	2	2	4
+    TOON	287	297	10	3.484320557491289	2	2	4
   __item:
     name deep-hierarchy-project
     leavesTotal 15799
@@ -117,6 +143,19 @@ documents:
     SDIF	103015	105949	2934	2.8481289132650587	245	245	490
     SDIF AI	99633	102567	2934	2.9448074433169733	245	245	490
   __item:
+    name llm-api-response
+    leavesTotal 56
+    leavesMutated 6
+    formats[format,originalTokens,mutatedTokens,tokenDelta,tokenDeltaPct,diffLinesAdded,diffLinesRemoved,diffLinesChanged]:
+    TOON	337	347	10	2.967359050445104	2	2	4
+    JSON Compact	404	416	12	2.9702970297029703	1	1	2
+    JSON Pretty	637	649	12	1.8838304552590266	6	6	12
+    YAML	451	463	12	2.6607538802660753	6	6	12
+    XML	792	804	12	1.5151515151515151	6	6	12
+    CSV Bundle	331	343	12	3.625377643504532	2	2	4
+    SDIF	307	319	12	3.908794788273615	2	2	4
+    SDIF AI	299	311	12	4.013377926421405	2	2	4
+  __item:
     name medium-invoice-batch
     leavesTotal 5288
     leavesMutated 529
@@ -207,6 +246,19 @@ documents:
     XML	1213	1230	17	1.4014839241549877	13	13	26
     CSV Bundle	331	348	17	5.13595166163142	4	4	8
     TOON	342	359	17	4.970760233918129	4	4	8
+  __item:
+    name semantic-narrative
+    leavesTotal 55
+    leavesMutated 6
+    formats[format,originalTokens,mutatedTokens,tokenDelta,tokenDeltaPct,diffLinesAdded,diffLinesRemoved,diffLinesChanged]:
+    JSON Compact	350	362	12	3.428571428571429	1	1	2
+    JSON Pretty	580	592	12	2.0689655172413794	6	6	12
+    YAML	392	404	12	3.061224489795918	6	6	12
+    XML	702	714	12	1.7094017094017095	6	6	12
+    CSV Bundle	273	285	12	4.395604395604396	2	2	4
+    SDIF	259	271	12	4.633204633204633	2	2	4
+    SDIF AI	253	265	12	4.743083003952568	2	2	4
+    TOON	277	289	12	4.332129963898916	2	2	4
   __item:
     name small-api-catalog
     leavesTotal 172

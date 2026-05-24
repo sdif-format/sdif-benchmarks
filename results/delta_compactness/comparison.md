@@ -1,7 +1,37 @@
 # SDIF Mutation Sensitivity Benchmark — Document Detail
 
-- Generated at: `2026-05-23T21:28:15Z`
+- Generated at: `2026-05-24T12:18:23Z`
 - Mutation: `10%` of leaf values changed
+
+## agent-workflow
+
+Leaves total: `58`, mutated: `6`
+
+| Format | Orig tokens | Mutated tokens | Δ tokens | Δ% | Diff lines |
+| --- | ---: | ---: | ---: | ---: | ---: |
+| JSON Compact | 320 | 332 | +12 | +3.8% | 2 |
+| JSON Pretty | 563 | 575 | +12 | +2.1% | 12 |
+| YAML | 373 | 385 | +12 | +3.2% | 12 |
+| XML | 692 | 704 | +12 | +1.7% | 12 |
+| CSV Bundle | 241 | 253 | +12 | +5.0% | 8 |
+| SDIF | 217 | 229 | +12 | +5.5% | 8 |
+| SDIF AI | 206 | 218 | +12 | +5.8% | 10 |
+| TOON | 246 | 258 | +12 | +4.9% | 8 |
+
+## audit-provenance
+
+Leaves total: `46`, mutated: `5`
+
+| Format | Orig tokens | Mutated tokens | Δ tokens | Δ% | Diff lines |
+| --- | ---: | ---: | ---: | ---: | ---: |
+| JSON Compact | 346 | 356 | +10 | +2.9% | 2 |
+| JSON Pretty | 545 | 555 | +10 | +1.8% | 10 |
+| YAML | 373 | 383 | +10 | +2.7% | 10 |
+| XML | 658 | 668 | +10 | +1.5% | 10 |
+| CSV Bundle | 293 | 303 | +10 | +3.4% | 4 |
+| SDIF | 259 | 269 | +10 | +3.9% | 4 |
+| SDIF AI | 258 | 268 | +10 | +3.9% | 4 |
+| TOON | 287 | 297 | +10 | +3.5% | 4 |
 
 ## deep-hierarchy-project
 
@@ -123,6 +153,21 @@ Leaves total: `14663`, mutated: `1467`
 | SDIF | 103015 | 105949 | +2934 | +2.8% | 490 |
 | SDIF AI | 99633 | 102567 | +2934 | +2.9% | 490 |
 
+## llm-api-response
+
+Leaves total: `56`, mutated: `6`
+
+| Format | Orig tokens | Mutated tokens | Δ tokens | Δ% | Diff lines |
+| --- | ---: | ---: | ---: | ---: | ---: |
+| TOON | 337 | 347 | +10 | +3.0% | 4 |
+| JSON Compact | 404 | 416 | +12 | +3.0% | 2 |
+| JSON Pretty | 637 | 649 | +12 | +1.9% | 12 |
+| YAML | 451 | 463 | +12 | +2.7% | 12 |
+| XML | 792 | 804 | +12 | +1.5% | 12 |
+| CSV Bundle | 331 | 343 | +12 | +3.6% | 4 |
+| SDIF | 307 | 319 | +12 | +3.9% | 4 |
+| SDIF AI | 299 | 311 | +12 | +4.0% | 4 |
+
 ## medium-invoice-batch
 
 Leaves total: `5288`, mutated: `529`
@@ -227,6 +272,21 @@ Leaves total: `105`, mutated: `11`
 | XML | 1213 | 1230 | +17 | +1.4% | 26 |
 | CSV Bundle | 331 | 348 | +17 | +5.1% | 8 |
 | TOON | 342 | 359 | +17 | +5.0% | 8 |
+
+## semantic-narrative
+
+Leaves total: `55`, mutated: `6`
+
+| Format | Orig tokens | Mutated tokens | Δ tokens | Δ% | Diff lines |
+| --- | ---: | ---: | ---: | ---: | ---: |
+| JSON Compact | 350 | 362 | +12 | +3.4% | 2 |
+| JSON Pretty | 580 | 592 | +12 | +2.1% | 12 |
+| YAML | 392 | 404 | +12 | +3.1% | 12 |
+| XML | 702 | 714 | +12 | +1.7% | 12 |
+| CSV Bundle | 273 | 285 | +12 | +4.4% | 4 |
+| SDIF | 259 | 271 | +12 | +4.6% | 4 |
+| SDIF AI | 253 | 265 | +12 | +4.7% | 4 |
+| TOON | 277 | 289 | +12 | +4.3% | 4 |
 
 ## small-api-catalog
 

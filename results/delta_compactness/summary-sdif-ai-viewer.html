@@ -28,11 +28,11 @@ pre.sdif{background:#1e293b;border:1px solid #334155;border-radius:12px;padding:
 <a href="dashboard.html">← Back</a>
 <span>Delta Compactness — SDIF AI</span>
 </div>
-<div class="meta">275 lines · 13.1 KB · SDIF AI projection</div>
+<div class="meta">327 lines · 15.4 KB · SDIF AI projection</div>
 <pre class="sdif"><span class="k">kind</span> <span class="v">MutationSensitivityReport</span>
 <span class="k">version</span> <span class="v">&quot;1.0&quot;</span>
 <span class="k">note</span> <span class="v">&quot;Full-resend overhead benchmark. Not a true SDIF delta encoding benchmark.&quot;</span>
-<span class="k">generatedAt</span> <span class="v">2026-05-23T21:28:15Z</span>
+<span class="k">generatedAt</span> <span class="v">2026-05-24T12:18:23Z</span>
 <span class="k">runDirectory</span> <span class="v">results/delta_compactness</span>
 <span class="k">semanticSource</span> <span class="v">examples/golden/&lt;document&gt;/equivalent.json</span>
 <span class="k">tokenizer</span> <span class="v">tiktoken/cl100k_base</span>
@@ -43,6 +43,32 @@ pre.sdif{background:#1e293b;border:1px solid #334155;border-radius:12px;padding:
 <span class="row">  SDIF_BENCHMARK_TOON null</span>
 <span class="row">  SDIF_TIKTOKEN_ENCODING null</span>
 <span class="bh">documents:</span>
+<span class="row">  __item:</span>
+<span class="row">    name agent-workflow</span>
+<span class="row">    leavesTotal 58</span>
+<span class="row">    leavesMutated 6</span>
+<span class="h">    formats[format,originalTokens,mutatedTokens,tokenDelta,tokenDeltaPct,diffLinesAdded,diffLinesRemoved,diffLinesChanged]:</span>
+<span class="row">    JSON Compact	320	332	12	3.75	1	1	2</span>
+<span class="row">    JSON Pretty	563	575	12	2.1314387211367674	6	6	12</span>
+<span class="row">    YAML	373	385	12	3.2171581769436997	6	6	12</span>
+<span class="row">    XML	692	704	12	1.7341040462427744	6	6	12</span>
+<span class="row">    CSV Bundle	241	253	12	4.979253112033195	4	4	8</span>
+<span class="row">    SDIF	217	229	12	5.529953917050691	4	4	8</span>
+<span class="row">    SDIF AI	206	218	12	5.825242718446602	5	5	10</span>
+<span class="row">    TOON	246	258	12	4.878048780487805	4	4	8</span>
+<span class="row">  __item:</span>
+<span class="row">    name audit-provenance</span>
+<span class="row">    leavesTotal 46</span>
+<span class="row">    leavesMutated 5</span>
+<span class="h">    formats[format,originalTokens,mutatedTokens,tokenDelta,tokenDeltaPct,diffLinesAdded,diffLinesRemoved,diffLinesChanged]:</span>
+<span class="row">    JSON Compact	346	356	10	2.8901734104046244	1	1	2</span>
+<span class="row">    JSON Pretty	545	555	10	1.834862385321101	5	5	10</span>
+<span class="row">    YAML	373	383	10	2.680965147453083	5	5	10</span>
+<span class="row">    XML	658	668	10	1.5197568389057752	5	5	10</span>
+<span class="row">    CSV Bundle	293	303	10	3.4129692832764507	2	2	4</span>
+<span class="row">    SDIF	259	269	10	3.861003861003861	2	2	4</span>
+<span class="row">    SDIF AI	258	268	10	3.875968992248062	2	2	4</span>
+<span class="row">    TOON	287	297	10	3.484320557491289	2	2	4</span>
 <span class="row">  __item:</span>
 <span class="row">    name deep-hierarchy-project</span>
 <span class="row">    leavesTotal 15799</span>
@@ -148,6 +174,19 @@ pre.sdif{background:#1e293b;border:1px solid #334155;border-radius:12px;padding:
 <span class="row">    SDIF	103015	105949	2934	2.8481289132650587	245	245	490</span>
 <span class="row">    SDIF AI	99633	102567	2934	2.9448074433169733	245	245	490</span>
 <span class="row">  __item:</span>
+<span class="row">    name llm-api-response</span>
+<span class="row">    leavesTotal 56</span>
+<span class="row">    leavesMutated 6</span>
+<span class="h">    formats[format,originalTokens,mutatedTokens,tokenDelta,tokenDeltaPct,diffLinesAdded,diffLinesRemoved,diffLinesChanged]:</span>
+<span class="row">    TOON	337	347	10	2.967359050445104	2	2	4</span>
+<span class="row">    JSON Compact	404	416	12	2.9702970297029703	1	1	2</span>
+<span class="row">    JSON Pretty	637	649	12	1.8838304552590266	6	6	12</span>
+<span class="row">    YAML	451	463	12	2.6607538802660753	6	6	12</span>
+<span class="row">    XML	792	804	12	1.5151515151515151	6	6	12</span>
+<span class="row">    CSV Bundle	331	343	12	3.625377643504532	2	2	4</span>
+<span class="row">    SDIF	307	319	12	3.908794788273615	2	2	4</span>
+<span class="row">    SDIF AI	299	311	12	4.013377926421405	2	2	4</span>
+<span class="row">  __item:</span>
 <span class="row">    name medium-invoice-batch</span>
 <span class="row">    leavesTotal 5288</span>
 <span class="row">    leavesMutated 529</span>
@@ -238,6 +277,19 @@ pre.sdif{background:#1e293b;border:1px solid #334155;border-radius:12px;padding:
 <span class="row">    XML	1213	1230	17	1.4014839241549877	13	13	26</span>
 <span class="row">    CSV Bundle	331	348	17	5.13595166163142	4	4	8</span>
 <span class="row">    TOON	342	359	17	4.970760233918129	4	4	8</span>
+<span class="row">  __item:</span>
+<span class="row">    name semantic-narrative</span>
+<span class="row">    leavesTotal 55</span>
+<span class="row">    leavesMutated 6</span>
+<span class="h">    formats[format,originalTokens,mutatedTokens,tokenDelta,tokenDeltaPct,diffLinesAdded,diffLinesRemoved,diffLinesChanged]:</span>
+<span class="row">    JSON Compact	350	362	12	3.428571428571429	1	1	2</span>
+<span class="row">    JSON Pretty	580	592	12	2.0689655172413794	6	6	12</span>
+<span class="row">    YAML	392	404	12	3.061224489795918	6	6	12</span>
+<span class="row">    XML	702	714	12	1.7094017094017095	6	6	12</span>
+<span class="row">    CSV Bundle	273	285	12	4.395604395604396	2	2	4</span>
+<span class="row">    SDIF	259	271	12	4.633204633204633	2	2	4</span>
+<span class="row">    SDIF AI	253	265	12	4.743083003952568	2	2	4</span>
+<span class="row">    TOON	277	289	12	4.332129963898916	2	2	4</span>
 <span class="row">  __item:</span>
 <span class="row">    name small-api-catalog</span>
 <span class="row">    leavesTotal 172</span>
