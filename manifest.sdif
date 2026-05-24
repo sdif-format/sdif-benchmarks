@@ -8,7 +8,9 @@ tracks[id,status,command,output,description]:
   token-efficiency	active	"make benchmark-token"	results/token_efficiency/summary.md	"Measures bytes and tokens across canonical JSON-derived representations."
   semantic-quality	active	"make benchmark-quality"	docs/semantic-quality.md	"Documents and checks semantic axes beyond token count."
   ai-speed-profile	active	docs/ai-speed-profile.md	docs/ai-speed-profile.md	"Documents LLM latency rules for SDIF AI locality, summary-first prompts, caching, deltas, and output contracts."
-  retrieval-accuracy	planned	"make benchmark-accuracy"	results/retrieval_accuracy/summary.md	"Future model comprehension benchmark with deterministic answer validation."
+  semantic-fidelity	active	"make benchmark-semantic"	results/semantic_fidelity/summary.md	"Measures structural recovery fidelity after format conversion across 4 semantic fixture types."
+  operability	active	"make benchmark-operability"	results/operability_matrix.md	"Documents format capability matrix: canonical forms, hashing, native relation support, rule handling."
+  retrieval-accuracy	active	"make benchmark-retrieval"	results/retrieval_accuracy/summary.md	"Model comprehension benchmark; requires SDIF_BENCHMARK_RETRIEVAL=1 and ANTHROPIC_API_KEY."
 
 formats[id,status,role,notes]:
   json-compact	active	baseline	"Stable baseline for primary ratios."
@@ -41,3 +43,9 @@ rel:
   ai-speed-profile guides sdif-ai
   ai-speed-profile complements token-efficiency
   retrieval-accuracy extends token-efficiency
+  semantic-fidelity derives_from canonical-golden
+  semantic-fidelity compares sdif
+  semantic-fidelity compares json-compact
+  semantic-fidelity compares csv-bundle
+  operability describes sdif
+  operability describes json-compact

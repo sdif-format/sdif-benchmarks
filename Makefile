@@ -36,6 +36,8 @@ BENCHMARK_PACKING_SCRIPT := $(SCRIPT_DIR)/context_packing.py
 BENCHMARK_ROUNDTRIP_SCRIPT := $(SCRIPT_DIR)/roundtrip_fidelity.py
 BENCHMARK_DELTA_SCRIPT := $(SCRIPT_DIR)/delta_compactness.py
 BENCHMARK_RETRIEVAL_SCRIPT := $(SCRIPT_DIR)/retrieval_accuracy.py
+BENCHMARK_SEMANTIC_SCRIPT := $(SCRIPT_DIR)/semantic_fidelity.py
+BENCHMARK_OPERABILITY_SCRIPT := $(SCRIPT_DIR)/operability.py
 
 
 # -----------------------------------------------------------------------------
@@ -53,6 +55,8 @@ BENCHMARK_RETRIEVAL_SCRIPT := $(SCRIPT_DIR)/retrieval_accuracy.py
 	benchmark-roundtrip \
 	benchmark-delta \
 	benchmark-retrieval \
+	benchmark-semantic \
+	benchmark-operability \
 	clean
 
 
@@ -94,6 +98,14 @@ benchmark-delta:
 
 benchmark-retrieval:
 	SDIF_BENCHMARK_RETRIEVAL=1 $(PYTHON) $(BENCHMARK_RETRIEVAL_SCRIPT)
+
+
+benchmark-semantic:
+	$(PYTHON) $(BENCHMARK_SEMANTIC_SCRIPT)
+
+
+benchmark-operability:
+	$(PYTHON) $(BENCHMARK_OPERABILITY_SCRIPT)
 
 
 clean:
