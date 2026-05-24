@@ -118,7 +118,7 @@ DASHBOARD_TEMPLATE_PATH = BENCHMARK_DIR / "src" / "dashboard_template.html"
 
 from sdif.ai import ai_view  # noqa: E402
 from sdif.json import json_data_to_sdif  # noqa: E402
-from src.report import render_md_viewer, render_sdif_ai_viewer  # noqa: E402
+from sdif_benchmarks.report import render_md_viewer, render_sdif_ai_viewer  # noqa: E402
 from src.optional_deps import optional_module  # noqa: E402
 
 

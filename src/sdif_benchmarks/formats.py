@@ -19,7 +19,7 @@ from xml.sax.saxutils import escape as xml_escape
 
 import yaml
 
-import infra  # noqa: F401 — ensures REPO_ROOT/src is on sys.path before sdif imports
+from sdif_benchmarks import infra  # noqa: F401 — ensures REPO_ROOT/src is on sys.path before sdif imports
 
 from sdif.ai import ai_view  # noqa: E402
 from sdif.json import json_data_to_sdif  # noqa: E402

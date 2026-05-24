@@ -70,10 +70,10 @@ if str(_BENCHMARK_DIR) not in sys.path:
 if str(_BENCHMARK_DIR / "src") not in sys.path:
     sys.path.insert(0, str(_BENCHMARK_DIR / "src"))
 
-import src.formats as fmt  # noqa: E402
-import src.report as report  # noqa: E402
+from sdif_benchmarks import formats as fmt  # noqa: E402
+from sdif_benchmarks import report  # noqa: E402
 from src.optional_deps import optional_module  # noqa: E402
-from src.infra import (  # noqa: E402
+from sdif_benchmarks.infra import (  # noqa: E402
     CORPUS_DIR_NAME,
     DASHBOARD_FILE_NAME,
     REPO_ROOT,

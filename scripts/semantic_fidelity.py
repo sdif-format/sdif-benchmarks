@@ -49,8 +49,8 @@ if str(_BENCHMARK_DIR) not in sys.path:
 if str(_BENCHMARK_DIR / "src") not in sys.path:
     sys.path.insert(0, str(_BENCHMARK_DIR / "src"))
 
-import src.formats as fmt  # noqa: E402
-from src.infra import (  # noqa: E402
+from sdif_benchmarks import formats as fmt  # noqa: E402
+from sdif_benchmarks.infra import (  # noqa: E402
     REPO_ROOT,
     Tee,
     benchmark_golden_dir,
@@ -141,19 +141,24 @@ def _extract_axes(
     """Extract semantic axes from SDIF source using the public API."""
     doc = parse_text(source_sdif, policy=_BENCHMARK_POLICY)
     json_repr = document_to_json_data(doc)
+    assert isinstance(json_repr, dict)
+    rel_val = json_repr.get("rel")
+    rel_list = rel_val if isinstance(rel_val, list) else []
     relations = [
         (r["subject"], r["predicate"], r["object"])
-        for r in json_repr.get("rel", [])
+        for r in rel_list
         if isinstance(r, dict)
     ]
-    rules = [str(r) for r in json_repr.get("rules", [])]
+    rules_val = json_repr.get("rules")
+    rules_list = rules_val if isinstance(rules_val, list) else []
+    rules = [str(r) for r in rules_list]
     tables = {
         k: v
         for k, v in json_repr.items()
         if isinstance(v, list) and v and isinstance(v[0], dict) and k not in {"rel", "rules"}
     }
     fields = {k: v for k, v in json_repr.items() if not isinstance(v, (list, dict))}
-    return relations, rules, tables, fields
+    return relations, rules, tables, fields  # type: ignore[return-value]
 
 
 # ====================

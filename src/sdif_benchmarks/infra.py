@@ -9,7 +9,7 @@ from datetime import datetime, timezone
 from pathlib import Path
 from typing import TextIO
 
-BENCHMARK_DIR = Path(__file__).resolve().parents[1]
+BENCHMARK_DIR = Path(__file__).resolve().parents[2]
 BENCHMARK_REPO_ROOT = BENCHMARK_DIR
 SDIF_CORE_REPO = (
     Path(os.environ.get("SDIF_CORE_REPO", BENCHMARK_REPO_ROOT.parent)).expanduser().resolve()

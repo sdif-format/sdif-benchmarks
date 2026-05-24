@@ -7,9 +7,9 @@ import json
 from pathlib import Path
 from typing import Any
 
-import infra  # noqa: F401 — ensures REPO_ROOT/src is on sys.path
+from sdif_benchmarks import infra  # noqa: F401 — ensures REPO_ROOT/src is on sys.path
 
-BENCHMARK_DIR = Path(__file__).resolve().parents[1]
+BENCHMARK_DIR = Path(__file__).resolve().parents[2]
 DASHBOARD_TEMPLATE_PATH = BENCHMARK_DIR / "src" / "dashboard_template.html"
 GENERIC_DASHBOARD_TEMPLATE_PATH = BENCHMARK_DIR / "src" / "generic_dashboard.html"
 
@@ -25,7 +25,7 @@ def render_sdif_report(data: dict[str, Any]) -> str:
 
 
 def render_sdif_ai_report(sdif_text: str) -> str:
-    from formats import compact_ai_projection
+    from sdif_benchmarks.formats import compact_ai_projection
 
     return compact_ai_projection(sdif_text)
 

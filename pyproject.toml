@@ -9,26 +9,48 @@ description = "Benchmark suite for SDIF format comparisons"
 readme = "README.md"
 requires-python = ">=3.10"
 dependencies = [
+  "Markdown>=3.6",
   "PyYAML>=6.0",
 ]
 
 [project.optional-dependencies]
 dev = [
   "anthropic>=0.103.1",
+  "mypy>=1.10",
   "pytest>=8.0",
   "tiktoken>=0.13.0",
   "transformers>=4",
-  "types-PyYAML>=6.0",
+  "types-Markdown>=3.10.2.20260518",
+  "types-PyYAML>=6.0.12.20260518",
+]
+
+[dependency-groups]
+dev = [
+  "anthropic>=0.103.1",
+  "mypy>=1.10",
+  "pytest>=8.0",
+  "tiktoken>=0.13.0",
+  "transformers>=4",
+  "types-Markdown>=3.10.2.20260518",
+  "types-PyYAML>=6.0.12.20260518",
 ]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
-pythonpath = ["src"]
+pythonpath = ["src", "../src"]
+
+[tool.mypy]
+python_version = "3.10"
+mypy_path = ["src", "../src"]
+files = ["src/sdif_benchmarks", "scripts"]
+pretty = true
+show_error_codes = true
+warn_unused_ignores = true
 
 [tool.ruff]
 line-length = 100
 src = ["scripts", "src", "tests"]
 target-version = "py310"
 
-[tool.setuptools]
-py-modules = []
+[tool.setuptools.packages.find]
+where = ["src"]

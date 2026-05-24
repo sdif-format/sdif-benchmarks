@@ -28,8 +28,8 @@ if str(_BENCHMARK_DIR) not in sys.path:
 if str(_BENCHMARK_DIR / "src") not in sys.path:
     sys.path.insert(0, str(_BENCHMARK_DIR / "src"))
 
-import src.infra as infra  # noqa: E402
-import src.report as report  # noqa: E402
+from sdif_benchmarks import infra  # noqa: E402
+from sdif_benchmarks import report  # noqa: E402
 
 RESULTS_FILENAME = "operability_matrix.md"
 

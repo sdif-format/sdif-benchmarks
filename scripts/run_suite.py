@@ -47,8 +47,8 @@ if str(_BENCHMARK_DIR) not in sys.path:
 if str(_BENCHMARK_DIR / "src") not in sys.path:
     sys.path.insert(0, str(_BENCHMARK_DIR / "src"))
 
-import src.report as report  # noqa: E402
-from src.infra import (  # noqa: E402
+from sdif_benchmarks import report  # noqa: E402
+from sdif_benchmarks.infra import (  # noqa: E402
     BENCHMARK_DIR,
     REPO_ROOT,
     benchmark_output_dir,
@@ -561,7 +561,7 @@ def main() -> None:
         run_results.append({"track": track, "ran": True, "success": success})
 
     # Count corpus documents from golden dir
-    from src.infra import benchmark_golden_dir, discover_documents
+    from sdif_benchmarks.infra import benchmark_golden_dir, discover_documents
 
     corpus_docs = len(discover_documents(benchmark_golden_dir()))
 

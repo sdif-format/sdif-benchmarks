@@ -578,7 +578,8 @@ def make_github_openapi(source_path: Path = DEFAULT_GITHUB_OPENAPI) -> JsonObjec
             for param in combined_params[:10]:
                 if not isinstance(param, dict):
                     continue
-                schema = param.get("schema") if isinstance(param.get("schema"), dict) else {}
+                schema_val = param.get("schema")
+                schema = schema_val if isinstance(schema_val, dict) else {}
                 parameters.append(
                     {
                         "operation_id": cell_text(op_id),

@@ -343,7 +343,7 @@ def test_roundtrip_format_parsers_include_sdif_ai_and_toon():
 
 def test_roundtrip_parse_sdif_ai_basic():
     rt = load_roundtrip_fidelity_module()
-    import formats as fmt_mod
+    from sdif_benchmarks import formats as fmt_mod
 
     data = {"kind": "Plan", "id": "demo", "items": [{"id": "I1", "status": "open"}]}
     sdif_text = __import__("sdif.json", fromlist=["json_data_to_sdif"]).json_data_to_sdif(
@@ -370,7 +370,7 @@ def test_roundtrip_parse_sdif_ai_with_explicit_header():
 
 def test_roundtrip_parse_sdif_ai_scalar_ambiguity():
     rt = load_roundtrip_fidelity_module()
-    import formats as fmt_mod
+    from sdif_benchmarks import formats as fmt_mod
     from sdif.json import json_data_to_sdif
 
     data = {
@@ -391,7 +391,7 @@ def test_roundtrip_parse_sdif_ai_scalar_ambiguity():
 
 def test_roundtrip_parse_toon_basic(monkeypatch):
     rt = load_roundtrip_fidelity_module()
-    import formats as fmt_mod
+    from sdif_benchmarks import formats as fmt_mod
 
     data = {"kind": "Plan", "id": "demo", "items": [{"id": "I1", "status": "open"}]}
     toon_text = fmt_mod.toon_from_cli(data)
@@ -403,7 +403,7 @@ def test_roundtrip_parse_toon_basic(monkeypatch):
 
 def test_roundtrip_parse_toon_scalar_ambiguity(monkeypatch):
     rt = load_roundtrip_fidelity_module()
-    import formats as fmt_mod
+    from sdif_benchmarks import formats as fmt_mod
 
     data = {"a": None, "b": True, "c": 42, "d": "42", "e": "null", "f": "true"}
     toon_text = fmt_mod.toon_from_cli(data)
@@ -480,7 +480,7 @@ def test_roundtrip_diagnostic_files_produced_below_100(monkeypatch, tmp_path):
 
 def test_roundtrip_sdif_ai_plan_at_100_after_expand_fix():
     rt = load_roundtrip_fidelity_module()
-    import formats as fmt_mod
+    from sdif_benchmarks import formats as fmt_mod
     from sdif.json import json_data_to_sdif
 
     data = {
@@ -501,7 +501,7 @@ def test_roundtrip_sdif_ai_numeric_string_table_cells_preserved():
     # column must survive the SDIF AI → expand_ai_doc → document_to_json_data
     # path as strings, not be coerced to integers.
     rt = load_roundtrip_fidelity_module()
-    import formats as fmt_mod
+    from sdif_benchmarks import formats as fmt_mod
     from sdif.json import json_data_to_sdif
 
     ambiguous = ["200", "404", "0", "-1", "1.0", "true", "false", "null"]

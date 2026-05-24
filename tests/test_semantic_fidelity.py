@@ -133,7 +133,7 @@ def test_semantic_fidelity_result_has_no_native_relation_support_attr() -> None:
 
 def test_csv_bundle_recovers_flat_table() -> None:
     """CSV Bundle parse-back should recover table rows → table_structural_fidelity=1.0."""
-    from formats import build_formats_dict
+    from sdif_benchmarks.formats import build_formats_dict
     from sdif import parse_text
     from sdif.json import document_to_json_data
 
@@ -149,7 +149,7 @@ def test_csv_bundle_recovers_flat_table() -> None:
 
 def test_csv_bundle_recovers_rules_as_list() -> None:
     """CSV Bundle encodes rules as JSON-encoded string; parse-back should recover it."""
-    from formats import build_formats_dict
+    from sdif_benchmarks.formats import build_formats_dict
     from sdif import parse_text
     from sdif.json import document_to_json_data
 
@@ -211,7 +211,7 @@ def test_semantic_fidelity_result_fields() -> None:
 def test_parse_back_status_valid_values() -> None:
     """parse_back_status must be one of the four defined values."""
     valid = {"ok", "best_effort", "not_measured", "parse_error"}
-    from formats import build_formats_dict
+    from sdif_benchmarks.formats import build_formats_dict
     from sdif import parse_text
     from sdif.json import document_to_json_data
 
