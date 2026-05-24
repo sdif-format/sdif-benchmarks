@@ -89,7 +89,7 @@ def test_equivalent_json_is_valid_json(generated_dir: Path, name: str) -> None:
     assert isinstance(obj, dict)
 
 
-def _load_json(generated_dir: Path, name: str) -> dict:
+def _load_json(generated_dir: Path, name: str) -> dict[str, Any]:
     return json.loads((generated_dir / name / "equivalent.json").read_text(encoding="utf-8"))
 
 
