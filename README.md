@@ -78,6 +78,20 @@ Every compared representation is derived from the same canonical JSON source. Cl
       Guards that SDIF preserves relations, rules, schema validation, canonicalization and reversible AI projection boundaries.
     </td>
   </tr>
+  <tr>
+    <td width="33%" valign="top">
+      <strong>Semantic fidelity</strong>
+      <br><br>
+      Structural recovery after format conversion. Separate axes for relations, rules, tables, and scalar fields. Unparsed formats report <code>not_measured</code>, not zero.
+    </td>
+    <td width="33%" valign="top">
+      <strong>Operability</strong>
+      <br><br>
+      Static capability matrix across 8 formats: canonical forms, stable hashing, native relation support, rule declaration vs. evaluation, semantic type vocabulary.
+    </td>
+    <td width="33%" valign="top">
+    </td>
+  </tr>
 </table>
 
 </div>
@@ -108,6 +122,12 @@ SDIF_BENCHMARK_RETRIEVAL=1 ANTHROPIC_API_KEY=<key> make benchmark-retrieval
 
 # Semantic quality checks
 make benchmark-quality
+
+# Structural recovery fidelity (semantic fidelity track)
+make benchmark-semantic
+
+# Format capability matrix (operability track)
+make benchmark-operability
 ```
 
 <br>

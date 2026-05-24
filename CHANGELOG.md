@@ -2,6 +2,42 @@
 
 ## [Unreleased]
 
+### Added — v1.1 Semantic Benchmark Suite
+
+- **Semantic golden fixture generator** (`scripts/generate_semantic_golden.py`): generates four
+  semantic fixture types (`semantic-narrative`, `audit-provenance`, `agent-workflow`,
+  `llm-api-response`) under `../sdif/examples/golden/`. Each fixture produces
+  `equivalent.json` and `source.sdif` with `rel:` triples, `rules:` declarations, and
+  named-column tables.
+
+- **Semantic fidelity track** (`scripts/semantic_fidelity.py`): measures structural recovery
+  after format conversion (relation, rule, table, and field axes). Uses nullable metrics
+  (`float | None`) — empty source axes and unimplemented parse-backs return `None`, never
+  a fake `0.0`. CSV Bundle parse-back implemented (recovers `# table:rel` sections
+  honestly). XML marked `best_effort`. TOON marked `not_measured`. Writes
+  `results/semantic_fidelity/summary.md`.
+
+- **Operability matrix track** (`scripts/operability.py`): documents format capabilities
+  across 8 formats (SDIF, SDIF AI, JSON, YAML, XML, CSV Bundle, TOON). Covers canonical
+  forms, stable hashing, schema validation, native relation support, rule declaration vs.
+  rule evaluation (split), semantic type vocabulary, and deterministic output. Writes
+  `results/operability_matrix.md`.
+
+- **Public extraction validation tests** (`tests/test_semantic_extraction.py`): proves that
+  `document_to_json_data()` exposes `rel` as `[{subject, predicate, object}]` and `rules`
+  as `[str]` without touching AST internals.
+
+- **Retrieval accuracy opt-in tests** (`tests/test_retrieval_accuracy_integration.py`):
+  verifies the retrieval script refuses to run without `SDIF_BENCHMARK_RETRIEVAL=1`.
+
+- **Makefile targets**: `benchmark-semantic` and `benchmark-operability` added.
+
+- **manifest.sdif**: `semantic-fidelity` and `operability` tracks registered as `active`.
+  `retrieval-accuracy` promoted from `planned` to `active` (opt-in via env var).
+
+- **run_suite.py**: `semantic_fidelity` and `operability` wired as non-optional suite tracks.
+  `retrieval_accuracy` remains `optional: True` — default suite runs without `ANTHROPIC_API_KEY`.
+
 ### Fixed
 
 - SDIF canonical and SDIF AI both round-trip losslessly across the full benchmark corpus.
