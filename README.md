@@ -293,7 +293,7 @@ sdif-benchmarks/
 - Packaged modules (tracks, generators, checks) belong under `src/sdif_benchmarks/`.
 - Reusable helpers belong under `src/sdif_benchmarks/` — e.g. `formats.py`, `infra.py`, `report.py`.
 - Each track writes scratch output to `tmp/<track>/`; completed evidence goes to `results/<track>/`.
-- Canonical semantic sources belong in the core repo's `examples/golden/`, unless `SDIF_BENCHMARK_GOLDEN_DIR` overrides.
+- Canonical semantic sources belong in the `sdif` core repo's `examples/golden/`, unless `SDIF_BENCHMARK_GOLDEN_DIR` overrides.
 - Optional external tools (TOON, tiktoken) must degrade gracefully.
 - Claims must name the tokenizer and model coverage that produced them.
 - Retrieval accuracy must use deterministic validators, not subjective LLM judging.
@@ -304,5 +304,6 @@ sdif-benchmarks/
 
 ## Related
 
-- [sdif](https://github.com/sdif-format/sdif) — Core format, specification, parser and CLI
+- [sdif-spec](https://github.com/sdif-format/sdif-spec) — Official format specification and conformance suite (SSOT)
+- [sdif](https://github.com/sdif-format/sdif) — Core reference parser, validator and CLI
 - [tree-sitter-sdif](https://github.com/sdif-format/tree-sitter-sdif) — Grammar and editor tooling

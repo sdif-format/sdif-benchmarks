@@ -2,8 +2,12 @@
 # Runtime configuration
 # -----------------------------------------------------------------------------
 
+ifeq ($(wildcard .venv/bin/python),)
 PYTHON ?= python3
-SDIF_CORE_REPO ?= ..
+else
+PYTHON ?= .venv/bin/python
+endif
+SDIF_CORE_REPO ?= ../sdif
 
 export SDIF_CORE_REPO
 export PYTHONPATH := src:$(SDIF_CORE_REPO)/src:$(PYTHONPATH)

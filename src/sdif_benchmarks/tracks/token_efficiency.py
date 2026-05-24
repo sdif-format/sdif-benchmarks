@@ -109,7 +109,7 @@ from sdif_benchmarks.infra import BENCHMARK_DIR
 
 BENCHMARK_REPO_ROOT = BENCHMARK_DIR
 SDIF_CORE_REPO = (
-    Path(os.environ.get("SDIF_CORE_REPO") or str(BENCHMARK_REPO_ROOT.parent)).expanduser().resolve()
+    Path(os.environ.get("SDIF_CORE_REPO") or str(BENCHMARK_REPO_ROOT.parent / "sdif")).expanduser().resolve()
 )
 REPO_ROOT = SDIF_CORE_REPO
 sys.path.insert(0, str(SDIF_CORE_REPO / "src"))

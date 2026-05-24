@@ -20,7 +20,7 @@ from sdif_benchmarks.infra import BENCHMARK_DIR as BENCHMARK_ROOT
 JsonObject = dict[str, Any]
 
 SDIF_CORE_REPO = (
-    Path(os.environ.get("SDIF_CORE_REPO") or str(BENCHMARK_ROOT.parent)).expanduser().resolve()
+    Path(os.environ.get("SDIF_CORE_REPO") or str(BENCHMARK_ROOT.parent / "sdif")).expanduser().resolve()
 )
 DEFAULT_GOLDEN_DIR = SDIF_CORE_REPO / "examples" / "golden"
 DEFAULT_GITHUB_OPENAPI = DEFAULT_GOLDEN_DIR / "github.openapi" / "github.openapi.json"

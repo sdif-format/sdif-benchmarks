@@ -20,7 +20,7 @@ from typing import Any
 from sdif_benchmarks.infra import BENCHMARK_DIR as BENCHMARKS_ROOT
 
 SDIF_CORE_REPO = (
-    Path(os.environ.get("SDIF_CORE_REPO") or str(BENCHMARKS_ROOT.parent)).expanduser().resolve()
+    Path(os.environ.get("SDIF_CORE_REPO") or str(BENCHMARKS_ROOT.parent / "sdif")).expanduser().resolve()
 )
 SDIF_SRC = SDIF_CORE_REPO / "src"
 DEFAULT_OUTPUT_DIR = SDIF_CORE_REPO / "examples" / "golden"
