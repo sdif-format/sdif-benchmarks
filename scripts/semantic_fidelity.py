@@ -34,12 +34,12 @@ from __future__ import annotations
 
 import contextlib
 import csv
-import io
 import json
-import os
 import sys
 import xml.etree.ElementTree as ET
-from dataclasses import dataclass, field
+
+import yaml  # type: ignore[import-untyped]
+from dataclasses import dataclass
 from pathlib import Path
 from typing import Any
 
@@ -47,11 +47,8 @@ _BENCHMARK_DIR = Path(__file__).resolve().parent.parent
 if str(_BENCHMARK_DIR / "src") not in sys.path:
     sys.path.insert(0, str(_BENCHMARK_DIR / "src"))
 
-import infra  # noqa: E402 — sets up REPO_ROOT/src on sys.path
 import formats as fmt  # noqa: E402
 from infra import (  # noqa: E402
-    CORPUS_DIR_NAME,
-    DASHBOARD_FILE_NAME,
     REPO_ROOT,
     Tee,
     benchmark_golden_dir,
@@ -65,8 +62,6 @@ from infra import (  # noqa: E402
     utc_now_iso,
     verbose_warning,
 )
-
-import yaml  # type: ignore[import-untyped]
 
 from sdif.ai import ai_view, expand_ai_doc  # noqa: E402
 from sdif.canonical import canonicalize  # noqa: E402
@@ -732,6 +727,10 @@ def main() -> int:
             summary = _summary_md(evidence)
             comparison = _comparison_json_data(evidence)
 
+            # Some format conversion helpers may clean benchmark tmp directories;
+            # keep the evidence writer resilient so suite-level runs always publish
+            # the semantic report artifacts for indexing.
+            run_dir.mkdir(parents=True, exist_ok=True)
             (run_dir / "summary.md").write_text(summary, encoding="utf-8")
             (run_dir / "summary.json").write_text(
                 json.dumps(structured, ensure_ascii=False, indent=2) + "\n",

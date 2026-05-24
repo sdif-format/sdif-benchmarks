@@ -535,3 +535,65 @@ def test_run_suite_includes_semantic_and_operability_tracks() -> None:
 def test_retrieval_accuracy_is_optional() -> None:
     retrieval = next(t for t in mod.TRACKS if t["id"] == "retrieval_accuracy")
     assert retrieval["optional"] is True
+
+
+def test_build_index_supports_semantic_and_operability_tracks(monkeypatch, tmp_path):
+    semantic_dir = tmp_path / "semantic_fidelity"
+    semantic_dir.mkdir()
+    (semantic_dir / "summary.json").write_text(
+        json.dumps(
+            {
+                "documents": [
+                    {
+                        "formats": [
+                            {
+                                "format": "SDIF",
+                                "relationStructuralFidelity": 1.0,
+                                "ruleStructuralFidelity": 1.0,
+                                "tableStructuralFidelity": 1.0,
+                                "fieldStructuralFidelity": 1.0,
+                            }
+                        ]
+                    }
+                ]
+            }
+        ),
+        encoding="utf-8",
+    )
+
+    operability_dir = tmp_path / "operability"
+    operability_dir.mkdir()
+    (operability_dir / "summary.json").write_text(
+        json.dumps(
+            {
+                "formats": [
+                    {
+                        "format": "SDIF",
+                        "nativeRelationSupport": True,
+                        "ruleDeclarationSupport": True,
+                        "ruleEvaluationSupport": False,
+                        "stableHash": True,
+                    }
+                ]
+            }
+        ),
+        encoding="utf-8",
+    )
+
+    monkeypatch.setattr(mod, "benchmark_result_dir", lambda track_id: tmp_path / track_id)
+    tracks = {track["id"]: track for track in mod.TRACKS}
+
+    index = mod._build_index(
+        [
+            {"track": tracks["semantic_fidelity"], "ran": True, "success": True},
+            {"track": tracks["operability"], "ran": True, "success": True},
+        ],
+        "2026-05-24T00:00:00Z",
+        corpus_documents=4,
+    )
+
+    assert index["tracks"] == ["semantic_fidelity", "operability"]
+    assert {entry["track"] for entry in index["scorecard"]} == {
+        "semantic_fidelity",
+        "operability",
+    }

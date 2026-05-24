@@ -18,8 +18,16 @@ from __future__ import annotations
 
 import argparse
 import sys
-from dataclasses import dataclass, field
+from dataclasses import dataclass
 from pathlib import Path
+from typing import Any
+
+_BENCHMARK_DIR = Path(__file__).resolve().parent.parent
+if str(_BENCHMARK_DIR / "src") not in sys.path:
+    sys.path.insert(0, str(_BENCHMARK_DIR / "src"))
+
+import infra  # noqa: E402
+import report  # noqa: E402
 
 RESULTS_FILENAME = "operability_matrix.md"
 
@@ -188,6 +196,46 @@ def _render_markdown_table(matrix: list[FormatOperability]) -> str:
     return "".join(lines) + notes_section
 
 
+def _summary_markdown(matrix: list[FormatOperability], table: str) -> str:
+    """Render the suite-compatible markdown summary."""
+    return "\n".join(
+        [
+            "# SDIF Operability Matrix — Summary",
+            "",
+            "Format capability flags are separate from structural-fidelity scores.",
+            "A `Yes` means the capability is native to the format or this benchmark implementation; notes qualify projection-based support.",
+            "",
+            table.rstrip(),
+            "",
+        ]
+    )
+
+
+def _structured_data(matrix: list[FormatOperability]) -> dict[str, Any]:
+    """Render matrix rows as machine-readable summary data."""
+    return {
+        "kind": "OperabilityMatrixReport",
+        "version": "1.0",
+        "generatedAt": infra.utc_now_iso(),
+        "formats": [
+            {
+                "format": row.format_name,
+                "standardCanonicalForm": row.standard_canonical_form,
+                "builtinCanonicalForm": row.builtin_canonical_form,
+                "stableHash": row.stable_hash,
+                "schemaValidation": row.schema_validation,
+                "nativeRelationSupport": row.native_relation_support,
+                "ruleDeclarationSupport": row.rule_declaration_support,
+                "ruleEvaluationSupport": row.rule_evaluation_support,
+                "semanticTypeVocabulary": row.semantic_type_vocabulary,
+                "deterministicOutput": row.deterministic_output,
+                "notes": row.notes,
+            }
+            for row in matrix
+        ],
+    }
+
+
 def _render_notes_section(matrix: list[FormatOperability]) -> str:
     """Append a notes section for formats that carry extra context."""
     noted = [row for row in matrix if row.notes]
@@ -207,6 +255,42 @@ def _write_results(output_dir: Path, content: str) -> Path:
     return output_path
 
 
+def _write_suite_artifacts(output_dir: Path, matrix: list[FormatOperability], table: str) -> Path:
+    """Write markdown, JSON, SDIF, and lightweight viewer artifacts."""
+    output_dir.mkdir(parents=True, exist_ok=True)
+    structured = _structured_data(matrix)
+    summary = _summary_markdown(matrix, table)
+
+    (output_dir / "summary.md").write_text(summary, encoding="utf-8")
+    (output_dir / "summary.json").write_text(report.render_json_report(structured), encoding="utf-8")
+    (output_dir / RESULTS_FILENAME).write_text(table, encoding="utf-8")
+
+    try:
+        sdif_text = report.render_sdif_report(structured)
+    except Exception:
+        sdif_text = "# OperabilityMatrixReport (SDIF rendering skipped — see summary.json)\n"
+    (output_dir / "summary.sdif").write_text(sdif_text, encoding="utf-8")
+
+    try:
+        sdif_ai_text = report.render_sdif_ai_report(sdif_text)
+    except Exception:
+        sdif_ai_text = sdif_text
+    (output_dir / "summary.sdif.ai").write_text(sdif_ai_text, encoding="utf-8")
+    (output_dir / "summary-viewer.html").write_text(
+        report.render_md_viewer(summary, "SDIF Operability Matrix"),
+        encoding="utf-8",
+    )
+    (output_dir / "summary-sdif-ai-viewer.html").write_text(
+        report.render_sdif_ai_viewer(sdif_ai_text, "SDIF Operability Matrix — SDIF AI"),
+        encoding="utf-8",
+    )
+    (output_dir / "dashboard.html").write_text(
+        report.render_dashboard_report(structured, summary, table),
+        encoding="utf-8",
+    )
+    return output_dir
+
+
 def main(argv: list[str] | None = None) -> int:
     """Run the operability benchmark, print summary to stdout, write file."""
     parser = argparse.ArgumentParser(
@@ -214,8 +298,9 @@ def main(argv: list[str] | None = None) -> int:
     )
     parser.add_argument(
         "--output-dir",
-        default="results/",
-        help="Directory to write results/operability_matrix.md (default: results/)",
+        type=Path,
+        default=None,
+        help="Directory to write suite artifacts (default: results/operability under SDIF_BENCHMARK_OUTPUT_DIR).",
     )
     args = parser.parse_args(argv)
 
@@ -224,8 +309,9 @@ def main(argv: list[str] | None = None) -> int:
 
     print(table)
 
-    output_path = _write_results(Path(args.output_dir), table)
-    print(f"Results written to {output_path}", file=sys.stderr)
+    output_dir = args.output_dir or infra.benchmark_result_dir("operability")
+    _write_suite_artifacts(output_dir, matrix, table)
+    print(f"Results written to {output_dir}", file=sys.stderr)
 
     return 0
 

@@ -9,10 +9,10 @@ native relation support.
 from __future__ import annotations
 
 import importlib.util
+import json
 import sys
 from pathlib import Path
 
-import pytest
 
 
 def _load_operability_module():
@@ -66,3 +66,16 @@ def test_csv_bundle_no_native_relation_support() -> None:
     csv = next(r for r in build_operability_matrix() if r.format_name == "CSV Bundle")
     assert csv.native_relation_support is False
     assert csv.rule_declaration_support is False
+
+
+def test_main_writes_suite_compatible_summary_artifacts(tmp_path) -> None:
+    exit_code = operability.main(["--output-dir", str(tmp_path)])
+
+    assert exit_code == 0
+    assert (tmp_path / "summary.md").is_file()
+    assert (tmp_path / "summary.json").is_file()
+    assert (tmp_path / "operability_matrix.md").is_file()
+
+    payload = json.loads((tmp_path / "summary.json").read_text(encoding="utf-8"))
+    assert payload["kind"] == "OperabilityMatrixReport"
+    assert any(row["format"] == "SDIF" for row in payload["formats"])

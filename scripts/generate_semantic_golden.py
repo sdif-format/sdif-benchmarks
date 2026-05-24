@@ -268,8 +268,9 @@ FIXTURE_BUILDERS: dict[str, Callable[[], JsonObject]] = {
 
 
 def write_fixture(output_dir: Path, name: str, data: JsonObject) -> None:
-    """Write equivalent.json and source.sdif into output_dir/name/."""
+    """Write equivalent.json, source.sdif, canonical.sdif, and canonical.sha256."""
     _ensure_sdif_on_path()
+    from sdif import canonicalize, sdif_hash  # type: ignore[import]  # deferred: SDIF src path injected by _ensure_sdif_on_path() above
     from sdif.json import json_data_to_sdif  # type: ignore[import]  # deferred: SDIF src path injected by _ensure_sdif_on_path() above
 
     fixture_dir = output_dir / name
@@ -282,6 +283,9 @@ def write_fixture(output_dir: Path, name: str, data: JsonObject) -> None:
 
     sdif_text = json_data_to_sdif(data, include_header=True)
     (fixture_dir / "source.sdif").write_text(sdif_text, encoding="utf-8")
+    canonical_text = canonicalize(sdif_text)
+    (fixture_dir / "canonical.sdif").write_text(canonical_text, encoding="utf-8")
+    (fixture_dir / "canonical.sha256").write_text(sdif_hash(sdif_text) + "\n", encoding="utf-8")
 
 
 def generate_all(output_dir: Path) -> None:

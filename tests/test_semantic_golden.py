@@ -7,6 +7,7 @@ with both equivalent.json and source.sdif for each of the four semantic types.
 from __future__ import annotations
 
 import importlib.util
+import hashlib
 import json
 import sys
 import types
@@ -38,6 +39,14 @@ def load_sdif_parse() -> tuple[Any, Any]:
     from sdif import parse_text  # type: ignore[import]
     from sdif.json import document_to_json_data  # type: ignore[import]
     return parse_text, document_to_json_data
+
+
+def load_sdif_canonical() -> tuple[Any, Any]:
+    """Return the canonicalize and sdif_hash callables."""
+    if str(SDIF_SRC) not in sys.path:
+        sys.path.insert(0, str(SDIF_SRC))
+    from sdif import canonicalize, sdif_hash  # type: ignore[import]
+    return canonicalize, sdif_hash
 
 
 FIXTURE_NAMES = [
@@ -75,6 +84,16 @@ def test_equivalent_json_exists(generated_dir: Path, name: str) -> None:
 @pytest.mark.parametrize("name", FIXTURE_NAMES)
 def test_source_sdif_exists(generated_dir: Path, name: str) -> None:
     assert (generated_dir / name / "source.sdif").is_file()
+
+
+@pytest.mark.parametrize("name", FIXTURE_NAMES)
+def test_canonical_sdif_exists(generated_dir: Path, name: str) -> None:
+    assert (generated_dir / name / "canonical.sdif").is_file()
+
+
+@pytest.mark.parametrize("name", FIXTURE_NAMES)
+def test_canonical_sha256_exists(generated_dir: Path, name: str) -> None:
+    assert (generated_dir / name / "canonical.sha256").is_file()
 
 
 # ---------------------------------------------------------------------------
@@ -248,6 +267,18 @@ def test_source_sdif_rules_are_exposed(generated_dir: Path, name: str) -> None:
     assert all(isinstance(r, str) for r in rules), "rules must be strings"
 
 
+@pytest.mark.parametrize("name", FIXTURE_NAMES)
+def test_canonical_fixture_matches_source_and_hash(generated_dir: Path, name: str) -> None:
+    canonicalize, sdif_hash = load_sdif_canonical()
+    source_text = (generated_dir / name / "source.sdif").read_text(encoding="utf-8")
+    canonical_text = (generated_dir / name / "canonical.sdif").read_text(encoding="utf-8")
+    hash_text = (generated_dir / name / "canonical.sha256").read_text(encoding="utf-8").strip()
+
+    assert canonical_text == canonicalize(source_text)
+    assert hash_text == sdif_hash(source_text)
+    assert hash_text == hashlib.sha256(canonical_text.encode("utf-8")).hexdigest()
+
+
 # ---------------------------------------------------------------------------
 # CLI test
 # ---------------------------------------------------------------------------
@@ -261,3 +292,5 @@ def test_generator_cli_runs_without_error(tmp_path: Path) -> None:
     for name in FIXTURE_NAMES:
         assert (tmp_path / name / "equivalent.json").is_file()
         assert (tmp_path / name / "source.sdif").is_file()
+        assert (tmp_path / name / "canonical.sdif").is_file()
+        assert (tmp_path / name / "canonical.sha256").is_file()
