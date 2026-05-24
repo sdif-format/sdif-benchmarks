@@ -71,6 +71,7 @@ if str(_BENCHMARK_DIR / "src") not in sys.path:
 import infra  # noqa: E402
 import formats as fmt  # noqa: E402
 import report  # noqa: E402
+from optional_deps import optional_module  # noqa: E402
 from infra import (  # noqa: E402
     CORPUS_DIR_NAME,
     DASHBOARD_FILE_NAME,
@@ -92,10 +93,8 @@ BENCHMARK_TRACK_NAME = "retrieval_accuracy"
 DEFAULT_MODEL = "claude-haiku-4-5-20251001"
 DEFAULT_MAX_QUESTIONS = 8
 
-try:
-    from anthropic import Anthropic  # type: ignore[import-not-found]
-except ImportError:
-    Anthropic = None  # type: ignore[assignment,misc]
+anthropic_module = optional_module("anthropic")
+anthropic_client_cls = getattr(anthropic_module, "Anthropic", None) if anthropic_module else None
 
 
 # ====================
@@ -588,13 +587,13 @@ def main() -> None:
         print("❌ ANTHROPIC_API_KEY is not set.")
         _print_usage_and_exit()
 
-    if Anthropic is None:
+    if anthropic_client_cls is None:
         print("❌ The 'anthropic' Python package is not installed.")
         print("   Run: uv pip install anthropic")
         sys.exit(1)
 
     model = os.environ.get("SDIF_CLAUDE_MODEL", DEFAULT_MODEL)
-    client = Anthropic()
+    client = anthropic_client_cls()
 
     run_dir = create_benchmark_run_dir(BENCHMARK_TRACK_NAME)
     final_dir = benchmark_result_dir(BENCHMARK_TRACK_NAME)

@@ -116,28 +116,21 @@ DASHBOARD_TEMPLATE_PATH = BENCHMARK_DIR / "src" / "dashboard_template.html"
 from sdif.ai import ai_view  # noqa: E402
 from sdif.json import json_data_to_sdif  # noqa: E402
 from report import render_md_viewer, render_sdif_ai_viewer  # noqa: E402
+from optional_deps import optional_module  # noqa: E402
 
 
 # ====================
 # Optional dependencies
 # ====================
 
-try:
-    import tiktoken  # type: ignore[import-not-found]
-except ImportError:
-    tiktoken = None  # type: ignore[assignment]
+tiktoken_module = optional_module("tiktoken")
+transformers_module = optional_module("transformers")
+anthropic_module = optional_module("anthropic")
 
-
-try:
-    from transformers import AutoTokenizer  # type: ignore[import-not-found]
-except ImportError:
-    AutoTokenizer = None  # type: ignore[assignment,misc]
-
-
-try:
-    from anthropic import Anthropic  # type: ignore[import-not-found]
-except ImportError:
-    Anthropic = None  # type: ignore[assignment,misc]
+auto_tokenizer_cls = (
+    getattr(transformers_module, "AutoTokenizer", None) if transformers_module else None
+)
+anthropic_client_cls = getattr(anthropic_module, "Anthropic", None) if anthropic_module else None
 
 
 # ====================
@@ -524,15 +517,15 @@ def toon_from_cli(data: dict[str, Any]) -> str | None:
 
 @functools.lru_cache(maxsize=1)
 def get_tiktoken_encoder() -> Any:
-    if tiktoken is None:
+    if tiktoken_module is None:
         raise RuntimeError("tiktoken is not installed")
 
     encoding_name = os.environ.get("SDIF_TIKTOKEN_ENCODING", "cl100k_base")
-    return tiktoken.get_encoding(encoding_name)
+    return tiktoken_module.get_encoding(encoding_name)
 
 
 def count_tiktoken(text: str) -> int | None:
-    if tiktoken is None:
+    if tiktoken_module is None:
         return None
 
     try:
@@ -545,7 +538,7 @@ def count_tiktoken(text: str) -> int | None:
 
 @functools.lru_cache(maxsize=1)
 def get_llama_tokenizer() -> Any:
-    if AutoTokenizer is None:
+    if auto_tokenizer_cls is None:
         raise RuntimeError("transformers is not installed")
 
     model_name = os.environ.get(
@@ -555,7 +548,7 @@ def get_llama_tokenizer() -> Any:
 
     local_files_only = os.environ.get("SDIF_LLAMA_LOCAL_ONLY") == "1"
 
-    return AutoTokenizer.from_pretrained(
+    return auto_tokenizer_cls.from_pretrained(
         model_name,
         token=os.environ.get("HF_TOKEN"),
         trust_remote_code=True,
@@ -567,7 +560,7 @@ def count_llama3(text: str) -> int | None:
     if os.environ.get("SDIF_BENCHMARK_LLAMA") == "0":
         return None
 
-    if AutoTokenizer is None:
+    if auto_tokenizer_cls is None:
         return None
 
     try:
@@ -580,10 +573,10 @@ def count_llama3(text: str) -> int | None:
 
 @functools.lru_cache(maxsize=1)
 def get_anthropic_client() -> Any:
-    if Anthropic is None:
+    if anthropic_client_cls is None:
         raise RuntimeError("anthropic is not installed")
 
-    return Anthropic()
+    return anthropic_client_cls()
 
 
 def count_estimate(text: str) -> int:
@@ -601,7 +594,7 @@ def count_claude(text: str) -> int | None:
     if os.environ.get("SDIF_BENCHMARK_CLAUDE") != "1":
         return None
 
-    if Anthropic is None:
+    if anthropic_client_cls is None:
         return None
 
     try:
@@ -1095,14 +1088,14 @@ def tokenizer_note(tokenizer_name: str) -> str:
         return "Resolved through Node.js, local/global npm, or npx fallback."
 
     if tokenizer_name == "tiktoken":
-        if tiktoken is None:
+        if tiktoken_module is None:
             return "Unavailable because Python package `tiktoken` is not installed."
         return f"Encoding: {os.environ.get('SDIF_TIKTOKEN_ENCODING', 'cl100k_base')}."
 
     if tokenizer_name == "Llama3":
         if os.environ.get("SDIF_BENCHMARK_LLAMA") == "0":
             return "Disabled through SDIF_BENCHMARK_LLAMA=0."
-        if AutoTokenizer is None:
+        if auto_tokenizer_cls is None:
             return "Unavailable because Python package `transformers` is not installed."
         tokenizer = os.environ.get("SDIF_LLAMA_TOKENIZER", "meta-llama/Meta-Llama-3-8B")
         if os.environ.get("SDIF_LLAMA_LOCAL_ONLY") == "1":
@@ -1115,7 +1108,7 @@ def tokenizer_note(tokenizer_name: str) -> str:
     if tokenizer_name == "Claude":
         if os.environ.get("SDIF_BENCHMARK_CLAUDE") != "1":
             return "Disabled. Set SDIF_BENCHMARK_CLAUDE=1 to enable API token counting."
-        if Anthropic is None:
+        if anthropic_client_cls is None:
             return "Unavailable because Python package `anthropic` is not installed."
         if not os.environ.get("ANTHROPIC_API_KEY"):
             return "Unavailable because ANTHROPIC_API_KEY is unset."

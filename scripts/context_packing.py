@@ -52,6 +52,7 @@ if str(_BENCHMARK_DIR / "src") not in sys.path:
 import infra  # noqa: E402 — sets up REPO_ROOT/src on sys.path
 import formats as fmt  # noqa: E402
 import report  # noqa: E402
+from optional_deps import optional_module  # noqa: E402
 from infra import (  # noqa: E402
     CORPUS_DIR_NAME,
     DASHBOARD_FILE_NAME,
@@ -74,10 +75,7 @@ BENCHMARK_TRACK_NAME = "context_packing"
 CONTEXT_BUDGETS = [4_096, 8_192, 32_768, 131_072]
 BUDGET_LABELS = {4_096: "4K", 8_192: "8K", 32_768: "32K", 131_072: "128K"}
 
-try:
-    import tiktoken  # type: ignore[import-not-found]
-except ImportError:
-    tiktoken = None  # type: ignore[assignment]
+tiktoken_module = optional_module("tiktoken")
 
 
 # ====================
@@ -86,10 +84,10 @@ except ImportError:
 
 
 def count_tokens(text: str) -> int:
-    if tiktoken is not None:
+    if tiktoken_module is not None:
         try:
             encoding_name = os.environ.get("SDIF_TIKTOKEN_ENCODING", "cl100k_base")
-            enc = tiktoken.get_encoding(encoding_name)
+            enc = tiktoken_module.get_encoding(encoding_name)
             return len(enc.encode(text))
         except Exception as exc:
             verbose_warning(f"tiktoken failed, using estimate: {exc}")
@@ -97,7 +95,7 @@ def count_tokens(text: str) -> int:
 
 
 def tokenizer_name() -> str:
-    if tiktoken is not None:
+    if tiktoken_module is not None:
         return f"tiktoken/{os.environ.get('SDIF_TIKTOKEN_ENCODING', 'cl100k_base')}"
     return "estimate (4 bytes/token)"
 

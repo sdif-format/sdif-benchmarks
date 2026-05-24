@@ -61,6 +61,7 @@ if str(_BENCHMARK_DIR / "src") not in sys.path:
 import infra  # noqa: E402
 import formats as fmt  # noqa: E402
 import report  # noqa: E402
+from optional_deps import optional_module  # noqa: E402
 from infra import (  # noqa: E402
     CORPUS_DIR_NAME,
     DASHBOARD_FILE_NAME,
@@ -80,10 +81,7 @@ from infra import (  # noqa: E402
 
 BENCHMARK_TRACK_NAME = "delta_compactness"
 
-try:
-    import tiktoken  # type: ignore[import-not-found]
-except ImportError:
-    tiktoken = None  # type: ignore[assignment]
+tiktoken_module = optional_module("tiktoken")
 
 
 # ====================
@@ -92,9 +90,9 @@ except ImportError:
 
 
 def count_tokens(text: str) -> int:
-    if tiktoken is not None:
+    if tiktoken_module is not None:
         try:
-            enc = tiktoken.get_encoding(os.environ.get("SDIF_TIKTOKEN_ENCODING", "cl100k_base"))
+            enc = tiktoken_module.get_encoding(os.environ.get("SDIF_TIKTOKEN_ENCODING", "cl100k_base"))
             return len(enc.encode(text))
         except Exception as exc:
             verbose_warning(f"tiktoken failed, using estimate: {exc}")
@@ -102,7 +100,7 @@ def count_tokens(text: str) -> int:
 
 
 def tokenizer_name() -> str:
-    if tiktoken is not None:
+    if tiktoken_module is not None:
         return f"tiktoken/{os.environ.get('SDIF_TIKTOKEN_ENCODING', 'cl100k_base')}"
     return "estimate (4 bytes/token)"
 

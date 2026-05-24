@@ -90,9 +90,9 @@ def test_benchmark_sdif_ai_projection_is_not_larger_than_canonical_sdif(monkeypa
 
 
 def test_benchmark_has_estimated_token_counter_when_optional_tokenizers_unavailable(monkeypatch):
-    monkeypatch.setattr(token_efficiency, "tiktoken", None)
-    monkeypatch.setattr(token_efficiency, "AutoTokenizer", None)
-    monkeypatch.setattr(token_efficiency, "Anthropic", None)
+    monkeypatch.setattr(token_efficiency, "tiktoken_module", None)
+    monkeypatch.setattr(token_efficiency, "auto_tokenizer_cls", None)
+    monkeypatch.setattr(token_efficiency, "anthropic_client_cls", None)
 
     tokenizers = token_efficiency.available_tokenizers()
     names = [tokenizer.name for tokenizer in tokenizers]
