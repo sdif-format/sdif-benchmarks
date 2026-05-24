@@ -26,19 +26,10 @@ if str(BENCHMARKS_ROOT / "src") not in sys.path:
     sys.path.insert(0, str(BENCHMARKS_ROOT / "src"))
 
 
-def _load_module(name: str, path: Path) -> object:
-    spec = importlib.util.spec_from_file_location(name, path)
-    assert spec is not None and spec.loader is not None
-    mod = importlib.util.module_from_spec(spec)
-    sys.modules[name] = mod
-    spec.loader.exec_module(mod)  # type: ignore[union-attr]
-    return mod
+from sdif_benchmarks.tracks import semantic_fidelity as sf
 
-
-sf = _load_module("semantic_fidelity", SCRIPTS_DIR / "semantic_fidelity.py")
-
-measure_semantic_fidelity = sf.measure_semantic_fidelity  # type: ignore[attr-defined]
-SemanticFidelityResult = sf.SemanticFidelityResult  # type: ignore[attr-defined]
+measure_semantic_fidelity = sf.measure_semantic_fidelity
+SemanticFidelityResult = sf.SemanticFidelityResult
 
 # ---------------------------------------------------------------------------
 # Shared SDIF fixture with all semantic axes

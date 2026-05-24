@@ -6,14 +6,10 @@ from pathlib import Path
 MODULE_PATH = Path("scripts/token_efficiency.py")
 
 
+from sdif_benchmarks.tracks import token_efficiency
+
 def load_token_efficiency_module():
-    spec = importlib.util.spec_from_file_location("token_efficiency", MODULE_PATH)
-    assert spec is not None
-    assert spec.loader is not None
-    module = importlib.util.module_from_spec(spec)
-    sys.modules["token_efficiency"] = module
-    spec.loader.exec_module(module)
-    return module
+    return token_efficiency
 
 
 def test_token_efficiency_writes_to_tmp_then_moves_to_named_results(monkeypatch, tmp_path):

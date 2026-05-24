@@ -8,24 +8,8 @@ native relation support.
 
 from __future__ import annotations
 
-import importlib.util
 import json
-import sys
-from pathlib import Path
-
-
-def _load_operability_module():
-    module_path = Path("scripts/operability.py")
-    spec = importlib.util.spec_from_file_location("operability", module_path)
-    assert spec is not None
-    assert spec.loader is not None
-    module = importlib.util.module_from_spec(spec)
-    sys.modules["operability"] = module
-    spec.loader.exec_module(module)
-    return module
-
-
-operability = _load_operability_module()
+from sdif_benchmarks.tracks import operability
 build_operability_matrix = operability.build_operability_matrix
 
 

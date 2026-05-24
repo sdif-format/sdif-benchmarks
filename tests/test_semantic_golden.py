@@ -20,16 +20,10 @@ BENCHMARKS_ROOT = Path(__file__).resolve().parents[1]
 SDIF_SRC = BENCHMARKS_ROOT.parent / "src"
 
 
+from sdif_benchmarks.generators import generate_semantic_golden
+
 def load_generator() -> types.ModuleType:
-    """Load the generate_semantic_golden module dynamically."""
-    module_path = BENCHMARKS_ROOT / "scripts" / "generate_semantic_golden.py"
-    spec = importlib.util.spec_from_file_location("generate_semantic_golden", module_path)
-    assert spec is not None
-    assert spec.loader is not None
-    module = importlib.util.module_from_spec(spec)
-    sys.modules["generate_semantic_golden"] = module
-    spec.loader.exec_module(module)
-    return module
+    return generate_semantic_golden  # type: ignore[return-value]
 
 
 def load_sdif_parse() -> tuple[Any, Any]:

@@ -12,18 +12,7 @@ from pathlib import Path
 import pytest
 
 
-def load_token_efficiency_module():
-    module_path = Path("scripts/token_efficiency.py")
-    spec = importlib.util.spec_from_file_location("token_efficiency", module_path)
-    assert spec is not None
-    assert spec.loader is not None
-    module = importlib.util.module_from_spec(spec)
-    sys.modules["token_efficiency"] = module
-    spec.loader.exec_module(module)
-    return module
-
-
-token_efficiency = load_token_efficiency_module()
+from sdif_benchmarks.tracks import token_efficiency
 
 
 def path_snapshot(path):
@@ -302,15 +291,10 @@ def test_benchmark_main_publishes_compared_corpus_files(monkeypatch, tmp_path):
     assert report["artifacts"]["corpus"] == str(corpus_dir.parent)
 
 
+from sdif_benchmarks.tracks import roundtrip_fidelity
+
 def load_roundtrip_fidelity_module():
-    module_path = Path("scripts/roundtrip_fidelity.py")
-    spec = importlib.util.spec_from_file_location("roundtrip_fidelity", module_path)
-    assert spec is not None
-    assert spec.loader is not None
-    module = importlib.util.module_from_spec(spec)
-    sys.modules["roundtrip_fidelity"] = module
-    spec.loader.exec_module(module)
-    return module
+    return roundtrip_fidelity
 
 
 def test_roundtrip_parse_sdif_large_document():
@@ -522,19 +506,7 @@ def test_roundtrip_sdif_ai_numeric_string_table_cells_preserved():
             )
 
 
-def load_run_suite_module() -> object:
-    """Load the run_suite module from scripts/run_suite.py."""
-    module_path = Path("scripts/run_suite.py")
-    spec = importlib.util.spec_from_file_location("run_suite", module_path)
-    assert spec is not None
-    assert spec.loader is not None
-    module = importlib.util.module_from_spec(spec)
-    sys.modules["run_suite"] = module
-    spec.loader.exec_module(module)
-    return module
-
-
-mod = load_run_suite_module()
+from sdif_benchmarks import run_suite as mod
 
 
 def test_run_suite_includes_semantic_and_operability_tracks() -> None:
