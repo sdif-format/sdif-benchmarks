@@ -92,7 +92,7 @@ def compact_ai_projection(sdif_text: str) -> str:
         max_string_length=1_000_000,
     )
     candidates = [
-        ai_view(sdif_text, {}, include_header=False, policy=policy),
+        ai_view(sdif_text, {}, include_header=True, policy=policy),
         ai_view(sdif_text, AI_ALIASES, include_header=True, policy=policy),
     ]
     return min(candidates, key=lambda c: len(c.encode("utf-8")))

@@ -2,7 +2,6 @@
 
 from __future__ import annotations
 
-import importlib.util
 import json
 import os
 import subprocess
@@ -291,7 +290,8 @@ def test_benchmark_main_publishes_compared_corpus_files(monkeypatch, tmp_path):
     assert report["artifacts"]["corpus"] == str(corpus_dir.parent)
 
 
-from sdif_benchmarks.tracks import roundtrip_fidelity
+from sdif_benchmarks.tracks import roundtrip_fidelity  # noqa: E402
+
 
 def load_roundtrip_fidelity_module():
     return roundtrip_fidelity
@@ -506,7 +506,7 @@ def test_roundtrip_sdif_ai_numeric_string_table_cells_preserved():
             )
 
 
-from sdif_benchmarks import run_suite as mod
+from sdif_benchmarks import run_suite as mod  # noqa: E402
 
 
 def test_run_suite_includes_semantic_and_operability_tracks() -> None:
@@ -552,10 +552,15 @@ def test_build_index_supports_semantic_and_operability_tracks(monkeypatch, tmp_p
                 "formats": [
                     {
                         "format": "SDIF",
+                        "standardCanonicalForm": True,
+                        "builtinCanonicalForm": True,
+                        "stableHash": True,
+                        "schemaValidation": True,
                         "nativeRelationSupport": True,
                         "ruleDeclarationSupport": True,
                         "ruleEvaluationSupport": False,
-                        "stableHash": True,
+                        "semanticTypeVocabulary": True,
+                        "deterministicOutput": True,
                     }
                 ]
             }
@@ -577,6 +582,195 @@ def test_build_index_supports_semantic_and_operability_tracks(monkeypatch, tmp_p
 
     assert index["tracks"] == ["semantic_fidelity", "operability"]
     assert {entry["track"] for entry in index["scorecard"]} == {
-        "semantic_fidelity",
         "operability",
     }
+
+    operability_card = next(
+        entry for entry in index["scorecard"] if entry["track"] == "operability"
+    )
+
+    assert operability_card["metric"] == "sdifDocumentContractCapabilities"
+    assert operability_card["value"] == 8
+    assert operability_card["unit"] == "/8"
+    assert "rule evaluation support is False" not in operability_card["description"]
+    assert (
+        "rule evaluation is intentionally outside this operability matrix"
+        in (operability_card["description"])
+    )
+
+
+def test_build_index_scorecard_and_experimental_tracks(monkeypatch):
+    mock_extractors = {
+        k: lambda dir: {"value": 100, "unit": "%"} for k in mod._SCORECARD_EXTRACTORS
+    }
+    monkeypatch.setattr(mod, "_SCORECARD_EXTRACTORS", mock_extractors)
+    monkeypatch.setattr(mod, "benchmark_result_dir", lambda track_id: Path("/dummy") / track_id)
+
+    run_results = []
+    for track in mod.TRACKS:
+        run_results.append({"track": track, "ran": True, "success": True})
+
+    index = mod._build_index(
+        run_results,
+        "2026-05-24T00:00:00Z",
+        corpus_documents=10,
+    )
+
+    scorecard_tracks = [entry["track"] for entry in index["scorecard"]]
+    assert len(scorecard_tracks) == 4
+    assert set(scorecard_tracks) == {
+        "token_efficiency",
+        "context_packing",
+        "roundtrip_fidelity",
+        "operability",
+    }
+    assert "delta_compactness" not in scorecard_tracks
+
+    operability_card = next(
+        entry for entry in index["scorecard"] if entry["track"] == "operability"
+    )
+    assert operability_card["claim"] == (
+        "Format capability matrix for canonicalization, stable hashing, "
+        "native relations, and rule declarations."
+    )
+
+    exp_tracks = index["experimental_tracks"]
+    assert len(exp_tracks) == 1
+    assert exp_tracks[0]["track"] == "delta_compactness"
+    assert exp_tracks[0]["label"] == "Mutation Sensitivity — Full-resend baseline"
+    assert exp_tracks[0]["claim"] == (
+        "This track measures full-document resend sensitivity after mutation. "
+        "It is not a semantic patch/delta benchmark."
+    )
+
+
+def test_roundtrip_relation_normalization():
+    rt = load_roundtrip_fidelity_module()
+
+    # 1. Distinct order in rel list must score 100%
+    original = {
+        "rel": [
+            {"subject": "A", "predicate": "uses", "object": "B"},
+            {"subject": "B", "predicate": "uses", "object": "C"},
+        ]
+    }
+    roundtripped = {
+        "rel": [
+            {"subject": "B", "predicate": "uses", "object": "C"},
+            {"subject": "A", "predicate": "uses", "object": "B"},
+        ]
+    }
+    orig_clean = rt.canonicalize_relations_in_dict(original)
+    rt_clean = rt.canonicalize_relations_in_dict(roundtripped)
+    scores = rt.score_fidelity(orig_clean, rt_clean)
+    assert scores["overall_fidelity"] == 100.0, (
+        f"Expected 100% for reordered relations, got {scores}"
+    )
+
+    # 2. Duplicate mismatch must fail (must not score 100%)
+    roundtripped_dupe = {
+        "rel": [
+            {"subject": "B", "predicate": "uses", "object": "C"},
+            {"subject": "A", "predicate": "uses", "object": "B"},
+            {"subject": "A", "predicate": "uses", "object": "B"},
+        ]
+    }
+    orig_clean_d = rt.canonicalize_relations_in_dict(original)
+    rt_clean_d = rt.canonicalize_relations_in_dict(roundtripped_dupe)
+    scores_d = rt.score_fidelity(orig_clean_d, rt_clean_d)
+    assert scores_d["overall_fidelity"] < 100.0, "Expected duplicate mismatch to fail (<100%)"
+
+    # 3. Value change (subject, predicate, object) must fail
+    roundtripped_diff = {
+        "rel": [
+            {"subject": "A", "predicate": "uses_output_of", "object": "B"},
+            {"subject": "B", "predicate": "uses", "object": "C"},
+        ]
+    }
+    orig_clean_diff = rt.canonicalize_relations_in_dict(original)
+    rt_clean_diff = rt.canonicalize_relations_in_dict(roundtripped_diff)
+    scores_diff = rt.score_fidelity(orig_clean_diff, rt_clean_diff)
+    assert scores_diff["overall_fidelity"] < 100.0, "Expected changed predicate to fail (<100%)"
+
+
+def test_compact_ai_projection_always_emits_header():
+    from sdif_benchmarks.formats import compact_ai_projection
+    from sdif.json import json_data_to_sdif
+
+    cases = [
+        {"kind": "Plan", "id": "p1", "items": [{"id": "I1", "status": "open"}]},
+        {"name": "test", "count": 3},
+        {"a": None, "b": "null", "c": 42, "d": "42", "e": True, "f": "false"},
+        {"rows": [{"x": 1, "y": 2}, {"x": 3, "y": 4}]},
+    ]
+    for data in cases:
+        sdif_text = json_data_to_sdif(data, include_header=True)
+        result = compact_ai_projection(sdif_text)
+        assert result.startswith("@sdif.ai 1.0"), (
+            f"compact_ai_projection output missing header for data={data!r}; got: {result[:80]!r}"
+        )
+
+
+def test_compact_ai_projection_both_candidates_include_header():
+    from sdif.ai import ai_view
+    from sdif.json import json_data_to_sdif
+    from sdif_benchmarks.formats import AI_ALIASES
+
+    data = {"kind": "Plan", "id": "demo", "items": [{"id": "I1", "status": "open"}]}
+    sdif_text = json_data_to_sdif(data, include_header=True)
+
+    no_alias = ai_view(sdif_text, {}, include_header=True)
+    with_alias = ai_view(sdif_text, AI_ALIASES, include_header=True)
+
+    assert no_alias.startswith("@sdif.ai"), f"no-alias candidate missing header: {no_alias[:80]!r}"
+    assert with_alias.startswith("@sdif.ai"), f"alias candidate missing header: {with_alias[:80]!r}"
+
+
+def test_parse_sdif_ai_rejects_headerless_text():
+    rt = load_roundtrip_fidelity_module()
+
+    headerless = "name\tcount\n---\t---\ntest\t3\n"
+    result = rt.parse_sdif_ai(headerless)
+    assert result is None, f"parse_sdif_ai should reject headerless input, got: {result!r}"
+
+
+def test_delta_compactness_summary_uses_preliminary_framing(tmp_path):
+    from sdif_benchmarks.tracks import delta_compactness as dc
+
+    evidence = dc.DeltaEvidence(
+        generated_at="2026-05-24T00:00:00Z",
+        run_dir=tmp_path,
+        golden_dir=tmp_path / "golden",
+        tokenizer="Estimate",
+        mutation_fraction=0.10,
+        documents=[
+            dc.DocumentResult(
+                document_name="demo",
+                leaves_total=10,
+                leaves_mutated=1,
+                rows=[
+                    dc.DeltaResult(
+                        format_name="SDIF AI",
+                        original_text="",
+                        mutated_text="",
+                        original_tokens=100,
+                        mutated_tokens=104,
+                        token_delta=4,
+                        token_delta_pct=4.0,
+                        diff_lines_added=2,
+                        diff_lines_removed=2,
+                        diff_lines_changed=4,
+                    ),
+                ],
+            )
+        ],
+        env_file_loaded=False,
+    )
+
+    summary = dc._summary_md(evidence)
+
+    assert "semantic delta (base + patch) would be even smaller" not in summary
+    assert "It is not a semantic patch/delta benchmark" in summary
+    assert "Token delta measures the cost of resending the whole mutated document" in summary
+    assert "Diff-line counts are a coarse text-level signal" in summary
+    assert "semantic delta size" in summary

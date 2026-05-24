@@ -48,6 +48,7 @@ from pathlib import Path
 from typing import Any
 
 from sdif_benchmarks.infra import BENCHMARK_DIR as _BENCHMARK_DIR
+
 if str(_BENCHMARK_DIR) not in sys.path:
     sys.path.insert(0, str(_BENCHMARK_DIR))
 if str(_BENCHMARK_DIR / "src") not in sys.path:
@@ -227,9 +228,6 @@ def parse_sdif(text: str) -> dict[str, Any] | None:
 
 def parse_sdif_ai(text: str) -> dict[str, Any] | None:
     try:
-        # compact_ai_projection may omit the header when it wins on size
-        if not text.startswith("@sdif"):
-            text = "@sdif.ai 1.0\n" + text
         doc = expand_ai_doc(text, policy=_BENCHMARK_POLICY)
         return document_to_json_data(doc)
     except Exception as exc:
@@ -299,6 +297,34 @@ def collect_leaves(obj: Any, path: str = "") -> list[tuple[str, Any]]:
             items.extend(collect_leaves(v, f"{path}[{i}]"))
         return items
     return [(path, obj)]
+
+
+def canonicalize_relations_in_dict(obj: Any) -> Any:
+    """Recursively normalize relation lists to be sorted deterministically, preserving duplicates."""
+    if isinstance(obj, dict):
+        new_dict = {}
+        for k, v in obj.items():
+            if k == "rel" and isinstance(v, list):
+                sorted_rel = sorted(
+                    [canonicalize_relations_in_dict(item) for item in v],
+                    key=lambda r: (
+                        (
+                            str(r.get("subject", "")),
+                            str(r.get("predicate", "")),
+                            str(r.get("object", "")),
+                        )
+                        if isinstance(r, dict)
+                        else ("", "", "")
+                    ),
+                )
+                new_dict[k] = sorted_rel
+            else:
+                new_dict[k] = canonicalize_relations_in_dict(v)
+        return new_dict
+    elif isinstance(obj, list):
+        return [canonicalize_relations_in_dict(item) for item in obj]
+    else:
+        return obj
 
 
 def score_fidelity(original: dict[str, Any], roundtripped: dict[str, Any]) -> dict[str, float]:
@@ -537,11 +563,13 @@ def run_benchmark(run_dir: Path, *, env_file_loaded: bool) -> FidelityEvidence:
                         if isinstance(unwrapped, dict):
                             roundtripped = unwrapped
 
-                    scores = score_fidelity(original, roundtripped)
+                    original_clean = canonicalize_relations_in_dict(original)
+                    roundtripped_clean = canonicalize_relations_in_dict(roundtripped)
+                    scores = score_fidelity(original_clean, roundtripped_clean)
                     note = ""
                     if scores["overall_fidelity"] < 100.0:
                         write_format_diagnostics(
-                            run_dir, doc_name, format_name, original, roundtripped
+                            run_dir, doc_name, format_name, original_clean, roundtripped_clean
                         )
                         note = "see diagnostics"
                     result = FidelityResult(

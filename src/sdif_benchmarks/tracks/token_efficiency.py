@@ -106,6 +106,7 @@ from xml.sax.saxutils import escape as xml_escape
 import yaml
 
 from sdif_benchmarks.infra import BENCHMARK_DIR
+
 BENCHMARK_REPO_ROOT = BENCHMARK_DIR
 SDIF_CORE_REPO = (
     Path(os.environ.get("SDIF_CORE_REPO") or str(BENCHMARK_REPO_ROOT.parent)).expanduser().resolve()
@@ -116,9 +117,9 @@ sys.path.insert(0, str(BENCHMARK_DIR))
 sys.path.insert(0, str(BENCHMARK_DIR / "src"))
 DASHBOARD_TEMPLATE_PATH = BENCHMARK_DIR / "src" / "dashboard_template.html"
 
-from sdif.ai import ai_view  # noqa: E402
 from sdif.json import json_data_to_sdif  # noqa: E402
 from sdif_benchmarks.report import render_md_viewer, render_sdif_ai_viewer  # noqa: E402
+from sdif_benchmarks.formats import compact_ai_projection  # noqa: E402
 from sdif_benchmarks.optional_deps import optional_module  # noqa: E402
 
 
@@ -156,18 +157,6 @@ FORMAT_FILE_NAMES = {
     "TOON": "toon.toon",
     "XML": "xml.xml",
     "YAML": "yaml.yaml",
-}
-
-
-AI_ALIASES = {
-    "authority": "auth",
-    "description": "desc",
-    "evidence": "ev",
-    "lifecycle": "life",
-    "priority": "pri",
-    "schema": "sch",
-    "status": "st",
-    "version": "v",
 }
 
 
@@ -432,21 +421,6 @@ def csv_bundle_generated(data: dict[str, Any]) -> str:
         sections.insert(0, "# fields\n" + output.getvalue().rstrip("\n"))
 
     return "\n\n".join(sections).rstrip() + "\n"
-
-
-def compact_ai_projection(sdif_text: str) -> str:
-    from sdif.core.policy import Policy
-
-    policy = Policy(
-        max_document_size=10_000_000,
-        max_table_row_count=100_000,
-        max_string_length=1_000_000,
-    )
-    candidates = [
-        ai_view(sdif_text, {}, include_header=False, policy=policy),
-        ai_view(sdif_text, AI_ALIASES, include_header=True, policy=policy),
-    ]
-    return min(candidates, key=lambda candidate: len(candidate.encode("utf-8")))
 
 
 def run_command(command: list[str], output: Path, timeout_seconds: int = 30) -> str | None:
