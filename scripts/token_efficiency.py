@@ -100,7 +100,7 @@ import tempfile
 from dataclasses import dataclass, field
 from datetime import datetime, timezone
 from pathlib import Path
-from typing import Any, Callable, TextIO
+from typing import Any, Callable, TextIO, TypeGuard
 from xml.sax.saxutils import escape as xml_escape
 
 import yaml  # type: ignore[import-untyped]
@@ -422,7 +422,7 @@ def csv_bundle_generated(data: dict[str, Any]) -> str:
 
     for key, value in data.items():
         if _is_uniform_object_array(value):
-            sections.append(_csv_section(key, value))  # type: ignore[arg-type]
+            sections.append(_csv_section(key, value))
         else:
             scalar_rows.append((key, value))
 
@@ -1178,7 +1178,7 @@ def _scalar_text(value: object) -> str:
     return str(value)
 
 
-def _is_uniform_object_array(value: object) -> bool:
+def _is_uniform_object_array(value: object) -> TypeGuard[list[dict[str, object]]]:
     if not isinstance(value, list) or not value:
         return False
     if not all(isinstance(item, dict) for item in value):

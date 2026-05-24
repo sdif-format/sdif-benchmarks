@@ -21,6 +21,7 @@ if str(SRC) not in sys.path:
     sys.path.insert(0, str(SRC))
 
 from sdif import canonicalize, parse_text, sdif_hash  # noqa: E402
+from sdif.core.ast import Document  # noqa: E402
 from sdif.ai import ai_view  # noqa: E402
 from sdif.json import document_to_json_data, json_data_to_sdif  # noqa: E402
 from sdif.validation import Schema, validate_document  # noqa: E402
@@ -60,7 +61,7 @@ def main() -> int:
     return 0
 
 
-def _check_relational_expressivity(doc: object, errors: list[str]) -> None:
+def _check_relational_expressivity(doc: Document, errors: list[str]) -> None:
     relations = getattr(doc, "relations", [])
     _expect(
         bool(relations), errors, "relational expressivity: examples/plan.sdif must contain rel rows"
@@ -82,8 +83,8 @@ def _check_relational_expressivity(doc: object, errors: list[str]) -> None:
     )
 
 
-def _check_round_trip_fidelity(doc: object, errors: list[str]) -> None:
-    data = document_to_json_data(doc)  # type: ignore[arg-type]
+def _check_round_trip_fidelity(doc: Document, errors: list[str]) -> None:
+    data = document_to_json_data(doc)
     recreated = parse_text(json_data_to_sdif(data))
     round_trip = document_to_json_data(recreated)
     _expect(
@@ -99,8 +100,8 @@ def _check_round_trip_fidelity(doc: object, errors: list[str]) -> None:
     _expect("rel" in data, errors, "round-trip fidelity: relation block must survive conversion")
 
 
-def _check_schema_validation(doc: object, schema: Schema, errors: list[str]) -> None:
-    diagnostics = validate_document(doc, schema)  # type: ignore[arg-type]
+def _check_schema_validation(doc: Document, schema: Schema, errors: list[str]) -> None:
+    diagnostics = validate_document(doc, schema)
     _expect(
         not diagnostics,
         errors,
