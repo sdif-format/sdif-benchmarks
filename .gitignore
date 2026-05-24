@@ -4,7 +4,12 @@
 
 __pycache__/
 *.py[cod]
-
+*.egg-info/
+.eggs/
+*.egg
+build/
+dist/
+pip-wheel-metadata/
 .venv/
 
 
