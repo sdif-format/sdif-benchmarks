@@ -9,7 +9,9 @@ from __future__ import annotations
 import importlib.util
 import json
 import sys
+import types
 from pathlib import Path
+from typing import Any
 
 import pytest
 
@@ -17,7 +19,7 @@ BENCHMARKS_ROOT = Path(__file__).resolve().parents[1]
 SDIF_SRC = BENCHMARKS_ROOT.parent / "src"
 
 
-def load_generator() -> object:
+def load_generator() -> types.ModuleType:
     """Load the generate_semantic_golden module dynamically."""
     module_path = BENCHMARKS_ROOT / "scripts" / "generate_semantic_golden.py"
     spec = importlib.util.spec_from_file_location("generate_semantic_golden", module_path)
@@ -29,7 +31,7 @@ def load_generator() -> object:
     return module
 
 
-def load_sdif_parse():
+def load_sdif_parse() -> tuple[Any, Any]:
     """Return the parse_text and document_to_json_data callables."""
     if str(SDIF_SRC) not in sys.path:
         sys.path.insert(0, str(SDIF_SRC))

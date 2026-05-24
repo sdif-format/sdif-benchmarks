@@ -13,6 +13,7 @@ import argparse
 import json
 import os
 import sys
+from collections.abc import Callable
 from pathlib import Path
 from typing import Any
 
@@ -258,7 +259,7 @@ def make_llm_api_response() -> JsonObject:
 # ---------------------------------------------------------------------------
 
 
-FIXTURE_BUILDERS: dict[str, Any] = {
+FIXTURE_BUILDERS: dict[str, Callable[[], JsonObject]] = {
     "semantic-narrative": make_semantic_narrative,
     "audit-provenance": make_audit_provenance,
     "agent-workflow": make_agent_workflow,
@@ -269,7 +270,7 @@ FIXTURE_BUILDERS: dict[str, Any] = {
 def write_fixture(output_dir: Path, name: str, data: JsonObject) -> None:
     """Write equivalent.json and source.sdif into output_dir/name/."""
     _ensure_sdif_on_path()
-    from sdif.json import json_data_to_sdif  # type: ignore[import]
+    from sdif.json import json_data_to_sdif  # type: ignore[import]  # deferred: SDIF src path injected by _ensure_sdif_on_path() above
 
     fixture_dir = output_dir / name
     fixture_dir.mkdir(parents=True, exist_ok=True)
