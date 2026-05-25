@@ -7,7 +7,7 @@ PYTHON ?= python3
 else
 PYTHON ?= .venv/bin/python
 endif
-SDIF_CORE_REPO ?= ../sdif
+SDIF_CORE_REPO ?= ../sdif-py
 
 export SDIF_CORE_REPO
 export PYTHONPATH := src:$(SDIF_CORE_REPO)/src:$(PYTHONPATH)

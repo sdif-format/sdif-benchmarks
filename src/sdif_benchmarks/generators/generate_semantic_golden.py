@@ -315,7 +315,7 @@ def main(argv: list[str] | None = None) -> int:
         "--output-dir",
         type=Path,
         default=DEFAULT_OUTPUT_DIR,
-        help="Directory to write fixtures into (default: ../sdif/examples/golden/)",
+        help="Directory to write fixtures into (default: ../sdif-py/examples/golden/)",
     )
     args = parser.parse_args(argv)
 

@@ -14,7 +14,7 @@ SRC_DIR = PACKAGE_DIR.parent
 BENCHMARK_DIR = SRC_DIR.parent
 BENCHMARK_REPO_ROOT = BENCHMARK_DIR
 SDIF_CORE_REPO = (
-    Path(os.environ.get("SDIF_CORE_REPO", BENCHMARK_REPO_ROOT.parent / "sdif")).expanduser().resolve()
+    Path(os.environ.get("SDIF_CORE_REPO", BENCHMARK_REPO_ROOT.parent / "sdif-py")).expanduser().resolve()
 )
 REPO_ROOT = SDIF_CORE_REPO
 

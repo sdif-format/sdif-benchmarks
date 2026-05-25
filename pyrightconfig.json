@@ -5,7 +5,7 @@
     "tests"
   ],
   "extraPaths": [
-    "../sdif/src",
+    "../sdif-py/src",
     "./src"
   ],
   "venvPath": ".",
